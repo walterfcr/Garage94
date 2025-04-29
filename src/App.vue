@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <AppHeader /> <!-- Updated component name -->
+    <router-view /> <!-- This will render the component based on the current route -->
+    <!-- Optionally add a link to the Punk Rock catalog -->
+    <router-link to="/punk-rock"></router-link>
+    <router-link to="/hard-core"></router-link>
+    <router-link to="/metal-music"></router-link>
+    <router-link to="/ska-music"></router-link>
+    <router-link to="/reggae-music"></router-link>
+    <router-link to="/hip-hop"></router-link>
+    <router-link to="/grunge-music"></router-link>
+    <router-link to="/rock-alternativo"></router-link>
+    <router-link to="/rock-progresivo"></router-link>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue'; // Corrected import
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    AppHeader, // Corrected component name
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

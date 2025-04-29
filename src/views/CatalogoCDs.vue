@@ -1,0 +1,101 @@
+<template>
+  <div>
+    <!-- Add the InicioSlider component here -->
+    <InicioSlider />
+
+    <h1>Nuevos Ingresos</h1>
+
+    <div class="product-list">
+      <!-- Loop through the products and display each one -->
+      <div v-for="product in products" :key="product.id" class="product-card">
+        <router-link :to="'/cd/' + product.id">
+          <img :src="product.image" :alt="product.name" />
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.price }}</p>
+        </router-link>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+// Import the slider component
+import InicioSlider from '@/components/InicioSlider.vue'; // Adjust the path if needed
+
+export default {
+  name: 'CatalogoCDs',
+  components: {
+    InicioSlider,
+  },
+  data() {
+    return {
+      products: [
+        { id: 1, name: 'Kerplunk', price: '$10', image: '/images/nuevos/cd-1.webp' },
+        { id: 2, name: 'Firestorm', price: '$12', image: '/images/nuevos/cd-2.webp' },
+        { id: 3, name: 'No Control', price: '$12', image: '/images/nuevos/cd-3.webp' },
+        { id: 4, name: 'The Action is Go', price: '$12', image: '/images/nuevos/cd-4.webp' },
+        { id: 5, name: 'Born to Expire', price: '$12', image: '/images/nuevos/cd-5.webp' },
+        { id: 6, name: 'Unfun', price: '$12', image: '/images/nuevos/cd-6.webp' },
+        { id: 7, name: 'Dillinger Four Vs God', price: '$12', image: '/images/nuevos/cd-7.webp' },
+        { id: 8, name: 'State of the World Address', price: '$12', image: '/images/nuevos/cd-8.webp' },
+        { id: 9, name: 'El Chico con Rayos X en los Ojos', price: '$12', image: '/images/nuevos/cd-9.webp' },
+        { id: 10, name: 'Fundamental', price: '$12', image: '/images/nuevos/cd-10.webp' },
+        { id: 11, name: 'Mi Vida Loca', price: '$12', image: '/images/nuevos/cd-11.webp' },
+        { id: 12, name: 'Cypress Hill III: Temples of Boom', price: '$12', image: '/images/nuevos/cd-12.webp' },
+        { id: 13, name: 'The Chronic', price: '$12', image: '/images/nuevos/cd-13.webp' },
+        { id: 14, name: 'Punk in Drublic', price: '$12', image: '/images/nuevos/cd-14.webp' },
+        { id: 15, name: '@#!*', price: '$12', image: '/images/nuevos/cd-15.webp' },
+        { id: 16, name: 'Siamese Dream', price: '$12', image: '/images/nuevos/cd-16.webp' },
+        { id: 17, name: 'Fyulaba', price: '$12', image: '/images/nuevos/cd-17.webp' },
+        { id: 18, name: 'Without a Sound', price: '$12', image: '/images/nuevos/cd-18.webp' },
+        // Add more products as needed
+      ],
+    };
+  },
+};
+</script>
+
+<style scoped>
+
+h1 {
+  text-align: center;
+}
+
+h3{
+  font-size: 0.8rem;
+
+}
+
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  transition: transform 0.3s;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+</style>
+
