@@ -93,8 +93,12 @@ export default {
 
 .nav-menu a {
   text-decoration: none;
-  color: #333;
+  color: var(--accent-blue);
   font-weight: bold;
+}
+
+.nav-menu a:hover {
+  color: var(--accent-blue-hover);
 }
 
 /* Submenu */
@@ -116,6 +120,15 @@ export default {
 
 .submenu li {
   margin: 5px 0;
+  padding: 10px 15px;
+  list-style: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submenu li:hover {
+  background-color: #f0f0f0; /* subtle hover effect */
 }
 
 /* Header actions */

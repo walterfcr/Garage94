@@ -38,6 +38,9 @@ export default {
     };
   },
   created() {
+    const page = parseInt(this.$route.query.page, 10);
+    this.currentPage = !isNaN(page) && page > 0 ? page : 1;
+
     this.cdProducts = products
       .filter(item => item.genre === 'Hardcore') // Solo los de Hardcore
       .map(item => ({
@@ -60,6 +63,7 @@ export default {
   methods: {
     goToPage(page) {
       if (page >= 1 && page <= this.totalPages) {
+        this.$router.replace({ query: { ...this.$route.query, page } });
         this.currentPage = page;
       }
     }
@@ -107,26 +111,5 @@ h3 {
   transform: scale(1.05);
 }
 
-/* Paginación */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-  gap: 10px;
-}
 
-.pagination button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.pagination button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
 </style>

@@ -3,18 +3,20 @@ clear cache    npm run dev -- --forcé
 
 
         {
-          id: 28, 
-          name: 'Dirt',
-          band: 'Alice in Chains',
-          genre: 'Hip Hop',
-          label: 'Columbia Records',
+          id: 9, 
+          name: 'Give',
+          band: 'Various',
+          genre: 'Rock Alternativo',
+          label: 'Hellcat Records',
           numDiscs: 1,
           releaseDate: '29/09/1992',
           type: 'CD',
-          itemNumber: '25869850X',
-          image: '/images/hiphop/h-1.webp',
+          itemNumber: '25869911X',
+          image: '/images/alternativo/a-2.webp',
           description: '​',
           price:'¢14.000',
         },  
 
+
+La banda experimentó con varias canciones y estilos hasta que tocaron su primer concierto en 924 Gilman Street en Berkeley en 1989. Sin embargo, poco después de su debut, Freeman y Armstrong se fueron para perseguir otros intereses, principalmente otro proyecto de ska basado en el punk llamado Downfall .
 

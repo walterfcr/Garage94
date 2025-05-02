@@ -92,13 +92,18 @@ export default {
   position: absolute;
   top: 15px;
   right: 20px;
-  background: #e74c3c;
+  background: var(--accent-red);
   color: white;
   border: none;
   padding: 8px 12px;
   cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-button:hover {
+  background: var(--accent-red-hover);
 }
 
 .product-details {
