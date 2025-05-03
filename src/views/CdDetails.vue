@@ -12,7 +12,7 @@
           <div class="column">
             <h2>Album: {{ product.name }}</h2>
             <p><strong>Artista:</strong> {{ product.band }}</p>
-            <p><strong>Género:</strong> {{ product.genre }}</p>
+            <p><strong>Género:</strong> {{ product.genreDescription }}</p>
             <p><strong>Disquera:</strong> {{ product.label }}</p>
             <p><strong>Numero de discos:</strong> {{ product.numDiscs }}</p>
             <p><strong>Fecha de Lanzamiento:</strong> {{ product.releaseDate }}</p>

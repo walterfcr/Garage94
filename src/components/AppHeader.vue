@@ -72,7 +72,7 @@ export default {
   justify-content: space-between;
   padding: 10px 30px;
   background-color: #fff;
-  border-bottom: 1px solid #ddd;
+   border-bottom: 5px solid var(--border-gray);
 }
 
 .logo img {
