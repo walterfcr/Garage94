@@ -3,7 +3,7 @@
     <!-- Modal Overlay -->
     <div class="modal-overlay" @click.self="closeModal">
       <!-- Modal Content -->
-      <div class="modal-content">
+      <div class="modal-content" data-aos="zoom-in"> 
         <div class="product-details">
           <div class="column">
             <img :src="product.image" :alt="product.name" />
@@ -72,7 +72,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.85); /* Darker overlay for better contrast */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,19 +80,22 @@ export default {
 }
 
 .modal-content {
-  background: white;
+  background: #1f1f1f;
+  color: #f5f5f5 !important;
   padding: 30px;
-  width: 80%;
+  width: 90%;
   max-width: 1000px;
   border-radius: 10px;
   position: relative;
+  border: 1px solid #444;
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.4); /* Optional glow effect */
 }
 
 .close-button {
   position: absolute;
   top: 15px;
   right: 20px;
-  background: var(--accent-red);
+  background: #ff0055;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -103,25 +106,45 @@ export default {
 }
 
 .close-button:hover {
-  background: var(--accent-red-hover);
+  background: #e6004c;
 }
 
 .product-details {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .column {
   flex: 1;
-  background-color: #f0f0f0;
+  background-color: #2a2a2a;
   padding: 20px;
+  border-radius: 8px;
+  color: #f5f5f5;
 }
 
 .column img {
   max-width: 100%;
   margin: 0 auto;
   display: block;
+  border-radius: 8px;
 }
+
+.column h2,
+.column h3 {
+  color: #ff0055;
+  margin-bottom: 10px;
+}
+
+.column p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.column p strong {
+  color: #ff0055;
+}
+
 </style>
 
 

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="contenido-wrap">
     <h1>Catálogo de Rock Alternativo</h1>
 
-    <div class="product-list">
+    <div class="product-list" data-aos="zoom-in">
       <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
         <router-link 
           :to="{ name: 'cd-details', params: { id: product.id }, query: { from: $route.fullPath } }"
@@ -22,14 +22,19 @@
 
       <button @click="goToPage(currentPage + 1)" :disabled="currentPage === totalPages">Siguiente</button>
     </div>
+    <BuscarGenero />
   </div>
 </template>
 
 <script>
 import { products } from '@/data/products.js'; // Ajusta la ruta si es necesario
+import BuscarGenero from '@/components/BuscarGenero.vue';
 
 export default {
   name: 'CatalogoAlternativo',
+    components: {
+    BuscarGenero
+  },
   data() {
     return {
       cdProducts: [],
@@ -77,37 +82,6 @@ h1 {
 
 h3 {
   font-size: 0.8rem;
-}
-
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-.product-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-  background: white;
-  transition: transform 0.3s;
-}
-
-.product-card img {
-  max-width: 100%;
-  height: auto;
-}
-
-.product-card a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
 }
 
 </style>

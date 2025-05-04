@@ -23,7 +23,6 @@
             <li><router-link to="/grunge-music">Grunge</router-link></li> 
             <li><router-link to="/rock-alternativo">Rock Alternativo</router-link></li> 
             <li><router-link to="/ska-music">Ska</router-link></li> 
-            <li><router-link to="/reggae-music">Reggae</router-link></li> 
             <li><router-link to="/hip-hop">Hip Hop</router-link></li> 
             <li><router-link to="/rock-progresivo">Rock Progresivo</router-link></li> 
           </ul>
@@ -65,14 +64,14 @@ export default {
 </script>
 
 <style scoped>
-/* Header */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px;
-  background-color: #fff;
-   border-bottom: 5px solid var(--border-gray);
+  background-color: var(--color-background-dark);
+  border-bottom: 3px solid var(--color-border);
+  color: var(--color-text-light);
 }
 
 .logo img {
@@ -93,12 +92,13 @@ export default {
 
 .nav-menu a {
   text-decoration: none;
-  color: var(--accent-blue);
+  color: var(--color-accent);
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 .nav-menu a:hover {
-  color: var(--accent-blue-hover);
+  color: var(--color-accent-hover);
 }
 
 /* Submenu */
@@ -107,8 +107,8 @@ export default {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   padding: 10px;
   min-width: 150px;
   z-index: 10;
@@ -122,13 +122,13 @@ export default {
   margin: 5px 0;
   padding: 10px 15px;
   list-style: none;
-  cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease;
+  color: var(--color-text-light);
 }
 
 .submenu li:hover {
-  background-color: #f0f0f0; /* subtle hover effect */
+  background-color: var(--color-background-dark);
 }
 
 /* Header actions */
@@ -140,20 +140,37 @@ export default {
 
 .header-actions input {
   padding: 5px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-light);
   border-radius: 3px;
+  background-color: var(--color-surface);
+  color: var(--color-text-light);
 }
 
-/* Hamburger menu (for mobile) */
+.header-actions button {
+  background-color: var(--color-button-bg);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-actions button:hover {
+  background-color: var(--color-button-hover);
+}
+
+/* Hamburger */
 .hamburger {
   display: none;
   font-size: 30px;
   background: none;
   border: none;
+  color: var(--color-text-light);
   cursor: pointer;
 }
 
-/* Mobile menu styles */
+/* Mobile Menu */
 .nav-menu {
   display: flex;
 }
@@ -164,12 +181,11 @@ export default {
   top: 60px;
   left: 0;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-background-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav-menu ul {
-  display: flex;
   flex-direction: column;
   gap: 10px;
 }
@@ -178,35 +194,27 @@ export default {
   text-align: center;
 }
 
-/* Media Query for Mobile (768px and below) */
+/* Responsive */
 @media screen and (max-width: 768px) {
   .hamburger {
-    display: block; /* Show hamburger icon on mobile */
+    display: block;
   }
 
   .nav-menu {
-    display: none; /* Hide nav menu by default */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
   }
 
   .nav-menu ul {
-    display: flex;
     flex-direction: column;
     padding: 10px;
   }
 
   .nav-menu li {
     padding: 10px;
-    text-align: center;
   }
 
   .header-actions {
-    display: none; /* Optionally hide header actions on mobile */
+    display: none;
   }
 
   .has-submenu .submenu {
@@ -218,31 +226,27 @@ export default {
   }
 }
 
-/* Media Query for Desktop (Above 768px) */
 @media screen and (min-width: 769px) {
   .hamburger {
-    display: none; /* Hide hamburger icon on desktop */
+    display: none;
   }
 
   .nav-menu {
-    display: flex; /* Show menu horizontally on desktop */
+    display: flex;
   }
 
   .nav-menu ul {
-    display: flex; /* Horizontal layout */
     flex-direction: row;
   }
 
   .nav-menu li {
-    margin: 0 15px; /* Keep the spacing */
+    margin: 0 15px;
   }
 
   .header-actions {
     display: flex;
-    gap: 10px;
   }
 
-  /* Ensure the submenus are shown on hover in desktop */
   .has-submenu .submenu {
     display: none;
   }
@@ -251,4 +255,5 @@ export default {
     display: block;
   }
 }
+
 </style>

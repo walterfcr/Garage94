@@ -37,7 +37,7 @@ export default {
 .inicio {
   height: 650px;
   width: 100%;
-  box-shadow: inset 0 0 0 1000px rgba(11, 18, 46, 0.6);
+  /*box-shadow: inset 0 0 0 1000px rgba(11, 18, 46, 0.6);*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -1,31 +1,25 @@
 <template>
   <div>
-    <!-- Add the InicioSlider component here -->
     <InicioSlider />
-
-    <h1>Nuevos Ingresos</h1>
-
-    <div class="product-list">
-      <!-- Loop through the products and display each one -->
-      <div v-for="product in products" :key="product.id" class="product-card">
-        <router-link :to="'/cd/' + product.id">
-          <img :src="product.image" :alt="product.name" />
-          <h3>{{ product.name }}</h3>
-          <p>{{ product.price }}</p>
-        </router-link>
-      </div>
-    </div>
+    <FeaturedCollections />
+    <NuevosIngresos :products="products" />
+    <BuscarGenero /> 
   </div>
 </template>
 
 <script>
-// Import the slider component
-import InicioSlider from '@/components/InicioSlider.vue'; // Adjust the path if needed
+import AOS from 'aos'; // Import the AOS library
+import InicioSlider from '@/components/InicioSlider.vue';
+import FeaturedCollections from '@/components/FeaturedCollections.vue';
+import NuevosIngresos from '@/components/NuevosIngresos.vue';
+import BuscarGenero from '@/components/BuscarGenero.vue';
 
 export default {
-  name: 'CatalogoCDs',
   components: {
     InicioSlider,
+    FeaturedCollections,
+    NuevosIngresos,
+    BuscarGenero,
   },
   data() {
     return {
@@ -52,50 +46,18 @@ export default {
       ],
     };
   },
+  mounted() {
+    // Initialize AOS when the page is loaded
+    AOS.init();
+
+    // Refresh AOS animations after component is mounted
+    setTimeout(() => {
+      AOS.refresh(); // Ensure animations are refreshed
+    }, 300);
+  },
 };
 </script>
 
 <style scoped>
-
-h1 {
-  text-align: center;
-}
-
-h3{
-  font-size: 0.8rem;
-
-}
-
-
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-.product-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-  background: white;
-  transition: transform 0.3s;
-}
-
-.product-card img {
-  max-width: 100%;
-  height: auto;
-}
-
-.product-card a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
-}
+/* Add any global or page-specific styles here */
 </style>
-
