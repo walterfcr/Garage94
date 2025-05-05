@@ -47,7 +47,7 @@ export default {
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
 
     this.cdProducts = products
-      .filter(item => item.genre === 'Hip Hop') // Solo los de Hip Hop
+      .filter(item => item.genre === 'Hip Hop'  && item.type !== 'Vinil') // Solo los de Hip Hop
       .map(item => ({
         id: item.id,
         name: item.name,

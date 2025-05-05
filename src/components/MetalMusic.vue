@@ -24,7 +24,7 @@
     </div>
     <BuscarGenero />
   </div>
-</template>
+</template> 
 
 <script>
 import { products } from '@/data/products.js'; // adjust the path if necessary
@@ -47,7 +47,7 @@ export default {
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
 
     this.cdProducts = products
-      .filter(item => item.genre === 'Metal') // Filter for Metal genre
+      .filter(item => item.genre === 'Metal' && item.type !== 'Vinil') // solo los de metal y que no digan vinilo
       .map(item => ({
         id: item.id,
         name: item.name,

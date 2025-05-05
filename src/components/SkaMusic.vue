@@ -46,7 +46,7 @@ export default {
     const page = parseInt(this.$route.query.page, 10);
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
     this.cdProducts = products
-      .filter(item => item.genre === 'Ska') // Only Ska genre
+      .filter(item => item.genre === 'Ska' && item.type !== 'Vinil') // Only Ska genre
       .map(item => ({
         id: item.id,
         name: item.name,
