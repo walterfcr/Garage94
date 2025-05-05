@@ -145,6 +145,20 @@ export default {
   color: #ff0055;
 }
 
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+  }
+
+  .column img {
+  border-radius: 8px;
+}
+
+  .modal-overlay {
+  position: relative;
+}
+}
+
 </style>
 
 
