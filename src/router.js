@@ -10,7 +10,7 @@ import HipHop from './components/HipHop.vue';
 import GrungeMusic from './components/GrungeMusic.vue';
 import RockAlternativo from './components/RockAlternativo.vue';
 import RockProgresivo from './components/RockProgresivo.vue';
-import ReggaeMusic from './components/ReggaeMusic.vue';
+import VinilCollection from './components/VinilCollection.vue';
 
 const routes = [
   { path: '/', name: 'home', component: CatalogoCDs },
@@ -24,7 +24,7 @@ const routes = [
   { path: '/grunge-music', name: 'grunge-music', component: GrungeMusic },
   { path: '/rock-alternativo', name: 'rock-alternativo', component: RockAlternativo },
   { path: '/rock-progresivo', name: 'rock-progresivo', component: RockProgresivo },
-  { path: '/reggae-music', name: 'reggae-music', component: ReggaeMusic },
+  { path: '/vinil-collection', name: 'vinil-collection', component: VinilCollection },
   { path: '/cd/:id', name: 'cd-details', component: () => import('./views/CdDetails.vue') },
 ];
 

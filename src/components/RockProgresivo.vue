@@ -46,7 +46,7 @@ export default {
     const page = parseInt(this.$route.query.page, 10);
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
     this.cdProducts = products
-      .filter(item => item.genre === 'Rock Progresivo') // Solo los de Hip Hop
+      .filter(item => item.genre === 'Rock Progresivo' && item.type !== 'Vinil') // Solo los de Hrock progresivo
       .map(item => ({
         id: item.id,
         name: item.name,

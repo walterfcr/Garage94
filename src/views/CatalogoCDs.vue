@@ -5,6 +5,7 @@
     <NuevosIngresos :products="products" />
     <BuscarGenero /> 
     <TestimonialsSection />
+    <VinilCollection />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import FeaturedCollections from '@/components/FeaturedCollections.vue';
 import NuevosIngresos from '@/components/NuevosIngresos.vue';
 import BuscarGenero from '@/components/BuscarGenero.vue';
 import TestimonialsSection from '@/components/TestimonialsSection.vue';
+import VinilCollection from '@/components/VinilCollection.vue';
 
 export default {
   components: {
@@ -23,6 +25,7 @@ export default {
     NuevosIngresos,
     BuscarGenero,
     TestimonialsSection,
+    VinilCollection,
   },
   data() {
     return {

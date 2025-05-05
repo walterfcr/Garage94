@@ -13,7 +13,7 @@
         </router-link>
       </div>
     </div>
-
+ 
     <!-- Pagination Controls -->
     <div class="pagination">
       <button @click="goToPage(currentPage - 1)" :disabled="currentPage === 1">Anterior</button>
@@ -47,7 +47,7 @@ export default {
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
 
     this.cdProducts = products
-      .filter(item => item.genre === 'Hardcore') // Solo los de Hardcore
+      .filter(item => item.genre === 'Hardcore' && item.type !== 'Vinil')// Solo los de Hardcore y que no sean vinilos
       .map(item => ({
         id: item.id,
         name: item.name,

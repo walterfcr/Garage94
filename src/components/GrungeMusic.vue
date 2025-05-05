@@ -48,7 +48,7 @@ export default {
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
     
     this.cdProducts = products
-      .filter(item => item.genre === 'Grunge') // Solo los de Hip Hop
+      .filter(item => item.genre === 'Grunge' && item.type !== 'Vinil') // Solo los de grunge y que no sean vinilos
       .map(item => ({
         id: item.id,
         name: item.name,

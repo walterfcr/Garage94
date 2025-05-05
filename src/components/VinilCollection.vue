@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Catálogo de Reggae</h1>
+  <div class="contenido-wrap">
+    <h1>Colección de Vinilos</h1>
 
     <div class="product-list" data-aos="zoom-in">
       <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
@@ -9,7 +9,7 @@
         >
           <img :src="product.image" :alt="product.name" />
           <h3>{{ product.name }}</h3>
-          <p>{{ product.price }}</p>
+          <p>{{ product.vinilPrice }}</p>
         </router-link>
       </div>
     </div>
@@ -23,6 +23,7 @@
       <button @click="goToPage(currentPage + 1)" :disabled="currentPage === totalPages">Siguiente</button>
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -34,18 +35,19 @@ export default {
     return {
       cdProducts: [],
       currentPage: 1,
-      itemsPerPage: 27,
+      itemsPerPage: 18,
     };
   },
   created() {
     const page = parseInt(this.$route.query.page, 10);
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
+    
     this.cdProducts = products
-      .filter(item => item.genre === 'Reggae') // Solo los de Hip Hop
+      .filter(item => item.type === 'Vinil') // solo vinilos
       .map(item => ({
         id: item.id,
         name: item.name,
-        price: item.price,
+        vinilPrice: item.vinilPrice,
         image: item.image,
       }));
   },
@@ -61,9 +63,9 @@ export default {
   },
   methods: {
     goToPage(page) {
-      if (page >= 1 && page <= this.totalPages) {
-        this.$router.replace({ query: { ...this.$route.query, page } });
-        this.currentPage = page;
+        if (page >= 1 && page <= this.totalPages) {
+          this.$router.replace({ query: { ...this.$route.query, page } });
+          this.currentPage = page;
       }
     }
   }
@@ -78,7 +80,6 @@ h1 {
 h3 {
   font-size: 0.8rem;
 }
-
 
 
 </style>
