@@ -134,4 +134,15 @@ export default {
     max-width: 30%;
     height: auto;
 }
+
+@media (max-width:768px) {
+  .grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.generoContenido {
+  width: 90%;
+}
+
+}
 </style>
