@@ -4,6 +4,7 @@
     <FeaturedCollections />
     <NuevosIngresos :products="products" />
     <BuscarGenero /> 
+    <TestimonialsSection />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import InicioSlider from '@/components/InicioSlider.vue';
 import FeaturedCollections from '@/components/FeaturedCollections.vue';
 import NuevosIngresos from '@/components/NuevosIngresos.vue';
 import BuscarGenero from '@/components/BuscarGenero.vue';
+import TestimonialsSection from '@/components/TestimonialsSection.vue';
 
 export default {
   components: {
@@ -20,6 +22,7 @@ export default {
     FeaturedCollections,
     NuevosIngresos,
     BuscarGenero,
+    TestimonialsSection,
   },
   data() {
     return {

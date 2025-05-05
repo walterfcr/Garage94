@@ -9,37 +9,37 @@
         </router-link>
 
         <router-link to="/punk-rock" class="card" data-aos="flip-right">
-          <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />
+          <img src="/icons/icon-2.png" alt="Metal Icon" class="genre-icon" />
           <h3>Punk Rock</h3>
         </router-link>
 
         <router-link to="/ska-music" class="card" data-aos="flip-left">
-          <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />
+          <img src="/icons/icon-3.png" alt="Metal Icon" class="genre-icon" />
           <h3>Ska</h3>
         </router-link>
 
         <router-link to="/rock-alternativo" class="card" data-aos="flip-right">
-          <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />
+          <img src="/icons/icon-4.png" alt="Metal Icon" class="genre-icon" />
           <h3>Alternativo</h3>
         </router-link>
 
         <router-link to="/grunge-music" class="card" data-aos="flip-left">
-          <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />
+          <img src="/icons/icon-5.png" alt="Metal Icon" class="genre-icon" />
           <h3>Grunge</h3>
         </router-link>
 
         <router-link to="/metal-music" class="card" data-aos="flip-right">
-          <img src="/icons/icon-5.png" alt="Metal Icon" class="genre-icon" />
+          <img src="/icons/icon-6.png" alt="Metal Icon" class="genre-icon" />
           <h3>Metal</h3>
         </router-link>
 
         <router-link to="/hip-hop" class="card" data-aos="flip-left">
-          <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />
+          <img src="/icons/icon-7.png" alt="Metal Icon" class="genre-icon" />
           <h3>Hip Hop</h3>
         </router-link>
 
         <router-link to="/rock-progresivo" class="card" data-aos="flip-right">
-          <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />
+          <img src="/icons/icon-8.png" alt="Metal Icon" class="genre-icon" />
           <h3>Progresivo</h3>
         </router-link>
       </div>
