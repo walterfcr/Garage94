@@ -5,6 +5,10 @@ body {
     background-color: var(--main-background-color);
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
 
   p {
     line-height: 1.6;

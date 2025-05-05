@@ -114,7 +114,20 @@ export default {
 }
 
 .card:hover img {
+  animation: pulse 0.5s ease;
   filter: grayscale(0%);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .card h3 {

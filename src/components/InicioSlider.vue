@@ -11,7 +11,7 @@ export default {
   name: 'InicioSlider',
   data() {
     return {
-      slides: ['slide1.webp', 'slide2.webp', 'slide3.webp', 'slide4.webp'],
+      slides: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'],
       currentSlideIndex: 0,
     };
   },
@@ -35,7 +35,7 @@ export default {
 
 <style>
 .inicio {
-  height: 650px;
+  height: 700px;
   width: 100%;
   /*box-shadow: inset 0 0 0 1000px rgba(11, 18, 46, 0.6);*/
   background-size: cover;
