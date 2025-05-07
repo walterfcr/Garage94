@@ -16,7 +16,7 @@
         <li><a href="/nosotros">Nosotros</a></li>
         <li class="has-submenu">
           <a href="#">Música</a>
-          <ul class="submenu">
+          <ul class="submenu"> 
             <li><router-link to="/punk-rock">Punk Rock</router-link></li> 
             <li><router-link to="/hard-core">Hardcore</router-link></li> 
             <li><router-link to="/metal-music">Metal</router-link></li> 
@@ -92,13 +92,13 @@ export default {
 
 .nav-menu a {
   text-decoration: none;
-  color: var(--color-accent);
+  color: var(--color-accent-alt);
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .nav-menu a:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-text-muted);
 }
 
 /* Submenu */

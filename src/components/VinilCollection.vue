@@ -29,6 +29,8 @@
 <script>
 import { products } from '@/data/products.js'; // Ajusta la ruta si es necesario
 
+
+
 export default {
   name: 'CatalogoHipHop',
   data() {
@@ -68,6 +70,12 @@ export default {
           this.currentPage = page;
       }
     }
+  },
+    beforeRouteLeave(to, from, next) {
+    if (to.name === 'cd-details') {
+      sessionStorage.setItem('scrollTopBeforeModal', window.scrollY);
+    }
+    next();
   }
 };
 </script>
