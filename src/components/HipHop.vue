@@ -99,17 +99,17 @@ export default {
       const width = window.innerWidth;
 
       if (width >= 1800) {
-        this.itemsPerPage = 27; // Desktop
+        this.itemsPerPage = 27; 
       } else if (width >= 1680) {
-        this.itemsPerPage = 24; // Tablet
+        this.itemsPerPage = 24; 
       } else if (width >= 1400) {
-        this.itemsPerPage = 28; // Tablet
+        this.itemsPerPage = 28;
       } else if (width >= 1280) {
-        this.itemsPerPage = 24; // Tablet
+        this.itemsPerPage = 24; 
       } else if (width >= 950) {
-        this.itemsPerPage = 20; // Tablet
+        this.itemsPerPage = 20; 
       } else {
-        this.itemsPerPage = 18; // Mobile
+        this.itemsPerPage = 18; 
       }
     },
     handleResize() {
