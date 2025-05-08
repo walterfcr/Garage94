@@ -102,14 +102,14 @@ export default {
         this.itemsPerPage = 27; // Desktop
       } else if (width >= 1680) {
         this.itemsPerPage = 24; // Tablet
-      } else if (width >= 1500) {
+      } else if (width >= 1400) {
         this.itemsPerPage = 28; // Tablet
       } else if (width >= 1280) {
         this.itemsPerPage = 24; // Tablet
       } else if (width >= 950) {
         this.itemsPerPage = 20; // Tablet
       } else {
-        this.itemsPerPage = 9; // Mobile
+        this.itemsPerPage = 18; // Mobile
       }
     },
     handleResize() {
