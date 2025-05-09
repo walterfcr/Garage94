@@ -72,11 +72,13 @@ export default {
 }
 
 .card img {
-  width: 100%;
+  width: 140px;
   height: 140px;
   object-fit: cover;
+  border-radius: 50%;
   filter: grayscale(30%);
   transition: filter 0.3s;
+  margin:30px 0 0;
 }
 
 .card:hover img {

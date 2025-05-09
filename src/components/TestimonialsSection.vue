@@ -105,7 +105,7 @@ const testimonials = [
 .testimonial-info {
   flex: 1;
 }
-
+ 
 .testimonial-text {
   font-style: italic;
   color: var(--color-text-muted);

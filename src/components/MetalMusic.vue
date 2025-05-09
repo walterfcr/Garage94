@@ -47,7 +47,7 @@ import { products } from '@/data/products.js';
 import BuscarGenero from '@/components/BuscarGenero.vue';
 
 export default {
-  name: 'CatalogoCDs',
+  name: 'CatalogoMetal',
   components: {
     BuscarGenero,
   },

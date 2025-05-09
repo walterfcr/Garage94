@@ -24,7 +24,7 @@
     </div>
   </div>
   
-</template>
+</template> 
 
 <script>
 import { products } from '@/data/products.js'; // Ajusta la ruta si es necesario

@@ -117,8 +117,4 @@ h3 {
   margin: 0.5rem 0 0;
 }
 
-button[disabled] {
-  opacity: 0.5;
-  pointer-events: none;
-}
 </style>
