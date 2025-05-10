@@ -1422,7 +1422,7 @@ export const products = [
           type: 'CD',
           itemNumber: '25869917X',
           image: '/images/alternativo/a-9.webp',
-          description: '"Monster" es el sénptimo álbum de estudio de la banda estadounidense R.E.M., lanzado el 1 de septiembre de 1994. Este álbum marcó un cambio significativo en el sonido de la banda, ya que fue más eléctrico, crudo y experimental en comparación con los discos anteriores como Automatic for the People (1992), que presentaban un sonido más suave y melódico.​',
+          description: '"Monster" es el séptimo álbum de estudio de la banda estadounidense R.E.M., lanzado el 1 de septiembre de 1994. Este álbum marcó un cambio significativo en el sonido de la banda, ya que fue más eléctrico, crudo y experimental en comparación con los discos anteriores como Automatic for the People (1992), que presentaban un sonido más suave y melódico.​',
           price:'¢14.000',
         },   
         {

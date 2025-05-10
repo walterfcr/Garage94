@@ -9,7 +9,7 @@
         class="product-card"
       >
         <router-link
-          :to="{
+          :to="{ 
             name: 'cd-details',
             params: { id: product.id },
             query: { from: $route.fullPath },
@@ -51,7 +51,8 @@ export default {
   components: {
     BuscarGenero,
   },
-  data() {
+
+    data() {
     return {
       cdProducts: [],
       currentPage: 1,
@@ -116,6 +117,7 @@ export default {
       this.setItemsPerPage();
     },
   },
+
   watch: {
     itemsPerPage() {
       this.goToPage(1); // Reset to page 1 if itemsPerPage changes

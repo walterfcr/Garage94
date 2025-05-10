@@ -3,9 +3,17 @@
     <h1>Catálogo de Ska</h1>
 
     <div class="product-list" data-aos="zoom-in">
-      <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
-        <router-link 
-          :to="{ name: 'cd-details', params: { id: product.id }, query: { from: $route.fullPath } }"
+      <div
+        v-for="product in paginatedProducts"
+        :key="product.id"
+        class="product-card"
+      >
+        <router-link
+          :to="{ 
+            name: 'cd-details',
+            params: { id: product.id },
+            query: { from: $route.fullPath },
+          }"
         >
           <img :src="product.image" :alt="product.name" />
           <h3>{{ product.name }}</h3>
@@ -16,9 +24,18 @@
 
     <!-- Pagination Controls -->
     <div class="pagination">
-      <button @click="goToPage(currentPage - 1)" :disabled="currentPage === 1">Anterior</button>
+      <button @click="goToPage(currentPage - 1)" :disabled="currentPage === 1">
+        Anterior
+      </button>
+
       <span>Página {{ currentPage }} de {{ totalPages }}</span>
-      <button @click="goToPage(currentPage + 1)" :disabled="currentPage === totalPages">Siguiente</button>
+
+      <button
+        @click="goToPage(currentPage + 1)"
+        :disabled="currentPage === totalPages"
+      >
+        Siguiente
+      </button>
     </div>
 
     <BuscarGenero />
@@ -38,7 +55,7 @@ export default {
     return {
       cdProducts: [],
       currentPage: 1,
-      itemsPerPage: 18,
+      itemsPerPage: 27,
     };
   },
   created() {
