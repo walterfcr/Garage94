@@ -34,9 +34,18 @@ const router = createRouter({
 
   // ✅ Scroll to top on route change
   /* eslint-disable */
-  scrollBehavior(/*_to, _from, _savedPosition*/) {
+scrollBehavior(to, from, savedPosition) {
+  if (to.hash) {
+    return {
+      el: to.hash,
+      behavior: 'smooth',
+    };
+  } else if (savedPosition) {
+    return savedPosition;
+  } else {
     return { top: 0 };
-  },
+  }
+},
 });
 
 export default router;

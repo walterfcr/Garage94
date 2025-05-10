@@ -2,6 +2,7 @@
 
 <template>
   <section class="collections-section">
+    <div class="collection-Contenido">
     <h2 class="title" data-aos="fade-up">Colecciones Destacadas</h2>
     <div class="grid">
       <div
@@ -11,11 +12,14 @@
         :data-aos="'fade-up'"
         :data-aos-delay="index * 100"
       >
-        <router-link :to="collection.link">
-          <img :src="collection.image" :alt="collection.title" />
-          <h3>{{ collection.title }}</h3>
-        </router-link>
+          <router-link :to="{ path: '/', hash: collection.hash }">
+            <img :src="collection.image" :alt="collection.title" />
+            <h3>{{ collection.title }}</h3>
+          </router-link>
+
+
       </div>
+    </div>
     </div>
   </section>
 </template>
@@ -39,6 +43,12 @@ export default {
   background-color: #121212;
   color: #f5f5f5;
   text-align: center;
+
+}
+
+.collection-Contenido{
+  width: 70%;
+  margin: 0 auto;
 }
 
 .title {
@@ -52,7 +62,7 @@ export default {
 
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   padding: 0 1rem;
 }
@@ -77,12 +87,15 @@ export default {
   object-fit: cover;
   border-radius: 50%;
   filter: grayscale(30%);
-  transition: filter 0.3s;
-  margin:30px 0 0;
+  transition: filter 0.3s, transform 0.3s;
+  margin: 30px 0 0;
+  border: 6px solid var(--color-border);
 }
 
 .card:hover img {
   filter: grayscale(0%);
+  transform: scale(1.05); /* Aumenta el tamaño de la imagen en un 5% */
+  border: 6px solid var(--color-border-light);
 }
 
 .card h3 {
@@ -90,6 +103,5 @@ export default {
   font-size: 1.1rem;
   font-weight: bold;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
 }
 </style>

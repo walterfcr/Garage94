@@ -1,8 +1,6 @@
 export default [
-    { title: 'Vinyls', image: '/images/categories/vinil.jpg', link: '/shop/vinyls' },
-    { title: 'CDs', image: '/images/categories/cds.jpg', link: '/shop/cds' },
-    { title: 'Merch', image: '/images/categories/cds.jpg', link: '/shop/merch' },
-    { title: 'New Arrivals', image: '/images/categories/new.jpg', link: '/shop/new' },
-    { title: 'Staff Picks', image: '/images/categories/cds.jpg', link: '/shop/staff' },
-    { title: 'Limited Editions', image: '/images/categories/cds.jpg', link: '/shop/limited' },
-  ];
+  { title: 'Vinilos', image: '/images/categories/vinil.jpg', hash: '#vinilos' },
+  { title: 'CDs', image: '/images/categories/cds.jpg', hash: '#cds' },
+  { title: 'Ediciones Limitadas', image: '/images/categories/special.jpg', hash: '#ediciones-limitadas' },
+  { title: 'Mercadería', image: '/images/categories/merch.jpg', hash: '#mercaderia' },
+];

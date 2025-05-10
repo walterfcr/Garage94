@@ -3,9 +3,13 @@
     <InicioSlider />
     <FeaturedCollections />
     <NuevosIngresos :products="products" />
-    <BuscarGenero /> 
+    <section id="cds">
+    <BuscarGenero />
+    </section>
     <TestimonialsSection />
+    <section id="vinilos">
     <VinilCollection />
+    </section>
   </div>
 </template>
 
