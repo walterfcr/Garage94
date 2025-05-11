@@ -1,7 +1,7 @@
 <template>
   <section class="collections-section">
     <div class="generoContenido">
-      <h2 class="title">Buscar por Género</h2>
+      <h2 class="title">Buscar CD'S por Género</h2>
       <div class="grid">
         <router-link to="/hard-core" class="card" data-aos="flip-left">
           <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />

@@ -61,7 +61,7 @@ export default {
     },
   },
 };
-</script>
+</script> 
 
 <style scoped>
 .header {
@@ -69,7 +69,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px;
-  background-color: var(--color-background-dark);
+  background-color: var(--color-background-light);
   border-bottom: 3px solid var(--color-border);
   color: var(--color-text-light);
 }
@@ -92,13 +92,13 @@ export default {
 
 .nav-menu a {
   text-decoration: none;
-  color: var(--color-accent-alt);
+  color: var(--color-text-dark);
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .nav-menu a:hover {
-  color: var(--color-text-muted);
+  color: var(--color-text-dark-hover);
 }
 
 /* Submenu */
@@ -116,6 +116,10 @@ export default {
 
 .has-submenu:hover .submenu {
   display: block;
+}
+
+.has-submenu .submenu a{
+color: var(--color-text-light);
 }
 
 .submenu li {

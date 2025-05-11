@@ -6,6 +6,9 @@
     <section id="cds">
     <BuscarGenero />
     </section>
+    <section id="merca">
+    <MercaSlider />
+    </section>
     <TestimonialsSection />
     <section id="vinilos">
     <VinilCollection />
@@ -21,6 +24,7 @@ import NuevosIngresos from '@/components/NuevosIngresos.vue';
 import BuscarGenero from '@/components/BuscarGenero.vue';
 import TestimonialsSection from '@/components/TestimonialsSection.vue';
 import VinilCollection from '@/components/VinilCollection.vue';
+import MercaSlider from '@/components/MercaSlider.vue';
 
 export default {
   components: {
@@ -30,6 +34,7 @@ export default {
     BuscarGenero,
     TestimonialsSection,
     VinilCollection,
+    MercaSlider,
   },
   data() {
     return {
