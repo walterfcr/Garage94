@@ -1,6 +1,7 @@
 <template>
   <div>
     <InicioSlider />
+    <main>
     <FeaturedCollections />
     <NuevosIngresos :products="products" />
     <section id="cds">
@@ -9,10 +10,16 @@
     <section id="merca">
     <MercaSlider />
     </section>
-    <TestimonialsSection />
+    <section id="especiales">
+    <EdicionesEspeciales />
+    </section>
     <section id="vinilos">
     <VinilCollection />
     </section>
+    <TestimonialsSection />
+    </main>
+    <AppFooter />
+    
   </div>
 </template>
 
@@ -25,6 +32,8 @@ import BuscarGenero from '@/components/BuscarGenero.vue';
 import TestimonialsSection from '@/components/TestimonialsSection.vue';
 import VinilCollection from '@/components/VinilCollection.vue';
 import MercaSlider from '@/components/MercaSlider.vue';
+import EdicionesEspeciales from '@/components/EdicionesEspeciales.vue';
+import AppFooter from '@/components/AppFooter.vue';
 
 export default {
   components: {
@@ -35,6 +44,8 @@ export default {
     TestimonialsSection,
     VinilCollection,
     MercaSlider,
+    EdicionesEspeciales,
+    AppFooter,
   },
   data() {
     return {

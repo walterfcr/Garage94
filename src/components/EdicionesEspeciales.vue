@@ -1,9 +1,15 @@
 <template>
-  <div class="contenido-wrap">
-    <h1>Colección de Vinilos</h1>
+  <div class="wrap-especiales">
+    <h1>Ediciones Especiales</h1>
 
-    <div class="product-list" data-aos="zoom-in">
-      <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
+    <div class="product-list">
+      <div 
+        v-for="(product, index) in paginatedProducts" 
+        :key="product.id" 
+        class="product-card"
+        data-aos="fade-up"
+        :data-aos-delay="index * 100"
+      >
         <router-link 
           :to="{ name: 'cd-details', params: { id: product.id }, query: { from: $route.fullPath } }"
         >
@@ -13,23 +19,11 @@
         </router-link>
       </div>
     </div>
-
-    <!-- Pagination Controls --> 
-    <div class="pagination">
-      <button @click="goToPage(currentPage - 1)" :disabled="currentPage === 1">Anterior</button>
-
-      <span>Página {{ currentPage }} de {{ totalPages }}</span>
-
-      <button @click="goToPage(currentPage + 1)" :disabled="currentPage === totalPages">Siguiente</button>
-    </div>
   </div>
-  
-</template> 
+</template>
 
 <script>
-import { products } from '@/data/products.js'; // Ajusta la ruta si es necesario
-
-
+import { products } from '@/data/products.js';
 
 export default {
   name: 'CatalogoHipHop',
@@ -43,9 +37,9 @@ export default {
   created() {
     const page = parseInt(this.$route.query.page, 10);
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
-    
+
     this.cdProducts = products
-      .filter(item => item.type === 'Vinil') // solo vinilos
+      .filter(item => item.type === 'Box-Set')
       .map(item => ({
         id: item.id,
         name: item.name,
@@ -65,13 +59,13 @@ export default {
   },
   methods: {
     goToPage(page) {
-        if (page >= 1 && page <= this.totalPages) {
-          this.$router.replace({ query: { ...this.$route.query, page } });
-          this.currentPage = page;
+      if (page >= 1 && page <= this.totalPages) {
+        this.$router.replace({ query: { ...this.$route.query, page } });
+        this.currentPage = page;
       }
     }
   },
-    beforeRouteLeave(to, from, next) {
+  beforeRouteLeave(to, from, next) {
     if (to.name === 'cd-details') {
       sessionStorage.setItem('scrollTopBeforeModal', window.scrollY);
     }
@@ -80,6 +74,7 @@ export default {
 };
 </script>
 
+
 <style scoped>
 h1 {
   text-align: center;
@@ -87,6 +82,12 @@ h1 {
 
 h3 {
   font-size: 0.8rem;
+}
+
+.wrap-especiales {
+  background: var(--color-surface);
+  margin:6rem 0;
+  padding: 50px 0 ;
 }
 
 

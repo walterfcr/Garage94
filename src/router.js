@@ -25,6 +25,7 @@ const routes = [
   { path: '/rock-alternativo', name: 'rock-alternativo', component: RockAlternativo },
   { path: '/rock-progresivo', name: 'rock-progresivo', component: RockProgresivo },
   { path: '/vinil-collection', name: 'vinil-collection', component: VinilCollection },
+  { path: '/ediciones-especiales', name: 'ediciones-especiales', component: VinilCollection },
   { path: '/cd/:id', name: 'cd-details', component: () => import('./views/CdDetails.vue') },
 ];
 

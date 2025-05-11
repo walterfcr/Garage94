@@ -28,7 +28,7 @@
           </ul>
         </li>
         <li class="has-submenu">
-          <a href="#">Ropa</a>
+          <a href="#">Mercadería</a>
           <ul class="submenu">
             <li><a href="/ropa/shirts">Shirts</a></li>
             <li><a href="/ropa/shoes">Shoes</a></li>

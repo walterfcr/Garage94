@@ -39,17 +39,20 @@
     </div>
 
     <BuscarGenero />
+    <AppFooter />
   </div>
 </template>
 
 <script>
 import { products } from '@/data/products.js';
 import BuscarGenero from '@/components/BuscarGenero.vue';
+import AppFooter from '@/components/AppFooter.vue';
 
 export default {
   name: 'CatalogoAlternativo',
   components: {
     BuscarGenero,
+    AppFooter,
   },
   data() {
     return {

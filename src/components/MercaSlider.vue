@@ -97,8 +97,9 @@ export default {
   object-fit: cover;
   filter: grayscale(30%);
   transition: filter 0.3s, transform 0.3s;
-  margin: 30px 0 0;
+  margin: 30px 20px 0;
   border: 6px solid var(--color-border);
+
 }
 
 .merch-card:hover img {

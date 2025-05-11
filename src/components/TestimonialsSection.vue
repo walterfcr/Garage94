@@ -56,7 +56,7 @@ const testimonials = [
 
 <style scoped>
 .testimonials {
-  background-color: var(--color-surface);
+  background-color: var(--color-background-dark);
   color: var(--color-text-light);
   padding: 50px 20px;
   text-align: center;
@@ -83,7 +83,7 @@ const testimonials = [
 }
 
 .testimonial-card {
-  background-color: var(--color-card-bg);
+  background-color: var(--color-card-bg); 
   border: 1px solid var(--color-border-light);
   border-radius: 12px;
   padding: 20px;

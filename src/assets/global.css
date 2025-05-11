@@ -57,7 +57,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 6rem 0; /* moved margin-bottom here */
   gap: 10px;
 }
 
@@ -69,7 +69,6 @@ body {
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.2s ease, color 0.2s ease;
-  margin-bottom: 6rem;
 }
 
 .pagination button:hover {
@@ -88,7 +87,7 @@ body {
   gap: 1.5rem;
   width: 90%;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem 0 0;
 }
 
 /* Product Card */
@@ -141,7 +140,7 @@ body {
 }
 
 .contenido-wrap {
-  margin:6rem 0;
+  margin:6rem 0 0;
 }
   
 
