@@ -10,6 +10,7 @@
     :loop="true"
     :autoplay="{ delay: 2500, disableOnInteraction: false }"
     :breakpoints="{
+        480: { slidesPerView: 1 },
         640: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         1024: { slidesPerView: 4 }
@@ -38,10 +39,10 @@ export default {
       merch: [
         { id: 1, name: 'Camisetas Punk / Hardcore / Ska', image: '/images/merca/merch-1.jpg' },
         { id: 2, name: 'Camisetas Metal / Progresivo', image: '/images/merca/merch-2.jpg' },
-        { id: 3, name: 'Camisetas Grunge / Alternativo', image: '/images/merca/merch-3.jpg' },
-        { id: 4, name: 'Ropa de Mujer', image: '/images/merca/merch-4.jpg' },
-        { id: 5, name: 'Accesorios', image: '/images/merch/merch-4.webp' },
-        { id: 6, name: 'Artículos Coleccionables', image: '/images/merch/merch-5.webp' },
+        { id: 3, name: 'Accesorios', image: '/images/merca/merch-5.jpg' },
+        { id: 4, name: 'Camisetas Grunge / Alternativo', image: '/images/merca/merch-3.jpg' },
+        { id: 5, name: 'Ropa de Mujer', image: '/images/merca/merch-4.jpg' },
+        { id: 6, name: 'Artículos Coleccionables', image: '/images/merca/merch-6.jpg' },
       ]
     };
   },
