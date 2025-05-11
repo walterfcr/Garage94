@@ -1,6 +1,6 @@
 <!-- src/components/MerchSlider.vue -->
 <template>
-  <section id="merch-slider" data-aos="fade-up">
+  <section id="merch-slider">
     <div class="merch-wrap">
     <h2 class="section-title">Mercadería Oficial</h2>
     <Swiper
@@ -10,14 +10,13 @@
     :loop="true"
     :autoplay="{ delay: 2500, disableOnInteraction: false }"
     :breakpoints="{
-        480: { slidesPerView: 1 },
         640: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         1024: { slidesPerView: 4 }
     }"
     >
  <SwiperSlide v-for="item in merch" :key="item.id">
-        <div class="merch-card">
+        <div class="merch-card" data-aos="fade-up">
           <img :src="item.image" :alt="item.name" />
           <h3>{{ item.name }}</h3>
         </div>
@@ -55,6 +54,7 @@ export default {
 </script>
 
 <style scoped>
+
 .section-title {
   font-size: 2.2rem;
   padding:50px 0 0;
@@ -72,14 +72,19 @@ export default {
 }
 
 .merch-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   background: #1f1f1f;
   border: 2px solid #ff005580;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  text-align: center;
   padding: 1rem;
+  margin: 20px 15px;
+  text-align: center;
 }
 
 .merch-card:hover {
@@ -87,7 +92,7 @@ export default {
   box-shadow: 0 0 15px #ff0055aa;
 }
 
-.merch-card img {
+.merch-card img { 
   max-width: 100%;
   object-fit: cover;
   filter: grayscale(30%);
@@ -107,11 +112,16 @@ export default {
   font-size: 1.1rem;
   font-weight: bold;
   color: #fff;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 
 .merch-card p {
   color: #ff0055;
   margin-bottom: 1rem;
 }
+
 
 </style>
