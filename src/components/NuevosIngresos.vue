@@ -30,13 +30,14 @@ h1 {
   text-align: center;
   font-size: 2.2rem;
   margin: 3rem 0 1rem;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Nova Square', sans-serif;
   letter-spacing: 2px;
-  color: #ff0055;
+  text-transform: uppercase;
+  color:var(----color-text-dark);
 }
 
 .Nuevos-container{
-  margin:10rem 0;
+ padding: 50px 0 100px; 
 }
 
 </style>

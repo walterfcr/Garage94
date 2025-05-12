@@ -56,19 +56,13 @@ export default {
 <style scoped>
 
 .section-title {
+  text-align: center;
   font-size: 2.2rem;
-  padding:50px 0 0;
-  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 2.5rem;
+  font-family: 'Nova Square', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-align: center;
-  color: var(--color-accent);
-}
-
-.merch-wrap {
-    padding:0 0 100px;
-    margin:0 auto;
-    width: 90%;
+  color:var(----color-text-dark);
 }
 
 .merch-card {
@@ -122,6 +116,12 @@ export default {
 .merch-card p {
   color: #ff0055;
   margin-bottom: 1rem;
+}
+
+.merch-wrap {
+  margin:0 auto;
+  padding: 50px 0 100px; 
+  width: 90%;
 }
 
 

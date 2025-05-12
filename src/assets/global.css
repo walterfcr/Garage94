@@ -21,7 +21,8 @@ body {
   h1 {
     color: var(--color-accent);
     font-size: 2.2rem;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Nova Square', sans-serif;
+    text-transform: uppercase;
   }
 
 
@@ -57,7 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 6rem 0; /* moved margin-bottom here */
+  margin: 6rem 0 ; /* moved margin-bottom here */
   gap: 10px;
 }
 
@@ -139,8 +140,6 @@ body {
   color: inherit;
 }
 
-.contenido-wrap {
-  margin:6rem 0 0;
-}
+
   
 

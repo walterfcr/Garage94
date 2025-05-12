@@ -68,14 +68,14 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
+  padding: 10px 100px;
   background-color: var(--color-background-light);
   border-bottom: 3px solid var(--color-border);
   color: var(--color-text-light);
 }
 
 .logo img {
-  height: 50px;
+  height: 75px;
 }
 
 .nav-menu ul {
@@ -228,6 +228,11 @@ color: var(--color-text-light);
   .has-submenu:hover .submenu {
     display: block;
   }
+
+  .header {
+  padding: 10px 30px;
+
+}
 }
 
 @media screen and (min-width: 769px) {

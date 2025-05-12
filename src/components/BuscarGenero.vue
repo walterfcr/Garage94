@@ -64,8 +64,8 @@ export default {
 <style scoped>
 
 .collections-section {
-  padding: 3rem 2rem;
-  margin-top: 2rem;
+  margin:0 auto;
+  padding: 50px 0 100px; 
   background-color: #121212;
   color: #f5f5f5;
   text-align: center;
@@ -74,10 +74,10 @@ export default {
 .title {
   font-size: 2.2rem;
   margin-bottom: 2.5rem;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Nova Square', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #ff0055;
+  color: var(--color-accent);
 }
 
 .grid {

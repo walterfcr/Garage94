@@ -78,6 +78,12 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  font-family: 'Nova Square', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
 h3 {
@@ -86,8 +92,8 @@ h3 {
 
 .wrap-especiales {
   background: var(--color-surface);
-  margin:6rem 0;
-  padding: 50px 0 ;
+  margin:0 ;
+  padding: 50px 0 100px; 
 }
 
 

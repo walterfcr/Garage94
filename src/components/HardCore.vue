@@ -130,6 +130,7 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
+  color:var(----color-text-dark);
 }
 
 h3 {
@@ -141,4 +142,10 @@ button[disabled] {
   opacity: 0.5;
   pointer-events: none;
 }
+
+.contenido-wrap {
+  margin:0;
+  padding: 50px 0 0; 
+}
+
 </style>

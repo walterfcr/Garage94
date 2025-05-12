@@ -130,11 +130,17 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
+  color:var(----color-text-dark);
 }
 
 h3 {
   font-size: 0.8rem;
   margin: 0.5rem 0 0;
+}
+
+.contenido-wrap {
+  margin:0;
+  padding: 50px 0 0; 
 }
 
 </style>
