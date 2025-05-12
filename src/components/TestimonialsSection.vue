@@ -66,7 +66,7 @@ const testimonials = [
 .testimonials {
   background-color: var(--color-background-dark);
   color: var(--color-text-light);
-  padding: 50px 0 100px; 
+  padding: 50px 50px 100px; 
   text-align: center;
 }
 
