@@ -146,7 +146,6 @@ button[disabled] {
 .contenido-wrap {
   margin:0;
   padding: 50px 0 0; 
-
 }
 
 </style>
