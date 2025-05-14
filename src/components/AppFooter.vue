@@ -71,6 +71,14 @@ export default {
 
 .footer-logo img {
   max-width: 120px;
+  margin:0 auto;
+  display: block;
+}
+
+@media (min-width:769px){
+  .footer-logo {
+    display: none;
+  }
 }
 
 .footer-links {

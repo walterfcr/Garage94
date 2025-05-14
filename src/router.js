@@ -11,9 +11,12 @@ import GrungeMusic from './components/GrungeMusic.vue';
 import RockAlternativo from './components/RockAlternativo.vue';
 import RockProgresivo from './components/RockProgresivo.vue';
 import VinilCollection from './components/VinilCollection.vue';
+import ContactForm from './components/ContactForm.vue';
+import AppNosotros from '@/components/AppNosotros.vue';
 
 const routes = [
   { path: '/', name: 'home', component: CatalogoCDs },
+  { path: '/nosotros', name: 'Nosotros', component: AppNosotros,},
   { path: '/ropa', name: 'ropa', component: CatalogoRopa },
   { path: '/accesorios', name: 'accesorios', component: CatalogoAccesorios },
   { path: '/punk-rock', name: 'punk-rock', component: PunkRock },
@@ -26,6 +29,7 @@ const routes = [
   { path: '/rock-progresivo', name: 'rock-progresivo', component: RockProgresivo },
   { path: '/vinil-collection', name: 'vinil-collection', component: VinilCollection },
   { path: '/ediciones-especiales', name: 'ediciones-especiales', component: VinilCollection },
+  { path: '/contacto', name: 'Contacto', component: ContactForm },
   { path: '/cd/:id', name: 'cd-details', component: () => import('./views/CdDetails.vue') },
 ];
 
