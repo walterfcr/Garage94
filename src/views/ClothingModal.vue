@@ -1,28 +1,23 @@
 <template>
   <div v-if="product">
-    <!-- Modal Overlay -->
     <div class="modal-overlay" @click.self="closeModal">
-      <!-- Modal Content -->
-      <div class="modal-content" data-aos="zoom-in"> 
+      <div class="modal-content" data-aos="zoom-in">
         <div class="product-details">
           <div class="column">
             <img :src="product.image" :alt="product.name" />
           </div>
 
           <div class="column">
-            <h2>Album: {{ product.name }}</h2>
-            <p><strong>Artista:</strong> {{ product.band }}</p>
-            <p><strong>Género:</strong> {{ product.genreDescription }}</p>
-            <p><strong>Disquera:</strong> {{ product.label }}</p>
-            <p><strong>Numero de discos:</strong> {{ product.numDiscs }}</p>
-            <p><strong>Fecha de Lanzamiento:</strong> {{ product.releaseDate }}</p>
-            <p><strong>Tipo de Producto:</strong> {{ product.type }}</p>
+            <h2>Producto: {{ product.name }}</h2>
+            <p><strong>Talla:</strong> {{ product.size }}</p>
+            <p><strong>Color:</strong> {{ product.color }}</p>
+            <p><strong>Precio:</strong> {{ product.price }}</p>
             <p><strong>Item #:</strong> {{ product.itemNumber }}</p>
           </div>
 
           <div class="column">
-            <h3>Descripción del álbum</h3>
-            <p>{{ product.description }}</p>
+            <h3>Descripción</h3>
+            <p>{{ product.description }}</p> 
           </div>
         </div>
 
@@ -30,10 +25,7 @@
       </div>
     </div>
   </div>
-
-  <div v-else>
-    <p>Loading...</p>
-  </div>
+  <div v-else><p>Loading...</p></div>
 </template>
 
 <script>
@@ -43,33 +35,20 @@ export default {
   data() {
     return {
       product: null,
-      previousRoute: '/', // NEW: Save where user came from
+      previousRoute: '/',
     };
   },
   created() {
     const productId = this.$route.params.id;
-    this.loadProduct(productId);
-
-    // Save previous page from route query if available
+    this.product = products.find(p => p.id === parseInt(productId) && p.type === 'Clothing');
     this.previousRoute = this.$route.query.from || '/';
   },
-    mounted() {
-    const scroll = sessionStorage.getItem('scrollTopBeforeModal');
-    if (scroll) {
-      window.scrollTo({ top: parseInt(scroll), behavior: 'auto' });
-      sessionStorage.removeItem('scrollTopBeforeModal');
-    }
-  },
   methods: {
-    loadProduct(id) {
-      this.product = products.find(product => product.id === parseInt(id));
-    },
     closeModal() {
-      this.$router.push(this.previousRoute); // Go back where you came from!
+      this.$router.push(this.previousRoute);
     },
   },
 };
-
 </script>
 
 <style scoped>
@@ -167,5 +146,3 @@ export default {
 }
 
 </style>
-
-

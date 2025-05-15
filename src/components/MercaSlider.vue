@@ -15,12 +15,17 @@
         1024: { slidesPerView: 4 }
     }"
     >
- <SwiperSlide v-for="item in merch" :key="item.id">
-        <div class="merch-card" data-aos="fade-up">
-          <img :src="item.image" :alt="item.name" />
-          <h3>{{ item.name }}</h3>
-        </div>
-      </SwiperSlide>
+<SwiperSlide v-for="item in merch" :key="item.id">
+  <component
+    :is="item.link ? 'router-link' : 'div'"
+    :to="item.link"
+    class="merch-card"
+    data-aos="fade-up"
+  >
+    <img :src="item.image" :alt="item.name" />
+    <h3>{{ item.name }}</h3>
+  </component>
+</SwiperSlide>
     </Swiper>
     </div> 
   </section>
@@ -36,7 +41,7 @@ export default {
   data() {
     return {
       merch: [
-        { id: 1, name: 'Camisetas Punk / Hardcore / Ska', image: '/images/merca/merch-1.jpg' },
+        { id: 1, name: 'Camisetas Punk / Hardcore / Ska', image: '/images/merca/merch-1.jpg', link: '/ropa-punk' },
         { id: 2, name: 'Camisetas Metal / Progresivo', image: '/images/merca/merch-2.jpg' },
         { id: 3, name: 'Accesorios', image: '/images/merca/merch-5.jpg' },
         { id: 4, name: 'Camisetas Grunge / Alternativo', image: '/images/merca/merch-3.jpg' },

@@ -30,7 +30,7 @@
         <li class="has-submenu">
           <a href="#">Mercadería</a>
           <ul class="submenu">
-            <li><a href="/ropa/shirts">Shirts</a></li>
+            <li><router-link to="/ropa-punk">Camisetas Punk</router-link></li> 
             <li><a href="/ropa/shoes">Shoes</a></li>
             <li><a href="/ropa/accesorios">Accesorios</a></li>
           </ul>
