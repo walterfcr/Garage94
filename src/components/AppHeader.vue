@@ -17,22 +17,22 @@
         <li class="has-submenu">
           <a href="#">Música</a>
           <ul class="submenu">
-            <li><router-link to="/punk-rock">Punk Rock</router-link></li>
-            <li><router-link to="/hard-core">Hardcore</router-link></li>
-            <li><router-link to="/metal-music">Metal</router-link></li>
-            <li><router-link to="/grunge-music">Grunge</router-link></li>
-            <li><router-link to="/rock-alternativo">Rock Alternativo</router-link></li>
-            <li><router-link to="/ska-music">Ska</router-link></li>
-            <li><router-link to="/hip-hop">Hip Hop</router-link></li>
-            <li><router-link to="/rock-progresivo">Rock Progresivo</router-link></li>
+            <li><router-link to="/punk-rock" @click="closeMenu">Punk Rock</router-link></li>
+            <li><router-link to="/hard-core" @click="closeMenu">Hardcore</router-link></li>
+            <li><router-link to="/metal-music" @click="closeMenu">Metal</router-link></li>
+            <li><router-link to="/grunge-music" @click="closeMenu">Grunge</router-link></li>
+            <li><router-link to="/rock-alternativo" @click="closeMenu">Rock Alternativo</router-link></li>
+            <li><router-link to="/ska-music" @click="closeMenu">Ska</router-link></li>
+            <li><router-link to="/hip-hop" @click="closeMenu">Hip Hop</router-link></li>
+            <li><router-link to="/rock-progresivo" @click="closeMenu">Rock Progresivo</router-link></li>
           </ul>
         </li>
         <li class="has-submenu">
           <a href="#">Mercadería</a>
           <ul class="submenu">
-            <li><router-link to="/ropa-punk">Camisetas Punk</router-link></li>
-            <li><router-link to="/ropa-metal">Camisetas Metal</router-link></li>
-            <li><router-link to="/ropa-grunge">Camisetas Grunge</router-link></li>
+            <li><router-link to="/ropa-punk" @click="closeMenu">Camisetas Punk</router-link></li>
+            <li><router-link to="/ropa-metal" @click="closeMenu">Camisetas Metal</router-link></li>
+            <li><router-link to="/ropa-grunge" @click="closeMenu">Camisetas Grunge</router-link></li>
           </ul>
         </li>
         <li><a href="/contacto">Contacto</a></li>
@@ -58,6 +58,9 @@ export default {
   methods: {
     toggleMenu() {
       this.menuActive = !this.menuActive;
+    },
+    closeMenu() {
+      this.menuActive = false;
     },
   },
 };
