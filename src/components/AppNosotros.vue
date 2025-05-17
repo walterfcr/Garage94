@@ -1,38 +1,15 @@
 <template>
-  <div class="nosotros-wrap" data-aos="fade-up">
-    <div class="nosotros-content">
-      <h2><span class="icon">🎸</span> Sobre Nosotros</h2>
-
-      <p class="intro">
-        Somos más que una tienda: somos una <strong>comunidad musical alternativa</strong>.
-      </p>
-
-      <div class="section">
-        <h3>🎶 Nuestra música</h3>
-        <p>
-          Nos especializamos en <span class="highlight">punk</span>, <span class="highlight">grunge</span>, <span class="highlight">metal</span>, 
-          <span class="highlight">ska</span>, <span class="highlight">hardcore</span>, <span class="highlight">hip hop</span> y más.
-          En formatos físicos como <strong>vinilos</strong> y <strong>CDs</strong>.
-        </p>
+  <div>
+    <!-- Hero Section with Rotating Text and Background -->
+    <section class="nosotros-hero" :style="{ backgroundImage: `url('/images/nosotros.jpg')` }">
+      <div class="hero-text">
+        <h1>{{ currentPhrase }}</h1>
+        <p>Es un refugio para quienes crecieron entre gritos, guitarras y rebeldía.</p>
       </div>
+    </section>
 
-      <div class="section">
-        <h3>🛍️ Mucho más que música</h3>
-        <p>
-          Descubre <strong>ropa</strong>, <strong>coleccionables</strong> y <strong>merch oficial</strong> de tus bandas favoritas.
-          Todo curado con pasión por la escena independiente.
-        </p>
-      </div>
+    
 
-      <div class="section">
-        <h3>🔥 Nuestro objetivo</h3>
-        <p>
-          Apoyar artistas reales y mantener viva la esencia del <em>underground</em>. Aquí, cada producto tiene historia y actitud.
-        </p>
-      </div>
-
-    <!-- <router-link to="/catalogo" class="cta-button">Explorar Catálogo</router-link> -->
-    </div>
     <TestimonialsSection />
     <AppFooter />
   </div>
@@ -43,16 +20,87 @@ import TestimonialsSection from '@/components/TestimonialsSection.vue';
 import AppFooter from '@/components/AppFooter.vue';
 
 export default {
-    components: {
+  name: 'AppNosotros',
+  components: {
     TestimonialsSection,
     AppFooter,
   },
-
-  name: 'AppNosotros',
+  data() {
+    return {
+      phrases: [
+        'Esto no es solo una tienda.',
+        'Es un refugio de rebeldía sonora.',
+        'Aquí se escuchan los gritos que formaron generaciones.',
+        'Vinilos. Gritos. Historia. Todo en un solo lugar.',
+      ],
+      currentIndex: 0,
+      intervalId: null,
+    };
+  },
+  computed: {
+    currentPhrase() {
+      return this.phrases[this.currentIndex];
+    },
+  },
+  mounted() {
+    this.intervalId = setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.phrases.length;
+    }, 4000);
+  },
+  beforeUnmount() {
+    clearInterval(this.intervalId);
+  },
 };
 </script>
 
 <style scoped>
+/* Hero Section */
+.nosotros-hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  color: #fff;
+  max-width: 700px;
+  box-shadow: 0 0 30px rgba(255, 0, 85, 0.4);
+  border-left: 4px solid #ff0055;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-family: 'Nova Square', sans-serif;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Content Section */
 .nosotros-wrap {
   margin: 100px 0 0;
 }
@@ -68,12 +116,11 @@ export default {
   box-shadow: 0 0 20px rgba(255, 0, 85, 0.25);
 }
 
-@media (max-width:768px){
-.nosotros-content {
-    width:90%;
+@media (max-width: 768px) {
+  .nosotros-content {
+    width: 90%;
   }
 }
-
 
 .nosotros-content h2 {
   font-family: 'Nova Square', sans-serif;
@@ -117,21 +164,5 @@ export default {
 .highlight {
   color: var(--color-accent);
   font-weight: bold;
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 24px;
-  background-color: var(--color-button-bg);
-  color: var(--color-text-light);
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  text-align: center;
-}
-
-.cta-button:hover {
-  background-color: var(--color-button-hover);
 }
 </style>

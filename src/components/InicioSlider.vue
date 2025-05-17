@@ -4,7 +4,7 @@
     :style="{ backgroundImage: `url('/images/${currentSlide}')` }"
   >
   <div class="texto-slider">
-      <h1>Tu tienda. Tu playlist. Tu identidad.</h1>
+      <h1>TU TIENDA. TU PLAYLIST. TU IDENTIDAD</h1>
       <p>CDs, vinilos y ropa de culto para quienes crecieron al margen.</p>
     </div>
   </div>
@@ -59,6 +59,7 @@ export default {
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
+  box-shadow: 0 0 30px rgba(255, 0, 85, 0.4);
 }
 
 .texto-slider h1 {
@@ -71,28 +72,6 @@ export default {
 .texto-slider p {
   font-size: 1.1rem;
   opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-  .texto-slider {
-    position: static;
-    transform: none;
-    padding: 1.5rem;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    max-width: 100%;
-    border-left: none;
-    border-radius: 0;
-  }
-
-  .texto-slider h1 {
-    font-size: 1.8rem;
-  }
-
-  .texto-slider p {
-    font-size: 1rem;
-  }
 }
 
 </style>
