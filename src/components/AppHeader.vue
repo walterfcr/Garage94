@@ -31,6 +31,8 @@
           <a href="#">Mercadería</a>
           <ul class="submenu">
             <li><router-link to="/ropa-punk">Camisetas Punk</router-link></li> 
+            <li><router-link to="/ropa-metal">Camisetas Metal</router-link></li> 
+            <li><router-link to="/ropa-grunge">Camisetas Grunge</router-link></li> 
             <li><a href="/ropa/shoes">Shoes</a></li>
             <li><a href="/ropa/accesorios">Accesorios</a></li>
           </ul>

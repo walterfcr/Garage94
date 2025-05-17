@@ -1,6 +1,6 @@
 <template>
   <div class="contenido-wrap">
-    <h1>Catálogo de Camisetas Punk Rock</h1>
+    <h1>Camisetas Grunge / Alternativo</h1>
 
     <div class="product-list" data-aos="zoom-in">
       <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
@@ -31,7 +31,7 @@ import MercaSlider from '@/components/MercaSlider.vue';
 import AppFooter from '@/components/AppFooter.vue';
 
 export default {
-  name: 'CatalogoPunkRock',
+  name: 'RopaGrunge',
   components: {
     MercaSlider,
     AppFooter,
@@ -48,7 +48,7 @@ export default {
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
 
     this.cdProducts = products
-      .filter(item => item.category === 'Punk')
+      .filter(item => item.category === 'Grunge')
       .map(item => ({
         id: item.id,
         name: item.name,
