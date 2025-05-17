@@ -6,35 +6,33 @@
 
     <!-- Hamburger menu icon for mobile -->
     <button class="hamburger" @click="toggleMenu" aria-label="Toggle menu">
-      &#9776;
+      ☰
     </button>
 
     <!-- Navigation menu -->
-    <nav class="nav-menu" :class="{'active': menuActive}">
+    <nav class="nav-menu" :class="{ active: menuActive }">
       <ul>
         <li><a href="/">Inicio</a></li>
         <li><a href="/nosotros">Nosotros</a></li>
         <li class="has-submenu">
           <a href="#">Música</a>
-          <ul class="submenu"> 
-            <li><router-link to="/punk-rock">Punk Rock</router-link></li> 
-            <li><router-link to="/hard-core">Hardcore</router-link></li> 
-            <li><router-link to="/metal-music">Metal</router-link></li> 
-            <li><router-link to="/grunge-music">Grunge</router-link></li> 
-            <li><router-link to="/rock-alternativo">Rock Alternativo</router-link></li> 
-            <li><router-link to="/ska-music">Ska</router-link></li> 
-            <li><router-link to="/hip-hop">Hip Hop</router-link></li> 
-            <li><router-link to="/rock-progresivo">Rock Progresivo</router-link></li> 
+          <ul class="submenu">
+            <li><router-link to="/punk-rock">Punk Rock</router-link></li>
+            <li><router-link to="/hard-core">Hardcore</router-link></li>
+            <li><router-link to="/metal-music">Metal</router-link></li>
+            <li><router-link to="/grunge-music">Grunge</router-link></li>
+            <li><router-link to="/rock-alternativo">Rock Alternativo</router-link></li>
+            <li><router-link to="/ska-music">Ska</router-link></li>
+            <li><router-link to="/hip-hop">Hip Hop</router-link></li>
+            <li><router-link to="/rock-progresivo">Rock Progresivo</router-link></li>
           </ul>
         </li>
         <li class="has-submenu">
           <a href="#">Mercadería</a>
           <ul class="submenu">
-            <li><router-link to="/ropa-punk">Camisetas Punk</router-link></li> 
-            <li><router-link to="/ropa-metal">Camisetas Metal</router-link></li> 
-            <li><router-link to="/ropa-grunge">Camisetas Grunge</router-link></li> 
-            <li><a href="/ropa/shoes">Shoes</a></li>
-            <li><a href="/ropa/accesorios">Accesorios</a></li>
+            <li><router-link to="/ropa-punk">Camisetas Punk</router-link></li>
+            <li><router-link to="/ropa-metal">Camisetas Metal</router-link></li>
+            <li><router-link to="/ropa-grunge">Camisetas Grunge</router-link></li>
           </ul>
         </li>
         <li><a href="/contacto">Contacto</a></li>
@@ -54,7 +52,7 @@ export default {
   name: 'AppHeader',
   data() {
     return {
-      menuActive: false, // To control menu visibility
+      menuActive: false,
     };
   },
   methods: {
@@ -63,7 +61,7 @@ export default {
     },
   },
 };
-</script> 
+</script>
 
 <style scoped>
 .header {
@@ -74,10 +72,26 @@ export default {
   background-color: var(--color-background-light);
   border-bottom: 3px solid var(--color-border);
   color: var(--color-text-light);
+  position: relative;
 }
 
 .logo img {
   height: 75px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: var(--color-text-dark);
+  cursor: pointer;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
 }
 
 .nav-menu ul {
@@ -90,6 +104,7 @@ export default {
 .nav-menu li {
   position: relative;
   margin: 0 15px;
+  text-align: center;
 }
 
 .nav-menu a {
@@ -120,24 +135,22 @@ export default {
   display: block;
 }
 
-.has-submenu .submenu a{
-color: var(--color-text-light);
+.has-submenu .submenu a {
+  color: var(--color-text-light);
 }
 
 .submenu li {
   margin: 5px 0;
   padding: 10px 15px;
-  list-style: none;
   border-radius: 5px;
   transition: background-color 0.2s ease;
-  color: var(--color-text-light);
 }
 
 .submenu li:hover {
   background-color: var(--color-background-dark);
 }
 
-/* Header actions */
+/* Header Actions */
 .header-actions {
   display: flex;
   align-items: center;
@@ -166,48 +179,36 @@ color: var(--color-text-light);
   background-color: var(--color-button-hover);
 }
 
-/* Hamburger */
-.hamburger {
-  display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: var(--color-text-light);
-  cursor: pointer;
-}
-
-/* Mobile Menu */
-.nav-menu {
-  display: flex;
-}
-
-.nav-menu.active {
-  display: block;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: var(--color-background-dark);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.nav-menu ul {
-  flex-direction: column;
-  gap: 10px;
-}
-
-.nav-menu li {
-  text-align: center;
-}
-
 /* Responsive */
 @media screen and (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 10px 30px;
+  }
+
   .hamburger {
     display: block;
+    z-index: 1100;
+    position: relative;
   }
 
   .nav-menu {
     display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-background-dark);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .nav-menu a {
+  color: var(--color-text-light);
+}
+
+  .nav-menu.active {
+    display: flex;
   }
 
   .nav-menu ul {
@@ -216,7 +217,7 @@ color: var(--color-text-light);
   }
 
   .nav-menu li {
-    padding: 10px;
+    padding: 10px 0;
   }
 
   .header-actions {
@@ -225,16 +226,15 @@ color: var(--color-text-light);
 
   .has-submenu .submenu {
     display: none;
+    position: relative;
+    background-color: var(--color-surface);
+    border: none;
+    padding: 0;
   }
 
   .has-submenu:hover .submenu {
     display: block;
   }
-
-  .header {
-  padding: 10px 30px;
-
-}
 }
 
 @media screen and (min-width: 769px) {
@@ -243,7 +243,7 @@ color: var(--color-text-light);
   }
 
   .nav-menu {
-    display: flex;
+    display: flex !important;
   }
 
   .nav-menu ul {
