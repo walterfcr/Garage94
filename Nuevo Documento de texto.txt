@@ -1,22 +1,46 @@
 clear cache    npm run dev -- --forcé
+npm run serve -- --forcé
+
+’
+
+        {
+          id: 26, 
+          name: 'Smash',
+          band: 'The',
+          genre: 'Punk Rock',
+          genreDescription: 'Punk Rock',
+          label: 'Epitaph Records',
+          numDiscs: 1,
+          releaseDate: '08/04/1994',
+          type: 'CD',
+          itemNumber: '258458240X',
+          image: '/images/punk/p-3.webp',
+          description: '​',
+          price:'¢14.000',
+        },
+
 
 
 
         {
-          id: 9, 
-          name: 'Give',
-          band: 'Various',
-          genre: 'Rock Alternativo',
-          label: 'Hellcat Records',
-          numDiscs: 1,
-          releaseDate: '29/09/1992',
-          type: 'CD',
-          itemNumber: '25869911X',
-          image: '/images/alternativo/a-2.webp',
-          description: '​',
-          price:'¢14.000',
-        },  
+        id: 781,
+        name: "Blusa Ramones",
+        price: "¢14.000",
+        image: "/images/ropa/mujer/m-1.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Negro",
+        description: "",
+        itemNumber: "CLTH-082"
+        },
+
+ genreDescription: '',
 
 
-La banda experimentó con varias canciones y estilos hasta que tocaron su primer concierto en 924 Gilman Street en Berkeley en 1989. Sin embargo, poco después de su debut, Freeman y Armstrong se fueron para perseguir otros intereses, principalmente otro proyecto de ska basado en el punk llamado Downfall .
 
+email
+Cenfotec123*
+
+
+mjmurillo@cenfotec.ac.cr

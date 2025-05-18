@@ -14,6 +14,7 @@ import VinilCollection from './components/VinilCollection.vue';
 import RopaPunk from './components/RopaPunk.vue';
 import RopaMetal from './components/RopaMetal.vue';
 import RopaGrunge from './components/RopaGrunge.vue';
+import RopaMujer from './components/RopaMujer.vue';
 import ContactForm from './components/ContactForm.vue';
 import AppNosotros from '@/components/AppNosotros.vue';
 
@@ -34,6 +35,7 @@ const routes = [
   { path: '/ropa-punk', name: 'ropa-punk', component: RopaPunk },
   { path: '/ropa-metal', name: 'ropa-metal', component: RopaMetal },
   { path: '/ropa-grunge', name: 'ropa-grunge', component: RopaGrunge },
+  { path: '/ropa-mujer', name: 'ropa-mujer', component: RopaMujer },
   { path: '/ediciones-especiales', name: 'ediciones-especiales', component: VinilCollection },
   { path: '/contacto', name: 'Contacto', component: ContactForm },
   { path: '/clothing/:id', name: 'clothing-details', component: () => import('@/views/ClothingModal.vue')},

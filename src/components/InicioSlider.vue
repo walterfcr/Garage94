@@ -74,4 +74,26 @@ export default {
   opacity: 0.9;
 }
 
+@media (max-width: 768px) {
+  .texto-slider {
+    position: static;
+    transform: none;
+    padding: 1.5rem;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    max-width: 100%;
+    border-left: none;
+    border-radius: 0;
+  }
+
+  .texto-slider h1 {
+    font-size: 1.8rem;
+  }
+
+  .texto-slider p {
+    font-size: 1rem;
+  }
+}
+
 </style>

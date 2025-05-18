@@ -17,22 +17,23 @@
         <li class="has-submenu">
           <a href="#">Música</a>
           <ul class="submenu">
-            <li><router-link to="/punk-rock" @click="closeMenu">Punk Rock</router-link></li>
-            <li><router-link to="/hard-core" @click="closeMenu">Hardcore</router-link></li>
-            <li><router-link to="/metal-music" @click="closeMenu">Metal</router-link></li>
-            <li><router-link to="/grunge-music" @click="closeMenu">Grunge</router-link></li>
-            <li><router-link to="/rock-alternativo" @click="closeMenu">Rock Alternativo</router-link></li>
-            <li><router-link to="/ska-music" @click="closeMenu">Ska</router-link></li>
-            <li><router-link to="/hip-hop" @click="closeMenu">Hip Hop</router-link></li>
-            <li><router-link to="/rock-progresivo" @click="closeMenu">Rock Progresivo</router-link></li>
+            <li><router-link to="/punk-rock" @click="closeMenu">CDs Punk Rock</router-link></li>
+            <li><router-link to="/hard-core" @click="closeMenu">CDs Hardcore</router-link></li>
+            <li><router-link to="/metal-music" @click="closeMenu">CDs Metal</router-link></li>
+            <li><router-link to="/grunge-music" @click="closeMenu">CDs Grunge</router-link></li>
+            <li><router-link to="/rock-alternativo" @click="closeMenu">CDs Rock Alternativo</router-link></li>
+            <li><router-link to="/ska-music" @click="closeMenu">CDs Ska</router-link></li>
+            <li><router-link to="/hip-hop" @click="closeMenu">CDs Hip Hop</router-link></li>
+            <li><router-link to="/rock-progresivo" @click="closeMenu">CDs Rock Progresivo</router-link></li>
           </ul>
         </li>
         <li class="has-submenu">
           <a href="#">Mercadería</a>
           <ul class="submenu">
-            <li><router-link to="/ropa-punk" @click="closeMenu">Camisetas Punk</router-link></li>
-            <li><router-link to="/ropa-metal" @click="closeMenu">Camisetas Metal</router-link></li>
-            <li><router-link to="/ropa-grunge" @click="closeMenu">Camisetas Grunge</router-link></li>
+            <li><router-link to="/ropa-punk" @click="closeMenu">Camisetas Punk / Ska</router-link></li>
+            <li><router-link to="/ropa-metal" @click="closeMenu">Camisetas Metal / Progresivo</router-link></li>
+            <li><router-link to="/ropa-grunge" @click="closeMenu">Camisetas Grunge / Alternativo</router-link></li>
+            <li><router-link to="/ropa-mujer" @click="closeMenu">Ropa Mujer</router-link></li>
           </ul>
         </li>
         <li><a href="/contacto">Contacto</a></li>
@@ -130,7 +131,7 @@ export default {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   padding: 10px;
-  min-width: 150px;
+  min-width: 250px;
   z-index: 10;
 }
 

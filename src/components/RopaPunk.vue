@@ -1,6 +1,6 @@
 <template>
   <div class="contenido-wrap">
-    <h1>Catálogo de Camisetas Punk Rock</h1>
+    <h1>Camisetas Punk Rock / Hardcore / Ska</h1>
 
     <div class="product-list" data-aos="zoom-in">
       <div v-for="product in paginatedProducts" :key="product.id" class="product-card">

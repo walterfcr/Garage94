@@ -45,7 +45,7 @@ export default {
         { id: 2, name: 'Camisetas Metal / Progresivo', image: '/images/merca/merch-2.jpg', link: '/ropa-metal' }, 
         { id: 3, name: 'Accesorios', image: '/images/merca/merch-5.jpg' },
         { id: 4, name: 'Camisetas Grunge / Alternativo', image: '/images/merca/merch-3.jpg', link: '/ropa-grunge' },
-        { id: 5, name: 'Ropa de Mujer', image: '/images/merca/merch-4.jpg' },
+        { id: 5, name: 'Ropa de Mujer', image: '/images/merca/merch-4.jpg', link: '/ropa-mujer'},
         { id: 6, name: 'Artículos Coleccionables', image: '/images/merca/merch-6.jpg' },
       ]
     };

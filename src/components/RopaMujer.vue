@@ -1,6 +1,6 @@
 <template>
   <div class="contenido-wrap">
-    <h1>Camisetas Metal / Rock Progresivo</h1>
+    <h1>Ropa para mujer</h1>
 
     <div class="product-list" data-aos="zoom-in">
       <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
@@ -48,7 +48,7 @@ export default {
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
 
     this.cdProducts = products
-      .filter(item => item.category === 'Metal')
+      .filter(item => item.category === 'Mujer')
       .map(item => ({
         id: item.id,
         name: item.name,

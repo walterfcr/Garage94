@@ -5356,6 +5356,114 @@ export const products = [
         description: "Camiseta unisex de Ghost, confeccionada en 100% algodón suave y resistente, con diseño frontal que presenta el logo o imágenes icónicas de la banda, perfecta para fans del rock/metal teatral que buscan una prenda elegante, oscura y con mucho estilo.",
         itemNumber: "CLTH-081"
         },
+        {
+        id: 781,
+        name: "Blusa Ramones",
+        price: "¢14.000",
+        image: "/images/ropa/mujer/m-1.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Gris",
+        description: "Blusa gris para mujer de los Ramones, confeccionada en algodón suave y cómodo, con diseño entallado y estampado frontal del clásico logo de la banda, ideal para fans del punk que buscan una prenda casual, con actitud y estilo vintage.",
+        itemNumber: "CLTH-082"
+        },
+        {
+        id: 782,
+        name: "Crop Top AC/DC",
+        price: "¢11.000",
+        image: "/images/ropa/mujer/m-2.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Negro",
+        description: "Crop top de AC/DC para mujer, confeccionado en algodón suave y elástico, con diseño moderno y estampado frontal del icónico logo de la banda, ideal para fans del rock clásico que buscan una prenda fresca, cómoda y con mucha actitud.",
+        itemNumber: "CLTH-083"
+        },
+        {
+        id: 783,
+        name: "Blusa Guns N' Roses",
+        price: "¢14.000",
+        image: "/images/ropa/mujer/m-3.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Negro",
+        description: "Blusa negra para mujer de Guns N' Roses, confeccionada en algodón suave y cómodo, con diseño entallado y estampado frontal del emblemático logo de la banda, perfecta para fans del hard rock que buscan una prenda con estilo, actitud y toque clásico.",
+        itemNumber: "CLTH-084"
+        },
+        {
+        id: 784,
+        name: "Blusa Korn",
+        price: "¢14.000",
+        image: "/images/ropa/mujer/m-4.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Negro",
+        description: "Blusa sin mangas de Korn para mujer, confeccionada en algodón suave y fresco, con corte moderno y estampado frontal del logo distintivo de la banda, ideal para fans del nu metal que buscan una prenda cómoda, ligera y con mucho estilo alternativo.",
+        itemNumber: "CLTH-085"
+        },
+        {
+        id: 785,
+        name: "Chaqueta de Cuero",
+        price: "¢44.000",
+        image: "/images/ropa/mujer/m-5.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Negro",
+        description: "Chaqueta de cuero para mujer, confeccionada en material sintético o cuero genuino de alta calidad, con corte entallado, cierre frontal y detalles metálicos, ideal para un look rebelde, versátil y con estilo rockero clásico.",
+        itemNumber: "CLTH-086"
+        },
+        {
+        id: 786,
+        name: "Falda de cuero",
+        price: "¢24.000",
+        image: "/images/ropa/mujer/m-6.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Negro",
+        description: "Falda de cuero para mujer, confeccionada en cuero sintético o genuino, con diseño ajustado y detalles modernos, ideal para combinar con prendas rockeras o alternativas, aportando un toque audaz, elegante y con actitud.",
+        itemNumber: "CLTH-087"
+        },
+        {
+        id: 787,
+        name: "Medias de Guns N' Roses",
+        price: "¢8.000",
+        image: "/images/ropa/mujer/m-7.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Negro",
+        description: "Medias de Guns N' Roses con diseño estampado del icónico logo de la banda, confeccionadas en mezcla de algodón, poliéster y elastano para mayor comodidad, ajuste y durabilidad; ideales para fans del rock que quieren llevar el estilo GNR de pies a cabeza.",
+        itemNumber: "CLTH-088"
+        },
+        {
+        id: 788,
+        name: "Blusa Guns N' Roses",
+        price: "¢14.000",
+        image: "/images/ropa/mujer/m-8.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Negro",
+        description: "Blusa clásica de Guns N' Roses para mujer, confeccionada en algodón suave y transpirable, con corte entallado y el emblemático logo de la banda en el frente, ideal para un look rockero atemporal y con mucha actitud.",
+        itemNumber: "CLTH-089"
+        },
+        {
+        id: 789,
+        name: "Blusa Cat Flag",
+        price: "¢14.000",
+        image: "/images/ropa/mujer/m-9.webp",
+        type: "Clothing",
+        category:"Mujer",
+        size: "S / M / L",
+        color: "Blanco",
+        description: "Blusa estilo Black Flag con diseño divertido de gatos (Cat Flag), confeccionada en algodón suave y cómodo, con estampado frontal que mezcla el icónico estilo de franjas de Black Flag con siluetas felinas, ideal para quienes buscan un look alternativo, original y con actitud punk.",
+        itemNumber: "CLTH-090"
+        },
 
       ];
   
