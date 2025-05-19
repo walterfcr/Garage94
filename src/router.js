@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import CatalogoCDs from './views/CatalogoCDs.vue';
-import CatalogoRopa from './views/CatalogoRopa.vue';
-import CatalogoAccesorios from './views/CatalogoAccesorios.vue';
 import PunkRock from './components/PunkRock.vue';
 import HardCore from './components/HardCore.vue';
 import MetalMusic from './components/MetalMusic.vue';
@@ -21,8 +19,6 @@ import AppNosotros from '@/components/AppNosotros.vue';
 const routes = [
   { path: '/', name: 'home', component: CatalogoCDs },
   { path: '/nosotros', name: 'Nosotros', component: AppNosotros,},
-  { path: '/ropa', name: 'ropa', component: CatalogoRopa },
-  { path: '/accesorios', name: 'accesorios', component: CatalogoAccesorios },
   { path: '/punk-rock', name: 'punk-rock', component: PunkRock },
   { path: '/hard-core', name: 'hard-core', component: HardCore },
   { path: '/metal-music', name: 'metal-music', component: MetalMusic },

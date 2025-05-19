@@ -6,6 +6,7 @@
       <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
         <router-link 
           :to="{ name: 'cd-details', params: { id: product.id }, query: { from: $route.fullPath } }"
+          @click="saveScrollPosition"
         >
           <img :src="product.image" :alt="product.name" />
           <h3>{{ product.name }}</h3>

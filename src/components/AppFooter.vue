@@ -15,6 +15,7 @@
             <li><router-link to="/hard-core">Hardcore</router-link></li>
             <li><router-link to="/metal-music">Metal</router-link></li>
             <li><router-link to="/grunge-music">Grunge</router-link></li>
+            <li><router-link to="/rock-alternativo">Rock Alternativo</router-link></li>
           </ul>
         </div>
         <div class="link-column">
@@ -42,7 +43,7 @@
           <a href="#" aria-label="Facebook">📘</a>
           <a href="#" aria-label="Twitter">🐦</a>
         </div>
-        <p>&copy; {{ new Date().getFullYear() }} TuMarca. Todos los derechos reservados.</p>
+        <p>&copy; {{ new Date().getFullYear() }} Garage 94. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
