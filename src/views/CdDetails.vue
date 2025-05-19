@@ -53,13 +53,7 @@ export default {
     // Save previous page from route query if available
     this.previousRoute = this.$route.query.from || '/';
   },
-    mounted() {
-    const scroll = sessionStorage.getItem('scrollTopBeforeModal');
-    if (scroll) {
-      window.scrollTo({ top: parseInt(scroll), behavior: 'auto' });
-      sessionStorage.removeItem('scrollTopBeforeModal');
-    }
-  },
+  
   methods: {
     loadProduct(id) {
       this.product = products.find(product => product.id === parseInt(id));

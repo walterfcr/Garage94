@@ -15,22 +15,12 @@
       </div>
     </div>
 
-    <!-- Pagination Controls --> 
-    <div class="pagination">
-      <button @click="goToPage(currentPage - 1)" :disabled="currentPage === 1">Anterior</button>
-
-      <span>Página {{ currentPage }} de {{ totalPages }}</span>
-
-      <button @click="goToPage(currentPage + 1)" :disabled="currentPage === totalPages">Siguiente</button>
-    </div>
   </div>
   
 </template> 
 
 <script>
-import { products } from '@/data/products.js'; // Ajusta la ruta si es necesario
-
-
+import { products } from '@/data/products.js';
 
 export default {
   name: 'CatalogoHipHop',
@@ -41,12 +31,23 @@ export default {
       itemsPerPage: 18,
     };
   },
+
+  mounted() {
+    const saved = sessionStorage.getItem('scrollTopBeforeModal');
+    if (saved !== null) {
+      this.$nextTick(() => {
+        window.scrollTo(0, parseInt(saved, 10));
+        sessionStorage.removeItem('scrollTopBeforeModal');
+      });
+    }
+  },
+
   created() {
     const page = parseInt(this.$route.query.page, 10);
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
     
     this.cdProducts = products
-      .filter(item => item.type === 'Vinil') // solo vinilos
+      .filter(item => item.type === 'Vinil')
       .map(item => ({
         id: item.id,
         name: item.name,
@@ -54,6 +55,7 @@ export default {
         image: item.image,
       }));
   },
+
   computed: {
     paginatedProducts() {
       const start = (this.currentPage - 1) * this.itemsPerPage;
@@ -64,15 +66,23 @@ export default {
       return Math.ceil(this.cdProducts.length / this.itemsPerPage);
     }
   },
+
   methods: {
     goToPage(page) {
-        if (page >= 1 && page <= this.totalPages) {
-          this.$router.replace({ query: { ...this.$route.query, page } });
-          this.currentPage = page;
+      if (page >= 1 && page <= this.totalPages) {
+        this.$router.replace({ query: { ...this.$route.query, page } });
+        this.currentPage = page;
+        this.$nextTick(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top smoothly
+        });
       }
+    },
+    saveScrollPosition() {
+      sessionStorage.setItem('scrollTopBeforeModal', window.scrollY);
     }
   },
-    beforeRouteLeave(to, from, next) {
+
+  beforeRouteLeave(to, from, next) {
     if (to.name === 'cd-details') {
       sessionStorage.setItem('scrollTopBeforeModal', window.scrollY);
     }
@@ -93,7 +103,7 @@ h3 {
 
 .contenido-wrap {
   margin:0;
-  padding: 50px 0 0; 
+  padding: 50px 0 100px; 
 
 }
 

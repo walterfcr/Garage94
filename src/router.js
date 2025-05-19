@@ -45,16 +45,22 @@ const router = createRouter({
   // ✅ Scroll to top on route change
   /* eslint-disable */
 scrollBehavior(to, from, savedPosition) {
-  if (to.hash) {
-    return {
-      el: to.hash,
-      behavior: 'smooth',
-    };
-  } else if (savedPosition) {
-    return savedPosition;
-  } else {
+  if (savedPosition) {
+      return savedPosition;
+    }
+
+    if (from.name === 'cd-details' && sessionStorage.getItem('scrollTopBeforeModal')) {
+      return false; // Prevent scroll, let component restore manually
+    }
+
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      };
+    }
+
     return { top: 0 };
-  }
 },
 });
 

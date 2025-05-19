@@ -11,7 +11,12 @@
         :data-aos-delay="index * 100"
       >
         <router-link 
-          :to="{ name: 'cd-details', params: { id: product.id }, query: { from: $route.fullPath } }"
+            :to="{
+            name: 'cd-details',
+            params: { id: product.id },
+            query: { from: $route.fullPath } // Pass current path as query
+            }"
+           @click="saveScrollPosition"
         >
           <img :src="product.image" :alt="product.name" />
           <h3>{{ product.name }}</h3>
@@ -26,13 +31,22 @@
 import { products } from '@/data/products.js';
 
 export default {
-  name: 'CatalogoHipHop',
+  name: 'EdicionesEspeciales',
   data() {
     return {
       cdProducts: [],
       currentPage: 1,
       itemsPerPage: 18,
     };
+  },
+  mounted() {
+    const saved = sessionStorage.getItem('scrollTopBeforeModal');
+    if (saved !== null) {
+      this.$nextTick(() => {
+        window.scrollTo(0, parseInt(saved, 10));
+        sessionStorage.removeItem('scrollTopBeforeModal');
+      });
+    }
   },
   created() {
     const page = parseInt(this.$route.query.page, 10);
@@ -47,6 +61,7 @@ export default {
         image: item.image,
       }));
   },
+  
   computed: {
     paginatedProducts() {
       const start = (this.currentPage - 1) * this.itemsPerPage;
@@ -58,6 +73,9 @@ export default {
     }
   },
   methods: {
+    saveScrollPosition() {
+    sessionStorage.setItem('scrollTopBeforeModal', window.scrollY);
+    },
     goToPage(page) {
       if (page >= 1 && page <= this.totalPages) {
         this.$router.replace({ query: { ...this.$route.query, page } });
