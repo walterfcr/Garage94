@@ -126,6 +126,12 @@ body {
   filter: grayscale(0%);
 }
 
+@media  (max-width: 480px){
+  .product-card img {
+  filter: grayscale(0%) !important;
+}
+}
+
 /* Title & Price */
 .product-card h3 {
   color: var(--color-text-light) !important;
