@@ -3,109 +3,121 @@
     <h1>Colección de Vinilos</h1>
 
     <div class="product-list" data-aos="zoom-in">
-      <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
-        <router-link 
-          :to="{ name: 'cd-details', params: { id: product.id }, query: { from: $route.fullPath } }"
-          @click="saveScrollPosition"
-        >
-          <img :src="product.image" :alt="product.name" />
-          <h3>{{ product.name }}</h3>
-          <p>{{ product.vinilPrice }}</p>
-        </router-link>
+      <div
+        v-for="product in paginatedProducts"
+        :key="product.id"
+        class="product-card"
+        @click="openModal(product)"
+      >
+        <img :src="product.image" :alt="product.name" />
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.vinilPrice }}</p>
       </div>
     </div>
 
+    <div class="pagination">
+      <button @click="goToPage(currentPage-1)" :disabled="currentPage===1">Anterior</button>
+      <span>Página {{ currentPage }} de {{ totalPages }}</span>
+      <button @click="goToPage(currentPage+1)" :disabled="currentPage===totalPages">Siguiente</button>
+    </div>
+
+    <!-- TRUE MODAL -->
+    <CdModal
+      v-if="isModalOpen"
+      :product="selectedProduct"
+      @close="closeModal"
+    />
   </div>
-  
-</template> 
+</template>
 
 <script>
 import { products } from '@/data/products.js';
+import CdModal       from '@/components/CdModal.vue';
 
 export default {
-  name: 'CatalogoHipHop',
-  data() {
-    return {
-      cdProducts: [],
+  name: 'CatalogoVinilos',
+  components: { CdModal },
+  data(){
+    return{
+      allVinyl: [],         // raw data
       currentPage: 1,
       itemsPerPage: 18,
+      selectedProduct: null,
+      isModalOpen: false
     };
   },
 
-  mounted() {
-    const saved = sessionStorage.getItem('scrollTopBeforeModal');
-    if (saved !== null) {
-      this.$nextTick(() => {
-        window.scrollTo(0, parseInt(saved, 10));
-        sessionStorage.removeItem('scrollTopBeforeModal');
-      });
-    }
+  created(){
+    /* pagination init */
+    const qp = parseInt(this.$route.query.page,10);
+    this.currentPage = !isNaN(qp)&&qp>0 ? qp : 1;
+
+    /* keep only vinilos */
+    this.allVinyl = products
+      .filter(p=>p.type==='Vinil')
+      .map(({id,name,vinilPrice,image,...rest})=>({id,name,vinilPrice,image,...rest}));
   },
 
-  created() {
-    const page = parseInt(this.$route.query.page, 10);
-    this.currentPage = !isNaN(page) && page > 0 ? page : 1;
-    
-    this.cdProducts = products
-      .filter(item => item.type === 'Vinil')
-      .map(item => ({
-        id: item.id,
-        name: item.name,
-        vinilPrice: item.vinilPrice,
-        image: item.image,
-      }));
+  mounted(){
+    /* responsive page size */
+    this.setItemsPerPage();
+    window.addEventListener('resize', this.handleResize);
+  },
+  beforeUnmount(){
+    window.removeEventListener('resize', this.handleResize);
   },
 
-  computed: {
-    paginatedProducts() {
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      const end = start + this.itemsPerPage;
-      return this.cdProducts.slice(start, end);
+  computed:{
+    paginatedProducts(){
+      const start = (this.currentPage-1)*this.itemsPerPage;
+      return this.allVinyl.slice(start, start+this.itemsPerPage);
     },
-    totalPages() {
-      return Math.ceil(this.cdProducts.length / this.itemsPerPage);
-    }
+    totalPages(){ return Math.ceil(this.allVinyl.length/this.itemsPerPage); }
   },
 
-  methods: {
-    goToPage(page) {
-      if (page >= 1 && page <= this.totalPages) {
-        this.$router.replace({ query: { ...this.$route.query, page } });
+  methods:{
+    /* ---------- modal ---------- */
+    openModal(product){
+      this.selectedProduct = product;
+      this.isModalOpen = true;
+    },
+    closeModal(){
+      this.isModalOpen = false;
+      this.selectedProduct = null;
+    },
+
+    /* ---------- pagination ---------- */
+    goToPage(page){
+      if(page>=1 && page<=this.totalPages){
+        this.$router.replace({ query:{...this.$route.query, page} });
         this.currentPage = page;
-        this.$nextTick(() => {
-          window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top smoothly
-        });
+        this.$nextTick(()=>window.scrollTo({top:0,behavior:'smooth'}));
       }
     },
-    saveScrollPosition() {
-      sessionStorage.setItem('scrollTopBeforeModal', window.scrollY);
-    }
+
+    /* ---------- responsive items per page ---------- */
+    setItemsPerPage(){
+      const w = window.innerWidth;
+      if     (w>=1800) this.itemsPerPage = 27;
+      else if(w>=1680) this.itemsPerPage = 24;
+      else if(w>=1400) this.itemsPerPage = 28;
+      else if(w>=1280) this.itemsPerPage = 24;
+      else if(w>=950 ) this.itemsPerPage = 20;
+      else             this.itemsPerPage = 18;
+    },
+    handleResize(){ this.setItemsPerPage(); }
   },
 
-  beforeRouteLeave(to, from, next) {
-    if (to.name === 'cd-details') {
-      sessionStorage.setItem('scrollTopBeforeModal', window.scrollY);
-    }
-    next();
+  watch:{
+    itemsPerPage(){ this.goToPage(1); }
   }
 };
 </script>
 
 <style scoped>
-h1 {
-  text-align: center;
-  color:var(----color-text-dark);
-}
-
-h3 {
-  font-size: 0.8rem;
-}
-
-.contenido-wrap {
-  margin:0;
-  padding: 50px 0 100px; 
-
-}
-
-
+h1{ text-align:center; color:var(--color-text-dark);}
+h3{ font-size:.8rem; margin:.5rem 0 0;}
+button[disabled]{opacity:.5; pointer-events:none;}
+.contenido-wrap{ margin:0; padding:50px 0 100px;}
+/* you already have product‑list / product‑card styles – keep them */
 </style>

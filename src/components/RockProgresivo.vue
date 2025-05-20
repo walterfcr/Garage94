@@ -2,7 +2,6 @@
   <div class="contenido-wrap">
     <h1>Catálogo de Rock Progresivo</h1>
 
-
     <div class="product-list" data-aos="zoom-in">
       <div
         v-for="product in paginatedProducts"
@@ -16,7 +15,7 @@
             query: { from: $route.fullPath },
           }"
         >
-          <img :src="product.image" :alt="product.name" />
+          <img :src="product.image" :alt="product.name || 'CD de Rock Progresivo'" />
           <h3>{{ product.name }}</h3>
           <p>{{ product.price }}</p>
         </router-link>
@@ -31,10 +30,7 @@
 
       <span>Página {{ currentPage }} de {{ totalPages }}</span>
 
-      <button
-        @click="goToPage(currentPage + 1)"
-        :disabled="currentPage === totalPages"
-      >
+      <button @click="goToPage(currentPage + 1)" :disabled="currentPage === totalPages">
         Siguiente
       </button>
     </div>
@@ -57,7 +53,6 @@ export default {
   },
   data() {
     return {
-      cdProducts: [],
       currentPage: 1,
       itemsPerPage: 27,
     };
@@ -65,15 +60,6 @@ export default {
   created() {
     const page = parseInt(this.$route.query.page, 10);
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
-
-    this.cdProducts = products
-      .filter(item => item.genre === 'Rock Progresivo' && item.type !== 'Vinil')
-      .map(item => ({
-        id: item.id,
-        name: item.name,
-        price: item.price,
-        image: item.image,
-      }));
   },
   mounted() {
     this.setItemsPerPage();
@@ -83,10 +69,14 @@ export default {
     window.removeEventListener('resize', this.handleResize);
   },
   computed: {
+    cdProducts() {
+      return products
+        .filter(item => item.genre === 'Rock Progresivo' && item.type !== 'Vinil')
+        .map(({ id, name, price, image }) => ({ id, name, price, image }));
+    },
     paginatedProducts() {
       const start = (this.currentPage - 1) * this.itemsPerPage;
-      const end = start + this.itemsPerPage;
-      return this.cdProducts.slice(start, end);
+      return this.cdProducts.slice(start, start + this.itemsPerPage);
     },
     totalPages() {
       return Math.ceil(this.cdProducts.length / this.itemsPerPage);
@@ -101,37 +91,29 @@ export default {
     },
     setItemsPerPage() {
       const width = window.innerWidth;
-
-      if (width >= 1800) {
-        this.itemsPerPage = 27;
-      } else if (width >= 1680) {
-        this.itemsPerPage = 24;
-      } else if (width >= 1400) {
-        this.itemsPerPage = 28;
-      } else if (width >= 1280) {
-        this.itemsPerPage = 24;
-      } else if (width >= 950) {
-        this.itemsPerPage = 20;
-      } else {
-        this.itemsPerPage = 18;
-      }
+      if (width >= 1800) this.itemsPerPage = 27;
+      else if (width >= 1680) this.itemsPerPage = 24;
+      else if (width >= 1400) this.itemsPerPage = 28;
+      else if (width >= 1280) this.itemsPerPage = 24;
+      else if (width >= 950) this.itemsPerPage = 20;
+      else this.itemsPerPage = 18;
     },
     handleResize() {
       this.setItemsPerPage();
-    }
+    },
   },
   watch: {
     itemsPerPage() {
       this.goToPage(1);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
 h1 {
   text-align: center;
-  color:var(----color-text-dark);
+  color: var(--color-text-dark);
 }
 
 h3 {
@@ -145,8 +127,7 @@ button[disabled] {
 }
 
 .contenido-wrap {
-  margin:0;
-  padding: 50px 0 0; 
+  margin: 0;
+  padding: 50px 0 0;
 }
-
 </style>

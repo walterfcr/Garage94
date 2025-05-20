@@ -98,7 +98,7 @@ export default {
   right: 20px;
   background: #ff0055;
   color: white;
-  border: none;
+  border: none; 
   padding: 8px 12px;
   cursor: pointer;
   font-size: 16px;
