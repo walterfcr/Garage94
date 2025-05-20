@@ -126,6 +126,76 @@ body {
   filter: grayscale(0%);
 }
 
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto; /* IMPORTANT: allow vertical scroll */
+  padding: 20px; /* add padding so modal isn't flush on small screens */
+}
+
+.modal-content {
+  background: #1f1f1f;
+  color: #f5f5f5;
+  padding: 30px;
+  width: 90%;
+  max-width: 1000px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,0,85,.4);
+  position: relative;
+
+  max-height: 90vh; /* limit modal height to viewport height */
+  overflow-y: auto; /* allow scrolling inside modal */
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #ff0055;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.column img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+}
+
+.column h2, .column h3 {
+  color: #ff0055;
+  margin-bottom: 10px;
+}
+
+.column p strong {
+  color: #ff0055;
+}
+
+
+
 @media  (max-width: 480px){
   .product-card img {
   filter: grayscale(0%) !important;
