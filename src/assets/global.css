@@ -95,6 +95,7 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 2rem 0 0;
+  max-width: 1800px;
 }
 
 /* Product Card */
