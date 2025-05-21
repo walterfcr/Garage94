@@ -1,43 +1,117 @@
 <template>
-  <div class="Nuevos-container">
+  <div class="contenido-wrap">
     <h1>Nuevos Ingresos</h1>
+
     <div class="product-list" data-aos="zoom-in">
-      <div v-for="product in products" :key="product.id" class="product-card">
-        <router-link :to="'/cd/' + product.id">
-          <img :src="product.image" :alt="product.name" />
-          <h3>{{ product.name }}</h3>
-          <p>{{ product.price }}</p>
-        </router-link>
+      <div
+        v-for="product in paginatedProducts"
+        :key="product.id"
+        class="product-card"
+        @click="openModal(product)"
+      >
+        <img :src="product.image" :alt="product.name" />
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.vinilPrice }}</p>
       </div>
     </div>
+
+    <!-- TRUE MODAL -->
+    <CdModal
+      v-if="isModalOpen"
+      :product="selectedProduct"
+      @close="closeModal"
+    />
   </div>
 </template>
 
 <script>
+import { products } from '@/data/products.js';
+import CdModal       from '@/components/CdModal.vue';
+
 export default {
-  name: 'NuevosIngresos',
-  props: {
-    products: {
-      type: Array,
-      required: true
-    }
+  name: 'CatalogoVinilos',
+  components: { CdModal },
+  data(){
+    return{
+      allVinyl: [],         // raw data
+      currentPage: 1,
+      itemsPerPage: 18,
+      selectedProduct: null,
+      isModalOpen: false
+    };
+  },
+
+  created(){
+    /* pagination init */
+    const qp = parseInt(this.$route.query.page,10);
+    this.currentPage = !isNaN(qp)&&qp>0 ? qp : 1;
+
+    /* keep only vinilos */
+    this.allVinyl = products
+      .filter(p => p.id >= 1 && p.id <= 18 && p.type !== 'Vinil')
+      .map(({id,name,vinilPrice,image,...rest})=>({id,name,vinilPrice,image,...rest}));
+  },
+
+  mounted(){
+    /* responsive page size */
+    this.setItemsPerPage();
+    window.addEventListener('resize', this.handleResize);
+  },
+  beforeUnmount(){
+    window.removeEventListener('resize', this.handleResize);
+  },
+
+  computed:{
+    paginatedProducts(){
+      const start = (this.currentPage-1)*this.itemsPerPage;
+      return this.allVinyl.slice(start, start+this.itemsPerPage);
+    },
+    totalPages(){ return Math.ceil(this.allVinyl.length/this.itemsPerPage); }
+  },
+
+  methods:{
+    /* ---------- modal ---------- */
+    openModal(product){
+      this.selectedProduct = product;
+      this.isModalOpen = true;
+    },
+    closeModal(){
+      this.isModalOpen = false;
+      this.selectedProduct = null;
+    },
+
+    /* ---------- pagination ---------- */
+    goToPage(page){
+      if(page>=1 && page<=this.totalPages){
+        this.$router.replace({ query:{...this.$route.query, page} });
+        this.currentPage = page;
+        this.$nextTick(()=>window.scrollTo({top:0,behavior:'smooth'}));
+      }
+    },
+
+    /* ---------- responsive items per page ---------- */
+    setItemsPerPage(){
+      const w = window.innerWidth;
+      if     (w>=1800) this.itemsPerPage = 27;
+      else if(w>=1680) this.itemsPerPage = 24;
+      else if(w>=1400) this.itemsPerPage = 28;
+      else if(w>=1280) this.itemsPerPage = 24;
+      else if(w>=950 ) this.itemsPerPage = 20;
+      else             this.itemsPerPage = 18;
+    },
+    handleResize(){ this.setItemsPerPage(); }
+  },
+
+  watch:{
+    itemsPerPage(){ this.goToPage(1); }
   }
 };
 </script>
 
 <style scoped>
-h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin: 3rem 0 1rem;
-  font-family: 'Nova Square', sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color:var(----color-text-dark);
-}
-
-.Nuevos-container{
- padding: 50px 0 100px; 
-}
-
+h1{ text-align:center; color:var(--color-text-dark);}
+h3{ font-size:.8rem; margin:.5rem 0 0;}
+button[disabled]{opacity:.5; pointer-events:none;}
+.contenido-wrap{ margin:0; padding:50px 0 100px;}
+/* you already have product‑list / product‑card styles – keep them */
 </style>

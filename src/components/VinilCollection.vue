@@ -82,7 +82,7 @@ export default {
       this.isModalOpen = true;
     },
     closeModal(){
-      this.isModalOpen = false;
+      this.isModalOpen = false; 
       this.selectedProduct = null;
     },
 
