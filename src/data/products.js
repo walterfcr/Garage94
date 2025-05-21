@@ -4717,7 +4717,7 @@ export const products = [
         image: "/images/ropa/punk/p-1.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta 100% algodón de alta calidad con el icónico logo de Circle Jerks, una de las bandas más influyentes del hardcore punk. Diseño clásico y atemporal, ideal para fanáticos del género. Cómoda, resistente y perfecta para conciertos, festivales o uso diario. Disponible en varias tallas.",
         itemNumber: "CLTH-001"
@@ -4729,7 +4729,7 @@ export const products = [
         image: "/images/ropa/punk/p-2.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta oficial de Misfits confeccionada en 100% algodón, con el emblemático logo de la banda en el pecho y letras verdes que resaltan sobre el fondo oscuro. Un diseño auténtico que rinde homenaje al legado del horror punk. Suave, cómoda y resistente, ideal para fans que buscan estilo y actitud en una prenda clásica. Perfecta para conciertos, salidas o para completar tu colección de merch.",
         itemNumber: "CLTH-002"
@@ -4741,7 +4741,7 @@ export const products = [
         image: "/images/ropa/punk/p-3.webp",
         type: "Clothing",
         category:"Punk",
-        size: "M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta oficial de Dead Kennedys elaborada en 100% algodón de alta calidad, con el icónico logo circular de la banda impreso al frente en contraste sobre fondo negro. Esta prenda combina comodidad y rebeldía, representando fielmente el espíritu crítico y provocador del punk californiano.",
         itemNumber: "CLTH-003"
@@ -4753,7 +4753,7 @@ export const products = [
         image: "/images/ropa/punk/p-4.webp",
         type: "Clothing",
         category:"Punk",
-        size: "M",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra 100% algodón con el emblemático logo de Milo al frente, símbolo inconfundible de los Descendents. Este diseño clásico celebra la estética minimalista y el espíritu DIY del punk californiano. Con un corte unisex y costuras reforzadas, ofrece comodidad y durabilidad, ideal tanto para conciertos como para el uso diario. Una prenda imprescindible para los fans del punk melódico y del legado irreverente de esta legendaria banda",
         itemNumber: "CLTH-004"
@@ -4765,7 +4765,7 @@ export const products = [
         image: "/images/ropa/punk/p-5.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Amarillo",
         description: "Camiseta amarilla 100% algodón con el icónico rayo atravesando el Capitolio, imagen tomada del legendario álbum debut de Bad Brains. Este diseño vibrante y lleno de energía captura la esencia del hardcore punk con raíces en el reggae y la actitud radical de la banda de Washington D.C. Corte clásico unisex, resistente y cómodo, ideal para quienes quieren rendir homenaje a una de las bandas más influyentes del género.",
         itemNumber: "CLTH-005"
@@ -4777,7 +4777,7 @@ export const products = [
         image: "/images/ropa/punk/p-6.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra confeccionada en 100% algodón, con el emblemático arte del álbum London Calling de The Clash. El diseño presenta la icónica fotografía en blanco y negro de Paul Simonon rompiendo su bajo en pleno escenario, acompañada del título en tipografía rosa y verde, inspirado en las portadas de Elvis Presley. Una prenda esencial para cualquier fan del punk británico",
         itemNumber: "CLTH-006"
@@ -4789,7 +4789,7 @@ export const products = [
         image: "/images/ropa/punk/p-7.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Blanco",
         description: "Camiseta de algodón 100% en color Blanco, con el icónico logo de Black Flag: las cuatro barras negras que representan la rebelión, el ruido y la disconformidad. Un diseño minimalista pero poderoso, símbolo de la escena hardcore punk desde finales de los 70. Ideal para fans de lo crudo, lo auténtico y lo independiente. Corte unisex, cómoda y perfecta para el día a día o conciertos",
         itemNumber: "CLTH-007"
@@ -4801,7 +4801,7 @@ export const products = [
         image: "/images/ropa/punk/p-8.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta 100% algodón con el provocador diseño del álbum Never Mind the Bollocks, Here's the Sex Pistols. El fondo amarillo intenso y las letras rosas y negras capturan el espíritu irreverente y anárquico de una de las bandas más influyentes del punk británico. ",
         itemNumber: "CLTH-008"
@@ -4813,7 +4813,7 @@ export const products = [
         image: "/images/ropa/punk/p-9.webp",
         type: "Clothing",
         category:"Punk",
-        size: "M / L / XL",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de algodón 100%, en color negro, con el icónico logo de Operation Ivy estampado en blanco. El diseño captura la energía cruda y combativa del ska-punk californiano de finales de los 80. Ideal para fans de la escena underground y de bandas que marcaron una generación con actitud DIY. Cómoda, resistente y con un mensaje claro: rebeldía y ritmo van de la mano.",
         itemNumber: "CLTH-009"
@@ -4825,7 +4825,7 @@ export const products = [
         image: "/images/ropa/punk/p-10.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra 100% algodón con el emblemático logo de Misfits y letras blancas. Un diseño atemporal que rinde homenaje a la banda pionera del horror punk. El estampado frontal presenta la clásica calavera 'Fiend Skull', reconocible al instante por cualquier fan del género.",
         itemNumber: "CLTH-010"
@@ -4837,7 +4837,7 @@ export const products = [
         image: "/images/ropa/punk/p-11.webp",
         type: "Clothing",
         category:"Punk",
-        size: "M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "CYAN",
         description: "Camiseta color cyan confeccionada en algodón suave, con el icónico diseño de Milo, la inconfundible mascota de Descendents. Este modelo combina comodidad y actitud con un toque vibrante gracias a su color llamativo. Ideal para quienes siguen el punk melódico",
         itemNumber: "CLTH-011"
@@ -4849,7 +4849,7 @@ export const products = [
         image: "/images/ropa/punk/p-12.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Azul",
         description: "Camiseta azul confeccionada en algodón suave, con diseño gráfico inspirado en el icónico álbum Smash de The Offspring. En el frente, destaca la silueta de la calavera característica del disco, acompañada del logo clásico de la banda. Una prenda esencial para fans del punk californiano de los 90, que marcó una generación con himnos como 'Come Out and Play' y 'Self Esteem",
         itemNumber: "CLTH-012"
@@ -4861,7 +4861,7 @@ export const products = [
         image: "/images/ropa/punk/p-13.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de algodón de alta calidad con el emblemático diseño de la calavera, símbolo inconfundible de Social Distortion. De fondo oscuro, esta prenda rinde homenaje al estilo punk rock californiano con tintes rockabilly que caracteriza a la banda. Ideal para fans que quieren llevar consigo la actitud rebelde y el estilo clásico que ha hecho de Social Distortion una leyenda del punk desde los años 80.",
         itemNumber: "CLTH-013"
@@ -4873,7 +4873,7 @@ export const products = [
         image: "/images/ropa/punk/p-14.webp",
         type: "Clothing",
         category:"Punk",
-        size: "M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Blanco",
         description: "Camiseta blanca 100% algodón con estampado frontal del diseño 'Give 'Em the Boot', inspirado en la estética cruda y callejera de Rancid. Con un estilo gráfico en alto contraste, esta prenda captura la esencia del punk californiano de los 90: actitud combativa, sonidos ska-punk y raíces working class. Ideal para quienes siguen vibrando con el espíritu de los discos clásicos",
         itemNumber: "CLTH-014"
@@ -4885,7 +4885,7 @@ export const products = [
         image: "/images/ropa/punk/p-15.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de algodón suave en color clásico, con el emblemático logo y diseño 'No Control' de Bad Religion estampado en el frente. Esta prenda rinde homenaje al álbum que definió el punk melódico de los años 80, con letras críticas y sonidos rápidos e intensos. ",
         itemNumber: "CLTH-015"
@@ -4897,7 +4897,7 @@ export const products = [
         image: "/images/ropa/punk/p-16.webp",
         type: "Clothing",
         category:"Punk",
-        size: "M / L / XL",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de algodón cómoda y resistente en color clásico, con el logo y nombre de NOFX estampados en letras verdes vibrantes. Esta prenda captura el espíritu irreverente y divertido de la banda punk californiana, perfecta para quienes disfrutan de un estilo casual con actitud y un toque de color llamativo.",
         itemNumber: "CLTH-016"
@@ -4909,7 +4909,7 @@ export const products = [
         image: "/images/ropa/punk/p-17.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta 100% algodón en color neutro, con un diseño destacado del icónico logo azul de Pennywise, inspirado en la portada del primer disco de la banda. Esta prenda combina comodidad y estilo punk clásico, ideal para los fanáticos del surf y skate.",
         itemNumber: "CLTH-017"
@@ -4921,7 +4921,7 @@ export const products = [
         image: "/images/ropa/punk/p-18.webp",
         type: "Clothing",
         category:"Punk",
-        size: "M / L / XL",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta 100% algodón con el emblemático logo del legendario club CBGB's, epicentro de la música punk y new wave en Nueva York. Diseño clásico en colores contrastantes que rinde homenaje a la historia y la influencia que este lugar tuvo en la cultura musical underground",
         itemNumber: "CLTH-018"
@@ -4933,7 +4933,7 @@ export const products = [
         image: "/images/ropa/punk/p-19.webp",
         type: "Clothing",
         category:"Punk",
-        size: "M / L / XL",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra 100% algodón con el logo y diseño oficial de The Distillers, la emblemática banda de punk rock y punk femenino. Esta camiseta presenta gráficos vibrantes y detalles únicos que capturan la energía cruda y rebelde de la banda, ideal para fans que quieren mostrar su pasión por el punk contemporáneo",
         itemNumber: "CLTH-019"
@@ -4945,7 +4945,7 @@ export const products = [
         image: "/images/ropa/punk/p-20.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta oficial de Rancid en color blanca, con el icónico diseño del álbum '…And Out Come the Wolves'. Esta camiseta presenta una impresión de alta calidad que muestra a los tres miembros de la banda en un estilo gráfico vintage y punk clásico. Hecha de algodón suave y resistente.",
         itemNumber: "CLTH-020"
@@ -4957,7 +4957,7 @@ export const products = [
         image: "/images/ropa/punk/p-21.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta oficial de Green Day en color verde inspirado en el álbum 'Nimrod'. Presenta un diseño llamativo con gráficos relacionados al icónico disco, impresa con alta calidad sobre algodón suave para máxima comodidad. Ideal para fans del punk rock que quieren lucir un estilo auténtico y lleno de energía",
         itemNumber: "CLTH-021"
@@ -4969,7 +4969,7 @@ export const products = [
         image: "/images/ropa/punk/p-22.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra oficial de Sick Of It All, con diseño clásico de la banda hardcore punk de Nueva York. Fabricada en algodón suave, ofrece comodidad y durabilidad para el uso diario. El estampado frontal destaca el logo emblemático de la banda en un estilo audaz y contundente, perfecta para los seguidores del hardcore y el punk más auténtico",
         itemNumber: "CLTH-022"
@@ -4981,7 +4981,7 @@ export const products = [
         image: "/images/ropa/punk/p-23.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Rojo",
         description: "Camiseta roja oficial de Bad Religion que rinde homenaje a su icónico álbum ‘How Could Hell Be Any Worse?’ de 1982. Fabricada en algodón 100% suave y resistente, esta camiseta presenta el diseño clásico del álbum con letras y gráficos que reflejan la esencia del punk rock estadounidense. Ideal para fans que buscan combinar estilo y autenticidad con comodidad",
         itemNumber: "CLTH-023"
@@ -4993,7 +4993,7 @@ export const products = [
         image: "/images/ropa/punk/p-24.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra oficial de The Offspring, confeccionada en algodón 100% de alta calidad. Presenta el emblemático logo de la banda en el pecho, con un diseño audaz que captura la energía explosiva del punk californiano.",
         itemNumber: "CLTH-024"
@@ -5005,7 +5005,7 @@ export const products = [
         image: "/images/ropa/punk/p-25.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta oficial de Agnostic Front con el icónico diseño de las botas, símbolo de la escena hardcore neoyorquina. Confeccionada en algodón 100% de gran resistencia, esta camiseta negra rinde homenaje al legado de una de las bandas más influyentes del hardcore punk. Un diseño directo, crudo y combativo, ideal para quienes valoran la actitud y la historia del NYHC.",
         itemNumber: "CLTH-025"
@@ -5017,7 +5017,7 @@ export const products = [
         image: "/images/ropa/punk/p-26.webp",
         type: "Clothing",
         category:"Punk",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "",
         itemNumber: "CLTH-026"
@@ -5029,7 +5029,7 @@ export const products = [
         image: "/images/ropa/grunge/g-1.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Rinde homenaje a uno de los álbumes más icónicos del grunge con esta poderosa camiseta de Alice In Chains. Inspirada en la portada del legendario disco Dirt (1992), esta prenda captura la esencia cruda y melancólica del sonido de Seattle. Confeccionada en 100% algodón suave y resistente, cuenta con un corte unisex moderno y una impresión frontal de alta calidad que resiste el uso y los lavados.",
         itemNumber: "CLTH-027"
@@ -5041,7 +5041,7 @@ export const products = [
         image: "/images/ropa/grunge/g-2.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Clásica, directa y llena de actitud. Esta camiseta de Nirvana presenta el icónico logotipo de la banda con letras en un vibrante color naranja, destacando sobre el fondo oscuro con una estética minimalista pero potente. Confeccionada en 100% algodón suave y duradero, tiene un corte unisex cómodo y moderno, ideal para el uso diario. La impresión de alta calidad garantiza que el diseño se mantenga intacto con el paso del tiempo",
         itemNumber: "CLTH-028"
@@ -5053,7 +5053,7 @@ export const products = [
         image: "/images/ropa/grunge/g-3.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Red Hot Chili Peppers con el emblemático logo rojo y letras blancas al frente, confeccionada en 100% algodón suave y resistente, con corte moderno y cómodo, ideal para expresar tu pasión por el rock con estilo y actitud.",
         itemNumber: "CLTH-029"
@@ -5065,7 +5065,7 @@ export const products = [
         image: "/images/ropa/grunge/g-4.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Blanco",
         description: "Camiseta de Silverchair con diseño inspirado en Frogstomp, en color blanco, confeccionada en 100% algodón suave y resistente, con impresión de alta calidad del icónico sapo del álbum, perfecta para fans del grunge y coleccionistas del rock noventero.",
         itemNumber: "CLTH-030"
@@ -5077,7 +5077,7 @@ export const products = [
         image: "/images/ropa/grunge/g-5.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Weezer con diseño del Álbum Verde, en fondo verde y estampado frontal con la clásica imagen de la banda, hecha en 100% algodón suave y duradero, ideal para fans del power pop y el rock alternativo con estilo nostálgico.",
         itemNumber: "CLTH-031"
@@ -5089,7 +5089,7 @@ export const products = [
         image: "/images/ropa/grunge/g-6.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de The Cure con imagen de Robert Smith tocando la guitarra, en diseño artístico de alto contraste, confeccionada en 100% algodón suave y resistente, perfecta para amantes del post-punk, el estilo oscuro y la música que marcó generaciones.",
         itemNumber: "CLTH-032"
@@ -5101,7 +5101,7 @@ export const products = [
         image: "/images/ropa/grunge/g-7.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Rojo",
         description: "Camiseta de Blur en color rojo vibrante con diseño minimalista del logo clásico, confeccionada en 100% algodón suave y duradero, ideal para fans del britpop que buscan una prenda cómoda, llamativa y con estilo noventero auténtico.",
         itemNumber: "CLTH-033"
@@ -5113,7 +5113,7 @@ export const products = [
         image: "/images/ropa/grunge/g-8.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Soundgarden con diseño inspirado en el álbum Badmotorfinger, estampado frontal con el icónico arte del disco, confeccionada en 100% algodón suave y resistente, perfecta para fans del grunge y el rock alternativo de los 90 que buscan estilo y comodidad.",
         itemNumber: "CLTH-034"
@@ -5125,7 +5125,7 @@ export const products = [
         image: "/images/ropa/grunge/g-9.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta clásica de Pearl Jam, confeccionada en 100% algodón suave y duradero, con diseño sencillo y atemporal que destaca el nombre de la banda, ideal para fans del grunge que quieren un look auténtico y cómodo.",
         itemNumber: "CLTH-035"
@@ -5137,7 +5137,7 @@ export const products = [
         image: "/images/ropa/grunge/g-10.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Azul",
         description: "Camiseta de Sonic Youth en tono azul, confeccionada en 100% algodón suave y resistente, con diseño frontal minimalista que refleja el estilo alternativo y experimental de la banda, perfecta para fans del rock indie y la estética underground.",
         itemNumber: "CLTH-036"
@@ -5149,7 +5149,7 @@ export const products = [
         image: "/images/ropa/grunge/g-11.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Radiohead confeccionada en 100% algodón suave y duradero, con diseño frontal que presenta elementos icónicos de la banda, ideal para seguidores del rock alternativo que buscan combinar comodidad con estilo único y vanguardista.",
         itemNumber: "CLTH-037"
@@ -5161,7 +5161,7 @@ export const products = [
         image: "/images/ropa/grunge/g-12.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Bush con diseño inspirado en el álbum More Than Machines, confeccionada en 100% algodón suave y resistente, con estampado frontal del arte del disco, perfecta para fans del rock alternativo noventero que quieren mostrar su pasión con estilo y comodidad.",
         itemNumber: "CLTH-038"
@@ -5173,7 +5173,7 @@ export const products = [
         image: "/images/ropa/grunge/g-13.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Blanco",
         description: "Camiseta blanca de Nirvana con diseño inspirado en el álbum In Utero, confeccionada en 100% algodón suave y duradero, con impresión frontal de alta calidad del icónico arte del disco, ideal para fans del grunge que buscan estilo auténtico y comodidad.",
         itemNumber: "CLTH-039"
@@ -5185,7 +5185,7 @@ export const products = [
         image: "/images/ropa/grunge/g-14.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra de Faith No More con letras rojas vibrantes en el frente, confeccionada en 100% algodón suave y resistente, perfecta para fans del metal alternativo que buscan una prenda con estilo potente y cómoda para el uso diario.",
         itemNumber: "CLTH-040"
@@ -5197,7 +5197,7 @@ export const products = [
         image: "/images/ropa/grunge/g-15.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Rojo",
         description: "Camiseta de Red Hot Chili Peppers en color rojo intenso con el icónico logo en negro estampado al frente, confeccionada en 100% algodón suave y duradero, ideal para fans del funk rock que buscan una prenda llamativa y cómoda.",
         itemNumber: "CLTH-041"
@@ -5209,7 +5209,7 @@ export const products = [
         image: "/images/ropa/grunge/g-16.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Soundgarden con diseño inspirado en el álbum Badmotorfinger, fondo oscuro y letras amarillas vibrantes, confeccionada en 100% algodón suave y resistente, perfecta para fans del grunge que buscan estilo auténtico y comodidad.",
         itemNumber: "CLTH-042"
@@ -5221,7 +5221,7 @@ export const products = [
         image: "/images/ropa/grunge/g-17.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra con logo de 311 en naranja vibrantes, confeccionada en 100% algodón suave y duradero, ideal para fans de la banda que buscan una prenda cómoda y con estilo llamativo para el día a día.",
         itemNumber: "CLTH-043"
@@ -5233,7 +5233,7 @@ export const products = [
         image: "/images/ropa/grunge/g-18.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Verde",
         description: "Camiseta verde de Pixies con diseño inspirado en Where Is My Mind?, confeccionada en 100% algodón suave y resistente, con estampado frontal que captura la esencia icónica de la banda, perfecta para fans del rock alternativo que buscan comodidad y estilo auténtico.",
         itemNumber: "CLTH-044"
@@ -5245,7 +5245,7 @@ export const products = [
         image: "/images/ropa/grunge/g-19.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra de Pearl Jam con el icónico diseño del oso, confeccionada en 100% algodón suave y resistente, con estampado frontal vibrante, ideal para fans del grunge que buscan una prenda clásica, cómoda y llena de personalidad.",
         itemNumber: "CLTH-045"
@@ -5257,7 +5257,7 @@ export const products = [
         image: "/images/ropa/grunge/g-20.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Rojo",
         description: "Camiseta de Sonic Youth en rojo intenso, confeccionada en 100% algodón suave y duradero, con diseño frontal minimalista que refleja la esencia alternativa y experimental de la banda, perfecta para fans del rock indie que buscan estilo y comodidad.",
         itemNumber: "CLTH-046"
@@ -5269,7 +5269,7 @@ export const products = [
         image: "/images/ropa/grunge/g-21.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Smashing Pumpkins con diseño inspirado en la canción Zero, confeccionada en 100% algodón suave y resistente, con estampado frontal oscuro y detalles llamativos, ideal para fans del rock alternativo que buscan una prenda auténtica y cómoda.",
         itemNumber: "CLTH-047"
@@ -5281,7 +5281,7 @@ export const products = [
         image: "/images/ropa/grunge/g-22.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Azul",
         description: "Camiseta de Mudhoney en azul profundo, confeccionada en 100% algodón suave y duradero, con diseño frontal clásico que representa la esencia cruda del grunge, perfecta para fans del rock alternativo que buscan comodidad y estilo auténtico.",
         itemNumber: "CLTH-048"
@@ -5293,7 +5293,7 @@ export const products = [
         image: "/images/ropa/grunge/g-23.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Azul",
         description: "Camiseta unisex de Dinosaur Jr. con diseño inspirado en el álbum Where You Been, confeccionada en 100% algodón suave y resistente, con estampado frontal del icónico arte del disco, perfecta para fans del rock alternativo y el indie que buscan una prenda cómoda y con estilo vintage.",
         itemNumber: "CLTH-049"
@@ -5305,7 +5305,7 @@ export const products = [
         image: "/images/ropa/grunge/g-24.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Stone Temple Pilots con diseño inspirado en el álbum Purple, confeccionada en 100% algodón suave y duradero, con estampado frontal del arte psicodélico del disco, ideal para fans del grunge y el rock noventero que buscan estilo, comodidad y nostalgia musical.",
         itemNumber: "CLTH-050"
@@ -5317,7 +5317,7 @@ export const products = [
         image: "/images/ropa/grunge/g-25.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Naranja",
         description: "Camiseta naranja de Radiohead con letras negras, confeccionada en 100% algodón suave y resistente, con diseño minimalista y moderno, ideal para fans del rock alternativo que buscan una prenda llamativa, cómoda y con estilo vanguardista.",
         itemNumber: "CLTH-051"
@@ -5329,7 +5329,7 @@ export const products = [
         image: "/images/ropa/grunge/g-26.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de L7 con el clásico logo al frente, confeccionada en 100% algodón suave y resistente, diseño directo y poderoso ideal para fans del punk y grunge que buscan una prenda con actitud, comodidad y estilo noventero auténtico.",
         itemNumber: "CLTH-052"
@@ -5341,8 +5341,7 @@ export const products = [
         image: "/images/ropa/grunge/g-27.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
-        color: "Verde",
+        sizes: ["S", "M", "L", "XL"],
         description: "Camiseta verde de Bush, confeccionada en 100% algodón suave y resistente, con diseño frontal clásico del logo de la banda, ideal para fans del rock alternativo que buscan una prenda cómoda, con estilo sencillo y esencia noventera.",
         itemNumber: "CLTH-053"
         },
@@ -5353,7 +5352,7 @@ export const products = [
         image: "/images/ropa/grunge/g-28.webp",
         type: "Clothing",
         category:"Grunge",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta azul de 311, confeccionada en 100% algodón suave y duradero, con el logo clásico de la banda estampado al frente, ideal para fans del rock alternativo y fusión que buscan comodidad y un estilo vibrante y auténtico.",
         itemNumber: "CLTH-054"
@@ -5365,7 +5364,7 @@ export const products = [
         image: "/images/ropa/metal/m-1.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L"],
         color: "Negro",
         description: "Camiseta de Metallica con diseño del álbum …And Justice for All, confeccionada en 100% algodón suave y resistente, con estampado frontal de alta calidad que muestra a Lady Justice en estilo icónico, ideal para fans del metal que buscan una prenda poderosa, cómoda y llena de actitud.",
         itemNumber: "CLTH-055"
@@ -5377,7 +5376,7 @@ export const products = [
         image: "/images/ropa/metal/m-2.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Pantera con diseño inspirado en Official Live: 101 Proof, confeccionada en 100% algodón suave y duradero, con estampado frontal que emula la etiqueta de licor del icónico álbum en vivo, perfecta para fans del metal que buscan una prenda auténtica, poderosa y con actitud.",
         itemNumber: "CLTH-056"
@@ -5389,7 +5388,7 @@ export const products = [
         image: "/images/ropa/metal/m-3.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Pink Floyd con el icónico diseño de The Dark Side of the Moon, confeccionada en 100% algodón suave y resistente, con el emblemático prisma y espectro de colores al frente, ideal para fans del rock progresivo que buscan una prenda clásica, cómoda y llena de historia musical.",
         itemNumber: "CLTH-057"
@@ -5401,7 +5400,7 @@ export const products = [
         image: "/images/ropa/metal/m-4.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra de Korn con la palabra “Korn” en letras blancas grandes y prominentes al frente, confeccionada en 100% algodón suave y resistente, ideal para fans del nu metal que buscan una prenda impactante, cómoda y con estilo auténtico.",
         itemNumber: "CLTH-058"
@@ -5413,7 +5412,7 @@ export const products = [
         image: "/images/ropa/metal/m-5.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Iron Maiden con diseño inspirado en The Number of the Beast, confeccionada en 100% algodón suave y resistente, con estampado frontal del icónico arte del álbum, perfecta para fans del heavy metal que buscan una prenda clásica, poderosa y llena de energía.",
         itemNumber: "CLTH-059"
@@ -5425,7 +5424,7 @@ export const products = [
         image: "/images/ropa/metal/m-6.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de D.R.I. con diseño inspirado en el álbum Thrash Zone, confeccionada en 100% algodón suave y resistente, con estampado frontal del arte clásico del disco, ideal para fans del crossover thrash que buscan una prenda auténtica, cómoda y con mucha actitud.",
         itemNumber: "CLTH-060"
@@ -5437,7 +5436,7 @@ export const products = [
         image: "/images/ropa/metal/m-7.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Tool con diseño inspirado en el álbum Undertow, confeccionada en 100% algodón suave y resistente, con estampado frontal del icónico arte oscuro y enigmático del disco, perfecta para fans del rock progresivo y alternativo que buscan una prenda con estilo, misterio y comodidad.",
         itemNumber: "CLTH-061"
@@ -5449,7 +5448,7 @@ export const products = [
         image: "/images/ropa/metal/m-8.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra de Ghost, confeccionada en 100% algodón suave y resistente, con diseño frontal que presenta el icónico logo o imagen de la banda, perfecta para fans del rock/metal teatral que buscan una prenda cómoda, elegante y con estilo oscuro.",
         itemNumber: "CLTH-062"
@@ -5461,7 +5460,7 @@ export const products = [
         image: "/images/ropa/metal/m-9.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Gojira, confeccionada en 100% algodón suave y resistente, con diseño frontal inspirado en la potente imagen y estilo progresivo de la banda, ideal para fans del metal ecológico y técnico que buscan una prenda cómoda y con actitud.",
         itemNumber: "CLTH-063"
@@ -5473,7 +5472,7 @@ export const products = [
         image: "/images/ropa/metal/m-10.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Beige",
         description: "Camiseta beige de Anthrax, confeccionada en 100% algodón suave y duradero, con diseño frontal clásico del logo de la banda en colores contrastantes, ideal para fans del thrash metal que buscan una prenda cómoda, con estilo vintage y auténtico.",
         itemNumber: "CLTH-064"
@@ -5485,7 +5484,7 @@ export const products = [
         image: "/images/ropa/metal/m-11.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta unisex de Slayer, confeccionada en 100% algodón suave y resistente, con diseño frontal del icónico logo y gráficos agresivos de la banda, perfecta para fans del thrash metal que buscan una prenda contundente, cómoda y con mucha actitud.",
         itemNumber: "CLTH-065"
@@ -5497,7 +5496,7 @@ export const products = [
         image: "/images/ropa/metal/m-12.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Pantera con diseño inspirado en los álbumes Vulgar Display of Power confeccionada en 100% algodón suave y resistente, con estampado frontal que combina elementos icónicos de ambos discos, ideal para fans del metal pesado que buscan una prenda poderosa, auténtica y con gran actitud.",
         itemNumber: "CLTH-066"
@@ -5509,7 +5508,7 @@ export const products = [
         image: "/images/ropa/metal/m-13.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Deftones con diseño inspirado en el álbum Around the Fur, confeccionada en 100% algodón suave y resistente, con estampado frontal del arte icónico del disco, ideal para fans del nu metal y rock alternativo que buscan una prenda cómoda, provocadora y con estilo noventero.",
         itemNumber: "CLTH-067"
@@ -5521,7 +5520,7 @@ export const products = [
         image: "/images/ropa/metal/m-14.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Def Leppard, confeccionada en 100% algodón suave y resistente, con diseño frontal del logo clásico o arte de alguno de sus discos emblemáticos, ideal para fans del hard rock y glam ochentero que buscan una prenda cómoda, llamativa y llena de energía retro.",
         itemNumber: "CLTH-068"
@@ -5533,7 +5532,7 @@ export const products = [
         image: "/images/ropa/metal/m-15.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta clásica de Guns N' Roses con el emblemático logo de las pistolas y rosas al frente, confeccionada en 100% algodón suave y resistente, ideal para fans del hard rock que buscan una prenda icónica, cómoda y con estilo atemporal.",
         itemNumber: "CLTH-069"
@@ -5545,7 +5544,7 @@ export const products = [
         image: "/images/ropa/metal/m-16.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta negra de Slipknot con letras blancas destacadas al frente, confeccionada en 100% algodón suave y resistente, ideal para fans del metal extremo que buscan una prenda intensa, cómoda y con el estilo oscuro característico de la banda.",
         itemNumber: "CLTH-070"
@@ -5557,7 +5556,7 @@ export const products = [
         image: "/images/ropa/metal/m-17.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Tool, confeccionada en 100% algodón suave y resistente, con diseño frontal inspirado en el arte enigmático y progresivo de la banda, ideal para fans del rock alternativo y experimental que buscan una prenda cómoda, misteriosa y con mucha personalidad.",
         itemNumber: "CLTH-071"
@@ -5569,7 +5568,7 @@ export const products = [
         image: "/images/ropa/metal/m-18.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Opeth con diseño inspirado en el álbum Blackwater Park, confeccionada en 100% algodón suave y resistente, con estampado frontal oscuro y atmosférico, ideal para fans del metal progresivo que buscan una prenda elegante, intensa y llena de profundidad sonora.",
         itemNumber: "CLTH-072"
@@ -5581,7 +5580,7 @@ export const products = [
         image: "/images/ropa/metal/m-19.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Black Sabbath con letras moradas al frente, confeccionada en 100% algodón suave y resistente, con diseño clásico que rinde homenaje a los pioneros del heavy metal, ideal para fans que buscan una prenda cómoda, poderosa y con estilo vintage.",
         itemNumber: "CLTH-073"
@@ -5593,7 +5592,7 @@ export const products = [
         image: "/images/ropa/metal/m-20.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Municipal Waste con diseño inspirado en The Art of Partying, confeccionada en 100% algodón suave y resistente, con estampado frontal lleno de energía y estética crossover thrash, ideal para fans del metal fiestero que buscan una prenda explosiva, cómoda y con actitud desenfrenada.",
         itemNumber: "CLTH-074"
@@ -5605,7 +5604,7 @@ export const products = [
         image: "/images/ropa/metal/m-21.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Blanco",
         description: "Camiseta blanca de Metallica con diseño inspirado en …And Justice for All, confeccionada en 100% algodón suave y resistente, con estampado frontal del icónico arte de Lady Justice, ideal para fans del metal que buscan una prenda llamativa, cómoda y cargada de historia.",
         itemNumber: "CLTH-075"
@@ -5617,7 +5616,7 @@ export const products = [
         image: "/images/ropa/metal/m-22.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Rush con diseño inspirado en el álbum Moving Pictures, confeccionada en 100% algodón suave y resistente, con estampado frontal del arte clásico del disco, ideal para fans del rock progresivo que buscan una prenda elegante, cómoda y con estilo icónico.",
         itemNumber: "CLTH-076"
@@ -5629,7 +5628,7 @@ export const products = [
         image: "/images/ropa/metal/m-23.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta de Anthrax, confeccionada en 100% algodón suave y resistente, con diseño frontal que presenta el logo clásico o arte emblemático de la banda, ideal para fans del thrash metal que buscan una prenda cómoda, auténtica y con mucha actitud.",
         itemNumber: "CLTH-077"
@@ -5641,7 +5640,7 @@ export const products = [
         image: "/images/ropa/metal/m-24.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta unisex de Dio, confeccionada en 100% algodón suave y resistente, con diseño frontal que presenta el icónico logo o arte clásico de la banda, ideal para fans del heavy metal que buscan una prenda poderosa, cómoda y llena de energía legendaria.",
         itemNumber: "CLTH-078"
@@ -5653,7 +5652,7 @@ export const products = [
         image: "/images/ropa/metal/m-25.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta unisex de KISS, confeccionada en 100% algodón suave y resistente, con diseño frontal que muestra el icónico logo de la banda y/o imágenes clásicas de sus miembros, ideal para fans del rock y glam metal que buscan una prenda llamativa, cómoda y con espíritu legendario.",
         itemNumber: "CLTH-079"
@@ -5665,7 +5664,7 @@ export const products = [
         image: "/images/ropa/metal/m-26.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta unisex de Cannibal Corpse, confeccionada en 100% algodón suave y resistente, con diseño frontal impactante y gráfico típico del death metal, ideal para fans del género que buscan una prenda intensa, auténtica y con mucha actitud brutal.",
         itemNumber: "CLTH-080"
@@ -5677,7 +5676,7 @@ export const products = [
         image: "/images/ropa/metal/m-27.webp",
         type: "Clothing",
         category:"Metal",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta unisex de Ghost, confeccionada en 100% algodón suave y resistente, con diseño frontal que presenta el logo o imágenes icónicas de la banda, perfecta para fans del rock/metal teatral que buscan una prenda elegante, oscura y con mucho estilo.",
         itemNumber: "CLTH-081"
@@ -5689,7 +5688,7 @@ export const products = [
         image: "/images/ropa/mujer/m-1.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Gris",
         description: "Blusa gris para mujer de los Ramones, confeccionada en algodón suave y cómodo, con diseño entallado y estampado frontal del clásico logo de la banda, ideal para fans del punk que buscan una prenda casual, con actitud y estilo vintage.",
         itemNumber: "CLTH-082"
@@ -5701,7 +5700,7 @@ export const products = [
         image: "/images/ropa/mujer/m-2.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Crop top de AC/DC para mujer, confeccionado en algodón suave y elástico, con diseño moderno y estampado frontal del icónico logo de la banda, ideal para fans del rock clásico que buscan una prenda fresca, cómoda y con mucha actitud.",
         itemNumber: "CLTH-083"
@@ -5713,7 +5712,7 @@ export const products = [
         image: "/images/ropa/mujer/m-3.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa negra para mujer de Guns N' Roses, confeccionada en algodón suave y cómodo, con diseño entallado y estampado frontal del emblemático logo de la banda, perfecta para fans del hard rock que buscan una prenda con estilo, actitud y toque clásico.",
         itemNumber: "CLTH-084"
@@ -5725,7 +5724,7 @@ export const products = [
         image: "/images/ropa/mujer/m-4.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa sin mangas de Korn para mujer, confeccionada en algodón suave y fresco, con corte moderno y estampado frontal del logo distintivo de la banda, ideal para fans del nu metal que buscan una prenda cómoda, ligera y con mucho estilo alternativo.",
         itemNumber: "CLTH-085"
@@ -5737,7 +5736,7 @@ export const products = [
         image: "/images/ropa/mujer/m-5.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Chaqueta de cuero para mujer, confeccionada en material sintético o cuero genuino de alta calidad, con corte entallado, cierre frontal y detalles metálicos, ideal para un look rebelde, versátil y con estilo rockero clásico.",
         itemNumber: "CLTH-086"
@@ -5749,7 +5748,7 @@ export const products = [
         image: "/images/ropa/mujer/m-6.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Falda de cuero para mujer, confeccionada en cuero sintético o genuino, con diseño ajustado y detalles modernos, ideal para combinar con prendas rockeras o alternativas, aportando un toque audaz, elegante y con actitud.",
         itemNumber: "CLTH-087"
@@ -5761,7 +5760,7 @@ export const products = [
         image: "/images/ropa/mujer/m-7.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Medias de Guns N' Roses con diseño estampado del icónico logo de la banda, confeccionadas en mezcla de algodón, poliéster y elastano para mayor comodidad, ajuste y durabilidad; ideales para fans del rock que quieren llevar el estilo GNR de pies a cabeza.",
         itemNumber: "CLTH-088"
@@ -5773,7 +5772,7 @@ export const products = [
         image: "/images/ropa/mujer/m-8.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa clásica de Guns N' Roses para mujer, confeccionada en algodón suave y transpirable, con corte entallado y el emblemático logo de la banda en el frente, ideal para un look rockero atemporal y con mucha actitud.",
         itemNumber: "CLTH-089"
@@ -5785,7 +5784,7 @@ export const products = [
         image: "/images/ropa/mujer/m-9.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Blanco",
         description: "Blusa estilo Black Flag con diseño divertido de gatos (Cat Flag), confeccionada en algodón suave y cómodo, con estampado frontal que mezcla el icónico estilo de franjas de Black Flag con siluetas felinas, ideal para quienes buscan un look alternativo, original y con actitud punk.",
         itemNumber: "CLTH-090"
@@ -5797,7 +5796,7 @@ export const products = [
         image: "/images/ropa/mujer/m-10.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Verde",
         description: "Blusa con la frase Girls Invented Punk Rock Not England, confeccionada en algodón suave con corte entallado, ideal para un look rebelde y feminista que rinde homenaje al papel de las mujeres en la historia del punk.",
         itemNumber: "CLTH-091"
@@ -5809,7 +5808,7 @@ export const products = [
         image: "/images/ropa/mujer/m-11.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa de Misfits con el clásico logo de la banda y la icónica calavera Fiend Skull, confeccionada en algodón suave con corte entallado, perfecta para un look oscuro, punk y con mucha actitud.",
         itemNumber: "CLTH-092"
@@ -5821,7 +5820,7 @@ export const products = [
         image: "/images/ropa/mujer/m-12.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Rojo",
         description: "Falda estilo grunge de cuadros rojo y negro, confeccionada en tela liviana con caída suave, cintura elástica y diseño inspirado en la moda alternativa de los 90; ideal para combinar con botas, camisetas de bandas o chaquetas de cuero.",
         itemNumber: "CLTH-093"
@@ -5833,7 +5832,7 @@ export const products = [
         image: "/images/ropa/mujer/m-13.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa de Nirvana con el icónico logo de la carita sonriente, confeccionada en algodón suave y cómodo, con corte entallado, perfecta para fans del grunge que buscan un look clásico, relajado y lleno de actitud.",
         itemNumber: "CLTH-094"
@@ -5845,7 +5844,7 @@ export const products = [
         image: "/images/ropa/mujer/m-14.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "7 / 7.5 / 8  ",
+        sizes: ["6.5", "7", "7.5", "8"],
         color: "Negro",
         description: "Tenis estilo “estrella”, inspirados en el diseño clásico con detalles llamativos y la icónica estrella lateral, confeccionados con materiales resistentes y cómodos, ideales para un look casual, urbano y con personalidad.",
         itemNumber: "CLTH-095"
@@ -5857,7 +5856,7 @@ export const products = [
         image: "/images/ropa/mujer/m-15.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa de KISS para mujer, confeccionada en algodón suave y cómodo, con diseño entallado y estampado frontal del icónico logo de la banda, perfecta para un look rockero, llamativo y con mucho estilo.",
         itemNumber: "CLTH-096"
@@ -5869,7 +5868,7 @@ export const products = [
         image: "/images/ropa/mujer/m-16.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Short gris oscuro para mujer, confeccionado en tela cómoda y resistente, con corte casual y diseño versátil, ideal para looks frescos y urbanos en cualquier temporada.",
         itemNumber: "CLTH-097"
@@ -5881,7 +5880,7 @@ export const products = [
         image: "/images/ropa/mujer/m-17.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Gris",
         description: "Blusa de Social Distortion para mujer, confeccionada en algodón suave y cómodo, con diseño entallado y estampado frontal del logo o gráficos icónicos de la banda, ideal para un look punk rock clásico con estilo y actitud.",
         itemNumber: "CLTH-098"
@@ -5893,7 +5892,7 @@ export const products = [
         image: "/images/ropa/mujer/m-18.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa sin mangas para mujer con diseño de calavera, confeccionada en algodón suave y fresco, con corte entallado y estampado frontal atrevido, perfecta para un look rockero, urbano y lleno de personalidad.",
         itemNumber: "CLTH-099"
@@ -5905,7 +5904,7 @@ export const products = [
         image: "/images/ropa/mujer/m-19.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Rosado",
         description: "Blusa rosada de Green Day con diseño inspirado en el álbum Kerplunk, estampado frontal con la icónica flor del disco, confeccionada en algodón suave y cómodo, con corte entallado, ideal para un look punk rock femenino y colorido.",
         itemNumber: "CLTH-100"
@@ -5917,7 +5916,7 @@ export const products = [
         image: "/images/ropa/mujer/m-20.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Chaqueta de cuero para mujer, confeccionada en cuero genuino o sintético de alta calidad, con corte entallado, cierre frontal y detalles metálicos, que combina estilo clásico y actitud rebelde para un look versátil y atemporal.",
         itemNumber: "CLTH-101"
@@ -5929,7 +5928,7 @@ export const products = [
         image: "/images/ropa/mujer/m-21.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Azul",
         description: "Short de mezclilla azul para mujer, confeccionado en denim resistente y cómodo, con corte clásico, detalles desgastados y acabado casual, perfecto para un look fresco, urbano y versátil en cualquier temporada.",
         itemNumber: "CLTH-102"
@@ -5941,7 +5940,7 @@ export const products = [
         image: "/images/ropa/mujer/m-22.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa de Iron Maiden para mujer, confeccionada en algodón suave y cómodo, con corte entallado y estampado frontal del icónico logo o ilustraciones clásicas de la banda, ideal para un look rockero auténtico y con mucha actitud.",
         itemNumber: "CLTH-103"
@@ -5953,7 +5952,7 @@ export const products = [
         image: "/images/ropa/mujer/m-23.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Crop top de Nirvana para mujer, confeccionado en algodón suave y cómodo, con diseño corto y entallado, estampado frontal con el icónico logo o la carita sonriente, perfecto para un estilo grunge, casual y con mucha personalidad.",
         itemNumber: "CLTH-104"
@@ -5965,7 +5964,7 @@ export const products = [
         image: "/images/ropa/mujer/m-24.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Camiseta con la frase “Be Cool Honey Bunny”, inspirada en la icónica escena de Pulp Fiction, confeccionada en algodón suave y cómodo, con corte unisex y diseño minimalista, ideal para fans del cine y amantes del estilo retro con actitud.",
         itemNumber: "CLTH-105"
@@ -5977,7 +5976,7 @@ export const products = [
         image: "/images/ropa/mujer/m-25.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Azul",
         description: "Blusa de Aerosmith para mujer, confeccionada en algodón suave y ligero, con corte entallado y estampado frontal del emblemático logo alado de la banda, perfecta para un look clásico de rock lleno de estilo y personalidad.",
         itemNumber: "CLTH-106"
@@ -5989,7 +5988,7 @@ export const products = [
         image: "/images/ropa/mujer/m-26.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "7 / 7.5 / 8",
+        sizes: ["6.5", "7", "7.5", "8"],
         color: "Negro",
         description: "Tenis estilo Converse, con diseño clásico de lona y suela de goma vulcanizada, cómodos y versátiles, ideales para un look casual, urbano y atemporal con toque alternativo.",
         itemNumber: "CLTH-107"
@@ -6001,7 +6000,7 @@ export const products = [
         image: "/images/ropa/mujer/m-27.webp",
         type: "Clothing",
         category:"Mujer",
-        size: "S / M / L",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "Blusa de Black Sabbath para mujer, confeccionada en algodón suave y cómodo, con corte entallado y estampado frontal del logo o arte clásico de la banda, ideal para un estilo rockero, oscuro y lleno de actitud.",
         itemNumber: "CLTH-108"

@@ -106,6 +106,7 @@ body {
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   color: #f5f5f5;
+  cursor: pointer;
 }
 
 .product-card:hover {

@@ -1,16 +1,17 @@
 <template>
   <div class="contenido-wrap">
-    <h1>Camisetas Punk Rock / Hardcore / Ska</h1>
+    <h1>Camisetas Punk / Hardcore / Ska</h1>
 
     <div class="product-list" data-aos="zoom-in">
-      <div v-for="product in paginatedProducts" :key="product.id" class="product-card">
-        <router-link 
-          :to="{ name: 'clothing-details', params: { id: product.id }, query: { from: $route.fullPath } }"
-        >
-          <img :src="product.image" :alt="product.name" />
-          <h3>{{ product.name }}</h3>
-          <p>{{ product.price }}</p>
-        </router-link>
+      <div
+        v-for="product in paginatedProducts"
+        :key="product.id"
+        class="product-card"
+        @click="openModal(product)"
+      >
+        <img :src="product.image" :alt="product.name" />
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price }}</p>
       </div>
     </div>
 
@@ -20,8 +21,16 @@
       <span>Página {{ currentPage }} de {{ totalPages }}</span>
       <button @click="goToPage(currentPage + 1)" :disabled="currentPage === totalPages">Siguiente</button>
     </div>
+
     <MercaSlider />
     <AppFooter />
+
+    <!-- Ropa Modal -->
+    <RopaModal
+      v-if="isModalOpen"
+      :product="selectedProduct"
+      @close="closeModal"
+    />
   </div>
 </template>
 
@@ -29,31 +38,33 @@
 import { products } from '@/data/products.js';
 import MercaSlider from '@/components/MercaSlider.vue';
 import AppFooter from '@/components/AppFooter.vue';
+import RopaModal from '@/components/RopaModal.vue'; // ← Import your modal
 
 export default {
-  name: 'CatalogoPunkRock',
+  name: 'RopaGrunge',
   components: {
     MercaSlider,
     AppFooter,
+    RopaModal,
   },
   data() {
     return {
       cdProducts: [],
       currentPage: 1,
-      itemsPerPage: 18
+      itemsPerPage: 18,
+      selectedProduct: null,
+      isModalOpen: false,
     };
   },
   created() {
     const page = parseInt(this.$route.query.page, 10);
     this.currentPage = !isNaN(page) && page > 0 ? page : 1;
 
+    // Load all product data for modal use
     this.cdProducts = products
       .filter(item => item.category === 'Punk')
       .map(item => ({
-        id: item.id,
-        name: item.name,
-        price: item.price,
-        image: item.image
+        ...item // Keep all fields for modal (name, price, image, size, color, etc.)
       }));
   },
   mounted() {
@@ -99,6 +110,14 @@ export default {
     },
     handleResize() {
       this.setItemsPerPage();
+    },
+    openModal(product) {
+      this.selectedProduct = product;
+      this.isModalOpen = true;
+    },
+    closeModal() {
+      this.selectedProduct = null;
+      this.isModalOpen = false;
     }
   },
   watch: {
@@ -112,7 +131,7 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
-  color:var(----color-text-dark);
+  color: var(----color-text-dark);
 }
 
 h3 {
@@ -126,8 +145,15 @@ button[disabled] {
 }
 
 .contenido-wrap {
-  margin:0;
-  padding: 50px 0 0; 
+  margin: 0;
+  padding: 50px 0 0;
 }
 
+.product-card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: scale(1.03);
+}
 </style>

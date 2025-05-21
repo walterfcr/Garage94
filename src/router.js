@@ -34,7 +34,6 @@ const routes = [
   { path: '/ropa-mujer', name: 'ropa-mujer', component: RopaMujer },
   { path: '/ediciones-especiales', name: 'ediciones-especiales', component: VinilCollection },
   { path: '/contacto', name: 'Contacto', component: ContactForm },
-  { path: '/clothing/:id', name: 'clothing-details', component: () => import('@/views/ClothingModal.vue')},
   { path: '/cd/:id', name: 'cd-details', component: () => import('./views/CdDetails.vue') },
 ];
 
