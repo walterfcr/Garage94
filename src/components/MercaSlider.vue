@@ -10,6 +10,7 @@
     :loop="true"
     :autoplay="{ delay: 2500, disableOnInteraction: false }"
     :breakpoints="{
+        480: { slidesPerView: 1 },
         640: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         1024: { slidesPerView: 4 }
