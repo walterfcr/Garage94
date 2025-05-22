@@ -9,7 +9,7 @@
 
         <!-- Column 2: Clothing Info -->
         <div class="column">
-          <h2>Producto: {{ product.name }}</h2>
+          <h2> {{ product.name }}</h2>
 
           <!-- Size Dropdown -->
           <label for="size-select"><strong>Talla:</strong></label>

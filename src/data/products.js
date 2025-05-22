@@ -6342,6 +6342,50 @@ export const products = [
         description: "Camiseta Earth Crisis que representa la fuerza del hardcore y el activismo ambiental. Diseño impactante y colores vibrantes, hecha con algodón resistente para máxima comodidad y durabilidad. Perfecta para fans comprometidos con la música y la causa.",
         itemNumber: "CLTH-136"
         },
+        {
+        id: 1000,
+        name: "Pulsera unisex de cuero sintético",
+        price: "¢10.000",
+        image: "/images/accesorios/accesorios/a-1.webp",
+        material:"Cuero / Acero",
+        longitud: "8 pulgadas",
+        type: "Accesorio",
+        description: "HZMAN – Pulsera unisex de cuero sintético, color negro, con tachuelas en forma de pirámide, de los años 80, aleación, 2 filas., PSZ71206",
+        itemNumber: "ACCS-0001"
+        },
+        {
+        id: 1001,
+        name: "Juego de 3 pulseras punk rock",
+        price: "¢11.000",
+        image: "/images/accesorios/accesorios/a-1.webp",
+        material:'Cuero / Metal',
+        longitud: '8"',
+        type: "Accesorio",
+        description: "Elegante y versátil: perfecto para hombres y mujeres, esta pulsera de cuero complementa una variedad de estilos, incluyendo punk, gótico y escena.",
+        itemNumber: "ACCS-0002"
+        },
+        {
+        id: 1002,
+        name: "FaithHeart Brazalete vikingo para hombre",
+        price: "¢9.000",
+        image: "/images/accesorios/accesorios/a-3.webp",
+        material:'Acero',
+        longitud: '6.8 cm',
+        type: "Accesorio",
+        description: "Pulsera vikinga: diseño de brazalete trenzado con cuervo/lobo/cráneo/cabeza de dragón en cada extremo. Se cree que esta poderosa joyería vikinga trae buena suerte y valentía al usuario.",
+        itemNumber: "ACCS-0003"
+        },
+        {
+        id: 1003,
+        name: "HZMAN Pulsera de serpiente vikinga para hombre, de acero inoxidable, mitología nórdica, Jormungandr",
+        price: "¢11.000",
+        image: "/images/accesorios/accesorios/a-4.webp",
+        material:'Cuero / Metal',
+        longitud: '8.5"',
+        type: "Accesorio",
+        description: "Diseño: inspirado en el legendario Jormungandr, la serpiente de la tradición nórdica, esta pulsera simboliza la fuerza, la resiliencia y el ciclo eterno de la vida.",
+        itemNumber: "ACCS-0004"
+        },
 
       ];
   

@@ -16,6 +16,7 @@
     }"
     >
 <SwiperSlide v-for="item in merch" :key="item.id">
+  <div class="merch-card-wrapper">
   <component
     :is="item.link ? 'router-link' : 'div'"
     :to="item.link"
@@ -25,6 +26,7 @@
     <img :src="item.image" :alt="item.name" />
     <h3>{{ item.name }}</h3>
   </component>
+  </div>
 </SwiperSlide>
     </Swiper>
     </div> 
@@ -43,10 +45,10 @@ export default {
       merch: [
         { id: 1, name: 'Camisetas Punk / Hardcore / Ska', image: '/images/merca/merch-1.jpg', link: '/ropa-punk' },
         { id: 2, name: 'Camisetas Metal / Progresivo', image: '/images/merca/merch-2.jpg', link: '/ropa-metal' }, 
-        { id: 3, name: 'Accesorios', image: '/images/merca/merch-5.jpg' },
+        { id: 3, name: 'Accesorios', image: '/images/merca/merch-5.jpg', link: '/catalogo-accesorios'  },
         { id: 4, name: 'Camisetas Grunge / Alternativo', image: '/images/merca/merch-3.jpg', link: '/ropa-grunge' },
         { id: 5, name: 'Ropa de Mujer', image: '/images/merca/merch-4.jpg', link: '/ropa-mujer'},
-        { id: 6, name: 'Artículos Coleccionables', image: '/images/merca/merch-6.jpg' },
+        { id: 6, name: 'Artículos Coleccionables', image: '/images/merca/merch-6.jpg', link: '/articulos-coleccionables' },
       ]
     };
   },
@@ -75,6 +77,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  flex-grow: 1;
   background: #1f1f1f;
   border: 2px solid #ff005580;
   border-radius: 12px;
@@ -112,9 +115,8 @@ export default {
   font-size: 1.1rem;
   font-weight: bold;
   color: #fff;
-    white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  min-height: 3rem;
+
 }
 
 
@@ -127,6 +129,21 @@ export default {
   margin:0 auto;
   padding: 50px 0 100px; 
   width: 90%;
+}
+
+::v-deep(.swiper-wrapper) {
+  display: flex;
+}
+::v-deep(.swiper-slide) {
+  display: flex;
+  height: auto;
+}
+
+.merch-card-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 

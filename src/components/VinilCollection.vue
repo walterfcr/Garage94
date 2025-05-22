@@ -118,6 +118,6 @@ export default {
 h1{ text-align:center; color:var(--color-text-dark);}
 h3{ font-size:.8rem; margin:.5rem 0 0;}
 button[disabled]{opacity:.5; pointer-events:none;}
-.contenido-wrap{ margin:0; padding:50px 0 100px;}
+.contenido-wrap{ margin:0; padding:50px 0 0;}
 /* you already have product‑list / product‑card styles – keep them */
 </style>

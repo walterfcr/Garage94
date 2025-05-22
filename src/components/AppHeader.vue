@@ -34,6 +34,8 @@
             <li><router-link to="/ropa-metal" @click="closeMenu">Camisetas Metal / Progresivo</router-link></li>
             <li><router-link to="/ropa-grunge" @click="closeMenu">Camisetas Grunge / Alternativo</router-link></li>
             <li><router-link to="/ropa-mujer" @click="closeMenu">Ropa Mujer</router-link></li>
+            <li><router-link to="/catalogo-accesorios" @click="closeMenu">Accesorios</router-link></li>
+            <li><router-link to="/articulos-coleccionables" @click="closeMenu">Artículos Coleccionables</router-link></li>
           </ul>
         </li>
         <li><a href="/contacto">Contacto</a></li>

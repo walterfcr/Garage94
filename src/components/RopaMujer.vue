@@ -41,7 +41,7 @@ import AppFooter from '@/components/AppFooter.vue';
 import RopaModal from '@/components/RopaModal.vue'; // ← Import your modal
 
 export default {
-  name: 'RopaGrunge',
+  name: 'RopaMujer',
   components: {
     MercaSlider,
     AppFooter,

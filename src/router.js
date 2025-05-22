@@ -13,12 +13,14 @@ import RopaPunk from './components/RopaPunk.vue';
 import RopaMetal from './components/RopaMetal.vue';
 import RopaGrunge from './components/RopaGrunge.vue';
 import RopaMujer from './components/RopaMujer.vue';
+import CatalogoAccesorios from './components/CatalogoAccesorios.vue';
+import CatalogoColeccionables from './components/CatalogoColeccionables.vue';
 import ContactForm from './components/ContactForm.vue';
 import AppNosotros from '@/components/AppNosotros.vue';
 
 const routes = [
   { path: '/', name: 'home', component: CatalogoCDs },
-  { path: '/nosotros', name: 'Nosotros', component: AppNosotros,},
+  { path: '/nosotros', name: 'Nosotros', component: AppNosotros,}, 
   { path: '/punk-rock', name: 'punk-rock', component: PunkRock },
   { path: '/hard-core', name: 'hard-core', component: HardCore },
   { path: '/metal-music', name: 'metal-music', component: MetalMusic },
@@ -32,6 +34,8 @@ const routes = [
   { path: '/ropa-metal', name: 'ropa-metal', component: RopaMetal },
   { path: '/ropa-grunge', name: 'ropa-grunge', component: RopaGrunge },
   { path: '/ropa-mujer', name: 'ropa-mujer', component: RopaMujer },
+  { path: '/catalogo-accesorios', name: 'catalogo-accesorios', component: CatalogoAccesorios },
+  { path: '/articulos-coleccionables', name: 'articulos-coleccionables', component: CatalogoColeccionables },
   { path: '/ediciones-especiales', name: 'ediciones-especiales', component: VinilCollection },
   { path: '/contacto', name: 'Contacto', component: ContactForm },
   { path: '/cd/:id', name: 'cd-details', component: () => import('./views/CdDetails.vue') },
