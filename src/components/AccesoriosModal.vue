@@ -4,7 +4,12 @@
       <div class="product-details">
         <!-- Column 1: Image -->
         <div class="column">
-          <img :src="product.image" :alt="product.name" />
+          <img
+            :src="product.image"
+            :alt="product.name"
+            @click="openLightbox"
+            class="zoomable-image"
+          />
         </div>
 
         <!-- Column 2: Product Info -->
@@ -14,7 +19,6 @@
           <p><strong>Material:</strong> {{ product.material }}</p>
           <p><strong>Longitud:</strong> {{ product.longitud }}</p>
           <p><strong>Item #:</strong> {{ product.itemNumber }}</p>
-
         </div>
 
         <!-- Column 3: Description -->
@@ -26,6 +30,12 @@
 
       <button class="close-button" @click="emitClose">Cerrar</button>
     </div>
+
+    <!-- Lightbox Overlay -->
+    <div v-if="isLightboxOpen" class="lightbox-overlay" @click.self="closeLightbox">
+      <img :src="product.image" :alt="product.name" class="lightbox-img" />
+      <button class="lightbox-close" @click="closeLightbox">×</button>
+    </div>
   </div>
 </template>
 
@@ -35,44 +45,106 @@ export default {
   props: {
     product: { type: Object, required: true },
   },
+  data() {
+    return {
+      isLightboxOpen: false,
+    };
+  },
   methods: {
     addToCart() {
-      // cart logic here
       this.emitClose();
     },
     emitClose() {
       this.$emit('close');
     },
+    openLightbox() {
+      if (window.innerWidth >= 769) {
+        this.isLightboxOpen = true;
+        document.addEventListener('keydown', this.handleKeydown);
+      }
+    },
+    closeLightbox() {
+      this.isLightboxOpen = false;
+      document.removeEventListener('keydown', this.handleKeydown);
+    },
+    handleKeydown(e) {
+      if (e.key === 'Escape') {
+        this.closeLightbox();
+      }
+    },
+  },
+  beforeUnmount() {
+    document.removeEventListener('keydown', this.handleKeydown);
   },
 };
 </script>
 
 <style scoped>
-.modal-overlay {
-  position: fixed; inset: 0;
-  display: grid; place-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2000;
+
+.close-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #ff0055;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
-.modal-box {
-  width: min(90vw, 420px);
-  background: #fff; border-radius: 1rem;
-  padding: 1.5rem; position: relative;
-  animation: zoomIn 0.25s ease;
+.product-details {
+  display: flex;
+  gap: 1rem;
 }
-.close-btn {
-  position: absolute; top: 0.5rem; right: 0.5rem;
-  background: transparent; border: none;
-  font-size: 1.5rem; cursor: pointer;
+.column {
+  flex: 1;
+}
+.description {
+  white-space: pre-line;
+}
+.zoomable-image {
+  cursor: zoom-in;
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.zoomable-image:hover {
+  transform: scale(1.02);
 }
 
-.add-btn {
-  width: 100%; padding: 0.65rem 1rem;
-  border: none; border-radius: 0.5rem;
-  font-weight: 600; cursor: pointer;
-  background: var(--accent, #ff0055); color: #fff;
+/* Lightbox styles */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2100;
 }
-@keyframes zoomIn { from { scale: 0.9; opacity: 0; } }
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #000;
+  cursor: zoom-out;
+}
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from {
+    scale: 0.9;
+    opacity: 0;
+  }
+}
 
 @media (max-width: 768px) {
   .product-details {
@@ -81,6 +153,10 @@ export default {
   .modal-overlay {
     align-items: flex-start;
     padding-top: 2rem;
+  }
+  .zoomable-image {
+    cursor: default;
+    transform: none !important;
   }
 }
 </style>
