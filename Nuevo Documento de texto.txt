@@ -3,36 +3,36 @@ npm run serve -- --forcé
 
 ’
 
-        {
-          id: 26, 
-          name: 'Smash',
-          band: 'The',
-          genre: 'Punk Rock',
-          genreDescription: 'Punk Rock',
-          label: 'Epitaph Records',
+         {
+          id: 300, 
+          name: 'Uncle',
+          band: 'Screaming',
+          genre: 'Grunge',
+          genreDescription: 'Grunge',
+          label: ' Records',
           numDiscs: 1,
-          releaseDate: '08/04/1994',
+          releaseDate: '19/02/1991',
           type: 'CD',
-          itemNumber: '258458240X',
-          image: '/images/punk/p-3.webp',
-          description: '​',
+          itemNumber: '258569523X',
+          image: '/images/grunge/g-33.webp',
+          description: '',
           price:'¢14.000',
-        },
+        }, 
 
 
 
 
         {
-        id: 781,
-        name: "Blusa Ramones",
+        id: 830,
+        name: "Camiseta ",
         price: "¢14.000",
-        image: "/images/ropa/mujer/m-1.webp",
+        image: "/images/ropa/punk/p-50.webp",
         type: "Clothing",
-        category:"Mujer",
-        size: "S / M / L",
+        category:"Punk",
+        sizes: ["S", "M", "L", "XL"],
         color: "Negro",
         description: "",
-        itemNumber: "CLTH-082"
+        itemNumber: "CLTH-13"
         },
 
  genreDescription: '',
