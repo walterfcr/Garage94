@@ -1,24 +1,28 @@
-import { createApp } from 'vue';  
-import App from './App.vue'; 
+import { createApp } from 'vue';
+import App from './App.vue';
 import './assets/global.css';
-import router from './router'; 
-//import '@flaticon/flaticon-uicons/css/uicons-regular-chubby.css';
+import router from './router';
 
 // AOS imports
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Create the Vue app
 const app = createApp(App);
 
-// Initialize AOS after mounting
 app.use(router);
+
+// Mount first
 app.mount('#app');
 
-// Start AOS animations
-AOS.init();
+// Initialize AOS after the app is mounted
+AOS.init({
+  once: true, // animation happens only the first time
+  duration: 1000, // optional: controls speed
+});
 
-// Optional: Refresh AOS on every route change
+// Refresh AOS on every route change so new components animate
 router.afterEach(() => {
-  AOS.refresh();
+  setTimeout(() => {
+    AOS.refreshHard();
+  }, 500); // small delay lets Vue render before refreshing
 });
