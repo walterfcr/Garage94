@@ -16,13 +16,13 @@ app.mount('#app');
 
 // Initialize AOS after the app is mounted
 AOS.init({
-  once: true, // animation happens only the first time
-  duration: 1000, // optional: controls speed
+  once: true,
+  duration: 400, // faster animation
+  easing: 'ease-out', // optional: snappy easing
 });
 
-// Refresh AOS on every route change so new components animate
 router.afterEach(() => {
   setTimeout(() => {
     AOS.refreshHard();
-  }, 500); // small delay lets Vue render before refreshing
+  }, 50); // minimal delay
 });
