@@ -68,6 +68,10 @@ npm run dev
 
 This project is a frontend prototype and is still under development.
 
+## 🌐 Live Demo
+
+https://garage94.vercel.app/
+
 ## 🔮 Future Improvements
 
 * 🛒 Shopping cart functionality
