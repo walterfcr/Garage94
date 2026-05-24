@@ -1,6 +1,6 @@
 <template>
   <div class="modal-overlay" @click.self="emitClose">
-    <div class="modal-content" data-aos="zoom-in">
+    <div class="modal-content" data-aos="fade-in">
       <div class="product-details">
         <!-- Column 1: Image -->
         <div class="column">
@@ -9,7 +9,7 @@
 
         <!-- Column 2: Clothing Info -->
         <div class="column">
-          <h2> {{ product.name }}</h2>
+          <h2>{{ product.name }}</h2>
 
           <!-- Size Dropdown -->
           <label for="size-select"><strong>Talla:</strong></label>
@@ -32,11 +32,7 @@
         </div>
       </div>
 
-      <button
-        class="add-button"
-        :disabled="!selectedSize"
-        @click="addToCart"
-      >
+      <button class="add-button" :disabled="!selectedSize" @click="addToCart">
         Agregar al carrito
       </button>
 
@@ -49,35 +45,34 @@
 export default {
   name: 'RopaModal',
   props: {
-    product: Object
+    product: Object,
   },
   emits: ['close'],
   data() {
     return {
-      selectedSize: ''
-    };
+      selectedSize: '',
+    }
   },
   mounted() {
-    document.body.classList.add('no-scroll');
+    document.body.classList.add('no-scroll')
   },
   unmounted() {
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove('no-scroll')
   },
   methods: {
     emitClose() {
-      this.$emit('close');
+      this.$emit('close')
     },
     addToCart() {
-      alert(`Añadido: ${this.product.name} - Talla: ${this.selectedSize}`);
+      alert(`Añadido: ${this.product.name} - Talla: ${this.selectedSize}`)
       // You can emit an event to parent instead of alert
-      this.emitClose();
-    }
-  }
-};
+      this.emitClose()
+    },
+  },
+}
 </script>
 
 <style scoped>
-
 label {
   display: block;
   margin-top: 0.5rem;

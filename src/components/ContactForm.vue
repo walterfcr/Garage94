@@ -1,39 +1,44 @@
 <template>
-<div class="contacto-wrap">
-  <div class="contact-form" data-aos="fade-up">
-    <h2>Contacto</h2>
-    <form @submit.prevent="handleSubmit">
-      <div class="form-group">
-        <label for="name">Nombre</label>
-        <input type="text" id="name" v-model="form.name" required />
-      </div>
+  <div class="contacto-wrap">
+    <div class="contact-form" data-aos="fade-in">
+      <h2>Contacto</h2>
+      <form @submit.prevent="handleSubmit">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" v-model="form.name" required />
+        </div>
 
-      <div class="form-group">
-        <label for="email">Correo Electrónico</label>
-        <input type="email" id="email" v-model="form.email" required />
-      </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" id="email" v-model="form.email" required />
+        </div>
 
-      <div class="form-group">
-        <label for="message">Mensaje</label>
-        <textarea id="message" v-model="form.message" rows="5" required></textarea>
-      </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            v-model="form.message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
 
-      <button type="submit" class="submit-button">Enviar</button>
-    </form>
+        <button type="submit" class="submit-button">Enviar</button>
+      </form>
 
-    <p v-if="successMessage" class="success-message">{{ successMessage }}</p>
+      <p v-if="successMessage" class="success-message">{{ successMessage }}</p>
+    </div>
+    <AppFooter />
   </div>
-  <AppFooter />
-</div>  
 </template>
 
 <script>
-import AppFooter from '@/components/AppFooter.vue';
+import AppFooter from '@/components/AppFooter.vue'
 
 export default {
-    components: {
+  components: {
     AppFooter,
-    },
+  },
   data() {
     return {
       form: {
@@ -42,23 +47,23 @@ export default {
         message: '',
       },
       successMessage: '',
-    };
+    }
   },
   methods: {
     handleSubmit() {
       // Simulate form submission
-      this.successMessage = '¡Gracias por tu mensaje!';
-      this.form.name = '';
-      this.form.email = '';
-      this.form.message = '';
+      this.successMessage = '¡Gracias por tu mensaje!'
+      this.form.name = ''
+      this.form.email = ''
+      this.form.message = ''
     },
   },
-};
+}
 </script>
 
 <style scoped>
-.contacto-wrap{
-    margin:100px 0 0;
+.contacto-wrap {
+  margin: 100px 0 0;
 }
 
 .contact-form {
@@ -72,9 +77,9 @@ export default {
   box-shadow: 0 0 15px rgba(255, 0, 85, 0.2);
 }
 
-@media (max-width:768px){
-.contact-form{
-    width:90%;
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
   }
 }
 

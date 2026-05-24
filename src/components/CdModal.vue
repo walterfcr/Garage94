@@ -1,7 +1,7 @@
 <template>
   <!-- Only rendered when product is not null -->
   <div class="modal-overlay" @click.self="emitClose">
-    <div class="modal-content" data-aos="zoom-in">
+    <div class="modal-content" data-aos="fade-in">
       <div class="product-details">
         <!-- column 1 -->
         <div class="column">
@@ -39,18 +39,21 @@ export default {
   emits: ['close'],
   mounted() {
     /* lock background scroll */
-    document.body.classList.add('no-scroll');
+    document.body.classList.add('no-scroll')
   },
   unmounted() {
     /* unlock background scroll */
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove('no-scroll')
   },
-  methods: { emitClose() { this.$emit('close'); } }
-};
+  methods: {
+    emitClose() {
+      this.$emit('close')
+    },
+  },
+}
 </script>
 
 <style scoped>
-
 @media (max-width: 768px) {
   .product-details {
     flex-direction: column;

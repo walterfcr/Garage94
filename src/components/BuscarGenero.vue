@@ -3,42 +3,42 @@
     <div class="generoContenido">
       <h2 class="title">Buscar CD'S por Género</h2>
       <div class="grid">
-        <router-link to="/hard-core" class="card" data-aos="flip-left">
+        <router-link to="/hard-core" class="card" data-aos="fade-in">
           <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />
           <h3>Hardcore</h3>
         </router-link>
 
-        <router-link to="/punk-rock" class="card" data-aos="flip-right">
+        <router-link to="/punk-rock" class="card" data-aos="fade-in">
           <img src="/icons/icon-2.png" alt="Metal Icon" class="genre-icon" />
           <h3>Punk Rock</h3>
         </router-link>
 
-        <router-link to="/ska-music" class="card" data-aos="flip-left">
+        <router-link to="/ska-music" class="card" data-aos="fade-in">
           <img src="/icons/icon-3.png" alt="Metal Icon" class="genre-icon" />
           <h3>Ska</h3>
         </router-link>
 
-        <router-link to="/rock-alternativo" class="card" data-aos="flip-right">
+        <router-link to="/rock-alternativo" class="card" data-aos="fade-int">
           <img src="/icons/icon-4.png" alt="Metal Icon" class="genre-icon" />
           <h3>Alternativo</h3>
         </router-link>
 
-        <router-link to="/grunge-music" class="card" data-aos="flip-left">
+        <router-link to="/grunge-music" class="card" data-aos="fade-in">
           <img src="/icons/icon-5.png" alt="Metal Icon" class="genre-icon" />
           <h3>Grunge</h3>
         </router-link>
 
-        <router-link to="/metal-music" class="card" data-aos="flip-right">
+        <router-link to="/metal-music" class="card" data-aos="fade-in">
           <img src="/icons/icon-6.png" alt="Metal Icon" class="genre-icon" />
           <h3>Metal</h3>
         </router-link>
 
-        <router-link to="/hip-hop" class="card" data-aos="flip-left">
+        <router-link to="/hip-hop" class="card" data-aos="fade-in">
           <img src="/icons/icon-7.png" alt="Metal Icon" class="genre-icon" />
           <h3>Hip Hop</h3>
         </router-link>
 
-        <router-link to="/rock-progresivo" class="card" data-aos="flip-right">
+        <router-link to="/rock-progresivo" class="card" data-aos="fade-in">
           <img src="/icons/icon-8.png" alt="Metal Icon" class="genre-icon" />
           <h3>Progresivo</h3>
         </router-link>
@@ -48,24 +48,23 @@
 </template>
 
 <script>
-import { onMounted } from 'vue';
-import AOS from 'aos'; // Import AOS
+import { onMounted } from 'vue'
+import AOS from 'aos' // Import AOS
 
 export default {
   name: 'BuscarGenero',
   mounted() {
     onMounted(() => {
-      AOS.init(); // Initialize AOS on component mount
-    });
+      AOS.init() // Initialize AOS on component mount
+    })
   },
-};
+}
 </script>
 
 <style scoped>
-
 .collections-section {
-  margin:0 auto;
-  padding: 50px 0 100px; 
+  margin: 0 auto;
+  padding: 50px 0 100px;
   background-color: #121212;
   color: #f5f5f5;
   text-align: center;
@@ -105,7 +104,7 @@ export default {
 }
 
 .card img {
-  margin-top:2rem;
+  margin-top: 2rem;
   width: 100%;
   height: 140px;
   object-fit: cover;
@@ -144,18 +143,17 @@ export default {
 }
 
 .generoContenido img {
-    max-width: 30%;
-    height: auto;
+  max-width: 30%;
+  height: auto;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .grid {
-  grid-template-columns: repeat(2, 1fr);
-}
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.generoContenido {
-  width: 90%;
-}
-
+  .generoContenido {
+    width: 90%;
+  }
 }
 </style>

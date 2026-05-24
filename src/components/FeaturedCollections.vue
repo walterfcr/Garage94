@@ -1,52 +1,47 @@
-
-
 <template>
   <section class="collections-section">
     <div class="collection-Contenido">
-    <h2 class="title" data-aos="fade-up">Colecciones Destacadas</h2>
-    <div class="grid">
-      <div
-        v-for="(collection, index) in collections"
-        :key="collection.title"
-        class="card"
-        :data-aos="'fade-up'"
-        :data-aos-delay="index * 100"
-      >
+      <h2 class="title" data-aos="fade-up">Colecciones Destacadas</h2>
+      <div class="grid">
+        <div
+          v-for="(collection, index) in collections"
+          :key="collection.title"
+          class="card"
+          :data-aos="'fade-in'"
+          :data-aos-delay="index * 100"
+        >
           <router-link :to="{ path: '/', hash: collection.hash }">
             <img :src="collection.image" :alt="collection.title" />
             <h3>{{ collection.title }}</h3>
           </router-link>
-
-
+        </div>
       </div>
-    </div>
     </div>
   </section>
 </template>
 
 <script>
-import collections from '../data/collections';
+import collections from '../data/collections'
 
 export default {
   name: 'FeaturedCollections',
   data() {
     return {
       collections,
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped>
 .collections-section {
-  padding: 50px 0 100px; 
+  padding: 50px 0 100px;
   background-color: #121212;
   color: #f5f5f5;
   text-align: center;
-
 }
 
-.collection-Contenido{
+.collection-Contenido {
   width: 70%;
   margin: 0 auto;
 }

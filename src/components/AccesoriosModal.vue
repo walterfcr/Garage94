@@ -1,6 +1,6 @@
 <template>
   <div class="modal-overlay" @click.self="emitClose">
-    <div class="modal-content" data-aos="zoom-in">
+    <div class="modal-content" data-aos="fade-in">
       <div class="product-details">
         <!-- Column 1: Image -->
         <div class="column">
@@ -32,7 +32,11 @@
     </div>
 
     <!-- Lightbox Overlay -->
-    <div v-if="isLightboxOpen" class="lightbox-overlay" @click.self="closeLightbox">
+    <div
+      v-if="isLightboxOpen"
+      class="lightbox-overlay"
+      @click.self="closeLightbox"
+    >
       <img :src="product.image" :alt="product.name" class="lightbox-img" />
       <button class="lightbox-close" @click="closeLightbox">×</button>
     </div>
@@ -48,39 +52,38 @@ export default {
   data() {
     return {
       isLightboxOpen: false,
-    };
+    }
   },
   methods: {
     addToCart() {
-      this.emitClose();
+      this.emitClose()
     },
     emitClose() {
-      this.$emit('close');
+      this.$emit('close')
     },
     openLightbox() {
       if (window.innerWidth >= 769) {
-        this.isLightboxOpen = true;
-        document.addEventListener('keydown', this.handleKeydown);
+        this.isLightboxOpen = true
+        document.addEventListener('keydown', this.handleKeydown)
       }
     },
     closeLightbox() {
-      this.isLightboxOpen = false;
-      document.removeEventListener('keydown', this.handleKeydown);
+      this.isLightboxOpen = false
+      document.removeEventListener('keydown', this.handleKeydown)
     },
     handleKeydown(e) {
       if (e.key === 'Escape') {
-        this.closeLightbox();
+        this.closeLightbox()
       }
     },
   },
   beforeUnmount() {
-    document.removeEventListener('keydown', this.handleKeydown);
+    document.removeEventListener('keydown', this.handleKeydown)
   },
-};
+}
 </script>
 
 <style scoped>
-
 .close-button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;

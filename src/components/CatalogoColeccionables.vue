@@ -3,7 +3,7 @@
     <h1>Catálogo de Artículos Coleccionables</h1>
 
     <!-- lista de productos -->
-    <div class="product-list" data-aos="zoom-in">
+    <div class="product-list" data-aos="fade-in">
       <div
         v-for="product in paginatedProducts"
         :key="product.id"
@@ -43,10 +43,10 @@
 </template>
 
 <script>
-import { products } from '@/data/products.js';
-import AccesoriosModal from '@/components/AccesoriosModal.vue';
-import MercaSlider from '@/components/MercaSlider.vue';
-import AppFooter from '@/components/AppFooter.vue';
+import { products } from '@/data/products.js'
+import AccesoriosModal from '@/components/AccesoriosModal.vue'
+import MercaSlider from '@/components/MercaSlider.vue'
+import AppFooter from '@/components/AppFooter.vue'
 
 export default {
   name: 'CatalogoColeccionables',
@@ -59,74 +59,78 @@ export default {
       itemsPerPage: 18,
       selectedProduct: null,
       isModalOpen: false,
-    };
+    }
   },
 
   created() {
-    const page = parseInt(this.$route.query.page, 10);
-    this.currentPage = !isNaN(page) && page > 0 ? page : 1;
-    this.accessoryProducts = products.filter(p => p.type === 'Coleccionables');
+    const page = parseInt(this.$route.query.page, 10)
+    this.currentPage = !isNaN(page) && page > 0 ? page : 1
+    this.accessoryProducts = products.filter((p) => p.type === 'Coleccionables')
   },
 
   mounted() {
-    this.setItemsPerPage();
-    window.addEventListener('resize', this.handleResize);
+    this.setItemsPerPage()
+    window.addEventListener('resize', this.handleResize)
   },
   beforeUnmount() {
-    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('resize', this.handleResize)
   },
 
   computed: {
     paginatedProducts() {
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      return this.accessoryProducts.slice(start, start + this.itemsPerPage);
+      const start = (this.currentPage - 1) * this.itemsPerPage
+      return this.accessoryProducts.slice(start, start + this.itemsPerPage)
     },
     totalPages() {
-      return Math.ceil(this.accessoryProducts.length / this.itemsPerPage);
+      return Math.ceil(this.accessoryProducts.length / this.itemsPerPage)
     },
   },
 
   methods: {
     openModal(product) {
-      this.selectedProduct = product;
-      this.isModalOpen = true;
+      this.selectedProduct = product
+      this.isModalOpen = true
     },
     closeModal() {
-      this.selectedProduct = null;
-      this.isModalOpen = false;
+      this.selectedProduct = null
+      this.isModalOpen = false
     },
     goToPage(page) {
       if (page >= 1 && page <= this.totalPages) {
-        this.$router.replace({ query: { ...this.$route.query, page } });
-        this.currentPage = page;
-        this.$nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        this.$router.replace({ query: { ...this.$route.query, page } })
+        this.currentPage = page
+        this.$nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
       }
     },
     setItemsPerPage() {
-      const w = window.innerWidth;
-      if      (w >= 1800) this.itemsPerPage = 27;
-      else if (w >= 1680) this.itemsPerPage = 24;
-      else if (w >= 1400) this.itemsPerPage = 28;
-      else if (w >= 1280) this.itemsPerPage = 24;
-      else if (w >= 950 ) this.itemsPerPage = 20;
-      else                this.itemsPerPage = 18;
+      const w = window.innerWidth
+      if (w >= 1800) this.itemsPerPage = 27
+      else if (w >= 1680) this.itemsPerPage = 24
+      else if (w >= 1400) this.itemsPerPage = 28
+      else if (w >= 1280) this.itemsPerPage = 24
+      else if (w >= 950) this.itemsPerPage = 20
+      else this.itemsPerPage = 18
     },
     handleResize() {
-      this.setItemsPerPage();
+      this.setItemsPerPage()
     },
   },
 
   watch: {
     itemsPerPage() {
-      this.goToPage(1);
+      this.goToPage(1)
     },
   },
-};
+}
 </script>
-
 
 <style scoped>
 /* reuse the same styles you already have */
-h1 { text-align: center; color: var(--color-text-dark); }
-.product-card img { object-fit: cover; }
+h1 {
+  text-align: center;
+  color: var(--color-text-dark);
+}
+.product-card img {
+  object-fit: cover;
+}
 </style>
