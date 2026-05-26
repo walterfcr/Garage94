@@ -11,7 +11,7 @@
       >
         <img :src="product.image" :alt="product.name" />
         <h3>{{ product.name }}</h3>
-        <p>{{ product.price }}</p>
+        <p>{{ formatPrice(product.price) }}</p>
       </div>
     </div>
 
@@ -45,7 +45,8 @@
 import { products } from '@/data/products.js'
 import MercaSlider from '@/components/MercaSlider.vue'
 import AppFooter from '@/components/AppFooter.vue'
-import RopaModal from '@/components/RopaModal.vue' // ← Import your modal
+import RopaModal from '@/components/RopaModal.vue'
+import { formatPrice } from '@/utils/formatPrice.js'
 
 export default {
   name: 'RopaMetal',
@@ -92,6 +93,7 @@ export default {
     },
   },
   methods: {
+    formatPrice,
     goToPage(page) {
       if (page >= 1 && page <= this.totalPages) {
         this.$router.replace({ query: { ...this.$route.query, page } })

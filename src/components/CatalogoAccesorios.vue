@@ -12,7 +12,7 @@
       >
         <img :src="product.image" :alt="product.name" />
         <h3>{{ product.name }}</h3>
-        <p>{{ product.price }}</p>
+        <p>{{ formatPrice(product.price) }}</p>
       </div>
     </div>
 
@@ -47,6 +47,7 @@ import { products } from '@/data/products.js'
 import AccesoriosModal from '@/components/AccesoriosModal.vue'
 import MercaSlider from '@/components/MercaSlider.vue'
 import AppFooter from '@/components/AppFooter.vue'
+import { formatPrice } from '@/utils/formatPrice.js'
 
 export default {
   name: 'CatalogoAccesorios',
@@ -87,6 +88,7 @@ export default {
   },
 
   methods: {
+    formatPrice,
     openModal(product) {
       this.selectedProduct = product
       this.isModalOpen = true

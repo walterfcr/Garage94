@@ -11,7 +11,7 @@
       >
         <img :src="product.image" :alt="product.name" />
         <h3>{{ product.name }}</h3>
-        <p>{{ product.vinilPrice }}</p>
+        <p>{{ formatPrice(product.vinilPrice) }}</p>
       </div>
     </div>
 
@@ -40,6 +40,7 @@
 <script>
 import { products } from '@/data/products.js'
 import CdModal from '@/components/CdModal.vue'
+import { formatPrice } from '@/utils/formatPrice.js'
 
 export default {
   name: 'CatalogoVinilos',
@@ -91,6 +92,7 @@ export default {
   },
 
   methods: {
+    formatPrice,
     /* ---------- modal ---------- */
     openModal(product) {
       this.selectedProduct = product

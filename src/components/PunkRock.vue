@@ -12,7 +12,7 @@
       >
         <img :src="product.image" :alt="product.name" />
         <h3>{{ product.name }}</h3>
-        <p>{{ product.price }}</p>
+        <p>{{ formatPrice(product.price) }}</p>
       </div>
     </div>
 
@@ -47,6 +47,7 @@ import { products } from '@/data/products.js'
 import CdModal from '@/components/CdModal.vue'
 import BuscarGenero from '@/components/BuscarGenero.vue'
 import AppFooter from '@/components/AppFooter.vue'
+import { formatPrice } from '@/utils/formatPrice.js'
 
 export default {
   name: 'CatalogoPunk',
@@ -99,6 +100,7 @@ export default {
   },
 
   methods: {
+    formatPrice,
     /* modal */
     openModal(product) {
       this.selectedProduct = product
