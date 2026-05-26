@@ -6296,7 +6296,7 @@ export const products = [
     genre: 'Grunge',
     genreDescription: 'Alternative rock',
     label: 'Virgin Records',
-    numDiscs: 1,
+    numDiscs: 2,
     releaseDate: '24/10/1995',
     type: 'CD',
     itemNumber: '905731468S',
