@@ -13,7 +13,7 @@ export const products = [
     image: '/images/nuevos/cd-1.webp',
     description:
       '"Kerplunk" de Green Day es el segundo álbum de estudio de la banda, lanzado en 1991 por Lookout! Records en Estados Unidos y por Epitaph Records en Europa. Es reconocido por su sonido punk rock y pop-punk, marcando el debut de Tré Cool como baterista en el álbum. Incluye la versión original de "Welcome to Paradise", que luego sería remasterizada para su álbum "Dookie". ',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const products = [
     image: '/images/nuevos/cd-2.webp',
     description:
       '"Firestorm" es un EP de la banda de hardcore metálico estadounidense Earth Crisis, lanzado en 1993. Este EP es considerado un hito en la escena hardcore punk por su sonido innovador que combina influencias metaleras con letras políticas y militantes, además de ser pionero en lo que se convertiría en el estilo distintivo tanto de Earth Crisis como del metalcore en general.',
-    price: '10000',
+    price: 10000,
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const products = [
     image: '/images/nuevos/cd-3.webp',
     description:
       '"No Control" es el cuarto álbum de estudio de Bad Religion, lanzado en 1989. Se caracteriza por su ritmo más rápido y orientado al hardcore punk, en comparación con su predecesor "Suffer". El álbum contiene algunos de los temas más populares de la banda, como "No Control", "I Want to Conquer the World" y "You"',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 4,
@@ -61,7 +61,7 @@ export const products = [
     image: '/images/nuevos/cd-4.webp',
     description:
       '"The Action Is Go" es el cuarto álbum de estudio de la banda de stoner rock Fu Manchu, lanzado en 1997. Este álbum es considerado un clásico del género y marca la incorporación del baterista Brant Bjork (Kyuss) y el guitarrista Bob Balch, reemplazando a Eddie Glass y Ruben Romano. ',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 5,
@@ -77,7 +77,7 @@ export const products = [
     image: '/images/nuevos/cd-5.webp',
     description:
       '"Born to Expire" es el álbum debut de la banda Leeway, una banda de crossover thrash de Nueva York. El álbum fue grabado en noviembre de 1987 en Normandy Sound, Rhode Island, y mezclaba hardcore punk, thrash metal y elementos de hip hop. Su lanzamiento fue pospuesto hasta 1989, y fue lanzado conjuntamente por Rock Hotel y Profile Records.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 6,
@@ -93,7 +93,7 @@ export const products = [
     image: '/images/nuevos/cd-6.webp',
     description:
       '"Unfun" es el álbum debut de la banda de punk rock Jawbreaker, lanzado en 1990. Describe a la banda como una combinación de pop-punk con un lado oscuro, destacando sus letras poéticas y estructuras complejas. El álbum ha sido reconocido por su impacto en el desarrollo del emo y por su influencia en la escena musical indie.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 7,
@@ -109,7 +109,7 @@ export const products = [
     image: '/images/nuevos/cd-7.webp',
     description:
       '"Dillinger Four vs God" es el nombre del segundo álbum de estudio de la banda de punk rock Dillinger Four, lanzado en 2000. El álbum refleja las raíces punk de la banda y se caracteriza por sus melodías vocales agresivas y dinámicas, que abordan temas de injusticia social.',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 8,
@@ -125,7 +125,7 @@ export const products = [
     image: '/images/nuevos/cd-8.webp',
     description:
       '"State of the World Address" es el tercer álbum de estudio de la banda estadounidense de hardcore Biohazard, lanzado en 1994. El álbum es conocido por su sonido metalcore directo y crudo, con letras que abordan temas sociales y políticos. La colaboración de Sen Dog de Cypress Hill en la canción "How It Is" también es destacada.',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 9,
@@ -141,7 +141,7 @@ export const products = [
     image: '/images/nuevos/cd-9.webp',
     description:
       'El álbum El chico con rayos X en los ojos de F.A.N.T.A., lanzado en 2007, es una muestra destacada del estilo pop punk de la banda, influenciada por los Ramones. Con una duración total de aproximadamente 30 minutos y compuesto por 17 pistas, el disco ofrece una combinación de temas enérgicos y letras con un toque de humor ácido y referencias a la cultura pop.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 10,
@@ -157,7 +157,7 @@ export const products = [
     image: '/images/nuevos/cd-10.webp',
     description:
       'Fundamental es el segundo álbum de estudio de la banda puertorriqueña Puya, lanzado en 1999 bajo el sello MCA Records. Este disco marcó un hito en la escena del metal latino, fusionando géneros como el thrash metal, el punk rock, el death metal, la salsa, el jazz, el rock alternativo y el rap, creando un sonido único que rompía barreras culturales y musicales.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 11,
@@ -173,7 +173,7 @@ export const products = [
     image: '/images/nuevos/cd-11.webp',
     description:
       'Mi Vida Loca es la obra maestra de Los Decadentes, que hace un recorrido por el ska, la murga, el cuarteto, el punk, la cumbia, el pop rock y el reggae en 14 temas compuestos de forma colectiva, una característica importante para entender la esencia de la banda.​',
-    price: '10000',
+    price: 10000,
   },
   {
     id: 12,
@@ -189,7 +189,7 @@ export const products = [
     image: '/images/nuevos/cd-12.webp',
     description:
       '"Cypress Hill III: Temples of Boom" es el tercer álbum de estudio del grupo de hip hop Cypress Hill, lanzado en 1995. Este disco marcó un cambio de sonido para el grupo, inclinándose hacia un estilo más tranquilo, oscuro, lento y espeluznante, a diferencia de sus álbumes anteriores.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 13,
@@ -205,7 +205,7 @@ export const products = [
     image: '/images/nuevos/cd-13.webp',
     description:
       '"The Chronic" es el álbum debut del rapero y productor Dr. Dre, lanzado en 1992. Fue su primer álbum en solitario después de salir de NWA, y es conocido por haber definido el sonido G-funk y por presentar a Snoop Dogg. El álbum fue un éxito comercial y crítico, y es considerado uno de los más importantes de la década de 1990.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 14,
@@ -221,7 +221,7 @@ export const products = [
     image: '/images/nuevos/cd-14.webp',
     description:
       '"Punk in Drublic" de NOFX es el quinto álbum de estudio de la banda de punk rock californiana, lanzado en 1994 por Epitaph. Es ampliamente considerado uno de sus álbumes más icónicos y exitosos, impulsando la popularidad internacional de la banda. El álbum, que incluye 17 canciones, combina crítica social, narraciones personales de Fat Mike y una energía punk rock contagiosa.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 15,
@@ -237,7 +237,7 @@ export const products = [
     image: '/images/nuevos/cd-15.webp',
     description:
       'El álbum @#!* de la banda californiana Pulley fue lanzado el 9 de marzo de 1999 en Europa y el 23 de marzo en Estados Unidos, bajo el sello Epitaph Records. Este disco homónimo marca un punto destacado en la escena del skate punk de finales de los 90, con una duración de 32:38 minutos.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 16,
@@ -253,7 +253,7 @@ export const products = [
     image: '/images/nuevos/cd-16.webp',
     description:
       '"Siamese Dream" de Smashing Pumpkins es un álbum de rock alternativo lanzado en 1993, que marca la transición del grupo hacia la fama y el reconocimiento general. Es el segundo álbum de estudio de la banda, considerado una obra maestra del género y una influencia para generaciones de músicos.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 17,
@@ -269,7 +269,7 @@ export const products = [
     image: '/images/nuevos/cd-17.webp',
     description:
       '"Fyulaba" es el sexto álbum de estudio de la banda canadiense de hardcore punk SNFU, publicado en 1996 por Epitaph Records. Es el tercer y último álbum de la banda en Epitaph. El álbum contiene 14 canciones de punk rock rápido y potente, con letras chiflas y descripciones bizarras. ​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 18,
@@ -285,7 +285,7 @@ export const products = [
     image: '/images/nuevos/cd-18.webp',
     description:
       '"Without a Sound" es el sexto álbum de estudio de la banda de rock alternativo Dinosaur Jr., lanzado en 1994. Este álbum marca el debut sin Murph en la batería, siendo reemplazado por J Mascis. La portada del álbum es una pintura de Neil Blender, un ex skater profesional y amigo de la banda..​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 19,
@@ -301,7 +301,7 @@ export const products = [
     image: '/images/punk/p-1.webp',
     description:
       '"London Calling" de The Clash es una canción emblemática que abre su álbum del mismo nombre, lanzado en 1979. La letra, que refleja la preocupación de Joe Strummer por la era nuclear y los problemas sociales de la época, es un llamado a la acción ante una situación de crisis. La música, con su ritmo pegadizo y sonido marcial, transmite una sensación de urgencia y advertencia.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 20,
@@ -317,7 +317,7 @@ export const products = [
     image: '/images/punk/p-2.webp',
     description:
       '"Unknown Road" es el segundo álbum de estudio de la banda estadounidense de punk rock Pennywise, lanzado en 1993 por Epitaph Records. Este álbum es conocido por su potente sonido de punk rock y hardcore melódico, y sus letras que abordan temas como la independencia, la importancia de vivir al máximo y la actitud mental positiva.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 21,
@@ -333,7 +333,7 @@ export const products = [
     image: '/images/punk/p-3.webp',
     description:
       '...And Out Come the Wolves es el tercer álbum de estudio de la banda de punk Rancid, publicado en agosto de 1995. Con un sonido muy influido por el ska, Rancid se convirtió en una de las pocas bandas de mediados y fines de los años 1990 en conservar gran parte de sus primeros fans.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 22,
@@ -349,7 +349,7 @@ export const products = [
     image: '/images/hardcore/h-1.webp',
     description:
       '"Riot, Riot, Upstart" es el sexto álbum de estudio de la banda Agnostic Front, lanzado en 1999 por Epitaph Records. Este álbum, producido por Lars Frederiksen de Rancid, está compuesto por 17 canciones que exploran temas sociales, políticos y personales con una actitud rebelde y agresiva.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 23,
@@ -365,7 +365,7 @@ export const products = [
     image: '/images/hardcore/h-2.webp',
     description:
       'Es el quinto álbum de estudio de la banda estadounidense de hardcore punk Sick of It All, lanzado en 1998. Es el primer lanzamiento de larga duración de la banda en Fat Wreck Chords y sigue al EP de 1998 "Potential for a Fall". El álbum es reconocido por su sonido hardcore punk agresivo y letras que abordan temas sociales y políticos, como la lucha de clases y la desigualdad',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 24,
@@ -381,7 +381,7 @@ export const products = [
     image: '/images/hardcore/h-3.webp',
     description:
       '"Crush Kill Destroy" de Spazz es el álbum de despedida de la banda, grabado en 1998 y lanzado por Slap A Ham Records. Es el primer vinilo de una serie de reediciones de los LPs de Spazz, ahora agotados. El LP incluye la grabación original masterizada, una portada a todo color y un inserto de póster. ​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 25,
@@ -397,7 +397,7 @@ export const products = [
     image: '/images/hardcore/h-4.webp',
     description:
       'Start Today" de Gorilla Biscuits es un álbum de hardcore punk influyente, considerado uno de los más populares del SxE hardcore de Nueva York de finales de los años 80. Combina agresividad hardcore con melodías pegadizas, lo que lo convierte en un clásico del género.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 26,
@@ -413,7 +413,7 @@ export const products = [
     image: '/images/metal/m-1.webp',
     description:
       '"...And Justice for All", lanzado en 1988, es el cuarto álbum de estudio de la banda y el primero con el bajista Jason Newsted, quien reemplazó a Cliff Burton. El álbum se caracteriza por sus canciones largas y complejas, con temas que exploran la crítica social y política. La portada muestra una estatua de la Dama de la Justicia agrietada, atada y con la balanza llena de dólares, reflejando la temática del álbum.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 27,
@@ -429,7 +429,7 @@ export const products = [
     image: '/images/metal/m-2.webp',
     description:
       '"State of Euphoria" es el cuarto álbum de estudio de la banda de heavy metal Anthrax, lanzado en 1988. Fue el seguimiento de su álbum de gran éxito, "Among the Living", y tuvo un éxito comercial aún mayor, pero menos éxito de crítica. El álbum incluye canciones populares como "Be All", "End All", "Antisocial" y "Who Cares Wins". ​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 28,
@@ -445,7 +445,7 @@ export const products = [
     image: '/images/grunge/g-1.webp',
     description:
       '​"Dirt", el segundo álbum de Alice in Chains, es un álbum de rock grunge y heavy metal que explore temas como la depresión, la adicción, la guerra y la muerte. Es conocido por su sonido oscuro y crudo, que refleja las experiencias personales de los miembros de la banda, especialmente las del vocalista Layne Staley.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 29,
@@ -461,7 +461,7 @@ export const products = [
     image: '/images/grunge/g-2.webp',
     description:
       '​"Vs." es el segundo álbum de Pearl Jam, lanzado en 1993. Se caracteriza por un sonido más crudo y agresivo que su predecesor "Ten". El álbum abarca temas como el abuso infantil, la cultura de las armas y la brutalidad policial. Además, incluye canciones que se convirtieron en éxitos como "Daughter", "Dissident" y "Go".',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 30,
@@ -477,7 +477,7 @@ export const products = [
     image: '/images/grunge/g-3.webp',
     description:
       '"Superunknown" es el cuarto álbum de estudio de Soundgarden, lanzado en 1994. Es un álbum clave de la banda, destacando por su mezcla de grunge, heavy metal, rock alternativo y elementos psicodélicos. El álbum incluye temas como "Black Hole Sun", "Spoonman" y "The Day I Tried to Live".​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 31,
@@ -493,7 +493,7 @@ export const products = [
     image: '/images/grunge/g-4.webp',
     description:
       'Bricks Are Heavy es el tercer álbum de estudio de la bandaestadounidense de rock L7 , lanzado el 14 de abril de 1992 por Slash Records . Alcanzó el puesto 160 en el Billboard 200 de EE. UU . [ 2 ] y el número uno en la lista Heatseekers Albums . [ 3 ] Hasta junio de 2000, Bricks Are Heavy había vendido 327.000 copias en Estados Unidos, según Nielsen Soundscan.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 32,
@@ -509,7 +509,7 @@ export const products = [
     image: '/images/grunge/g-5.webp',
     description:
       '"Incesticide" de Nirvana es una recopilación de canciones de la banda, que incluye demos, cara B de sencillos, y grabaciones de sesiones de BBC. El álbum fue lanzado en 1992, entre los álbumes "Nevermind" y "In Utero", y alcanzó el puesto 39 en la lista Billboard 200.​',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 33,
@@ -525,7 +525,7 @@ export const products = [
     image: '/images/grunge/g-6.webp',
     description:
       '"Core" de Stone Temple Pilots es el álbum debut de la banda, lanzado en 1992. Es considerado uno de los álbumes más importantes del género grunge y rock alternativo. Describe una mezcla de estilos, incluyendo el hard rock, el metal alternativo y el grunge. Es conocido por canciones como "Plush", "Sex Type Thing" y "Crackerman.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 34,
@@ -541,7 +541,7 @@ export const products = [
     image: '/images/grunge/g-7.webp',
     description:
       'Sixteen Stone alcanzó el #4 en el Heatseekers y en Billboard Hot 200 del Billboard Music Charts. 2 canciones de este álbum alcanzaron el Top 40 Singles. El álbum empezó a vender mucho más cuando los sencillos "Glycerine" y "Comedown" llegaron a Norteamérica.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 35,
@@ -557,7 +557,7 @@ export const products = [
     image: '/images/grunge/g-8.webp',
     description:
       'Frogstomp es el álbum de estudio debut de la banda de rock australiana Silverchair. Fue lanzado por primera vez en Australia en 1995, cuando sus miembros tenían sólo 15 años de edad, por un subsidiario de Sony Records El 20 de junio de 1995, el disco fue lanzado por Epic Records en Estados Unidos, convirtiéndose en disco de platino en noviembre.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 36,
@@ -573,7 +573,7 @@ export const products = [
     image: '/images/hiphop/h-1.webp',
     description:
       ' Es el segundo álbum de estudio del grupo de hip hop Public Enemy, lanzado en el sello Def Jam Recordings en los Estados Unidos el 14 de abril de 1988.​ Este disco es frecuentemente citado como una de los más célebres e influyentes obras en la historia del hip hop.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 37,
@@ -589,7 +589,7 @@ export const products = [
     image: '/images/hiphop/h-2.webp',
     description:
       '​"Straight Outta Compton" es el álbum debut de NWA, lanzado en 1988, considerado uno de los pioneros del gangsta rap y un punto de inflexión en la historia del hip-hop. El álbum refleja la vida y experiencias de los miembros en Compton, California, a través de letras crudas y directas, que exploran temas de violencia, pobreza y abuso policial.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 38,
@@ -605,7 +605,7 @@ export const products = [
     image: '/images/hiphop/h-3.webp',
     description:
       'hip hop group Run-D.M.C. It was released in 1991 and was complemented by a greatest hits video collection (released separately). Some pressings included an uncensored version of "Beats To The Rhyme" as heard in the film "Tougher Than Leather"​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 39,
@@ -621,7 +621,7 @@ export const products = [
     image: '/images/hiphop/h-4.webp',
     description:
       '​"93 til Infinity" es el álbum debut del grupo de hip-hop Souls of Mischief, lanzado en 1993. El álbum se caracteriza por su sonido lírico, con letras de alta calidad y producción que utiliza samples de jazz y soul poco comunes. El grupo, subgrupo del colectivo Hieroglyphics, está formado por A-Plus, Opio, Phesto D y Tajai.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 40,
@@ -637,7 +637,7 @@ export const products = [
     image: '/images/hiphop/h-5.webp',
     description:
       '"3 Feet High and Rising" es el álbum debut de De La Soul, lanzado en 1989. Es un disco innovador que mezcla elementos de funk, soul, doo-wop, rock psicodélico y música infantil. El álbum fue un éxito de crítica y ventas, y es considerado un clásico del hip-hop. Incluye los sencillos "Me Myself and I", "The Magic Number", "Buddy" y "Eye Know".​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 41,
@@ -653,7 +653,7 @@ export const products = [
     image: '/images/hiphop/h-6.webp',
     description:
       '"Wu-Tang Forever" es el segundo álbum de estudio de Wu-Tang Clan, lanzado en 1997. Se trata de un álbum doble que ha sido aclamado por la crítica y por los fans por su sonido único y sus letras llenas de energía. El álbum exploró la vida en la ciudad, los peligros de la droga, la presencia policial y la violencia, así como la dinámica de las bandas locales.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 42,
@@ -669,7 +669,7 @@ export const products = [
     image: '/images/hiphop/h-7.webp',
     description:
       'El álbum "Deltron 3030" es una ópera de rap conceptual, ambientada en un año distópico 3030, donde el protagonista Deltron Zero, un soldado mecha y prodigio informático, se rebela contra un Nuevo Orden Mundial. La historia se centra en el conflicto entre la "rectitud" y la "malevolencia" a través de la perspectiva de un guerrero y su camarada, un mago cíborg viajero en el tiempo.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 43,
@@ -685,7 +685,7 @@ export const products = [
     image: '/images/hiphop/h-8.webp',
     description:
       '"Bacdafucup" es el nombre del álbum de estudio debut del grupo de hip hop estadounidense Onyx, lanzado en 1993. El título, que se puede traducir como "cagadas", refleja la actitud de Onyx hacia la industria del contrabando. El álbum incluye éxitos como "Slam" y "Throw Ya Gunz", y fue un lanzamiento importante para el grupo.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 44,
@@ -701,7 +701,7 @@ export const products = [
     image: '/images/hiphop/h-9.webp',
     description:
       '​El álbum aborda temas como la sexualidad ("Like a Virgin", "2 Young 4 What"), el embarazo adolescente (" Eyes Are the Soul "), las relaciones disfuncionales (" Poor Georgie "), la adicción al alcohol y las drogas ("Poor Georgie", "Eyes Are the Soul") y el SIDA ("Eyes Are the Soul", "Lola from the Copa")',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 45,
@@ -717,7 +717,7 @@ export const products = [
     image: '/images/hiphop/h-10.webp',
     description:
       'Business as Usual es el tercer álbum del dúo de hip hop EPMD. Fue lanzado el 18 de diciembre de 1990 y fue su primer álbum en Def Jam, después de firmar con su antiguo sello, Fresh Records​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 46,
@@ -733,7 +733,7 @@ export const products = [
     image: '/images/ska/s-1.webp',
     description:
       '"Rey Azúcar" de Los Fabulosos Cadillacs es un álbum de 1995 que fusiona ska, rock, reggae y sonidos latinos. El disco, producido por Tina Weymouth y Chris Frantz de Talking Heads, incluye colaboraciones con artistas como Mick Jones de The Clash y se grabó en Nassau, Bahamas. El título del álbum se inspira en el libro "Las Venas Abiertas de América Latina" de Eduardo Galeano.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 47,
@@ -749,7 +749,7 @@ export const products = [
     image: '/images/ska/s-2.webp',
     description:
       'Después de 27 años de carrera LaMatatena lanzó un nuevo disco el cual recopila varias de las canciones que los hicieron alcanzar el reconocimiento y gusto de la gente. Con nuevas y frescas versiones "Antología" cuenta con la participación de varios artistas de la talla de Dr. Shenka (Panteón Rococó), El Mastuerzo, Piro Pendas (Ritmo Peligroso) y #TereEstrada dándole otro enfoque, sin perder su esencia, a las canciones que los hicieron populares a finales de la década de los 90.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 48,
@@ -765,7 +765,7 @@ export const products = [
     image: '/images/ska/s-3.webp',
     description:
       'El álbum "Rental Eviction" de The Bruce Lee Band es un vinilo de 12 pulgadas que contiene las 7 canciones del EP original "Rental Eviction", junto con 5 pistas extra del EP "Community Support Group", actualmente descatalogado. El álbum es una reedición limitada, con solo 300 copias disponibles. Esta edición es una combinación de los dos EP originales, ofreciendo una colección completa del trabajo de The Bruce Lee Band.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 49,
@@ -781,7 +781,7 @@ export const products = [
     image: '/images/ska/s-4.webp',
     description:
       '"Killing Katie" es el segundo álbum de la banda punk Link 80, lanzado en 1997 por Asian Man Records en CD y vinilo de 10". Fue grabado en Fantasy Studios en Berkeley, California, entre el 18 y el 20 de abril de 1997, con Steve Fontano como ingeniero. Este álbum fue la última grabación de Link 80 con el cantante Nick Traina y el guitarrista Matt Bettinelli-Olpin, y fue lanzado poco antes del suicidio de Traina.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 50,
@@ -797,7 +797,7 @@ export const products = [
     image: '/images/ska/s-5.webp',
     description:
       'El álbum "Right On Time" de Hepcat, lanzado en 1998 por Hellcat/Epitaph Records, es una obra que combina influencias ska, rocksteady, reggae y R&B, con un enfoque en melodías caribeñas y armonías vocales. La banda, conocida por su sonido contundente y su capacidad para fusionar géneros, logra crear una atmósfera festiva y enérgica en cada canción.',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 51,
@@ -813,7 +813,7 @@ export const products = [
     image: '/images/ska/s-6.webp',
     description:
       'El álbum es una explosión de ska punk, con influencias latinas y un sonido enérgico y directo. Las letras, aunque a veces difíciles de entender, transmiten un espíritu de fiesta y rebeldía. El álbum también incluye covers de canciones conocidas, como "Feliz Navidad". ​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 52,
@@ -829,7 +829,7 @@ export const products = [
     image: '/images/ska/s-7.webp',
     description:
       '"Candy Coated Fury" es el octavo álbum de estudio de la banda estadounidense de ska punk Reel Big Fish, lanzado en 2012. El álbum fue grabado en el estudio personal de la banda en Orange, California. Incluye canciones como "Hiding in My Headphones" y "I Love / You Suck". También cuenta con voces de invitados de Coolie Ranx, Brian Klemm, Laila K, Barney Boom y Julie Stoyer.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 53,
@@ -845,7 +845,7 @@ export const products = [
     image: '/images/ska/s-8.webp',
     description:
       '​"Losing Streak" es el tercer álbum de estudio de la banda de ska punk Less Than Jake, lanzado el 12 de noviembre de 1996 por Capitol Records. El álbum fue grabado en Criteria Studios de Miami y Mirror Image Studios de Gainesville, Florida, con el productor Michael Rosen.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 54,
@@ -861,7 +861,7 @@ export const products = [
     image: '/images/ska/s-9.webp',
     description:
       '​La historia de NIÑOS CON BOMBAS empieza en Santiago De Chile, donde su cantante y guitarrista Daniel Puente, Y su ex banda, Pinochet Boys, una banda infame de Punk Rock, agarro la atención de una gran cantidad de fanes, pero de las autoridades también, terminando en la cárcel en varias ocasiones. Después de una odisea de dos años viajando por São Paulo, Madrid, Londres, Y terminando en Berlín, Daniel vio al bajista y Biólogo graduado Alex Menck tocando en una horrible banda, en un horrible y vacío bar de Berlín, tocando una horrible versión de un tema de los Rolling Stones.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 55,
@@ -877,7 +877,7 @@ export const products = [
     image: '/images/ska/s-10.webp',
     description:
       '"More Noise and Other Disturbances" es el segundo álbum de estudio de The Mighty Mighty Bosstones, lanzado en 1992. Este álbum es conocido por fusionar el ska con elementos de punk rock y hardcore, estableciendo la base para el género ska-core. El Deseret News lo describió como "una mezcla vibrante de punk rock, rock, funk y ska"​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 56,
@@ -893,7 +893,7 @@ export const products = [
     image: '/images/ska/s-11.webp',
     description:
       'El álbum "Quality Soft Core" de Mad Caddies es una producción que destaca por su sonido punk y ska, con influencias rock. Se trata de un álbum que, según la descripción, se caracteriza por su naturaleza caleidoscópica y multigénero, donde el artista experimenta con diferentes sonidos y melodías. Este álbum es el primer lanzamiento de la banda Mad Caddies, que se ha hecho un nombre en la escena punk y ska.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 57,
@@ -909,7 +909,7 @@ export const products = [
     image: '/images/ska/s-12.webp',
     description:
       'Grabado y mezclado por Thom Panunzio en Sorcerer Sounds en Nueva York Ingenieros asistentes: Erica Larsen y Mark Mitchell Masterizado por Jon Marshall Smith en Baby Monster, Studios en Nueva York. Productor ejecutivo: Keith Masco, productor asociado: Eric Rosen​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 58,
@@ -925,7 +925,7 @@ export const products = [
     image: '/images/ska/s-13.webp',
     description:
       'El álbum "Energy" de Operation Ivy, el único álbum de estudio de la banda, es una obra seminal del ska-punk. Mezcla la energía del punk con el ritmo contagioso del ska, creando un sonido único y altamente influyente. El álbum fue lanzado en vinilo y casete en 1989 y fue seguido por un recopilatorio que incluía todas sus canciones.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 59,
@@ -941,7 +941,7 @@ export const products = [
     image: '/images/ska/s-14.webp',
     description:
       'El álbum "Wasted Days" es una producción de la banda The Slackers, conocida por su estilo ska/reggae, lanzado en 2001 por Hellcat Records. Lo que distingue a este álbum de otros lanzamientos de The Slackers es que las canciones de la versión en vinilo difieren significativamente de las de la versión en CD, y además, hay varias canciones exclusivas en esta última.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 60,
@@ -957,7 +957,7 @@ export const products = [
     image: '/images/ska/s-15.webp',
     description:
       '"Big Daddy Multitude" es el primer álbum oficial de la banda de ska Mustard Plug. Fue lanzado antes de que el ska se convirtiera en un género popular, pero después de que Mustard Plug ya tenía una gran base de fans en el Medio Oeste. El álbum muestra el sonido ska de la banda, con letras ingeniosas, ritmos rápidos​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 61,
@@ -973,7 +973,7 @@ export const products = [
     image: '/images/ska/s-16.webp',
     description:
       '"Everything Sucks" es el álbum debut de la banda de ska punk Reel Big Fish. Fue grabado en 1994-1995 en Sound Art Studios y lanzado en 1995 a través de su propio sello, Piss Off Records. La producción y mezcla fueron a cargo de John Gregorius. El álbum se convirtió en un éxito de boca en boca en la escena ska-punk y universitario, lo que llevó a la banda a firmar con Mojo Records.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 62,
@@ -989,7 +989,7 @@ export const products = [
     image: '/images/ska/s-17.webp',
     description:
       '"Redlight" es un álbum de The Slackers, lanzado en 1997, que consolida el sonido distintivo de la banda, fusionando ska, reggae, soul, jazz y dub. Fue originalmente lanzado por Hellcat Records y fue seguido por una gira como parte del NYC Ska Mob Tour 97. El álbum ha sido remasterizado y prensado en vinilo de 180 gramos, mejorando aún más su calidad de sonido',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 63,
@@ -1005,7 +1005,7 @@ export const products = [
     image: '/images/ska/s-18.webp',
     description:
       '"Ska-Core, The Devil & More" es un EP de The Mighty Mighty Bosstones, una banda que fusiona ska, hardcore, punk y rock. Fue lanzado en 1994 por Mercury. Contiene 7 canciones y una pista oculta al final, que es una versión en vivo de "Howwhywuz, Howwhyam" de su álbum "Devils Night Out"​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 64,
@@ -1021,7 +1021,7 @@ export const products = [
     image: '/images/ska/s-19.webp',
     description:
       '​Banda de ska de Houston, Texas, formada en 1994 por miembros de la banda de punk Desorden. Los Skarnales tocan una mezcla de ska, reggae, rockabilly, cumbia y danzón.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 65,
@@ -1037,7 +1037,7 @@ export const products = [
     image: '/images/ska/s-20.webp',
     description:
       'Es una recopilación de canciones grabadas en 1989-1992 y lanzada por el sello subsidiario Honest Dons Records.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 66,
@@ -1053,7 +1053,7 @@ export const products = [
     image: '/images/ska/s-21.webp',
     description:
       '"Duck and Cover" de Mad Caddies es su segundo álbum de larga duración, lanzado en 1998 por Fat Wreck Chords. El álbum es conocido por su estilo ska punk energizante y melodías pegadizas. ​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 67,
@@ -1069,7 +1069,7 @@ export const products = [
     image: '/images/ska/s-22.webp',
     description:
       '"Vasos Vacíos" es un álbum recopilatorio de la banda argentina Los Fabulosos Cadillacs, lanzado en 1993. Contiene 17 temas, incluyendo éxitos de sus álbumes anteriores, dos canciones nuevas ("V Centenario" y "El Matador") y versiones actualizadas de otros temas. El nombre del álbum proviene de la canción homónima que se incluyó en su álbum "El Ritmo Mundial" en 1988, donde colaboraron con Celia Cruz.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 68,
@@ -1085,7 +1085,7 @@ export const products = [
     image: '/images/ska/s-23.webp',
     description:
       '"Anthem" es el quinto álbum de estudio de la banda de ska punk estadounidense Less Than Jake, lanzado en 2003. Este álbum fue un éxito comercial, debutando en el puesto 45 en las listas de éxitos de Billboard. ​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 69,
@@ -1101,7 +1101,7 @@ export const products = [
     image: '/images/ska/s-24.webp',
     description:
       '​"Locos y Rucas in Retro" es el álbum debut de la banda mexicana Salón Victoria, lanzado en 1999 bajo el sello Opción Sónica. Este disco es una vibrante fusión de géneros como ska, swing, mambo y punk, destacando por su diversidad sonora y la energía de sus 11 músicos. La batería de Cheko Mendoza ha sido especialmente elogiada por su potencia y versatilidad.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 70,
@@ -1117,7 +1117,7 @@ export const products = [
     image: '/images/ska/s-25.webp',
     description:
       '​"17 Reasons" es el álbum debut de la banda californiana de ska punk Link 80, lanzado en 1997 bajo el sello Asian Man Records . Este disco es una muestra enérgica y cruda del ska-core de los años 90, caracterizado por su fusión de ska, punk rock y hardcore punk​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 71,
@@ -1133,7 +1133,7 @@ export const products = [
     image: '/images/ska/s-26.webp',
     description:
       '"Forget the World" es el álbum debut de la banda californiana de ska punk The Hippos, lanzado el 10 de marzo de 1998 bajo los sellos Fueled by Ramen, Vagrant Records y Stiff Dog Records. Este disco es una representación vibrante de la tercera ola del ska, fusionando elementos de ska, punk y pop rock con una energía juvenil y letras introspectivas.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 72,
@@ -1149,7 +1149,7 @@ export const products = [
     image: '/images/ska/s-27.webp',
     description:
       '"Twenty-Eight Teeth" es el tercer álbum de estudio de la banda estadounidense de ska punk Buck-O-Nine, lanzado el 15 de abril de 1997 bajo el sello TVT Records. Este disco es considerado un emblema de la tercera ola del ska, destacando por su energía contagiosa y su fusión de ska, punk y pop rock. ​',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 73,
@@ -1165,7 +1165,7 @@ export const products = [
     image: '/images/ska/s-28.webp',
     description:
       '"Fabulosos Calavera" es el octavo álbum de estudio de la banda argentina Los Fabulosos Cadillacs, lanzado el 28 de julio de 1997. Grabado entre octubre de 1996 y mayo de 1997 en Nassau, Bahamas, este disco marca un punto de inflexión en la trayectoria del grupo, destacándose por su enfoque experimental y temáticas más oscuras​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 74,
@@ -1181,7 +1181,7 @@ export const products = [
     image: '/images/ska/s-29.webp',
     description:
       '​"Out of Nowhere" es el álbum debut de la banda californiana de ska y reggae Hepcat, lanzado en 1993 bajo el sello Moon Ska Records. Este disco es ampliamente reconocido por su fidelidad al sonido del ska tradicional jamaicano de los años 60, destacándose en la tercera ola del ska por su enfoque auténtico y elegante.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 75,
@@ -1197,7 +1197,7 @@ export const products = [
     image: '/images/ska/s-30.webp',
     description:
       '​"Evildoers Beware!" es el tercer álbum de estudio de la banda estadounidense de ska punk Mustard Plug, lanzado el 18 de marzo de 1997 bajo el sello Hopeless Records. Este disco consolidó a la banda como una de las figuras destacadas de la tercera ola del ska, gracias a su energía contagiosa y su fusión de ritmos ska con la intensidad del punk. ​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 76,
@@ -1213,7 +1213,7 @@ export const products = [
     image: '/images/ska/s-31.webp',
     description:
       'Este álbum continúa con el estilo característico de la banda, fusionando ska, punk y hardcore, y se destaca por su energía y letras en inglés y español. Incluye una versión de "Stranded in the Jungle", escrita por James Johnson y Ernestine Smith.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 77,
@@ -1229,7 +1229,7 @@ export const products = [
     image: '/images/ska/s-32.webp',
     description:
       '"Lankktalo" es un álbum de la banda Skunk, lanzado el 1 de septiembre de 1997 bajo el sello discográfico Esan Ozenki Records. Este trabajo se caracteriza por su fusión de géneros como el ska, punk y rock alternativo, y presenta letras en euskera y español, reflejando una fuerte identidad cultural y compromiso social.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 78,
@@ -1245,7 +1245,7 @@ export const products = [
     image: '/images/ska/s-33.webp',
     description:
       '"Contra-Revolución Avenue" es el tercer álbum de estudio de la banda mexicana Tijuana No!, lanzado en 1998. Este disco marcó una evolución en su estilo musical, fusionando ska, punk, reggae y rock alternativo, y se caracteriza por sus letras comprometidas con temas sociales y políticos.​​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 79,
@@ -1261,7 +1261,7 @@ export const products = [
     image: '/images/ska/s-34.webp',
     description:
       '"Turn the Radio Off" es el segundo álbum de estudio de la banda estadounidense de ska punk Reel Big Fish, lanzado el 13 de agosto de 1996 bajo el sello discográfico Mojo Records. Este álbum marcó un hito en la escena del ska de los años 90, destacándose por su energía, humor y crítica social.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 80,
@@ -1277,7 +1277,7 @@ export const products = [
     image: '/images/ska/s-35.webp',
     description:
       'Este disco marca una evolución en el sonido de Salón Victoria, incorporando influencias de ska, rock alternativo y pop, y destacándose por sus letras nostálgicas y de crítica social. El álbum incluye 14 pistas que exploran temas como el amor, la juventud y las experiencias personales.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 81,
@@ -1293,7 +1293,7 @@ export const products = [
     image: '/images/ska/s-36.webp',
     description:
       'Dale aborigen es el tercer álbum de estudio de la banda de reggae punk argentina Todos Tus Muertos. Fue publicado en 1994 y relanzado en 1997. En el disco participan como invitados Fermín Muguruza, Manu Chao y Actitud María Marta, entre otros​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 82,
@@ -1309,7 +1309,7 @@ export const products = [
     image: '/images/ska/s-37.webp',
     description:
       '"Modified" marcó una evolución en el sonido de Save Ferris, incorporando elementos de pop punk y alejándose parcialmente de sus raíces ska. El álbum incluye 11 pistas, destacando canciones como "Turn It Up", "The Only Way to Be" (que apareció en la película Scary Movie de 2000) y "Im Not Cryin for You". La última pista, "Let Me In"​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 83,
@@ -1325,7 +1325,7 @@ export const products = [
     image: '/images/ska/s-38.webp',
     description:
       '"KEMURIFIED" es un álbum que rinde homenaje a las influencias musicales de Kemuri, presentando versiones de canciones icónicas de bandas como The Police, Rancid, NOFX, Kiss y Madness, entre otras . El álbum incluye 13 pistas con una duración total de 40 minutos.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 84,
@@ -1341,7 +1341,7 @@ export const products = [
     image: '/images/ska/s-39.webp',
     description:
       '​"Lets Face It" es el quinto álbum de estudio de la banda estadounidense de ska punk The Mighty Mighty Bosstones, lanzado el 11 de marzo de 1997 bajo el sello discográfico Mercury Records . Este álbum es considerado el más exitoso de la banda, alcanzando el puesto número 27 en la lista Billboard 200 y obteniendo la certificación de platino por la RIAA​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 85,
@@ -1357,7 +1357,7 @@ export const products = [
     image: '/images/ska/s-40.webp',
     description:
       '​"All Fall Down" es el segundo álbum de estudio de la banda estadounidense de ska punk Against All Authority, lanzado el 13 de enero de 1998 bajo el sello discográfico Hopeless Records . Con una duración de 28 minutos y 56 segundos, el álbum presenta 15 pistas que combinan letras de protesta con una fusión enérgica de ska y punk.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 86,
@@ -1373,7 +1373,7 @@ export const products = [
     image: '/images/ska/s-41.webp',
     description:
       '​"Give Em the Boot II" es la segunda entrega de la serie de compilaciones lanzadas por Hellcat Records, el sello fundado por Tim Armstrong de Rancid. Publicado el 23 de noviembre de 1999, este álbum reúne 22 pistas que abarcan géneros como ska punk, hardcore, reggae y rocksteady, destacando la diversidad musical de la escena alternativa de finales de los 90​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 87,
@@ -1389,7 +1389,7 @@ export const products = [
     image: '/images/alternativo/a-1.webp',
     description:
       '"One Hot Minute" es el sexto álbum de estudio de la banda estadounidense Red Hot Chili Peppers, lanzado el 12 de septiembre de 1995. Es un disco único dentro de su discografía porque fue el único en contar con el guitarrista Dave Navarro (exintegrante de Jane’s Addiction), quien reemplazó a John Frusciante tras su salida en 1992.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 88,
@@ -1405,7 +1405,7 @@ export const products = [
     image: '/images/alternativo/a-2.webp',
     description:
       '"Doubt" es el segundo álbum de estudio de la banda británica Jesus Jones, lanzado el 29 de enero de 1991. Es su trabajo más exitoso y una pieza clave del sonido alternativo de principios de los 90, combinando rock alternativo con electrónica, dance y samples, en una fusión innovadora para su época.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 89,
@@ -1421,7 +1421,7 @@ export const products = [
     image: '/images/alternativo/a-3.webp',
     description:
       '"Pinkerton" es el segundo álbum de estudio de la banda estadounidense Weezer, lanzado el 24 de septiembre de 1996. Es uno de los discos más emblemáticos del rock alternativo de los 90, aunque inicialmente fue recibido con críticas mixtas y ventas decepcionantes. Con el tiempo, sin embargo, se ha convertido en un álbum de culto, ampliamente reconocido por su honestidad emocional y su influencia en el movimiento emo y el indie rock.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 90,
@@ -1437,7 +1437,7 @@ export const products = [
     image: '/images/alternativo/a-4.webp',
     description:
       '"Blind Melon" mezcla influencias del rock clásico de los años 60 y 70 (como Led Zeppelin, Grateful Dead o Lynyrd Skynyrd) con una estética alternativa y grunge característica de los 90. A diferencia de otras bandas de la época con tonos más oscuros, Blind Melon apostó por un sonido más orgánico, acústico y optimista, con letras introspectivas y una vibra despreocupada.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 91,
@@ -1453,7 +1453,7 @@ export const products = [
     image: '/images/alternativo/a-5.webp',
     description:
       '"Cure for Pain" es el segundo álbum de estudio de la banda estadounidense Morphine, lanzado el 5 de septiembre de 1993. Es el disco más conocido y aclamado del grupo, y una obra fundamental dentro del rock alternativo de los 90, gracias a su estilo único que fusiona jazz, blues, rock y elementos oscuros.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 92,
@@ -1469,7 +1469,7 @@ export const products = [
     image: '/images/alternativo/a-6.webp',
     description:
       'Schubert Dip combina elementos de rock alternativo, electrónica, hip hop y samples enérgicos, alineándose con el espíritu de la escena Madchester y el baggy movement del Reino Unido. El nombre del álbum es un juego de palabras entre el compositor Franz Schubert y una marca de bocadillos británicos llamada “chip dip”.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 93,
@@ -1485,7 +1485,7 @@ export const products = [
     image: '/images/alternativo/a-7.webp',
     description:
       'Dirty fue producido por Butch Vig (productor de Nevermind de Nirvana) y mezclado por Andy Wallace. Aprovechando el boom del grunge, el disco muestra a Sonic Youth canalizando su energía caótica y experimental en una forma más estructurada, sin perder su identidad.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 94,
@@ -1501,7 +1501,7 @@ export const products = [
     image: '/images/alternativo/a-8.webp',
     description:
       '"Repeater" es el primer álbum de estudio de la banda estadounidense Fugazi, lanzado el 19 de abril de 1990. Es un disco clave en la historia del post-hardcore, y uno de los más influyentes del rock alternativo independiente de los 90.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 95,
@@ -1517,7 +1517,7 @@ export const products = [
     image: '/images/alternativo/a-9.webp',
     description:
       '"Monster" es el séptimo álbum de estudio de la banda estadounidense R.E.M., lanzado el 1 de septiembre de 1994. Este álbum marcó un cambio significativo en el sonido de la banda, ya que fue más eléctrico, crudo y experimental en comparación con los discos anteriores como Automatic for the People (1992), que presentaban un sonido más suave y melódico.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 96,
@@ -1533,7 +1533,7 @@ export const products = [
     image: '/images/alternativo/a-10.webp',
     description:
       'Blood Sugar Sex Magik fue producido por Rick Rubin, quien aportó una gran simplicidad y enfoque a las canciones, lo que permitió que la banda mezclara sus influencias de funk, rock, punk y psychedelia en una obra poderosa y muy característica. Este álbum no solo destacó por su sonido único, sino también por la madurez lírica, lo que lo convirtió en un referente del rock alternativo y una pieza clave en la explosión del rock alternativo en los 90.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 97,
@@ -1549,7 +1549,7 @@ export const products = [
     image: '/images/alternativo/a-11.webp',
     description:
       '"311" es el álbum homónimo de la banda estadounidense 311, lanzado el 3 de marzo de 1995. Este fue el tercer álbum de estudio de la banda y consolidó su sonido característico, que mezcla elementos de rock alternativo, funk, reggae, rap y psychedelia. A menudo llamado simplemente 311, el disco refleja el estilo único de la banda, que se caracteriza por la combinación de melodías pegajosas, riffs potentes y letras optimistas y positivas.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 98,
@@ -1565,7 +1565,7 @@ export const products = [
     image: '/images/alternativo/a-12.webp',
     description:
       '"Weezer" (conocido como The Blue Album) es el álbum debut de estudio de la banda estadounidense Weezer, lanzado el 10 de mayo de 1994. Este disco marcó el inicio de la carrera de la banda y es uno de los más influyentes del rock alternativo de los años 90. Con su mezcla de power pop, rock alternativo y grunge, Weezer se convirtió en un referente dentro de la escena musical de la época.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 99,
@@ -1581,7 +1581,7 @@ export const products = [
     image: '/images/alternativo/a-13.webp',
     description:
       '"Congratulations Im Sorry" es el cuarto álbum de estudio de la banda estadounidense Gin Blossoms, lanzado el 7 de septiembre de 1996. Este disco marcó el regreso de la banda después de una pausa de varios años y fue el primero que incluyó a Jesse Valenzuela como miembro oficial después de que el guitarrista Doug Hopkins dejara la banda.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 100,
@@ -1597,7 +1597,7 @@ export const products = [
     image: '/images/alternativo/a-14.webp',
     description:
       '"Angel Dust" es el cuarto álbum de estudio de la banda estadounidense Faith No More, lanzado el 8 de junio de 1992. Este disco es ampliamente considerado uno de los más influyentes y experimentalmente audaces de la banda, marcando una transición significativa en su sonido y consolidando su estatus en la escena del rock alternativo de los años 90.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 101,
@@ -1613,7 +1613,7 @@ export const products = [
     image: '/images/alternativo/a-15.webp',
     description:
       '"Throwing Copper" es el segundo álbum de estudio de la banda Live, y es conocido por su sonido poderoso y emocionalmente cargado. El álbum combina rock alternativo con elementos de grunge y hard rock, y sus letras exploran temas de fe, espiritualidad, crisis existenciales y relaciones personales.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 102,
@@ -1629,7 +1629,7 @@ export const products = [
     image: '/images/alternativo/a-16.webp',
     description:
       '​"Mellow Gold" es el álbum debut de estudio de Beck, lanzado el 1 de marzo de 1994. Este disco marcó el comienzo de la carrera de Beck Hansen, quien sería conocido por su estilo ecléctico que mezcla una variedad de géneros como rock alternativo, hip-hop, funk, folk, lo-fi y electrónica. A través de este álbum, Beck ganó reconocimiento y se consolidó como una figura clave en la escena musical de los años 90.',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 103,
@@ -1645,7 +1645,7 @@ export const products = [
     image: '/images/alternativo/a-17.webp',
     description:
       '"Fashion Nugget" es el segundo álbum de estudio de la banda estadounidense Cake, lanzado el 17 de septiembre de 1996 bajo el sello Capricorn Records. Este álbum consolidó el estilo distintivo de Cake, caracterizado por una fusión ecléctica de géneros y letras ingeniosas.​​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 104,
@@ -1661,7 +1661,7 @@ export const products = [
     image: '/images/alternativo/a-18.webp',
     description:
       '"Tales from the Punchbowl" se caracteriza por su fusión de rock progresivo, funk metal y rock alternativo, presentando composiciones complejas y letras surrealistas. El álbum incluye 13 pistas, destacando canciones como "Wynonas Big Brown Beaver", que fue nominada al Grammy por "Mejor Interpretación de Hard Rock" en 1996​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 105,
@@ -1677,7 +1677,7 @@ export const products = [
     image: '/images/alternativo/a-19.webp',
     description:
       '"Check Your Head" es el tercer álbum de estudio de Beastie Boys, lanzado el 21 de abril de 1992 bajo los sellos Capitol Records y su propio sello Grand Royal. Este disco marcó un punto crucial en la evolución musical del grupo, ya que regresaron a tocar sus propios instrumentos —una práctica que habían abandonado tras su álbum debut Licensed to Ill—, mezclando con audacia hip hop, punk, funk, y jazz.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 106,
@@ -1693,7 +1693,7 @@ export const products = [
     image: '/images/alternativo/a-20.webp',
     description:
       '"Meantime" marcó un punto decisivo en la historia del metal alternativo de los 90. El sonido característico del disco —basado en riffs pesados, afinaciones bajas y estructuras matemáticas— se convirtió en una influencia directa para géneros como el nu metal, el metalcore y el post-hardcore.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 107,
@@ -1709,7 +1709,7 @@ export const products = [
     image: '/images/alternativo/a-21.webp',
     description:
       '"Bossanova" marcó una evolución en el sonido de Pixies, alejándose ligeramente del punk abrasivo de sus discos anteriores (Surfer Rosa, Doolittle) y adoptando una estética más espacial, surf rock y psicodélica. El álbum presenta letras surrealistas, paisajes sonoros más atmosféricos y una producción más pulida, a cargo de Gil Norton.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 108,
@@ -1725,7 +1725,7 @@ export const products = [
     image: '/images/alternativo/a-22.webp',
     description:
       '"Bandwagonesque" es un disco fundamental del power pop y uno de los álbumes indie más influyentes de los años 90. Con claras influencias de Big Star, The Byrds y The Beatles, Teenage Fanclub combinó guitarras distorsionadas al estilo grunge con melodías brillantes y armonías vocales cuidadosamente arregladas.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 109,
@@ -1741,7 +1741,7 @@ export const products = [
     image: '/images/alternativo/a-23.webp',
     description:
       '"You are Living All Over Me" es ampliamente considerado un disco esencial del rock alternativo y un pilar del sonido indie/noise rock de finales de los años 80. El trío liderado por J Mascis ofreció en este álbum una mezcla abrasiva de guitarras distorsionadas, solos psicodélicos, voces lánguidas y estructuras que parecían desordenadas pero perfectamente intencionales.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 110,
@@ -1757,7 +1757,7 @@ export const products = [
     image: '/images/alternativo/a-24.webp',
     description:
       '​"Too High to Die" es el álbum más exitoso comercialmente de Meat Puppets, una banda clave dentro del movimiento underground estadounidense. El disco marcó su regreso al centro de atención gracias al auge del rock alternativo en los 90, impulsado en parte por su colaboración con Nirvana en el famoso MTV Unplugged in New York, donde interpretaron juntos tres canciones de los Puppets.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 111,
@@ -1773,7 +1773,7 @@ export const products = [
     image: '/images/alternativo/a-25.webp',
     description:
       'Este disco muestra una evolución en el sonido de la banda, alejándose de la imagen de "No Rain" y la vibra del grunge para incorporar una mayor diversidad estilística, con elementos de rock alternativo, psychedelia, blues y hasta country. A pesar de la popularidad de su primer álbum, Soup tuvo una recepción crítica mixta debido a su tono más sombrío y experimental.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 112,
@@ -1789,7 +1789,7 @@ export const products = [
     image: '/images/alternativo/a-26.webp',
     description:
       '​"Eight Arms to Hold You" es un álbum que continuó la evolución sonora de Veruca Salt, manteniendo su esencia de rock alternativo y grunge, pero con un sonido más pulido y melódico. En este disco, la banda combina guitarras pesadas y letras emotivas con un enfoque más experimental y accesible. También se nota la influencia de bandas como Hole y Garbage, con toques más suaves y un mayor énfasis en las armonías vocales.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 113,
@@ -1805,7 +1805,7 @@ export const products = [
     image: '/images/alternativo/a-27.webp',
     description:
       'El álbum está lleno de paisajes sonoros envolventes, sintetizadores etéreos, guitarras reverberantes y letras que exploran temas como la pérdida, el paso del tiempo, el amor imposible y la desesperanza. Aun así, canciones como "Lovesong" ofrecen momentos de ternura emocional, lo que da al disco un balance complejo entre la tristeza y la belleza.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 114,
@@ -1821,7 +1821,7 @@ export const products = [
     image: '/images/alternativo/a-28.webp',
     description:
       '"Fear" fue el álbum que catapultó a Toad the Wet Sprocket al éxito comercial. Mezclando elementos de folk rock, jangle pop y rock alternativo, el disco ofreció un sonido melódico, introspectivo y accesible, muy representativo del movimiento alternativo de principios de los años 90.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 115,
@@ -1837,7 +1837,7 @@ export const products = [
     image: '/images/alternativo/a-29.webp',
     description:
       '"Pure Guava" es un viaje psicodélico y surrealista a través del universo sonoro de Ween, lleno de humor absurdo, experimentación lo-fi, y una mezcla irreverente de géneros como rock, funk, punk, synth-pop y música bizarra grabada en casa. El álbum fue grabado casi en su totalidad en un estudio casero de 4 pistas, lo que le da ese sonido crudo, desordenado y encantadoramente extraño que caracteriza sus primeras obras.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 116,
@@ -1853,7 +1853,7 @@ export const products = [
     image: '/images/alternativo/a-30.webp',
     description:
       'Fue el segundo álbum tras la salida de Lou Barlow, y el primero con una formación estable durante toda la grabación (Mike Johnson en bajo y Murph en batería). El disco presentó una producción más pulida que sus antecesores, pero conservó el ADN del grupo: guitarras distorsionadas, solos intensos, y la característica voz arrastrada y nostálgica de Mascis.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 117,
@@ -1869,7 +1869,7 @@ export const products = [
     image: '/images/alternativo/a-31.webp',
     description:
       'Este primer álbum de Violent Femmes es una mezcla cruda y acústica de punk, folk y rock alternativo, con letras cargadas de ansiedad adolescente, deseo sexual, frustración y sarcasmo. La voz nasal y angustiada de Gordon Gano, junto con el uso de instrumentos acústicos poco convencionales para el punk (como contrabajo, xilófono y guitarras acústicas), le dieron al disco un sonido distintivo e influyente.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 118,
@@ -1885,7 +1885,7 @@ export const products = [
     image: '/images/alternativo/a-32.webp',
     description:
       '​"King for a Day... Fool for a Lifetime" es uno de los discos más eclécticos y arriesgados de Faith No More. Después de la salida del guitarrista Jim Martin, el grupo trabajó con Trey Spruance (guitarrista de Mr. Bungle), quien aportó un enfoque más experimental. El álbum mezcla géneros tan diversos como metal alternativo, jazz, funk, soul, punk, country y gospel, demostrando la versatilidad vocal y compositiva de Mike Patton.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 119,
@@ -1901,7 +1901,7 @@ export const products = [
     image: '/images/alternativo/a-33.webp',
     description:
       '"S.C.I.E.N.C.E." (abreviatura de Sailing Catamarans Is Every Nautical Captain’s Ecstasy, aunque el significado es más simbólico que literal) es un disco que marcó el estilo funk-metal, nu-metal y alternativo temprano de Incubus. En este álbum, la banda experimenta con scratchings, efectos electrónicos, riffs agresivos y funk rock, influenciados por grupos como Red Hot Chili Peppers, Faith No More, y Rage Against the Machine.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 120,
@@ -1917,7 +1917,7 @@ export const products = [
     image: '/images/alternativo/a-34.webp',
     description:
       'Este álbum mezcla rock alternativo, psicodelia, punk y metal, con letras intensamente personales, espirituales y a veces caóticas. El disco está dividido en dos mitades claras: la primera (pistas 1–5) ofrece temas más cortos y energéticos, mientras que la segunda parte (pistas 6–9) explora estructuras más largas, épicas y emocionales, incluyendo tributos como "Three Days" y "Then She Did..." dedicados a la novia fallecida del vocalista Perry Farrell.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 121,
@@ -1933,7 +1933,7 @@ export const products = [
     image: '/images/alternativo/a-35.webp',
     description:
       'Kiss Me, Kiss Me, Kiss Me es un álbum doble (en formato vinilo original) que muestra la versatilidad sonora de The Cure. Aquí conviven baladas oscuras, experimentación psicodélica, pop brillante y rock directo. Es uno de los discos más ambiciosos y accesibles de la banda, y el que los ayudó a conquistar el mercado estadounidense, abriendo el camino para su estatus de culto global.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 123,
@@ -1949,7 +1949,7 @@ export const products = [
     image: '/images/alternativo/a-36.webp',
     description:
       'Mother’s Milk es un álbum de transición e impulso para los RHCP. Tras la trágica muerte del guitarrista original Hillel Slovak, el grupo reclutó a Frusciante, cuyo enfoque melódico y creativo dio nueva forma al sonido de la banda, y a Chad Smith, quien añadió potencia y precisión a la batería.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 124,
@@ -1965,7 +1965,7 @@ export const products = [
     image: '/images/alternativo/a-37.webp',
     description:
       '"God Fodder" es un disco caracterizado por su sonido crudo y enérgico, combinando elementos de indie rock, post-punk y grunge. La banda utilizó un enfoque experimental en sus composiciones, con guitarras agresivas y una sección rítmica dinámica que se destacó en la época. En lugar de seguir las convenciones del rock alternativo de finales de los 80, Ned’s Atomic Dustbin implementó un estilo más rítmico y pegajoso, con un toque de humor y letras sardónicas.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 125,
@@ -1981,7 +1981,7 @@ export const products = [
     image: '/images/alternativo/a-38.webp',
     description:
       'Pork Soda es un álbum que lleva a Primus más allá de sus raíces en el funk metal, con una atmósfera más oscura y experimental. La banda, liderada por Les Claypool, exploró sonidos aún más excéntricos y retorcidos, con una fuerte presencia del bajo, un sonido disonante y excéntrico en las guitarras y una batería intrincada que se convierte en un protagonista dentro de las composiciones.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 126,
@@ -1997,7 +1997,7 @@ export const products = [
     image: '/images/alternativo/a-39.webp',
     description:
       'El álbum debut de Porno for Pyros presenta un sonido que evoluciona y se aleja de las raíces de Jane’s Addiction. Mientras que Jane’s Addiction era conocida por su fusión de rock alternativo y metal, Porno for Pyros adoptó un enfoque más experimental y psicodélico, con influencias de rock de los 70s y una atmósfera más relajada y etérea. El disco se caracteriza por guitarras relajadas, un enfoque rítmico marcado por el bajo y la percusión, y las letras poéticas de Farrell.​',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 127,
@@ -2013,7 +2013,7 @@ export const products = [
     image: '/images/alternativo/a-40.webp',
     description:
       '"Quebec" es el octavo álbum de estudio de la banda estadounidense Ween, lanzado el 5 de agosto de 2003 a través de su propio sello Chocodog Records (en asociación con Sanctuary Records). Este álbum marca un regreso a un sonido más pulido y accesible en comparación con algunos de sus discos anteriores, manteniendo su distintiva mezcla de humor, eclecticismo y experimentación musical.​',
-    price: '20000',
+    price: 20000,
   },
   {
     id: 128,
@@ -2029,7 +2029,7 @@ export const products = [
     image: '/images/alternativo/a-41.webp',
     description:
       '​It’s a Shame About Ray es el quinto álbum de estudio de The Lemonheads, y el que consolidó a la banda como un referente del rock alternativo de los años 90. Liderados por Evan Dando, este disco destaca por su estilo melódico, su estructura pop, y letras que combinan melancolía juvenil, romanticismo y humor sutil.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 129,
@@ -2045,7 +2045,7 @@ export const products = [
     image: '/images/alternativo/a-42.webp',
     description:
       '"Grave Dancers Union" es el sexto álbum de estudio de la banda estadounidense Soul Asylum, lanzado el 6 de octubre de 1992 a través de Columbia Records. Este disco marcó un punto de inflexión en la carrera de la banda, llevándolos al éxito comercial y consolidándolos como una de las bandas más importantes del rock alternativo de los años 90.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 130,
@@ -2061,7 +2061,7 @@ export const products = [
     image: '/images/alternativo/a-43.webp',
     description:
       '"Rotting Piñata" es el álbum debut de la banda estadounidense Sponge, lanzado el 2 de agosto de 1994 a través del sello Work Group. Este disco se convirtió en el mayor éxito comercial de la banda, destacando dentro de la escena del rock alternativo y post-grunge de los años 90​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 131,
@@ -2077,7 +2077,7 @@ export const products = [
     image: '/images/alternativo/a-44.webp',
     description:
       '“Wild Mood Swings” es el décimo álbum de estudio de The Cure, lanzado el 6 de mayo de 1996 a través de Fiction Records en el Reino Unido y Elektra Records en Estados Unidos. Este disco se caracteriza por su eclecticismo, explorando una amplia gama de estilos musicales, desde baladas melancólicas hasta ritmos latinos y jazzísticos.​',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 132,
@@ -2093,7 +2093,7 @@ export const products = [
     image: '/images/alternativo/a-45.webp',
     description:
       '"Troublegum" es el segundo álbum de estudio de la banda norirlandesa de rock alternativo Therapy?, lanzado el 7 de febrero de 1994 a través de A&M Records. Este disco marcó un punto de inflexión en la carrera del grupo, llevándolos al reconocimiento internacional y consolidando su estilo distintivo que fusiona punk, metal alternativo y melodías pop​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 133,
@@ -2109,7 +2109,7 @@ export const products = [
     image: '/images/metal/m-3.webp',
     description:
       'El álbum se caracteriza por su crudeza, duración extremadamente corta de algunas canciones (varias de menos de un minuto), y una crítica social y política feroz en sus letras. Dividido en dos mitades grabadas por formaciones distintas, Scum muestra una evolución rápida de estilo entre el lado A (más orientado al hardcore/crust punk) y el lado B (más cercano al death metal).​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 134,
@@ -2125,7 +2125,7 @@ export const products = [
     image: '/images/metal/m-4.webp',
     description:
       ' Undisputed Attitude es un álbum de estudio de la legendaria banda de thrash metal Slayer, lanzado en 1996. A diferencia de sus trabajos anteriores, este disco es un álbum de covers, en su mayoría de bandas hardcore punk que influenciaron a Slayer en sus inicios, como Minor Threat, D.R.I., T.S.O.L., Verbal Abuse y The Stooges. También incluye una canción original de Slayer llamada “Gemini”, que cierra el álbum, mostrando un sonido más oscuro y denso en comparación con el resto del material. El álbum es agresivo, rápido y rinde homenaje al espíritu rebelde y crudo del punk, con el sello distintivo de velocidad y violencia sonora que caracteriza a Slayer.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 135,
@@ -2141,7 +2141,7 @@ export const products = [
     image: '/images/metal/m-5.webp',
     description:
       'The Art of Partying es el tercer álbum de estudio de la banda estadounidense de crossover thrash Municipal Waste, lanzado el 12 de junio de 2007. Este disco es una celebración directa y desenfrenada del espíritu del thrash metal de los 80, combinado con letras humorísticas, temáticas de fiestas, alcohol, mutantes y caos generalizado.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 136,
@@ -2157,7 +2157,7 @@ export const products = [
     image: '/images/metal/m-6.webp',
     description:
       'From Mars to Sirius es el tercer álbum de estudio de la banda francesa de metal progresivo y groove/death metal Gojira, lanzado el 27 de septiembre de 2005. Este disco marcó un punto de inflexión en la carrera del grupo, estableciendo su sonido característico: una mezcla de riffs pesados, estructuras progresivas, cambios dinámicos y letras profundamente conscientes sobre temas como la ecología, la espiritualidad y la evolución.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 137,
@@ -2173,7 +2173,7 @@ export const products = [
     image: '/images/metal/m-7.webp',
     description:
       'Este disco es ampliamente considerado como una obra maestra del metal progresivo moderno. Producido por Steven Wilson (de Porcupine Tree), quien también colaboró con teclados y coros, el álbum fusiona con maestría pasajes intensamente pesados con secciones acústicas y atmosféricas, mostrando un equilibrio único entre la brutalidad del death metal y la delicadeza del rock progresivo.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 138,
@@ -2189,7 +2189,7 @@ export const products = [
     image: '/images/metal/m-8.webp',
     description:
       'El disco muestra a la banda en su punto más técnico y pulido dentro del thrash metal, sin perder su energía punk. Con riffs veloces, baterías frenéticas y letras directas que abordan temas sociales y personales, Thrash Zone es considerado un clásico del género crossover thrash.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 139,
@@ -2205,7 +2205,7 @@ export const products = [
     image: '/images/metal/m-9.webp',
     description:
       'Es un pilar del hardcore punk de los años 80, aunque con elementos que más tarde definirían el crossover thrash, especialmente en sus discos posteriores. Este álbum incluye el legendario tema "Institutionalized", conocido por su letra sarcástica y existencial, además de su innovador videoclip que fue uno de los primeros de punk transmitidos en MTV.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 140,
@@ -2221,7 +2221,7 @@ export const products = [
     image: '/images/hardcore/h-5.webp',
     description:
       'One Truth es el álbum debut de la banda californiana Strife, lanzado el 15 de mayo de 1994. Este disco es un referente clave del movimiento hardcore straight edge de los años 90, particularmente dentro de la escena metalcore temprano. Con un sonido poderoso, riffs contundentes y letras cargadas de compromiso personal, unidad y fuerza interior, One Truth ayudó a definir el sonido de la escena hardcore de la costa oeste.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 141,
@@ -2237,7 +2237,7 @@ export const products = [
     image: '/images/hardcore/h-6.webp',
     description:
       '​El disco combina la energía del hardcore punk con melodías pegadizas y letras positivas centradas en la amistad, la lealtad, el esfuerzo personal y la escena punk/hardcore.Con un sonido limpio pero agresivo, y canciones cortas, directas y apasionadas, este álbum se convirtió en un clásico dentro del hardcore melódico de los años 90. La banda, liderada por Toby Morse, destaca por sus presentaciones enérgicas y su mensaje comprometido con la comunidad hardcore.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 142,
@@ -2253,7 +2253,7 @@ export const products = [
     image: '/images/hardcore/h-7.webp',
     description:
       ' se destacó por su estilo metalcore temprano con fuertes raíces en el hardcore straight edge, caracterizado por breakdowns pesados, riffs densos, y letras intensas con fuerte carga emocional y crítica social. El título del EP hace referencia directa a una novela gráfica de X-Men, y refleja el contenido lírico de la banda, enfocado en la intolerancia, el poder, la fe y la lucha interna.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 143,
@@ -2269,7 +2269,7 @@ export const products = [
     image: '/images/hardcore/h-8.webp',
     description:
       'Wake the Dead es el segundo álbum de estudio de la banda canadiense de hardcore melódico Comeback Kid, lanzado el 22 de febrero de 2005. El álbum destaca por su mensaje positivo, energía constante y la voz inconfundible de Scott Wade, quien dejaría la banda después de este disco.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 144,
@@ -2285,7 +2285,7 @@ export const products = [
     image: '/images/hardcore/h-9.webp',
     description:
       'Breed the Killers es el tercer álbum de estudio de la influyente banda estadounidense de metalcore/straight edge hardcore Earth Crisis, lanzado el 6 de octubre de 1998. Este disco marcó un momento especial en la historia de la banda, ya que fue el único editado por Roadrunner Records, dándoles mayor proyección internacional.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 145,
@@ -2301,7 +2301,7 @@ export const products = [
     image: '/images/punk/p-4.webp',
     description:
       'Descripción: Keep Out es un EP de la banda sueca de punk melódico Satanic Surfers. Este trabajo forma parte de sus primeros lanzamientos y muestra un sonido rápido y agresivo, característico del skate punk de los años 90. Las letras mezclan temas sociales con introspección personal, todo acompañado por riffs veloces y una batería contundente, muy en la línea del hardcore melódico.​',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 146,
@@ -2317,7 +2317,7 @@ export const products = [
     image: '/images/punk/p-5.webp',
     description:
       '​Este disco es considerado uno de los más representativos del skate punk de los años 90. Con una duración de poco más de 25 minutos, presenta canciones rápidas, melodías pegajosas y letras introspectivas. El vocalista Joey Cape ha mencionado que es su álbum favorito de la banda, influenciado en parte por el sonido de Punk in Drublic de NOFX.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 147,
@@ -2333,7 +2333,7 @@ export const products = [
     image: '/images/punk/p-6.webp',
     description:
       'Este álbum marcó el regreso de los Descendents con material nuevo después de una pausa de casi una década, desde su álbum anterior "All" en 1987. Durante ese tiempo, el vocalista Milo Aukerman se había alejado de la música para dedicarse a su carrera en bioquímica. La reunión de la banda para "Everything Sucks" trajo de vuelta su característico sonido de hardcore melódico y pop punk, con letras que combinan humor, introspección y temas cotidianos.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 148,
@@ -2349,7 +2349,7 @@ export const products = [
     image: '/images/punk/p-7.webp',
     description:
       'El álbum Econochrist (1988–1993) es una recopilación exhaustiva de la banda de hardcore punk Econochrist, lanzada en junio de 1994 por el sello independiente Ebullition Records. Este compilado reúne la totalidad de su discografía oficial, incluyendo EPs, splits y LPs, así como algunas canciones de compilados.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 149,
@@ -2365,7 +2365,7 @@ export const products = [
     image: '/images/punk/p-8.webp',
     description:
       '"Anthem for a New Tomorrow" es el sexto álbum de estudio de la banda estadounidense de punk rock Screeching Weasel. Originalmente lanzado el 8 de octubre de 1993 a través de Lookout! Records , este álbum se considera uno de los más influyentes en la escena del pop punk de los años 90.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 150,
@@ -2381,7 +2381,7 @@ export const products = [
     image: '/images/punk/p-9.webp',
     description:
       '"Today’s Empires, Tomorrow’s Ashes" es el tercer álbum de estudio de la banda canadiense de punk rock Propagandhi, lanzado el 6 de febrero de 2001. Este álbum marcó un cambio significativo en su sonido, incorporando influencias de thrash metal y hardcore melódico, y profundizando en sus posturas políticas y sociales.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 151,
@@ -2397,7 +2397,7 @@ export const products = [
     image: '/images/punk/p-10.webp',
     description:
       'Este álbum es una compilación que reúne a varias bandas de punk de los años 90. Lanzado por Fearless Records, presenta una portada llamativa con un niño con mohawk, acompañada de logotipos de diversas bandas. Incluye canciones de grupos como The Vandals, No Use for a Name, Ten Foot Pole, Strung Out, Straight Faced, entre otros.​',
-    price: '10000',
+    price: 10000,
   },
   {
     id: 152,
@@ -2413,7 +2413,7 @@ export const products = [
     image: '/images/punk/p-11.webp',
     description:
       '"Smash" fue un hito en la historia del punk rock, convirtiéndose en el álbum más vendido de todos los tiempos lanzado por un sello independiente, con más de 11 millones de copias vendidas en todo el mundo . El álbum alcanzó el puesto número 4 en el Billboard 200 de EE. UU. y fue certificado seis veces platino por la RIAA​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 153,
@@ -2429,7 +2429,7 @@ export const products = [
     image: '/images/progresivo/p-1.webp',
     description:
       '"Close to the Edge" es considerado una obra maestra del rock progresivo y uno de los álbumes más ambiciosos de Yes. Lanzado en 1972, este disco llevó al límite la experimentación musical de la banda, con estructuras largas y complejas, instrumentación virtuosa y letras filosóficas inspiradas en literatura espiritual (como el libro Siddhartha de Hermann Hesse).​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 154,
@@ -2445,7 +2445,7 @@ export const products = [
     image: '/images/progresivo/p-2.webp',
     description:
       'Este álbum marcó el inicio oficial del rock progresivo como género definido, gracias a su fusión de rock psicodélico, jazz, música clásica y lírica poética. Su sonido experimental, combinado con la portada icónica pintada por Barry Godber, lo convierte en una obra fundamental.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 155,
@@ -2461,7 +2461,7 @@ export const products = [
     image: '/images/progresivo/p-3.webp',
     description:
       'Musicalmente, el álbum combina rock progresivo complejo, momentos atmosféricos y pasajes más accesibles, con uso de sintetizadores, guitarras experimentales y letras crípticas. Se distingue por su cohesión narrativa, que se extiende a lo largo de sus 94 minutos.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 156,
@@ -2477,7 +2477,7 @@ export const products = [
     image: '/images/progresivo/p-4.webp',
     description:
       '"The Power and the Glory" es un álbum conceptual de Gentle Giant, que critica la corrupción del poder político y la fragilidad de la justicia. La narrativa explora cómo las personas que obtienen poder con buenas intenciones a menudo terminan traicionando esos ideales, atrapadas en sistemas autoritarios o manipuladores.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 157,
@@ -2493,7 +2493,7 @@ export const products = [
     image: '/images/progresivo/p-5.webp',
     description:
       'Wish You Were Here es considerado uno de los mejores álbumes de todos los tiempos. Vendió millones de copias y ha sido aclamado por fans y críticos por su profundidad emocional y coherencia artística. La portada, diseñada por Hipgnosis, con dos hombres dándose la mano mientras uno está en llamas, se ha vuelto icónica.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 158,
@@ -2509,7 +2509,7 @@ export const products = [
     image: '/images/progresivo/p-6.webp',
     description:
       '"Moving Pictures" es el octavo álbum de estudio de Rush y su obra más exitosa tanto comercial como críticamente. Representa el punto culminante del equilibrio entre su estilo progresivo de los años 70 y una aproximación más accesible, orientada al rock de estadio, que marcó su sonido en los años 80.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 159,
@@ -2525,7 +2525,7 @@ export const products = [
     image: '/images/progresivo/p-7.webp',
     description:
       '"You" es el tercer y último álbum de la trilogía cósmica conocida como "Radio Gnome Invisible", una saga psicodélica y humorística que mezcla ciencia ficción, espiritualidad, y sátira social. Esta trilogía narra las aventuras del personaje Zero the Hero, los Pot Head Pixies, y otras entidades interdimensionales. En este capítulo final, el protagonista alcanza una forma de iluminación espiritual, y la música refleja esa expansión de conciencia con composiciones largas, místicas y envolventes.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 160,
@@ -2541,7 +2541,7 @@ export const products = [
     image: '/images/progresivo/p-8.webp',
     description:
       'Este álbum marcó el inicio del proyecto Utopia, una banda liderada por Todd Rundgren enfocada en el rock progresivo, contrastando con sus trabajos solistas más orientados al pop y la experimentación psicodélica. Este álbum presenta un cambio radical respecto al estilo anterior de Rundgren, mostrando su deseo de explorar lo sinfónico y lo caótico a través de estructuras poco convencionales.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 161,
@@ -2557,7 +2557,7 @@ export const products = [
     image: '/images/progresivo/p-9.webp',
     description:
       '"Thick as a Brick" es el quinto álbum de estudio de Jethro Tull y una obra maestra del rock progresivo. Concebido como una parodia de los álbumes conceptuales de otras bandas progresivas, terminó convirtiéndose en uno de los más emblemáticos del género. a música se presenta como una única canción larga dividida en dos partes (una por cada lado del vinilo original), con múltiples secciones que varían en ritmo, tono y estilo, pero todas unidas temáticamente.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 162,
@@ -2573,7 +2573,7 @@ export const products = [
     image: '/images/progresivo/p-10.webp',
     description:
       'Con esta obra, la banda alcanza una profundización en la complejidad musical y lírica, incorporando estructuras más audaces y temas filosóficos. El álbum contiene tres largas composiciones que exploran temas como la existencia humana, el conflicto interior y la desesperación, siempre a través de una instrumentación intrincada, voces dramáticas y letras densas.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 163,
@@ -2589,7 +2589,7 @@ export const products = [
     image: '/images/progresivo/p-11.webp',
     description:
       '​"John Barleycorn Must Die" es el cuarto álbum de estudio de Traffic y un hito en su carrera, marcando una nueva dirección musical para la banda. Después de un descanso temporal, el grupo volvió a la escena con este disco, fusionando rock, jazz, folk y elementos del blues, lo que lo convierte en uno de sus trabajos más eclécticos y apreciados.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 164,
@@ -2605,7 +2605,7 @@ export const products = [
     image: '/images/progresivo/p-12.webp',
     description:
       '"Tarkus" es el segundo álbum de estudio de Emerson, Lake & Palmer (ELP) y uno de los discos más representativos del rock progresivo de principios de los 70. Este álbum es conocido por su complejidad técnica, la mezcla de instrumentos clásicos y electrónicos, y las influencias del jazz, el blues y la música clásica.​',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 165,
@@ -2621,7 +2621,7 @@ export const products = [
     image: '/images/progresivo/p-13.webp',
     description:
       '"In the Land of Grey and Pink" es el tercer álbum de estudio de Caravan, y es ampliamente considerado su obra maestra. Forma parte esencial del llamado “Sonido de Canterbury”, una rama del rock progresivo británico caracterizada por la fusión de elementos del jazz, la psicodelia, el folk y letras con un tono lúdico o surrealista.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 166,
@@ -2637,7 +2637,7 @@ export const products = [
     image: '/images/progresivo/p-14.webp',
     description:
       '"Ashes Are Burning" es el cuarto álbum de estudio de la banda británica de rock progresivo Renaissance, y es considerado uno de sus trabajos más emblemáticos. Marca el punto en que la banda consolidó su alineación clásica (con Annie Haslam como vocalista principal) y desarrolló plenamente su estilo distintivo que combina el rock sinfónico, la música clásica y el folk.​',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 167,
@@ -2653,7 +2653,7 @@ export const products = [
     image: '/images/progresivo/p-15.webp',
     description:
       '"Leftoverture" es el cuarto álbum de estudio de la banda estadounidense Kansas, y el más exitoso de su carrera tanto en crítica como en ventas. Mezcla el rock progresivo sinfónico con influencias del hard rock, mostrando arreglos complejos, instrumentación refinada, y un fuerte componente melódico.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 168,
@@ -2669,7 +2669,7 @@ export const products = [
     image: '/images/progresivo/p-16.webp',
     description:
       'El álbum presenta una amplia variedad de estilos, que van desde el rock progresivo hasta el art rock, pasando por momentos de pop experimental, lo que refleja el deseo de Gabriel de distanciarse del sonido de Genesis y explorar nuevos terrenos musicales.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 169,
@@ -2685,7 +2685,7 @@ export const products = [
     image: '/images/progresivo/p-17.webp',
     description:
       '​A menudo considerado uno de los discos más sólidos y ambiciosos del grupo, Hero and Heroine destaca por su enfoque conceptual. Aunque no es un álbum conceptual en el sentido estricto, muchas de las canciones giran en torno a temas de lucha interna, redención, identidad y espiritualidad. La instrumentación se volvió más eléctrica y expansiva comparada con sus trabajos anteriores más acústicos.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 170,
@@ -2701,7 +2701,7 @@ export const products = [
     image: '/images/progresivo/p-18.webp',
     description:
       '​El álbum fue concebido como una especie de retrato musical de los miembros de la banda, con cada canción reflejando la personalidad o estilo de uno de ellos, aunque no de forma explícita. Su sonido melódico y emocional, combinado con la complejidad musical característica del prog, lo convierte en un clásico del género.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 171,
@@ -2717,7 +2717,7 @@ export const products = [
     image: '/images/progresivo/p-19.webp',
     description:
       '​El álbum combina elementos del rock progresivo sinfónico con influencias del jazz fusión. Temas como “In the Dead of Night” y “Thirty Years” son ejemplos destacados de su estilo técnico y atmosférico, con pasajes instrumentales elaborados y virtuosos.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 172,
@@ -2733,7 +2733,7 @@ export const products = [
     image: '/images/progresivo/p-20.webp',
     description:
       '​In Search of the Lost Chord es el tercer álbum de estudio de The Moody Blues y se considera una de sus obras más emblemáticas dentro del rock psicodélico y progresivo. Fue el primer álbum del grupo sin la participación de una orquesta; en cambio, los miembros tocaron una amplia variedad de instrumentos por sí mismos, incluyendo el sitar, el tabla, el mellotron y muchos otros.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 173,
@@ -2749,7 +2749,7 @@ export const products = [
     image: '/images/progresivo/p-21.webp',
     description:
       '​Ommadawn es el tercer álbum de estudio del multiinstrumentista británico Mike Oldfield, famoso por su enfoque instrumental y progresivo. Continuando con el estilo establecido en Tubular Bells y Hergest Ridge, este disco está compuesto por dos piezas extensas divididas en lados A y B del vinilo original: "Ommadawn Part One" y "Ommadawn Part Two".',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 174,
@@ -2765,7 +2765,7 @@ export const products = [
     image: '/images/progresivo/p-22.webp',
     description:
       'El álbum está inspirado en las cartas del tarot, y cada pista representa una carta o figura arquetípica (como “Ace of Wands” o “The Hermit”). Hackett muestra una gran variedad de estilos y sonidos, desde secciones acústicas delicadas hasta pasajes instrumentales potentes.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 175,
@@ -2781,7 +2781,7 @@ export const products = [
     image: '/images/progresivo/p-23.webp',
     description:
       'El álbum está cantado en un idioma inventado por Vander, llamado Kobaïan, como parte de una narrativa conceptual sobre una civilización ficticia (los Kobaïanos) que ha aparecido a lo largo de varios álbumes de Magma. Musicalmente, combina elementos de rock progresivo, música clásica coral, jazz, y música contemporánea, con secciones repetitivas, intensas y dramáticas.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 176,
@@ -2797,7 +2797,7 @@ export const products = [
     image: '/images/progresivo/p-24.webp',
     description:
       'El sonido de Encore está compuesto por largas improvisaciones electrónicas, utilizando sintetizadores analógicos, secuenciadores y Mellotron. Las atmósferas son hipnóticas y espaciales, y las piezas evolucionan lentamente con capas sonoras envolventes. A pesar de ser un disco en vivo, todo el material es inédito, compuesto y ejecutado específicamente para los conciertos, algo característico de la banda en aquella época.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 177,
@@ -2813,7 +2813,7 @@ export const products = [
     image: '/images/progresivo/p-25.webp',
     description:
       'Este álbum contiene uno de sus mayores éxitos: "God Gave Rock and Roll to You", escrita por Russ Ballard, que se convirtió en un himno del género. La canción fue posteriormente versionada por Kiss en los años 90. El disco también incluye temas más experimentales con estructuras largas y secciones instrumentales complejas, mostrando la faceta progresiva del grupo.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 178,
@@ -2829,7 +2829,7 @@ export const products = [
     image: '/images/progresivo/p-26.webp',
     description:
       'Es considerado uno de los discos más influyentes y aclamados de la historia de la música. El álbum aborda temas complejos como la salud mental, la ansiedad, el tiempo, la muerte y la avaricia, y está estructurado como una suite continua con transiciones fluidas entre las canciones. El álbum es conocido por su uso innovador de efectos de estudio, como la grabación de sonido envolvente y el uso de sintetizadores, además de la famosa portada, diseñada por Storm Thorgerson.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 179,
@@ -2845,7 +2845,7 @@ export const products = [
     image: '/images/progresivo/p-27.webp',
     description:
       'Selling England by the Pound es el séptimo álbum de estudio de la banda británica Genesis, lanzado en 1973. Este disco es una de las obras más aclamadas de la banda, considerada como uno de los mejores ejemplos del rock progresivo de la época. El álbum presenta una mezcla de elementos del rock sinfónico, letras poéticas y un virtuosismo instrumental impresionante.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 180,
@@ -2861,7 +2861,7 @@ export const products = [
     image: '/images/grunge/g-9.webp',
     description:
       'Dust marcó un cambio notable en el sonido de Screaming Trees, incorporando más influencias del rock psicodélico, folk y blues, además del grunge característico de la banda. Fue grabado después de un período de inestabilidad y representa uno de los trabajos más maduros y completos de su carrera. La voz intensa de Mark Lanegan y las guitarras de Gary Lee Conner brillan especialmente en este álbum.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 181,
@@ -2877,7 +2877,7 @@ export const products = [
     image: '/images/grunge/g-10.webp',
     description:
       '​Este disco combina elementos de hard rock, heavy metal, funk metal y pop-metal, destacando por su tono irreverente y humorístico. El título es una parodia de la famosa frase "America’s Most Wanted". El álbum incluye una mezcla de canciones originales y una destacada versión de "Cat’s in the Cradle" de Harry Chapin. Además, se regrabaron temas de su EP anterior, As Ugly as They Wanna Be, como "Everything About You" y "Madman".',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 182,
@@ -2893,7 +2893,7 @@ export const products = [
     image: '/images/grunge/g-11.webp',
     description:
       '"Frosting on the Beater" representó un cambio de dirección para The Posies, alejándose del sonido más melódico y jangle pop de sus primeros discos hacia un enfoque más crudo y pesado, alineado con el sonido alternativo y grunge de principios de los 90. Sin perder sus armonías vocales características, el disco combina guitarras distorsionadas, una producción más agresiva y letras introspectivas.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 183,
@@ -2909,7 +2909,7 @@ export const products = [
     image: '/images/grunge/g-12.webp',
     description:
       'Despised se considera el primer lanzamiento significativo de Seaweed, aunque técnicamente es un EP. Contiene seis canciones nuevas grabadas con el productor Jack Endino, conocido por su trabajo con bandas como Nirvana y Soundgarden. Además, incluye cuatro pistas adicionales ligeramente remezcladas de su EP anterior, Seaweed, lo que generó cierta controversia con su antiguo sello, Tupelo.​',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 184,
@@ -2925,7 +2925,7 @@ export const products = [
     image: '/images/grunge/g-13.webp',
     description:
       '"Jar of Flies" fue grabado en solo una semana en los London Bridge Studio de Seattle. A diferencia del sonido más pesado de trabajos anteriores como Dirt, este EP muestra un enfoque más acústico, atmosférico y melódico, lo que lo convierte en una obra única dentro del catálogo de Alice in Chains. Su temática aborda la soledad, la adicción, el arrepentimiento y la pérdida.​',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 185,
@@ -2941,7 +2941,7 @@ export const products = [
     image: '/images/grunge/g-14.webp',
     description:
       '"Superfuzz Bigmuff" es considerado uno de los lanzamientos fundacionales del grunge. Con guitarras distorsionadas, voces rasgadas y una producción lo-fi, este EP capturó la crudeza del underground de Seattle mucho antes de que Nirvana o Pearl Jam se hicieran mundialmente famosos. El sonido del EP combina influencias del punk, el garage rock de los 60, y el metal, convirtiéndose en un modelo sonoro para la escena Sub Pop​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 186,
@@ -2957,7 +2957,7 @@ export const products = [
     image: '/images/grunge/g-15.webp',
     description:
       'Después del debut casero de Dave Grohl en 1995, The Colour and the Shape fue el primer álbum grabado con Foo Fighters como una banda de verdad. El proceso de grabación fue intenso y emocional, en parte debido al divorcio de Grohl en ese momento, lo cual se refleja líricamente en muchas canciones.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 187,
@@ -2973,7 +2973,7 @@ export const products = [
     image: '/images/grunge/g-16.webp',
     description:
       '​"Bent Pages" es un álbum recopilatorio de la banda estadounidense de garage punk The Mono Men, lanzado originalmente en 1993 por el sello Estrus Records. Esta colección reúne sencillos, lados B y rarezas grabadas entre 1988 y 1992, mostrando la evolución temprana de la banda y su fusión de sonidos garage de los años 60 con una energía punk cruda.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 188,
@@ -2989,7 +2989,7 @@ export const products = [
     image: '/images/grunge/g-17.webp',
     description:
       'Skin Yard es el álbum debut homónimo de la banda estadounidense de grunge Skin Yard, lanzado en enero de 1987 por el sello independiente C/Z Records. Este álbum es considerado uno de los primeros registros del movimiento grunge de Seattle, precediendo a los lanzamientos más conocidos de Nirvana y Soundgarden.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 189,
@@ -3005,7 +3005,7 @@ export const products = [
     image: '/images/grunge/g-18.webp',
     description:
       'Above es el único álbum de estudio de la banda estadounidense Mad Season, un supergrupo formado por Layne Staley (Alice in Chains), Mike McCready (Pearl Jam), Barrett Martin (Screaming Trees), y John Baker Saunders. El álbum fusiona grunge, blues y rock psicodélico, con letras introspectivas y oscuras, destacando la voz cruda y emocional de Staley. Canciones como “River of Deceit” y “Wake Up” capturan una atmósfera melancólica y espiritual.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 190,
@@ -3021,7 +3021,7 @@ export const products = [
     image: '/images/grunge/g-19.webp',
     description:
       'Sweet Oblivion es el sexto álbum de estudio de Screaming Trees y el más exitoso de su carrera. Lanzado durante el auge del grunge, combina la crudeza del rock alternativo con tintes psicodélicos y una fuerte carga emocional. La voz profunda y melancólica de Mark Lanegan se impone en temas intensos como “Nearly Lost You”, que se convirtió en su mayor éxito comercial. El álbum explora temáticas de pérdida, adicción y redención, envuelto en una producción densa y atmosférica.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 191,
@@ -3037,7 +3037,7 @@ export const products = [
     image: '/images/grunge/g-20.webp',
     description:
       ' ¡Viva Zapata! es el segundo álbum de estudio de la banda punk/grunge femenina 7 Year Bitch, y funciona como un homenaje a su guitarrista original Stefanie Sargent (fallecida en 1992) y a la activista Mia Zapata de The Gits, asesinada en 1993. El disco es feroz, directo y emocional, mezclando rabia, dolor y empoderamiento​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 192,
@@ -3053,7 +3053,7 @@ export const products = [
     image: '/images/grunge/g-21.webp',
     description:
       'Something Vicious for Tomorrow es un EP lanzado por Treepeople en 1990, justo antes de su álbum debut completo. Este trabajo marca un paso importante en la evolución de su sonido, consolidando su mezcla característica de punk melódico, grunge crudo y un enfoque lírico introspectivo. El EP destaca por sus guitarras ásperas, cambios de ritmo abruptos y una energía caótica pero emocionalmente controlada. ​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 193,
@@ -3069,7 +3069,7 @@ export const products = [
     image: '/images/grunge/g-22.webp',
     description:
       'Frenching the Bully es el explosivo álbum debut de The Gits, una banda punk de Seattle liderada por la carismática y poderosa voz de Mia Zapata. Lanzado en plena era del grunge, el disco se destaca por su combinación feroz de punk rock con sensibilidad melódica y líricas sociales cargadas de honestidad.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 194,
@@ -3085,7 +3085,7 @@ export const products = [
     image: '/images/grunge/g-23.webp',
     description:
       'Conocido por su sonido más oscuro y crudo en comparación con su debut Sixteen Stone. Producido por Steve Albini (famoso por trabajar con Nirvana en In Utero), el álbum adopta una estética más áspera y emocionalmente densa, con letras introspectivas sobre pérdida, aislamiento y angustia.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 195,
@@ -3101,7 +3101,7 @@ export const products = [
     image: '/images/grunge/g-24.webp',
     description:
       'El álbum homónimo Nudeswirl de la banda estadounidense Nudeswirl fue lanzado en 1989 como su primer LP independiente. La banda, originaria de New Brunswick, Nueva Jersey, fue formada en 1988 por Shane M. Green, Chris Wargo y el baterista Mike Toro​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 196,
@@ -3117,7 +3117,7 @@ export const products = [
     image: '/images/grunge/g-25.webp',
     description:
       'Con un sonido que abarca desde el grunge hasta el rock alternativo, el disco presenta una mezcla de guitarras sucias, melodías pegajosas y letras introspectivas, lo que lo convierte en una joya del grunge y el indie de los años 90. La banda, liderada por Guy M. Smiley, explora temas de amor, desilusión y la vida cotidiana con una actitud relajada pero intensa. Destacan canciones como "You" y "Cold Air" por su energía melódica y su sonido crudo pero accesible.​',
-    price: '19000',
+    price: 19000,
   },
   {
     id: 197,
@@ -3133,7 +3133,7 @@ export const products = [
     image: '/images/grunge/g-26.webp',
     description:
       'Este álbum marcó un punto de inflexión en la historia de la música, llevando el grunge a la corriente principal y convirtiendo a Nirvana en una de las bandas más influyentes de todos los tiempos. Con Kurt Cobain al mando, la banda presenta una mezcla de grunge abrasivo, melodías pegajosas y letras poéticas que abordan temas de alienación, frustración y la lucha interna de la juventud.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 198,
@@ -3149,7 +3149,7 @@ export const products = [
     image: '/images/grunge/g-27.webp',
     description:
       'Ten es el poderoso álbum debut de Pearl Jam, una de las bandas más emblemáticas del movimiento grunge de Seattle. Lanzado el 27 de agosto de 1991, el disco combina rock alternativo, hard rock y letras profundas que exploran temas como la depresión, el abuso, la pérdida y la introspección. La voz intensa y emocional de Eddie Vedder, junto con los riffs marcados de Stone Gossard y los solos melódicos de Mike McCready, hacen de Ten un álbum tan accesible como visceral.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 199,
@@ -3165,7 +3165,7 @@ export const products = [
     image: '/images/grunge/g-28.webp',
     description:
       '​Numb es el segundo y último álbum de estudio de la banda de rock alternativo/grunge Hammerbox, lanzado en un momento en que el grunge comenzaba a expandirse más allá de Seattle. A diferencia de su debut más indie, Numb presenta una producción más pulida y un sonido más contundente',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 200,
@@ -3181,7 +3181,7 @@ export const products = [
     image: '/images/grunge/g-29.webp',
     description:
       ' El álbum mantiene el humor sarcástico y actitud rebelde que siempre caracterizó a la banda, pero también muestra una madurez musical, con riffs sólidos, producción moderna y letras que oscilan entre la crítica social y la diversión despreocupada.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 201,
@@ -3197,7 +3197,7 @@ export const products = [
     image: '/images/grunge/g-30.webp',
     description:
       '​ Return to Olympus es el único álbum oficial de la banda Malfunkshun, pioneros del grunge de Seattle y parte esencial del surgimiento del movimiento a mediados de los 80. La banda fue liderada por el carismático Andrew Wood, quien más tarde fundaría Mother Love Bone.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 202,
@@ -3213,7 +3213,7 @@ export const products = [
     image: '/images/grunge/g-31.webp',
     description:
       'Purple es el segundo álbum de estudio de la banda estadounidense Stone Temple Pilots, lanzado el 7 de junio de 1994. Este disco consolidó el estatus de la banda dentro de la escena del rock alternativo y el grunge, ampliando su sonido con elementos de psicodelia, hard rock, blues y hasta jazz. Liderados por el carismático vocalista Scott Weiland, STP logró una obra más madura y diversa que su debut (Core), con una producción impecable y letras introspectivas que reflejan lucha, deseo y redención.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 203,
@@ -3229,7 +3229,7 @@ export const products = [
     image: '/images/grunge/g-32.webp',
     description:
       '​Fue el primer disco de la banda editado por un sello importante (Epic Records) y marcó un punto clave en su transición del sonido psicodélico del garage rock de los 80 hacia un estilo más pulido dentro del grunge y el rock alternativo. Producido por Terry Date junto a Chris Cornell (de Soundgarden), el álbum conserva las raíces psicodélicas del grupo pero añade riffs más pesados, estructuras más accesibles y una producción más ambiciosa.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 204,
@@ -3245,7 +3245,7 @@ export const products = [
     image: '/images/metal/m-10.webp',
     description:
       'Lanzado en 1987, el disco capturó la crudeza, el caos y la actitud callejera de la banda, mezclando elementos de punk, blues, y heavy metal. Con la voz rasposa y feroz de Axl Rose, los solos explosivos de Slash, y una sección rítmica agresiva, el álbum ofreció una visión sucia y auténtica del rock de Los Ángeles, en contraposición al glam edulcorado de la época. Appetite es considerado uno de los discos debut más impactantes de la historia del rock.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 205,
@@ -3261,7 +3261,7 @@ export const products = [
     image: '/images/ska/s-42.webp',
     description:
       'Sublime es el tercer y último álbum de estudio de la banda californiana Sublime, lanzado de manera póstuma tras la muerte del vocalista Bradley Nowell. Este disco, lanzado el 30 de julio de 1996, consolidó a Sublime como uno de los referentes del punk rock alternativo de los 90, fusionando géneros como ska, punk, reggae, hip hop y dub. A pesar del fallecimiento de Nowell poco antes del lanzamiento, el álbum fue un éxito rotundo tanto comercial como crítico, y generó múltiples sencillos que siguen sonando hasta hoy.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 206,
@@ -3277,7 +3277,7 @@ export const products = [
     image: '/images/alternativo/a-46.webp',
     description:
       'Lanzado originalmente de forma independiente en 1993 y relanzado comercialmente por Atlantic Records en 1994 tras el éxito inesperado del sencillo “Shine”. Aunque técnicamente es una maqueta, su sonido pulido y sus pegajosas canciones lo convirtieron rápidamente en un éxito del rock alternativo de los 90. El álbum mezcla rock melódico con toques grunge y post-grunge, y sentó las bases del estilo característico de la banda: riffs accesibles, estribillos potentes y letras introspectivas.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 207,
@@ -3293,7 +3293,7 @@ export const products = [
     image: '/images/hiphop/h-11.webp',
     description:
       'SouthernUnderground es el segundo álbum de estudio del trío de hip hop alternativo CunninLynguists, reconocido por su fusión de sonido sureño con letras conscientes, personales y políticas. En este disco, el grupo muestra una madurez lírica y una producción refinada a cargo principalmente de Kno, destacando por su uso creativo de samples y atmósferas emocionales.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 208,
@@ -3309,7 +3309,7 @@ export const products = [
     image: '/images/hiphop/h-12.webp',
     description:
       'Something 4 Da Youngsta’s es el álbum debut del trío de rap juvenil Da Youngsta’s, lanzado cuando los miembros tenían entre 11 y 14 años. El grupo, compuesto por los hermanos Taji "Taj Mahal" Goodman, Qu’ran Goodman y su primo Tarik Dawson, presentó un enfoque juvenil pero auténtico al hip hop del este de EE.UU. El álbum fue producido en gran parte por L.G. the Teacher, y refleja el boom bap clásico de principios de los 90, con rimas limpias y beats crudos.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 209,
@@ -3341,7 +3341,7 @@ export const products = [
     image: '/images/hiphop/h-14.webp',
     description:
       'El título The Hierophant hace referencia a una figura que interpreta conocimientos ocultos, lo cual se refleja en las letras complejas y líricas de Casual. El álbum destaca por su enfoque lírico profundo y su producción sólida, con la mayoría de las pistas producidas por DJ Toure, excepto "Shrimp Fried Rice", que fue producida por The Elect​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 211,
@@ -3357,7 +3357,7 @@ export const products = [
     image: '/images/hiphop/h-15.webp',
     description:
       'The Extinction Agenda es el segundo álbum de Organized Konfusion, un dúo de hip hop formado por Pharoahe Monch y Prince Po. Este disco es ampliamente considerado un clásico del rap underground por su complejidad lírica, producción cruda y temáticas oscuras y profundas.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 212,
@@ -3373,7 +3373,7 @@ export const products = [
     image: '/images/hiphop/h-16.webp',
     description:
       'Grabado principalmente en una habitación alquilada por Skinner en Brixton, Londres, el álbum fusiona géneros como UK garage, hip hop alternativo y 2-step garage. Las letras narran historias de la vida cotidiana de la clase trabajadora británica, abordando temas como salir de fiesta, relaciones personales y la rutina diaria. Skinner utilizó un enfoque de producción casero, grabando y mezclando el álbum en su computadora portátil IBM ThinkPad, con un armario adaptado como cabina vocal​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 213,
@@ -3389,7 +3389,7 @@ export const products = [
     image: '/images/hiphop/h-17.webp',
     description:
       'It Was Written marcó un cambio estilístico para Nas, alejándose del enfoque crudo y underground de Illmatic. El álbum presenta una producción más elaborada y teatral, con influencias del G-funk y un enfoque en narrativas mafiosas bajo el alias "Nas Escobar", inspirado en el narcotraficante colombiano Pablo Escobar . Las letras exploran temas de excesos materialistas y otras temáticas propias del mafioso rap​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 214,
@@ -3405,7 +3405,7 @@ export const products = [
     image: '/images/hiphop/h-18.webp',
     description:
       'es un álbum de hip-hop colaborativo entre el MC estadounidense Venomous2000 y el productor serbio Trilian. Este proyecto destaca por su enfoque en el boom bap clásico, con letras conscientes y colaboraciones de artistas veteranos del género.  Entre los colaboradores se incluyen The Artifacts, Tiye Phoenix, DJ Trickalome, Reks, C-Rayz Walz, Shabaam Sahdeeq, Cella Dwellas, 9th Prince (Killarmy), Inspectah Deck (Wu-Tang Clan), NLZ, DJ TMB y Marie Kanu ​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 215,
@@ -3421,7 +3421,7 @@ export const products = [
     image: '/images/hiphop/h-19.webp',
     description:
       'Regulate... G Funk Era es el álbum debut del rapero estadounidense Warren G, lanzado el 7 de junio de 1994. Este álbum marcó el inicio de la carrera en solitario de Warren G y consolidó su estilo característico dentro del G-Funk. El sencillo principal, "Regulate", interpretado junto a Nate Dogg, se convirtió en un éxito rotundo, alcanzando el puesto #2 en el Billboard Hot 100 y siendo incluido en la banda sonora de la película Above the Rim.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 216,
@@ -3437,7 +3437,7 @@ export const products = [
     image: '/images/hiphop/h-20.webp',
     description:
       'El álbum incluye algunos de los sencillos más emblemáticos de Snoop Dogg, como "Gin and Juice", "What’s My Name?" y "Nuthin’ But a ’G’ Thang" (que fue un éxito mundial junto a Dr. Dre). Doggy Style define el sonido G-Funk con su estilo relajado, pero líricamente agresivo, que habla de la vida en Los Ángeles, las fiestas, y las relaciones sociales.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 217,
@@ -3453,7 +3453,7 @@ export const products = [
     image: '/images/hiphop/h-21.webp',
     description:
       'Reaching (A New Refutation of Time and Space) es el álbum debut de Digable Planets, lanzado el 9 de junio de 1993. Este álbum de hip-hop tiene un enfoque único y distintivo, fusionando jazz, soul y funk con un estilo lírico relajado y sofisticado. Los tres miembros de Digable Planets, Butterfly (Ladybug Mecca), Doodlebug y Cee Knowledge, crean un sonido suave y experimental, caracterizado por sus rimas fluidas y su enfoque en la conciencia social y la espiritualidad.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 218,
@@ -3469,7 +3469,7 @@ export const products = [
     image: '/images/hiphop/h-22.webp',
     description:
       'En Quality Control, Jurassic 5 hace honor a sus influencias de la era dorada del hip-hop, como A Tribe Called Quest, De La Soul y otros pioneros del rap. El álbum combina el estilo lírico elegante con una producción limpia y efectiva, fusionando samples de jazz, funk y soul. A lo largo de todo el álbum, se nota la química entre los miembros del grupo, que incluye a Cut Chemist, DJ Nu-Mark, Chali 2na, Akil, Mark 7even y Zaakir.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 219,
@@ -3485,7 +3485,7 @@ export const products = [
     image: '/images/hiphop/h-23.webp',
     description:
       'En IV, Cypress Hill sigue con su enfoque en temas como el cannabis, la vida urbana, el entretenimiento y la política, pero también hay un toque de madurez en sus letras. Además, es uno de los álbumes donde el grupo explora más el sonido del rock alternativo, con elementos de guitarras eléctricas en varias canciones. Tracks como "Rock Superstar" y "Dr. Greenthumb" muestran la capacidad del grupo para mezclar el hip-hop con otros géneros musicales de forma innovadora.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 220,
@@ -3501,7 +3501,7 @@ export const products = [
     image: '/images/hiphop/h-24.webp',
     description:
       'Ready to Die es el álbum debut del legendario rapero The Notorious B.I.G., lanzado el 13 de septiembre de 1994 bajo la disquera Bad Boy Records. Este álbum se considera uno de los más influyentes y fundamentales en la historia del hip-hop y ayudó a consolidar a Biggie Smalls (su nombre real era Christopher Wallace) como una de las figuras más importantes del género.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 221,
@@ -3517,7 +3517,7 @@ export const products = [
     image: '/images/hiphop/h-25.webp',
     description:
       'El álbum está marcado por su tono introspectivo y líricamente crudo, con Slug (el MC de la banda) abordando temas de lucha personal, inseguridad, relaciones y la búsqueda de significado en un mundo oscuro. God Loves Ugly es conocido por su estilo melódico y su capacidad para explorar la vulnerabilidad de una manera honesta y accesible.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 222,
@@ -3533,7 +3533,7 @@ export const products = [
     image: '/images/hiphop/h-26.webp',
     description:
       'El título del álbum hace referencia a un supuesto documento conspirativo que aborda el uso del control social como una forma de guerra silenciosa. Este concepto se traslada a la música de Killarmy, que fusiona el estilo lírico callejero con metáforas militares, influencias de ciencia política, y una crítica social profunda.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 223,
@@ -3549,7 +3549,7 @@ export const products = [
     image: '/images/hiphop/h-27.webp',
     description:
       '​El álbum se sumerge en temas sociales como la pobreza, la violencia, la educación y la espiritualidad en el contexto de la vida en los barrios urbanos estadounidenses. A través de su enfoque narrativo sincero, Coolio equilibra crudeza con reflexión, ofreciendo letras conscientes sobre la vida de los jóvenes afroamericanos en los años 90.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 224,
@@ -3565,7 +3565,7 @@ export const products = [
     image: '/images/hiphop/h-28.webp',
     description:
       '​El álbum combina hábilmente beats de estilo boom bap, ganchos pegadizos y letras ingeniosas con un fuerte sabor callejero. Treach, el líder lírico del grupo, se destaca por su fluidez y carisma, mientras que Vin Rock y el DJ Kay Gee aportan cohesión y energía a la producción y el estilo del grupo. Aparte de “O.P.P.”, otros cortes como “Everything’s Gonna Be Alright” (también conocida como “Ghetto Bastard”) exploran temas sociales con un enfoque sincero y personal.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 225,
@@ -3581,7 +3581,7 @@ export const products = [
     image: '/images/hiphop/h-29.webp',
     description:
       '​Hand on the Torch es el álbum debut del grupo británico Us3, lanzado el 26 de julio de 1993. Este disco es famoso por ser uno de los primeros en combinar exitosamente el jazz clásico con hip hop moderno, gracias a una innovadora colaboración con Blue Note Records, lo que permitió a Us3 utilizar samples originales del catálogo del legendario sello de jazz. El sencillo principal, "Cantaloop (Flip Fantasia)", que samplea el tema “Cantaloupe Island” de Herbie Hancock, se convirtió en un éxito global y es hasta hoy el tema más conocido del grupo.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 226,
@@ -3597,7 +3597,7 @@ export const products = [
     image: '/images/hiphop/h-30.webp',
     description:
       '​White People es el segundo y último álbum de estudio del dúo de productores Handsome Boy Modeling School, formado por Dan the Automator y Prince Paul. Fue lanzado el 9 de noviembre de 2004 y es una obra ecléctica y experimental que fusiona hip hop alternativo con géneros como rock, soul, electrónica y pop. Cada canción es una mezcla inesperada de mundos musicales, que a veces se cruzan de forma brillante y otras de forma completamente bizarra.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 227,
@@ -3613,7 +3613,7 @@ export const products = [
     image: '/images/hiphop/h-31.webp',
     description:
       'El álbum presenta una mezcla de temas personales y sociales, abordando desde relaciones complicadas hasta reflexiones sobre la vida cotidiana. Canciones como "Little Man", "Say Hey There" y "That Night" muestran la habilidad de Slug para narrar historias emotivas y sinceras, mientras que Ant proporciona una base musical que combina elementos de soul, jazz y beats clásicos del hip hop.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 228,
@@ -3629,7 +3629,7 @@ export const products = [
     image: '/images/hiphop/h-32.webp',
     description:
       'The Very Best of Das EFX es una compilación que reúne los temas más emblemáticos del dúo de hip hop Das EFX, conocido por su estilo lírico rápido y su característico uso de onomatopeyas. Lanzado el 3 de junio de 2001 bajo el sello Rhino Entertainment, este álbum ofrece una visión integral de la carrera del grupo, destacando su impacto en la escena del hip hop de los años 90.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 229,
@@ -3645,7 +3645,7 @@ export const products = [
     image: '/images/hiphop/h-33.webp',
     description:
       '​Illmatic es el legendario álbum debut del rapero Nas, ampliamente considerado como uno de los mejores discos de hip hop de todos los tiempos. Con una lírica profundamente poética, realista y madura para su corta edad (20 años al momento del lanzamiento), Nas pintó un retrato crudo y reflexivo de la vida en Queensbridge, Nueva York.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 230,
@@ -3661,7 +3661,7 @@ export const products = [
     image: '/images/hiphop/h-34.webp',
     description:
       'El Necronomicon es un grimorio ficticio creado por H.P. Lovecraft, que suele ser referenciado en medios de horror y ocultismo. En este caso, el título del álbum hace referencia a este libro de conocimiento prohibido, rituales oscuros y caos. Al usar este nombre, The Devil’z Rejects indican que su música explora temas oscuros y tabúes, similares a los que se mencionan en el Necronomicon.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 231,
@@ -3677,7 +3677,7 @@ export const products = [
     image: '/images/hiphop/h-35.webp',
     description:
       'The Score es el segundo y último álbum de estudio del trío de hip hop Fugees, compuesto por Lauryn Hill, Wyclef Jean y Pras Michel. Lanzado el 13 de febrero de 1996 por Columbia Records y Ruffhouse Records, este álbum marcó un hito en la música por su fusión de hip hop con elementos de reggae, soul y R&B. Con una producción mayormente a cargo del grupo y colaboradores como Jerry "Te Bass" Duplessis, Diamond D, John Forté, Shawn King y Warren Riker, The Score se caracteriza por su estilo melódico y líricamente​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 232,
@@ -3693,7 +3693,7 @@ export const products = [
     image: '/images/hiphop/h-36.webp',
     description:
       'The Loneliest Punk es el álbum debut en solitario de Fatlip, conocido por su participación en el influyente grupo de hip hop The Pharcyde. El título del álbum es un juego de palabras con el nombre del pianista de jazz Thelonious Monk, reflejando la mezcla de humor y melancolía presente en la obra. El álbum ofrece una visión introspectiva de la vida de Fatlip, abordando temas como la soledad, la introspección y la vulnerabilidad emocional, todo ello con un estilo único que combina el hip hop alternativo con toques de humor y experimentación sonora.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 233,
@@ -3709,7 +3709,7 @@ export const products = [
     image: '/images/hiphop/h-37.webp',
     description:
       'El álbum incluye colaboraciones notables, como la participación de Tupac Shakur en la canción "Wussup Wit the Luv", marcando su última aparición en una producción de Digital Underground. Además, el guitarrista de Funkadelic, Michael Hampton, contribuye con un solo de guitarra en el mismo tema.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 234,
@@ -3725,7 +3725,7 @@ export const products = [
     image: '/images/hiphop/h-38.webp',
     description:
       'El álbum presenta una mezcla de hip hop alternativo y jazz rap, característico del estilo de Digable Planets. Incluye su éxito de 1993 "Rebirth of Slick (Cool Like Dat)" y otros temas destacados como Nickel Bags, Jettin, y ’9th Wonder (Blackitolism). Además, ofrece remixes y versiones alternativas que muestran la versatilidad y creatividad del grupo​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 235,
@@ -3741,7 +3741,7 @@ export const products = [
     image: '/images/hiphop/h-39.webp',
     description:
       'El EP combina letras introspectivas y narrativas con una producción de estilo boom bap, evocando la esencia del hip-hop clásico de Nueva York. Denzil Porter utiliza las bodegas como metáfora para explorar temas como la identidad, la comunidad y las experiencias personales. La producción de DLP complementa perfectamente las letras, creando una atmósfera que transporta al oyente a las esquinas y calles del Bronx.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 236,
@@ -3757,7 +3757,7 @@ export const products = [
     image: '/images/hiphop/h-40.webp',
     description:
       '​El álbum fue producido principalmente por O.G. Style (Alejandro R. Martínez), miembro del grupo, con la colaboración de Eric Bobo en una de las pistas. Además, contó con la producción ejecutiva de Sen Dog de Cypress Hill, quien también participó como artista invitado junto a Hurricane G en la canción "Underground Connection".',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 237,
@@ -3773,7 +3773,7 @@ export const products = [
     image: '/images/hiphop/h-41.webp',
     description:
       'Dirty Old Hip Hop es una obra que celebra la conexión entre el hip hop y el jazz, destacando la influencia de productores como Jazzy Jeff, J Dilla y Pete Rock. Marc Mac reimagina sus beats favoritos de la era dorada del hip hop, manteniendo la sensación de esos grooves extendidos y reintroduciendo la emoción y musicalidad de los discos de los que se samplearon. El álbum cuenta con colaboraciones de los raperos Capitol A y Voice, así como de los músicos Luke Parkhouse y Somatik, habituales en las sesiones de 4hero. ​',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 238,
@@ -3789,7 +3789,7 @@ export const products = [
     image: '/images/hiphop/h-42.webp',
     description:
       '"Icons" representa una evolución en el sonido de Da Youngsta’s, manteniendo la esencia de su estilo clásico mientras incorporan nuevas influencias. El álbum fue producido por Quran Goodman y presenta una mezcla de ritmos contundentes y letras introspectivas que abordan temas contemporáneos y personales. Con este lanzamiento, el grupo reafirma su lugar en la escena del hip hop, conectando con antiguos seguidores y atrayendo a nuevas audiencias.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 239,
@@ -3805,7 +3805,7 @@ export const products = [
     image: '/images/hiphop/h-43.webp',
     description:
       '"Mucho Barato..." es una obra pionera en el hip hop latinoamericano, caracterizada por su fusión de ritmos tradicionales mexicanos con beats de rap y letras contundentes. El álbum aborda temas sociales y urbanos, reflejando la realidad de la juventud mexicana de los años 90. Su estilo crudo y auténtico lo convirtió en un referente del género.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 240,
@@ -3821,7 +3821,7 @@ export const products = [
     image: '/images/hiphop/h-44.webp',
     description:
       '"All Eyez on Me" representa un cambio significativo en el estilo de 2Pac, alejándose de las letras introspectivas de trabajos anteriores para adoptar un enfoque más agresivo y orientado al gangsta rap. El álbum aborda temas como la vida callejera, la violencia, la fama y la paranoia, reflejando las experiencias personales de 2Pac y su entorno en ese momento​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 241,
@@ -3837,7 +3837,7 @@ export const products = [
     image: '/images/hiphop/h-45.webp',
     description:
       '"Summer Knights" presenta una producción influenciada por el boom bap de los años 90, con colaboraciones de productores como MF DOOM, DJ Premier, Statik Selektah, Oddisee, Lee Bannon, Chuck Strangers y Kirk Knight. El mixtape incluye temas introspectivos y tributos, como el emotivo "#LongLiveSTEELO", dedicado al fallecido amigo y miembro de Pro Era, Capital STEEZ​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 242,
@@ -3853,7 +3853,7 @@ export const products = [
     image: '/images/punk/p-12.webp',
     description:
       'Demmamussabebonk presenta una mezcla enérgica de punk melódico con toques de humor y letras ingeniosas, características distintivas de Snuff. El álbum incluye 14 pistas que combinan velocidad, melodía y una actitud irreverente. Entre las canciones destacadas se encuentran "Vikings", "Martin", "G to D"​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 243,
@@ -3869,7 +3869,7 @@ export const products = [
     image: '/images/punk/p-13.webp',
     description:
       'Este álbum es el segundo que Goober Patrol lanza con Fat Wreck Chords. En él, la banda ofrece una mezcla versátil de punk que combina humor británico, letras personales y una fusión de hardcore, punk ’n’ roll y melodías distintivas . El título del álbum es un juego de palabras con la novela The Unbearable Lightness of Being de Milan Kundera, reflejando la actitud desenfadada y humorística del grupo..​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 244,
@@ -3885,7 +3885,7 @@ export const products = [
     image: '/images/punk/p-14.webp',
     description:
       '"This Is Bad Taste Vol. 4" es una recopilación lanzada por el sello sueco independiente Bad Taste Records. Esta serie de compilaciones presenta una selección de bandas de punk rock, hardcore y géneros afines, tanto del catálogo del sello como de otras agrupaciones destacadas de la escena alternativa.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 245,
@@ -3901,7 +3901,7 @@ export const products = [
     image: '/images/punk/p-15.webp',
     description:
       '¡Leche con Carne! es el tercer álbum de estudio de la banda estadounidense de punk rock No Use for a Name, lanzado el 15 de febrero de 1995 a través del sello independiente Fat Wreck Chords . Este disco marcó un punto de inflexión en la carrera del grupo, consolidando su sonido dentro del skate punk melódico y ganando reconocimiento en la escena punk internacional.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 246,
@@ -3917,7 +3917,7 @@ export const products = [
     image: '/images/punk/p-16.webp',
     description:
       'Blatant Localism es el primer EP de la banda estadounidense de skate punk JFA (Jodie Foster’s Army). Fue lanzado en 1981 bajo el sello independiente Placebo Records. Este EP es considerado una de las primeras grabaciones en fusionar el punk hardcore con la cultura del skateboarding, posicionando a JFA como pioneros del género skate punk​',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 247,
@@ -3933,7 +3933,7 @@ export const products = [
     image: '/images/punk/p-17.webp',
     description:
       '"Dixie" es el segundo álbum de estudio de la banda estadounidense de punk rock Avail, originaria de Richmond, Virginia. Lanzado el 23 de septiembre de 1994 por el sello Lookout! Records, este álbum consolidó el sonido característico de la banda, fusionando punk rock, hardcore punk y elementos de melodic hardcore.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 248,
@@ -3949,7 +3949,7 @@ export const products = [
     image: '/images/punk/p-18.webp',
     description:
       'El álbum "Adolescents" es el primer disco de estudio de la banda estadounidense de hardcore punk The Adolescents, originaria de Fullerton, California. Lanzado en abril de 1981 por el sello Frontier Records, este álbum es considerado una piedra angular del punk californiano y uno de los primeros discos de hardcore punk en distribuirse ampliamente en Estados Unidos.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 249,
@@ -3965,7 +3965,7 @@ export const products = [
     image: '/images/punk/p-19.webp',
     description:
       'Este disco debut fue lanzado originalmente solo en cassette, algo poco común en su época, lo que le dio un aire de culto instantáneo. Contiene una explosiva mezcla de hardcore punk ultra rápido y reggae, mostrando la dualidad musical que hizo única a la banda.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 250,
@@ -3981,7 +3981,7 @@ export const products = [
     image: '/images/punk/p-20.webp',
     description:
       'Damaged es ampliamente reconocido como una obra fundamental del hardcore punk. Con una duración de 34:58 minutos, el álbum presenta una mezcla de letras crudas y agresivas, riffs de guitarra caóticos y una energía implacable. Este disco marcó el debut del vocalista Henry Rollins con la banda, cuya intensidad vocal y presencia escénica se convirtieron en elementos distintivos del grupo.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 251,
@@ -3997,7 +3997,7 @@ export const products = [
     image: '/images/punk/p-21.webp',
     description:
       '​Este álbum captura la energía cruda y la velocidad característica del hardcore punk de principios de los años 80. Con 17 canciones interpretadas en poco más de 26 minutos, "Land Speed Record" muestra a Hüsker Dü en su forma más agresiva y directa. El álbum fue grabado en vivo directamente desde la consola de sonido a una grabadora de cuatro pistas, con un presupuesto de aproximadamente 300 dólares. ',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 252,
@@ -4013,7 +4013,7 @@ export const products = [
     image: '/images/punk/p-22.webp',
     description:
       '"Love Is Dead" destaca por su fusión de punk rock y pop punk, presentando letras ingeniosas y melodías pegajosas. La crítica especializada elogió el álbum; por ejemplo, Trouser Press lo describió como "un álbum maravilloso" lleno de "cantos pegajosos y adorables", mientras que Stylus Magazine lo calificó como "fácilmente la mejor obra de la segunda ola del punk estadounidense".​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 253,
@@ -4029,7 +4029,7 @@ export const products = [
     image: '/images/punk/p-23.webp',
     description:
       'Gig fue grabado en vivo en Los Ángeles y Tijuana a finales de los años 80, y lanzado en 1992. El álbum presenta una selección de 22 canciones que abarcan los éxitos más conocidos de la banda, interpretados con la energía y la actitud que caracterizan a Circle Jerks. La producción estuvo a cargo de Paul du Gré, quien también se encargó de la mezcla del álbum. La crítica especializada elogió la calidad del sonido y la intensidad de las interpretaciones.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 254,
@@ -4045,7 +4045,7 @@ export const products = [
     image: '/images/punk/p-24.webp',
     description:
       'Este álbum debut es ampliamente considerado como uno de los discos más influyentes de la música rock. Con un sonido crudo, rápido y directo, el disco ayudó a definir el género punk. Las canciones son cortas, simples y energéticas, con letras que a menudo tratan temas como la juventud, el aburrimiento suburbano y la rebeldía.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 255,
@@ -4061,7 +4061,7 @@ export const products = [
     image: '/images/punk/p-25.webp',
     description:
       'For Monkeys marca una evolución en el sonido de Millencolin, con un enfoque más pulido en comparación con sus discos anteriores, pero sin perder su energía punk característica. El álbum incluye temas con letras introspectivas, a la vez que conserva el estilo melódico y rápido del skate punk de los años 90.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 256,
@@ -4077,7 +4077,7 @@ export const products = [
     image: '/images/punk/p-26.webp',
     description:
       'The Smell of Victory es el segundo álbum de la banda punk Nobodys, originaria de Colorado, EE.UU. El disco mantiene el estilo punk rápido y melódico que caracteriza a la banda, con letras cargadas de humor negro, irreverencia y actitud despreocupada.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 257,
@@ -4093,7 +4093,7 @@ export const products = [
     image: '/images/punk/p-27.webp',
     description:
       'The Gold Record es el séptimo álbum de estudio de The Bouncing Souls. El disco fue lanzado como celebración de los 20 años de la banda y refleja tanto su madurez como su fidelidad al espíritu punk. El álbum presenta una mezcla de canciones llenas de energía, letras emotivas y un sonido más pulido que en sus primeros trabajos.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 258,
@@ -4109,7 +4109,7 @@ export const products = [
     image: '/images/punk/p-28.webp',
     description:
       'Este fue el primer recopilatorio oficial de la banda tras su separación en 1983. Reúne algunos de los temas más representativos de su etapa clásica con Glenn Danzig como vocalista, extraídos de EPs, sencillos y álbumes anteriores como Walk Among Us y Earth A.D. Es considerado uno de los discos más accesibles para quienes se inician en el universo de los Misfits.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 259,
@@ -4125,7 +4125,7 @@ export const products = [
     image: '/images/punk/p-29.webp',
     description:
       'Home from Home muestra una evolución en el sonido de Millencolin, con una producción más limpia y un enfoque melódico más maduro que sus trabajos anteriores. Aunque sigue teniendo influencias del skate punk noventero, las letras son más personales, y el estilo se inclina levemente hacia el punk alternativo.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 260,
@@ -4141,7 +4141,7 @@ export const products = [
     image: '/images/punk/p-30.webp',
     description:
       '​Este álbum es uno de los discos más influyentes y emblemáticos del punk rock. Con letras provocadoras, actitud desafiante y un sonido crudo, Never Mind the Bollocks capturó la rabia juvenil y la inconformidad social del Reino Unido de los años 70. A pesar de que la banda tuvo una carrera breve, este álbum definió un movimiento cultural.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 261,
@@ -4157,7 +4157,7 @@ export const products = [
     image: '/images/punk/p-31.webp',
     description:
       '​Front Porch Stories es el último álbum de estudio lanzado por la banda punk de Richmond, Virginia. El disco muestra a Avail en su forma más refinada, combinando su estilo característico de hardcore melódico con raíces sureñas y letras emotivas que reflejan la vida cotidiana, la amistad y la resistencia.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 262,
@@ -4173,7 +4173,7 @@ export const products = [
     image: '/images/punk/p-32.webp',
     description:
       'El álbum debut de Teen Idols presenta un sonido de punk rock melódico que sigue la tradición de bandas como NOFX y Lagwagon. Con una mezcla de guitarras rápidas y coros pegajosos, el álbum captura el estilo de punk melódico californiano de los 90. Aunque la banda no alcanzó el nivel de fama de algunas de las bandas más grandes del sello Fat Wreck Chords, su música sigue siendo una influencia importante dentro del subgénero.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 263,
@@ -4189,7 +4189,7 @@ export const products = [
     image: '/images/punk/p-33.webp',
     description:
       'Este álbum homónimo, lanzado en 1996, es uno de los discos más importantes de Face to Face. Se aleja un poco de las influencias hardcore de sus primeros discos, mostrando un sonido más melódico y refinado, sin perder la energía del punk. La banda se consolidó como una de las más relevantes en la escena punk californiana con este álbum.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 264,
@@ -4205,7 +4205,7 @@ export const products = [
     image: '/images/punk/p-34.webp',
     description:
       'El álbum homónimo de 2 Minutos, lanzado en 1994, es un parteaguas dentro de la escena del punk argentino. El disco contiene 14 canciones que incluyen temas con una sonoridad rápida y melódica, características del punk rock de la vieja escuela. Las letras de las canciones son críticas con el sistema social y político, abordando temas de rebeldía, frustración y situaciones cotidianas. Dentro de estas canciones, "Valentín Alsina" es una de las más emblemáticas, que refleja la cultura de barrio en el contexto de Argentina.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 265,
@@ -4221,7 +4221,7 @@ export const products = [
     image: '/images/hardcore/h-10.webp',
     description:
       'La edición incluye un nuevo diseño gráfico, notas escritas por el guitarrista Porcell y fotografías inéditas de presentaciones en vivo y momentos tras bambalinas, ofreciendo una visión completa de la trayectoria de la banda.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 266,
@@ -4237,7 +4237,7 @@ export const products = [
     image: '/images/hardcore/h-11.webp',
     description:
       'F.T.T.W. representa un punto culminante en la carrera de H2O, consolidando su sonido característico que fusiona la intensidad del hardcore punk con melodías accesibles. El álbum destaca por su energía contagiosa y letras que abordan temas de integridad, unidad y perseverancia.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 267,
@@ -4253,7 +4253,7 @@ export const products = [
     image: '/images/hardcore/h-12.webp',
     description:
       'Something’s Gotta Give es el quinto álbum de estudio de la banda neoyorquina de hardcore punk Agnostic Front. Lanzado el 30 de junio de 1998 en Europa y el 14 de julio de 1998 en Estados Unidos bajo el sello Epitaph Records, este álbum marcó el regreso de la banda tras una pausa de cinco años desde su último trabajo de estudio, One Voice​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 268,
@@ -4269,7 +4269,7 @@ export const products = [
     image: '/images/hardcore/h-13.webp',
     description:
       'A Place Called Home destaca por su combinación de riffs potentes, coros pegajosos y letras que abordan temas como la justicia social, el medio ambiente y la identidad cultural. El vocalista Zoltán "Zoli" Téglás, de ascendencia húngara, imprime una pasión única en cada canción, reflejando su compromiso con causas como la defensa de los derechos humanos y la protección del medio ambiente.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 269,
@@ -4285,7 +4285,7 @@ export const products = [
     image: '/images/hardcore/h-14.webp',
     description:
       'Este álbum marca una evolución en el sonido de Snapcase, incorporando elementos de metal alternativo, post-hardcore y punk melódico. Las canciones presentan una mezcla de riffs pesados, estructuras rítmicas complejas y letras introspectivas, reflejando una madurez en la composición de la banda​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 270,
@@ -4301,7 +4301,7 @@ export const products = [
     image: '/images/hardcore/h-15.webp',
     description:
       'In This Defiance representa un punto culminante en la carrera de Strife, consolidando su sonido característico que combina la intensidad del hardcore con elementos del metal. El álbum presenta una producción pulida y una ejecución precisa, reflejando la madurez musical de la banda. Además, cuenta con colaboraciones destacadas de músicos de renombre.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 271,
@@ -4317,7 +4317,7 @@ export const products = [
     image: '/images/hardcore/h-16.webp',
     description:
       'Este EP se caracteriza por su sonido enérgico y letras comprometidas, reflejando la pasión de la banda por el hardcore punk. El título, For the Love of Indie Rock, fue una respuesta irónica a la evolución musical de algunas bandas contemporáneas que se alejaban de sus raíces hardcore.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 272,
@@ -4333,7 +4333,7 @@ export const products = [
     image: '/images/hardcore/h-17.webp',
     description:
       'Este EP contiene siete temas que capturan la esencia cruda y directa del hardcore neoyorquino de los años 80. Con letras que abordan la unidad, la identidad de la escena y la vida en el Lower East Side de Manhattan, Warzone, liderado por Raymond "Raybeez" Barbieri, estableció un sonido y mensaje que resonaron profundamente en la comunidad hardcore.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 273,
@@ -4349,7 +4349,7 @@ export const products = [
     image: '/images/hardcore/h-18.webp',
     description:
       '​The Age of Quarrel destaca por su energía cruda, riffs agresivos y letras que abordan temas como la supervivencia, la justicia callejera y la búsqueda de la verdad. El álbum fue principalmente compuesto por los cofundadores Parris Mayhew y Harley Flanagan, con la voz principal de John Joseph',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 274,
@@ -4365,7 +4365,7 @@ export const products = [
     image: '/images/hardcore/h-19.webp',
     description:
       '​"Seasons in the Size of Days" presenta una combinación de agresivos riffs de metalcore con atmósferas industriales y experimentales. La canción final, "Burning Flesh Children to Mist", es una pieza monumental de casi 28 minutos que fusiona drones, ruido y elementos ambientales, mostrando la evolución sonora de la banda hacia territorios más oscuros y experimentales.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 275,
@@ -4381,7 +4381,7 @@ export const products = [
     image: '/images/hardcore/h-20.webp',
     description:
       '"The Process Of" se caracteriza por su sonido agresivo y técnico, fusionando elementos de hardcore, metalcore y noise-core. La producción estuvo a cargo de Steve Evetts, conocido por su trabajo con bandas como The Dillinger Escape Plan y Hatebreed. El álbum presenta una estructura dinámica, con cambios abruptos de ritmo y una intensidad emocional palpable en cada pista.​',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 276,
@@ -4397,7 +4397,7 @@ export const products = [
     image: '/images/hardcore/h-21.webp',
     description:
       '"Bringin’ It Down" fusiona la energía del hardcore con letras introspectivas y un sonido más pesado, marcando una evolución respecto al estilo de su EP anterior, New York Crew. La producción estuvo a cargo de John Porcell y Tom Soares, quienes lograron capturar la esencia cruda de la banda en el estudio..​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 277,
@@ -4413,7 +4413,7 @@ export const products = [
     image: '/images/hardcore/h-22.webp',
     description:
       'For Those Who Were Crucified destaca por su combinación de riffs pesados, baterías contundentes y letras que abordan temas como la desesperación, la resistencia y la crítica social. El álbum es considerado un clásico del metalcore y ha sido influyente para generaciones de músicos y fanáticos del género.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 278,
@@ -4429,7 +4429,7 @@ export const products = [
     image: '/images/hardcore/h-23.webp',
     description:
       'Este disco marcó el debut oficial de la banda y consolidó su estilo característico de hardcore pesado y straight edge. Incluye colaboraciones de figuras destacadas del hardcore, como Jamey Jasta de Hatebreed, Roger Miret y Vinnie Stigma de Agnostic Front, Jimmy Gestapo de Murphy’s Law, y Paul Bearer de Sheer Terror.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 279,
@@ -4445,7 +4445,7 @@ export const products = [
     image: '/images/hardcore/h-24.webp',
     description:
       '​En Scratch the Surface, Sick of It All adoptó un sonido más pesado y oscuro en comparación con sus trabajos anteriores, incorporando influencias del heavy metal, speed metal y Oi!. La banda se autoproductó el álbum y lo grabó en Normandy Sound en Warren, Rhode Island, con el ingeniero Tom Soares.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 280,
@@ -4461,7 +4461,7 @@ export const products = [
     image: '/images/hardcore/h-25.webp',
     description:
       'Este es el segundo álbum de estudio de Refused, lanzado en 1996. "Songs to Fan the Flames of Discontent" es conocido por su sonido agresivo y una mezcla innovadora de hardcore punk con elementos de post-hardcore y metal. Las letras abordan temas políticos y sociales, reflejando la postura activista de la banda.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 281,
@@ -4477,7 +4477,7 @@ export const products = [
     image: '/images/hardcore/h-26.webp',
     description:
       '"Demonstrating My Style" es el segundo álbum de estudio de Madball, una de las bandas más representativas del hardcore neoyorquino. Este disco consolidó el sonido callejero, crudo y directo del grupo, combinando riffs pesados, breakdowns característicos del NYHC, y letras que reflejan la vida en las calles, la lealtad, y la identidad.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 282,
@@ -4493,7 +4493,7 @@ export const products = [
     image: '/images/hardcore/h-27.webp',
     description:
       'Este disco representa una combinación poderosa de hardcore punk con estructuras melódicas y letras introspectivas.La producción limpia pero agresiva y los riffs precisos consolidaron a Straight Faced como una de las propuestas destacadas dentro del circuito punk/hardcore de la costa oeste durante los años 90.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 283,
@@ -4509,7 +4509,7 @@ export const products = [
     image: '/images/hardcore/h-28.webp',
     description:
       'El álbum Ugly and Proud de Sheer Terror es un clásico del hardcore punk neoyorquino, lanzado originalmente en 1991. Este disco destaca por su sonido agresivo y letras crudas, características distintivas de la banda.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 284,
@@ -4525,7 +4525,7 @@ export const products = [
     image: '/images/hardcore/h-29.webp',
     description:
       'El álbum Broken de Straight Faced es el segundo trabajo de estudio de esta banda de hardcore melódico originaria del sur de California. Lanzado el 30 de octubre de 1996 bajo el sello Fearless Records, este disco consolidó el sonido agresivo y melódico que caracteriza a la banda.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 285,
@@ -4541,7 +4541,7 @@ export const products = [
     image: '/images/hardcore/h-30.webp',
     description:
       'El álbum es conocido por su honestidad y compromiso con los ideales del movimiento hardcore, además de ser una pieza fundamental para fans del punk hardcore melódico.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 286,
@@ -4557,7 +4557,7 @@ export const products = [
     image: '/images/hardcore/h-31.webp',
     description:
       '​El álbum Truth Through Defiance de Strife es una compilación que reúne grabaciones en vivo, rarezas y material inédito, lanzada por Victory Records el 23 de febrero de 1999 . Este lanzamiento siguió al aclamado álbum de estudio In This Defiance (1997) y marcó un cierre temporal en la carrera de la banda antes de su separación ese mismo año.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 287,
@@ -4573,7 +4573,7 @@ export const products = [
     image: '/images/hardcore/h-32.webp',
     description:
       'Fight for Justice es el último álbum de estudio de la banda neoyorquina de hardcore punk Warzone, lanzado el 21 de octubre de 1997 a través de Victory Records . Este disco es especialmente significativo, ya que fue publicado poco después del fallecimiento del vocalista y líder de la banda, Raybeez (Raymond Barbieri), quien murió el 11 de septiembre de 1997 debido a una neumonía',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 288,
@@ -4589,7 +4589,7 @@ export const products = [
     image: '/images/hardcore/h-33.webp',
     description:
       'El álbum Hellbound, Misery, Torment de 25 ta Life es el segundo trabajo de estudio de esta emblemática banda de hardcore neoyorquino. Lanzado el 27 de enero de 2005 bajo el sello The Age of Venus Records, este disco refleja la intensidad y el compromiso característicos de la banda en la escena hardcore.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 289,
@@ -4605,7 +4605,7 @@ export const products = [
     image: '/images/hardcore/h-34.webp',
     description:
       'One Voice es el cuarto álbum de estudio de la banda neoyorquina de hardcore punk Agnostic Front, lanzado en 1992 a través de Relativity Records. Este disco marcó el regreso de la banda tras una pausa de tres años, durante la cual el vocalista Roger Miret estuvo encarcelado.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 290,
@@ -4621,7 +4621,7 @@ export const products = [
     image: '/images/hardcore/h-35.webp',
     description:
       'Broadcasting... es el tercer álbum de estudio de la banda canadiense de hardcore punk Comeback Kid, lanzado el 20 de febrero de 2007 a través de Victory Records en el resto del mundo y Smallman Records en Canadá. Este disco marca un punto de inflexión en la carrera de la banda, siendo el primero con Andrew Neufeld como vocalista principal.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 291,
@@ -4637,7 +4637,7 @@ export const products = [
     image: '/images/hardcore/h-36.webp',
     description:
       'Este disco representa una evolución en el sonido de la banda, incorporando elementos más melódicos y estructuras más complejas, acercándose al metalcore, pero manteniendo la esencia del hardcore punk .',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 292,
@@ -4653,7 +4653,7 @@ export const products = [
     image: '/images/hardcore/h-37.webp',
     description:
       'Hold It Down es el cuarto álbum de estudio de la banda neoyorquina de hardcore Madball. Este disco es considerado un clásico del hardcore de Nueva York (NYHC), consolidando el sonido característico de la banda con riffs contundentes, breakdowns agresivos y letras que reflejan la vida en las calles.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 293,
@@ -4669,7 +4669,7 @@ export const products = [
     image: '/images/hardcore/h-38.webp',
     description:
       'The Difference Between es el álbum debut de la banda estadounidense de hardcore punk In My Eyes, lanzado el 4 de agosto de 1998 a través de Revelation Records . Originarios de Boston, Massachusetts, In My Eyes fue una banda straight edge que desempeñó un papel destacado en el resurgimiento del estilo youth crew a finales de los años 90.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 294,
@@ -4685,7 +4685,7 @@ export const products = [
     image: '/images/hardcore/h-39.webp',
     description:
       'Cast the First Stone es el segundo álbum de estudio de la banda estadounidense de hardcore punk Ensign, lanzado en marzo de 1999 a través de Nitro Records. Este álbum representa una evolución en el sonido de la banda, incorporando elementos más melódicos y estructuras más complejas, acercándose al metalcore, pero manteniendo la esencia del hardcore punk.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 295,
@@ -4701,7 +4701,7 @@ export const products = [
     image: '/images/hardcore/h-40.webp',
     description:
       'Gomorrah’s Season Ends es el segundo álbum de estudio de la banda estadounidense de metalcore Earth Crisis, lanzado el 8 de octubre de 1996 a través de Victory Records. Este disco consolidó a la banda como una de las más influyentes en la escena hardcore y metalcore de los años 90, destacándose por su sonido agresivo y sus letras comprometidas con el movimiento straight edge y los derechos de los animales.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 296,
@@ -4717,7 +4717,7 @@ export const products = [
     image: '/images/hardcore/h-41.webp',
     description:
       'Progression Through Unlearning is the second studio album by American hardcore punk band Snapcase, released on April 8, 1997, through Victory Records. The album was recorded over a two-week period in January 1997 at Trax East Studios in Union City, New Jersey, with production by Steve Evetts and the band itself. Notably, guitarist Jon Salemi recorded the album while ill with chickenpox, contributing to the album’s raw and urgent sound',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 297,
@@ -4733,7 +4733,7 @@ export const products = [
     image: '/images/hardcore/h-42.webp',
     description:
       'Imprint is the second studio album by American metalcore band Vision of Disorder, released on July 28, 1998, through Roadrunner Records. Recorded over 19 days in April 1998 at various studios in New York City, the album was produced by Dave Sardy, known for his work with bands like Helmet and Slayer. Imprint is noted for its raw sound, complex rhythms, and a blend of metalcore and heavy metal elements.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 298,
@@ -4749,7 +4749,7 @@ export const products = [
     image: '/images/hardcore/h-43.webp',
     description:
       'Just Can’t Hate Enough is the debut full-length album by New York hardcore band Sheer Terror, released in 1989 through Blackout! Records. The album was recorded in the fall of 1988 at CBGB and Baby Monster Studios, capturing the band’s raw and aggressive sound. The production was handled by Tommy Victor of Prong, who also engineered the sessions',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 299,
@@ -4765,7 +4765,7 @@ export const products = [
     image: '/images/hardcore/h-44.webp',
     description:
       'Against All Odds is the debut full-length album by New York hardcore band Shutdown, released on March 24, 1998, through Victory Records. The album was recorded at SPA Recording Studios in New York, capturing the band’s energetic and positive straight-edge hardcore sound. Produced by Jimmy Gestapo of Murphy’s Law, the album features guest appearances from notable figures in the New York hardcore scene.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 300,
@@ -4781,7 +4781,7 @@ export const products = [
     image: '/images/grunge/g-33.webp',
     description:
       'Este trabajo se caracteriza por su sonido crudo y enérgico, que fusiona elementos del indie rock, post-hardcore y grunge. Es considerado una muestra representativa del sonido alternativo del noroeste de Estados Unidos previo a la explosión del grunge a nivel mundial.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 301,
@@ -4797,7 +4797,7 @@ export const products = [
     image: '/images/grunge/g-34.webp',
     description:
       'tag destaca por su enfoque experimental y ecléctico, incorporando elementos de géneros como el sludge metal, el metal alternativo, el grunge y el stoner rock. El álbum presenta una variedad de sonidos poco convencionales para la banda, incluyendo instrumentos como el sitar y el trombón, así como pasajes de ambient y drone.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 302,
@@ -4813,7 +4813,7 @@ export const products = [
     image: '/images/grunge/g-35.webp',
     description:
       'Este disco marcó un hito en la escena grunge de Seattle al ser el primer álbum del género en alcanzar el top 50 de la lista Billboard 200, posicionándose en el puesto 42 en el verano de 1991 . Con un sonido que fusiona el metal alternativo con la sensibilidad melódica del grunge, Facelift presenta letras que abordan temas como la depresión, la angustia y el dolor.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 303,
@@ -4829,7 +4829,7 @@ export const products = [
     image: '/images/grunge/g-36.webp',
     description:
       'Shame se caracteriza por su sonido crudo y ecléctico, fusionando elementos de rock alternativo, grunge y funk rock. El álbum fue grabado en 17 días en octubre de 1992 en los estudios Avast Recording Co. en Seattle, Washington, y muchas de sus pistas surgieron de sesiones de improvisación en el estudio',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 304,
@@ -4845,7 +4845,7 @@ export const products = [
     image: '/images/grunge/g-37.webp',
     description:
       'Tras el éxito comercial de su álbum debut homónimo en 1993, Candlebox optó por un enfoque más experimental en Lucy, incorporando elementos de grunge, rock alternativo y toques de psicodelia. Aunque no alcanzó el mismo nivel de ventas que su predecesor, Lucy logró la certificación de disco de oro en Estados Unidos.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 305,
@@ -4861,7 +4861,7 @@ export const products = [
     image: '/images/grunge/g-38.webp',
     description:
       'El EP U-Men es el debut discográfico de la banda estadounidense The U-Men, lanzado en 1984 por el sello Bomb Shelter Records, con el número de catálogo SPY 007 . Este trabajo es considerado una pieza fundamental en la evolución del sonido underground de Seattle, anticipando el surgimiento del grunge.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 306,
@@ -4877,7 +4877,7 @@ export const products = [
     image: '/images/grunge/g-39.webp',
     description:
       'El álbum se distingue por su enfoque completamente acústico, fusionando elementos de rock alternativo y post-grunge con una instrumentación despojada de guitarras eléctricas. La voz introspectiva de Travis Meeks y las letras sombrías se combinan con melodías intensas y atmósferas oscuras.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 307,
@@ -4893,7 +4893,7 @@ export const products = [
     image: '/images/grunge/g-40.webp',
     description:
       'In Utero aborda temas profundos y personales, incluyendo la fama, la alienación, la maternidad y la muerte. Kurt Cobain, líder y principal compositor de la banda, expresó su deseo de crear un álbum que reflejara sus emociones y experiencias de manera más directa y menos comercial.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 308,
@@ -4909,7 +4909,7 @@ export const products = [
     image: '/images/grunge/g-41.webp',
     description:
       'Este álbum fue el primero en contar con el bajista Ben Shepherd, completando la formación clásica de la banda junto a Chris Cornell (voz), Kim Thayil (guitarra) y Matt Cameron (batería) . Badmotorfinger se caracteriza por su fusión de riffs pesados y complejos con estructuras musicales poco convencionales.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 309,
@@ -4925,7 +4925,7 @@ export const products = [
     image: '/images/grunge/g-42.webp',
     description:
       'Death to Traitors es el segundo álbum de estudio de la banda estadounidense Paw, lanzado el 8 de agosto de 1995 a través de A&M Records. Este trabajo marcó una evolución en su sonido, incorporando elementos más suaves y melódicos, influenciados por el country y el blues, en comparación con su álbum anterior, Dragline.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 310,
@@ -4941,7 +4941,7 @@ export const products = [
     image: '/images/grunge/g-43.webp',
     description:
       'A diferencia de sus trabajos anteriores, este álbum presenta un sonido más melódico y menos pesado, incorporando influencias del rock de finales de los 60 y principios de los 70. Las letras abordan temas como la adicción, la depresión y las tensiones internas dentro de la banda, reflejando las luchas personales de Staley durante ese período.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 311,
@@ -4957,7 +4957,7 @@ export const products = [
     image: '/images/grunge/g-45.webp',
     description:
       'El álbum presenta una mezcla de rock alternativo y post-grunge, con influencias del sonido de Nirvana y de bandas como Hüsker Dü. Las canciones abordan temas personales y emocionales, reflejando las experiencias de Grohl tras la disolución de Nirvana. A pesar de ser un proyecto en solitario, el álbum fue presentado bajo el nombre de la banda para mantener un aire de misterio.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 312,
@@ -4973,7 +4973,7 @@ export const products = [
     image: '/images/grunge/g-46.webp',
     description:
       'El álbum presenta un sonido más melódico y menos pesado en comparación con sus trabajos anteriores, incorporando influencias del rock de finales de los 60 y principios de los 70. Las letras abordan temas como la alienación y la introspección.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 313,
@@ -4989,7 +4989,7 @@ export const products = [
     image: '/images/ska/s-43.webp',
     description:
       'El disco mezcla crust punk, hardcore punk y ska, con canciones cortas, caóticas y cargadas de energía. Sus letras son abiertamente políticas y antisistema, atacando temas como el capitalismo, la autoridad, la religión organizada, la violencia policial y la alienación social. El sonido crudo y agresivo, combinado con secciones de ska distorsionadas, le dio al álbum un carácter único y muy influyente.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 314,
@@ -5005,7 +5005,7 @@ export const products = [
     image: '/images/ska/s-44.webp',
     description:
       'disco se mueve entre el ska punk, punk rock y power pop, con un sonido directo, melódico y optimista. A diferencia de propuestas más agresivas del punk, este álbum destaca por su tono positivo y reflexivo, con letras que abordan temas como la identidad, la amistad, la perseverancia, el racismo y la experiencia asiático-americana, siempre desde una perspectiva personal y honesta.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 315,
@@ -5021,7 +5021,7 @@ export const products = [
     image: '/images/ska/s-45.webp',
     description:
       'El disco lleva el concepto de ska-core y dark ska al límite, combinando ritmos rápidos de ska con hardcore punk, metal y noise, creando un sonido caótico, agresivo y provocador. Las letras y la estética giran en torno al satanismo como símbolo, la crítica a la religión organizada, la hipocresía social y el rechazo a la moral tradicional, siempre desde una postura irónica y confrontativa.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 316,
@@ -5037,7 +5037,7 @@ export const products = [
     image: '/images/ska/s-46.webp',
     description:
       'Musicalmente, Venga la Sentencia destaca por sus cambios de ritmo constantes, secciones de ska acelerado y explosiones punk llenas de energía. El álbum sentó las bases del estilo de la banda y la posicionó rápidamente como una referencia del ska punk en español, influyendo en numerosas bandas de la región.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 317,
@@ -5053,7 +5053,7 @@ export const products = [
     image: '/images/hardcore/h-45.webp',
     description:
       'El disco se caracteriza por un sonido brutal, denso y emocionalmente intenso, combinando hardcore punk con estructuras y peso propios del metal. Las canciones están marcadas por riffs pesados, cambios de tempo abruptos y una ejecución agresiva que rompía con el hardcore más tradicional de la época.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 318,
@@ -5069,7 +5069,7 @@ export const products = [
     image: '/images/hardcore/h-46.webp',
     description:
       'El material muestra a la banda en una de sus etapas más crudas y agresivas, con un sonido fuertemente influenciado por el hardcore metalizado, riffs densos y breakdowns contundentes. Las canciones mantienen una actitud directa y violenta, tanto musical como líricamente.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 319,
@@ -5085,7 +5085,7 @@ export const products = [
     image: '/images/hardcore/h-47.webp',
     description:
       'El disco representa un regreso consciente a las raíces hardcore de la banda, dejando de lado parte de la experimentación metálica de trabajos anteriores para enfocarse en canciones rápidas, directas y cargadas de actitud. Musicalmente destaca por riffs sólidos, ritmos contundentes y la voz inconfundible de Lou Koller, llena de energía y convicción.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 320,
@@ -5101,7 +5101,7 @@ export const products = [
     image: '/images/hardcore/h-48.webp',
     description:
       'El disco combina la intensidad del hardcore punk con estructuras más melódicas y accesibles, manteniendo una ejecución rápida y agresiva sin perder claridad ni enfoque emocional. Musicalmente se apoya en riffs sólidos, ritmos veloces y coros directos, marcando una transición entre el hardcore clásico y el hardcore melódico que dominaría la escena a finales de la década.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 321,
@@ -5117,7 +5117,7 @@ export const products = [
     image: '/images/hardcore/h-49.webp',
     description:
       'El disco se caracteriza por un sonido extremadamente intenso y emocional, combinando hardcore punk, metal y elementos experimentales. Destacan los riffs pesados, los cambios bruscos de dinámica y la interpretación vocal de Tim Williams, que alterna gritos desgarrados con pasajes más melódicos y desesperados.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 322,
@@ -5133,7 +5133,7 @@ export const products = [
     image: '/images/punk/p-35.webp',
     description:
       'The Sunshine Drive tiene el estilo característico de The Spazzys: canciones rápidas, cortas y muy melódicas, influenciadas por los Ramones. El EP mezcla guitarras punk simples, coros pegajosos y una energía juvenil y divertida​',
-    price: '14000',
+    price: 14000,
   },
 
   {
@@ -5150,7 +5150,7 @@ export const products = [
     image: '/images/punk/p-36.webp',
     description:
       'El disco es una mezcla de punk rock y pop-punk melódico característico de los años 90. Tiene guitarras rápidas, letras irónicas y un tono entre humorístico y emocional. Fue el primer álbum de la banda como trío después de la salida del guitarrista Jon Von Zelowitz​',
-    price: '12000',
+    price: 12000,
   },
 
   {
@@ -5167,7 +5167,7 @@ export const products = [
     image: '/images/punk/p-37.webp',
     description:
       'muestra el estilo clásico de ALL: punk melódico rápido, energético y muy influenciado por el hardcore y el pop-punk. El disco tiene riffs cortos y pegajosos, letras sarcásticas y temas sobre frustraciones personales, relaciones y ansiedad cotidiana​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 325,
@@ -5183,7 +5183,7 @@ export const products = [
     image: '/images/punk/p-38.webp',
     description:
       'Amén! marcó una evolución importante en el sonido de Attaque 77. Aunque mantiene la velocidad y energía del punk rock clásico, el disco incorpora influencias de hardcore punk y punk californiano, alejándose un poco del estilo más “ramonero” de sus primeros trabajos​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 326,
@@ -5199,7 +5199,7 @@ export const products = [
     image: '/images/punk/p-39.webp',
     description:
       'El disco mezcla punk rock, rock and roll clásico, country y blues, consolidando el sonido característico de Social Distortion. A diferencia de sus trabajos más crudos de los años 80, Somewhere Between Heaven and Hell tiene una producción más pulida, pero mantiene la actitud callejera y melancólica de la banda.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 327,
@@ -5215,7 +5215,7 @@ export const products = [
     image: '/images/punk/p-40.webp',
     description:
       'mezcla hardcore melódico, skate punk y punk rock rápido con letras políticas y personales. El disco mantiene la energía agresiva típica de Good Riddance, pero incorpora melodías más trabajadas y una producción más pulida gracias al trabajo de Bill Stevenson y Stephen Egerton en The Blasting Room.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 328,
@@ -5231,7 +5231,7 @@ export const products = [
     image: '/images/metal/m-11.webp',
     description:
       '​El álbum combina atmósferas oscuras, riffs lentos y pesados, voces melancólicas y pasajes death/doom muy emotivos. Es considerado uno de los trabajos más sólidos y depresivos de la banda, con canciones largas y cargadas de tristeza, romanticismo oscuro y desesperación.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 329,
@@ -5247,7 +5247,7 @@ export const products = [
     image: '/images/metal/m-12.webp',
     description:
       'El álbum presenta un sonido extremadamente pesado, oscuro y atmosférico, combinando sludge metal, industrial, hardcore y ambient. Sus composiciones largas y densas crean una sensación apocalíptica e hipnótica, con percusiones tribales, guitarras lentas y voces desgarradoras.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 330,
@@ -5263,7 +5263,7 @@ export const products = [
     image: '/images/metal/m-13.webp',
     description:
       'El álbum destaca por su agresividad, complejidad musical y letras oscuras que abordan temas como el control, la manipulación, las adicciones y la guerra. Combina velocidad, riffs memorables y estructuras elaboradas, mostrando una evolución importante en la composición de la banda.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 331,
@@ -5279,7 +5279,7 @@ export const products = [
     image: '/images/metal/m-14.webp',
     description:
       'El disco reúne canciones representativas de la carrera de la banda, incluyendo temas remasterizados, ediciones especiales, mezclas alternativas y algunas rarezas. Mantiene el característico sonido oscuro y melancólico de Type O Negative, mezclando doom metal, gothic metal y elementos atmosféricos.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 332,
@@ -5295,7 +5295,7 @@ export const products = [
     image: '/images/metal/m-15.webp',
     description:
       '​El álbum marcó un regreso a un sonido más rápido, agresivo y técnico para la banda, combinando velocidad, riffs pesados y una ejecución instrumental intensa. Destaca especialmente la batería de Scott Travis, quien debutó en este disco aportando un estilo más poderoso y veloz.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 333,
@@ -5311,7 +5311,7 @@ export const products = [
     image: '/images/metal/m-16.webp',
     description:
       'El álbum continúa la saga fantástica “Emerald Sword Saga”, desarrollando una historia épica de guerras, héroes y magia. Musicalmente combina power metal rápido y melódico con arreglos orquestales, coros cinematográficos y elementos de música clásica y folk.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 334,
@@ -5327,7 +5327,7 @@ export const products = [
     image: '/images/metal/m-17.webp',
     description:
       'El álbum es un trabajo conceptual basado en la historia de un personaje con poderes sobrenaturales y visiones proféticas. Musicalmente mezcla el sonido clásico de Iron Maiden con elementos progresivos y el uso más notable de teclados y sintetizadores.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 335,
@@ -5343,7 +5343,7 @@ export const products = [
     image: '/images/metal/m-18.webp',
     description:
       'El álbum celebra toda la historia de la banda combinando el power metal clásico de sus primeras épocas con elementos modernos y melódicos. Presenta múltiples vocalistas y guitarristas, creando un sonido épico, variado y muy dinámico.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 336,
@@ -5359,7 +5359,7 @@ export const products = [
     image: '/images/metal/m-19.webp',
     description:
       'El álbum muestra un sonido más pesado, oscuro y caótico que sus trabajos anteriores, incorporando elementos de industrial rock, post-punk y metal alternativo. Las canciones transmiten tensión, paranoia y rabia, con guitarras densas, ritmos tribales y una atmósfera apocalíptica característica de Killing Joke.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 337,
@@ -5375,7 +5375,7 @@ export const products = [
     image: '/images/metal/m-20.webp',
     description:
       'El álbum marcó una transición importante en el sonido de la banda, dejando atrás gran parte de las influencias de hard rock y desarrollando un estilo más pesado y agresivo. Fue el primer disco de Judas Priest con el baterista Simon Phillips.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 338,
@@ -5391,7 +5391,7 @@ export const products = [
     image: '/images/metal/m-21.webp',
     description:
       'El álbum representa el punto más alto del sonido glam metal de Mötley Crüe, con una producción más pulida y orientada a la radio sin perder su energía rockera. Fue el primer disco grabado con el productor Bob Rock, quien ayudó a definir un sonido más potente y profesional.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 339,
@@ -5407,7 +5407,7 @@ export const products = [
     image: '/images/metal/m-22.webp',
     description:
       'El álbum mantiene el enfoque característico de Utsu-P: una mezcla intensa de voces sintetizadas (VOCALOID), guitarras extremadamente pesadas, breakdowns influenciados por el metalcore/djent y elementos de música electrónica industrial.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 340,
@@ -5423,7 +5423,7 @@ export const products = [
     image: '/images/metal/m-23.webp',
     description:
       'El álbum destaca por su altísimo nivel técnico, riffs complejos y solos de guitarra muy elaborados a cargo de Dave Mustaine y Marty Friedman. Las letras abordan temas como la guerra, la política, la ciencia ficción y la destrucción global.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 341,
@@ -5439,7 +5439,7 @@ export const products = [
     image: '/images/metal/m-24.webp',
     description:
       'El álbum amplía el sonido del black metal noruego hacia estructuras más complejas y atmosféricas, incorporando teclados prominentes, arreglos orquestales y composiciones más técnicas. Mantiene la intensidad y oscuridad del género, pero con una producción más elaborada y un enfoque más épico.​',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 342,
@@ -5455,7 +5455,7 @@ export const products = [
     image: '/images/metal/m-25.webp',
     description:
       '​El álbum muestra a Kreator en una etapa de máxima agresividad, con riffs rápidos, baterías intensas y un enfoque más pulido que en sus trabajos anteriores sin perder la crudeza. Las letras continúan abordando temas como violencia, alienación social, guerra y crítica política.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 343,
@@ -5471,7 +5471,7 @@ export const products = [
     image: '/images/metal/m-26.webp',
     description:
       'El álbum combina death metal con una fuerte carga atmosférica y melódica, incorporando pasajes oscuros, ambientales y casi rituales. Su sonido es más lento y denso que el death metal tradicional de la época, con énfasis en la creación de una atmósfera mística y sombría.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 344,
@@ -5487,7 +5487,7 @@ export const products = [
     image: '/images/metal/m-27.webp',
     description:
       'El trabajo muestra el enfoque característico de Esoteric: composiciones extremadamente largas, densas y psicodélicas dentro del funeral doom. La música se construye sobre guitarras pesadas y lentísimas, capas atmosféricas, efectos de sonido y una producción deliberadamente opresiva.',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 345,
@@ -5503,7 +5503,7 @@ export const products = [
     image: '/images/punk/p-41.webp',
     description:
       'El álbum debut de The Queers mezcla melodías pegajosas, guitarras rápidas y letras simples inspiradas en el punk rock clásico y el surf rock. Su sonido ayudó a definir el estilo pop punk underground de principios de los noventa.',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 346,
@@ -5519,7 +5519,7 @@ export const products = [
     image: '/images/punk/p-42.webp',
     description:
       'Growing Up combina energía juvenil, riffs rápidos y letras sobre amistad, identidad y adolescencia. The Linda Lindas presentan un sonido fresco influenciado por el punk clásico, el garage rock y el pop alternativo moderno.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 347,
@@ -5535,7 +5535,7 @@ export const products = [
     image: '/images/punk/p-43.webp',
     description:
       'Uno de los discos más conocidos de Millencolin, con canciones rápidas, melodías pegajosas y una fuerte influencia del skate punk sueco. El álbum destaca por su ritmo constante y letras relajadas con actitud juvenil.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 348,
@@ -5551,7 +5551,7 @@ export const products = [
     image: '/images/punk/p-44.webp',
     description:
       'The Gold Record ofrece himnos melódicos y letras optimistas características de The Bouncing Souls. El disco mezcla energía punk tradicional con coros memorables y un sonido más maduro, manteniendo la intensidad y emoción de la banda.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 349,
@@ -5567,7 +5567,7 @@ export const products = [
     image: '/images/punk/p-45.webp',
     description:
       'Pleasant Dreams muestra a los Ramones explorando un sonido más melódico y accesible sin abandonar su velocidad característica. El álbum incluye influencias pop y canciones cortas llenas de guitarras rápidas y actitud punk clásica.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 350,
@@ -5583,7 +5583,7 @@ export const products = [
     image: '/images/punk/p-46.webp',
     description:
       'Ribbed captura la etapa temprana de NOFX con canciones rápidas, humor irreverente y un sonido crudo de hardcore punk melódico. El álbum ayudó a consolidar la identidad de la banda dentro de la escena punk californiana.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 351,
@@ -5599,7 +5599,7 @@ export const products = [
     image: '/images/punk/p-47.webp',
     description:
       'El álbum presenta el sonido agresivo y desordenado de New Bomb Turks, combinando garage rock y punk de alta velocidad. Sus canciones destacan por la energía caótica, guitarras distorsionadas y una producción cruda y directa.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 352,
@@ -5615,7 +5615,7 @@ export const products = [
     image: '/images/punk/p-48.webp',
     description:
       'Young and Good Looking mezcla el caos característico de Dwarves con canciones cortas, agresivas y llenas de humor oscuro. El álbum combina punk veloz, garage rock y actitud provocadora con una producción más limpia que trabajos anteriores.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 353,
@@ -5631,7 +5631,7 @@ export const products = [
     image: '/images/punk/p-49.webp',
     description:
       'Unleashed presenta el sonido rápido y melódico de Ten Foot Pole con letras personales y ritmos intensos. El álbum mantiene la energía clásica del skate punk californiano con guitarras veloces y coros pegajosos.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 354,
@@ -5647,7 +5647,7 @@ export const products = [
     image: '/images/punk/p-50.webp',
     description:
       'El debut de The Mr. T Experience ofrece canciones rápidas, simples y melódicas inspiradas en el punk clásico. Sus letras humorísticas y el enfoque relajado ayudaron a convertir a la banda en referente del pop punk underground.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 355,
@@ -5663,7 +5663,7 @@ export const products = [
     image: '/images/punk/p-51.webp',
     description:
       'For God and Country combina hardcore melódico con letras políticas y sociales intensas. Good Riddance entrega canciones rápidas y agresivas con mensajes críticos, manteniendo melodías pegajosas y una fuerte energía punk californiana.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 356,
@@ -5679,7 +5679,7 @@ export const products = [
     image: '/images/punk/p-52.webp',
     description:
       'El álbum homónimo de Social Distortion mezcla punk rock con influencias de rock clásico y country. Incluye algunas de las canciones más conocidas de la banda, destacando melodías sólidas y la voz característica de Mike Ness.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 357,
@@ -5695,7 +5695,7 @@ export const products = [
     image: '/images/punk/p-53.webp',
     description:
       'Otras Canciones muestra una faceta más melódica y alternativa de Attaque 77, incluyendo versiones acústicas y nuevas interpretaciones de temas conocidos. El disco mantiene la esencia punk de la banda con un sonido diferente y experimental.',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 358,
@@ -5711,7 +5711,7 @@ export const products = [
     image: '/images/punk/p-54.webp',
     description:
       'Considerado uno de los discos más importantes del hardcore melódico, Suffer presenta canciones rápidas, letras inteligentes y armonías vocales distintivas. Bad Religion redefinió el punk moderno con un sonido agresivo pero altamente melódico.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 359,
@@ -5727,7 +5727,7 @@ export const products = [
     image: '/images/punk/p-55.webp',
     description:
       'Mass Nerder combina melodías pegajosas, ritmos rápidos y letras divertidas con el estilo característico de ALL. El álbum mantiene la influencia de Descendents mientras desarrolla un sonido propio lleno de energía y humor.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 360,
@@ -5743,7 +5743,7 @@ export const products = [
     image: '/images/punk/p-56.webp',
     description:
       'Cinco de Copas mantiene el estilo directo y desprolijo de Flema con canciones simples, rápidas y cargadas de actitud. El disco refleja el espíritu callejero y autodestructivo que convirtió a la banda en un clásico del punk argentino.',
-    price: '11000',
+    price: 11000,
   },
   {
     id: 361,
@@ -5759,7 +5759,7 @@ export const products = [
     image: '/images/punk/p-57.webp',
     description:
       'Pearly Gates presenta el sonido rápido y melódico de Jughead’s Revenge con guitarras intensas y voces agresivas. El álbum mezcla energía hardcore con melodías pegajosas, convirtiéndose en un referente del punk californiano noventero.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 362,
@@ -5775,7 +5775,7 @@ export const products = [
     image: '/images/punk/p-58.webp',
     description:
       'Jump Salty reúne canciones rápidas, melódicas y simples con el estilo característico de Pinhead Gunpowder. El proyecto paralelo de Billie Joe Armstrong destaca por su sonido crudo y actitud relajada dentro del punk underground.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 363,
@@ -5791,7 +5791,7 @@ export const products = [
     image: '/images/punk/p-59.webp',
     description:
       'Road to Ruin muestra a los Ramones incorporando melodías más accesibles sin perder su velocidad y simplicidad clásica. El álbum incluye algunas de sus canciones más reconocidas y mantiene la esencia directa del punk neoyorquino.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 364,
@@ -5807,7 +5807,7 @@ export const products = [
     image: '/images/punk/p-60.webp',
     description:
       'El álbum combina himnos melódicos, letras nostálgicas y la energía positiva característica de The Bouncing Souls. Sus canciones reflejan amistad, crecimiento personal y espíritu juvenil dentro de un sonido punk melódico muy sólido.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 365,
@@ -5823,7 +5823,7 @@ export const products = [
     image: '/images/punk/p-61.webp',
     description:
       'Caution presenta un sonido emotivo y potente con guitarras melódicas y voces rasposas características de Hot Water Music. El álbum mezcla punk rock y post-hardcore con letras personales y una producción más madura y dinámica.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 366,
@@ -5839,7 +5839,7 @@ export const products = [
     image: '/images/punk/p-62.webp',
     description:
       'Earth A.D. es uno de los trabajos más agresivos de Misfits, alejándose del horror punk melódico hacia un hardcore rápido y caótico. Las canciones son cortas, violentas y llenas de la energía oscura característica de la banda.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 367,
@@ -5855,7 +5855,7 @@ export const products = [
     image: '/images/punk/p-63.webp',
     description:
       'El álbum debut de Los Peores de Chile mezcla punk rock, humor y crítica social con un sonido alternativo influenciado por el rock latinoamericano. Sus canciones destacan por letras irónicas y una energía directa y desenfadada.',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 368,
@@ -5871,7 +5871,7 @@ export const products = [
     image: '/images/punk/p-64.webp',
     description:
       'Rev combina velocidad, melodías pegajosas y letras optimistas dentro del clásico sonido skate punk de los noventa. Ten Foot Pole entrega un álbum energético con coros memorables y guitarras rápidas de influencia californiana.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 369,
@@ -5887,7 +5887,7 @@ export const products = [
     image: '/images/punk/p-65.webp',
     description:
       'Scared Straight mantiene el estilo salvaje y desordenado de New Bomb Turks con canciones rápidas, guitarras distorsionadas y actitud garage punk. El álbum destaca por su sonido crudo y una energía caótica constante.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 370,
@@ -5903,7 +5903,7 @@ export const products = [
     image: '/images/punk/p-66.webp',
     description:
       'Beyond the Valley presenta melodías simples, ritmos rápidos y letras divertidas inspiradas en el surf rock y el punk clásico. The Queers consolidan su estilo pop punk con canciones pegajosas y una producción más sólida.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 371,
@@ -5919,7 +5919,7 @@ export const products = [
     image: '/images/punk/p-67.webp',
     description:
       'Goodbye Ellston Avenue mezcla punk melódico, guitarras rápidas y letras introspectivas con el sonido crudo de Pinhead Gunpowder. El álbum mantiene una energía constante y refleja la esencia underground de la banda.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 372,
@@ -5935,7 +5935,7 @@ export const products = [
     image: '/images/grunge/g-47.webp',
     description:
       'El debut de Hammerbox mezcla guitarras pesadas, melodías oscuras y la poderosa voz de Carrie Akre. El álbum combina la energía del grunge de Seattle con influencias alternativas y una producción cruda característica de la época.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 373,
@@ -5951,7 +5951,7 @@ export const products = [
     image: '/images/grunge/g-48.webp',
     description:
       'Creado como homenaje a Andrew Wood, este álbum reúne miembros de Soundgarden y Pearl Jam. Sus canciones combinan emoción, guitarras melódicas y voces intensas, convirtiéndose en uno de los discos más importantes del movimiento grunge.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 374,
@@ -5967,7 +5967,7 @@ export const products = [
     image: '/images/grunge/g-49.webp',
     description:
       'Sugartooth presenta un sonido alternativo pesado con influencias grunge y hard rock. El álbum destaca por guitarras distorsionadas, voces agresivas y una energía noventera marcada por melodías oscuras y ritmos contundentes.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 375,
@@ -5983,7 +5983,7 @@ export const products = [
     image: '/images/grunge/g-50.webp',
     description:
       '¡Gato Negro! mezcla agresividad punk, guitarras pesadas y letras intensas dentro de la escena grunge de Seattle. 7 Year Bitch entrega canciones directas y poderosas con una fuerte actitud rebelde y sonido crudo.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 376,
@@ -5999,7 +5999,7 @@ export const products = [
     image: '/images/grunge/g-51.webp',
     description:
       'Piece of Cake mantiene el estilo sucio y garage de Mudhoney con riffs pesados y humor irreverente. El álbum combina energía punk y grunge clásico con una producción desordenada y canciones llenas de actitud.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 377,
@@ -6015,7 +6015,7 @@ export const products = [
     image: '/images/grunge/g-52.webp',
     description:
       'Vitalogy muestra a Pearl Jam explorando sonidos experimentales y emociones más oscuras. El álbum mezcla rock alternativo, grunge y canciones introspectivas, consolidando a la banda como una de las más importantes de los noventa.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 378,
@@ -6031,7 +6031,7 @@ export const products = [
     image: '/images/grunge/g-53.webp',
     description:
       'Gish combina guitarras pesadas, psicodelia y melodías alternativas con una producción atmosférica distintiva. El debut de Smashing Pumpkins destaca por su mezcla de intensidad emocional y elementos experimentales dentro del rock noventero.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 379,
@@ -6047,7 +6047,7 @@ export const products = [
     image: '/images/grunge/g-54.webp',
     description:
       'Sin & Tonic presenta un sonido salvaje influenciado por garage rock, punk y grunge temprano. The Mono Men ofrecen canciones rápidas y desordenadas llenas de guitarras distorsionadas y energía underground característica de Seattle.',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 380,
@@ -6063,7 +6063,7 @@ export const products = [
     image: '/images/grunge/g-55.webp',
     description:
       'El álbum homónimo de Green River captura el sonido temprano que ayudaría a crear el grunge. Mezcla punk, hard rock y riffs pesados con una producción cruda y la actitud agresiva de la escena de Seattle.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 381,
@@ -6079,7 +6079,7 @@ export const products = [
     image: '/images/grunge/g-56.webp',
     description:
       'Houdini mezcla riffs lentos, pesados y experimentales con la extraña creatividad de Melvins. El álbum influyó fuertemente en el desarrollo del grunge y sludge metal gracias a su sonido oscuro y poco convencional.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 382,
@@ -6095,7 +6095,7 @@ export const products = [
     image: '/images/grunge/g-57.webp',
     description:
       'Frenching the Bully combina punk agresivo y grunge melódico con la intensa voz de Mia Zapata. El álbum destaca por sus letras emocionales, guitarras pesadas y una energía cruda característica del underground de Seattle.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 383,
@@ -6111,7 +6111,7 @@ export const products = [
     image: '/images/grunge/g-58.webp',
     description:
       'Conocido como el álbum rojo, este trabajo mezcla grunge acústico con melodías oscuras y letras introspectivas. Days of the New crea un sonido atmosférico basado en guitarras acústicas y voces emocionales.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 384,
@@ -6127,7 +6127,7 @@ export const products = [
     image: '/images/grunge/g-59.webp',
     description:
       'Fist Sized Chunks presenta riffs pesados, baterías agresivas y una producción sucia típica del grunge temprano. Skin Yard desarrolla un sonido intenso que mezcla hard rock, metal y la crudeza del underground de Seattle.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 385,
@@ -6143,7 +6143,7 @@ export const products = [
     image: '/images/grunge/g-60.webp',
     description:
       'El debut de Candlebox combina melodías accesibles, guitarras pesadas y voces emotivas dentro del sonido post-grunge noventero. El álbum incluye algunos de los mayores éxitos de la banda y una producción más comercial.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 386,
@@ -6159,7 +6159,7 @@ export const products = [
     image: '/images/grunge/g-61.webp',
     description:
       'Freak Show muestra a Silverchair evolucionando hacia un sonido más oscuro y experimental. El álbum mezcla grunge, rock alternativo y letras introspectivas con guitarras pesadas y una producción más madura y compleja.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 387,
@@ -6175,7 +6175,7 @@ export const products = [
     image: '/images/grunge/g-62.webp',
     description:
       'Dragline combina riffs pesados, melodías agresivas y la distintiva voz rasposa de Paw. El álbum mezcla grunge y rock alternativo con influencias sureñas, creando un sonido potente y muy característico de los noventa.',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 388,
@@ -6191,7 +6191,7 @@ export const products = [
     image: '/images/grunge/g-63.webp',
     description:
       'The Family mezcla rock alternativo y grunge melódico con guitarras suaves y letras introspectivas. Satchel desarrolla un sonido relajado y emocional influenciado por la escena de Seattle y el rock alternativo noventero.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 389,
@@ -6207,7 +6207,7 @@ export const products = [
     image: '/images/grunge/g-64.webp',
     description:
       'El álbum homónimo recopila el estilo único de Mother Love Bone, combinando hard rock, glam y los primeros sonidos del grunge de Seattle. La voz carismática de Andrew Wood destaca entre guitarras melódicas y energía intensa.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 390,
@@ -6223,7 +6223,7 @@ export const products = [
     image: '/images/grunge/g-65.webp',
     description:
       'El debut de Mudhoney define gran parte del sonido grunge temprano con guitarras sucias, distorsión pesada y actitud punk. El álbum combina garage rock y energía caótica con una producción cruda y directa.',
-    price: '16000',
+    price: 16000,
   },
   {
     id: 391,
@@ -6239,7 +6239,7 @@ export const products = [
     image: '/images/grunge/g-66.webp',
     description:
       'El álbum homónimo de Pearl Jam presenta un sonido más agresivo y político, mezclando grunge y rock alternativo con letras intensas. La banda mantiene su identidad clásica mientras incorpora una producción moderna y poderosa.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 392,
@@ -6255,7 +6255,7 @@ export const products = [
     image: '/images/grunge/g-67.webp',
     description:
       '..Out Loud mezcla guitarras pesadas, melodías alternativas y una producción típica del rock noventero. Loudhouse desarrolla un sonido cercano al post-grunge con influencias de hard rock y energía emocional constante.',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 393,
@@ -6271,7 +6271,7 @@ export const products = [
     image: '/images/grunge/g-68.webp',
     description:
       'El álbum homónimo de Treepeople combina indie rock y grunge con melodías melancólicas y guitarras distorsionadas. La banda presenta un sonido alternativo emotivo influenciado por la escena underground del noroeste estadounidense.',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 394,
@@ -6287,7 +6287,7 @@ export const products = [
     image: '/images/grunge/g-69.webp',
     description:
       'Rubberneck mezcla riffs oscuros, voces agresivas y atmósferas inquietantes dentro de un sonido alternativo influenciado por el grunge. El álbum destaca por su intensidad emocional y canciones pesadas llenas de energía.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 395,
@@ -6303,7 +6303,7 @@ export const products = [
     image: '/images/grunge/g-70.webp',
     description:
       'Este ambicioso álbum doble mezcla rock alternativo, grunge y sonidos experimentales con una enorme variedad musical. Smashing Pumpkins combina canciones pesadas y melancólicas con arreglos complejos y una producción épica.',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 396,
@@ -6319,7 +6319,7 @@ export const products = [
     image: '/images/grunge/g-71.webp',
     description:
       'Down on the Upside muestra a Soundgarden explorando sonidos más experimentales y melódicos sin abandonar su pesadez característica. El álbum combina riffs complejos, voces intensas y elementos alternativos dentro del grunge clásico.',
-    price: '17000',
+    price: 17000,
   },
   {
     id: 397,
@@ -6335,7 +6335,7 @@ export const products = [
     image: '/images/grunge/g-72.webp',
     description:
       'Spanaway combina melodías emocionales, guitarras distorsionadas y energía punk con influencias grunge y post-hardcore. Seaweed desarrolla un sonido potente y melódico característico de la escena alternativa de los noventa.',
-    price: '14000',
+    price: 14000,
   },
 
   {
@@ -6348,12 +6348,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '24/09/1991',
     type: 'Vinil',
-    vinilPrice: '22000',
+    vinilPrice: 22000,
     itemNumber: '258569517X',
     image: '/images/grunge/g-26.webp',
     description:
       'Este álbum marcó un punto de inflexión en la historia de la música, llevando el grunge a la corriente principal y convirtiendo a Nirvana en una de las bandas más influyentes de todos los tiempos. Con Kurt Cobain al mando, la banda presenta una mezcla de grunge abrasivo, melodías pegajosas y letras poéticas que abordan temas de alienación, frustración y la lucha interna de la juventud.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 501,
@@ -6365,12 +6365,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '08/25/1988',
     type: 'Vinil',
-    vinilPrice: '24000',
+    vinilPrice: 24000,
     itemNumber: '25869848X',
     image: '/images/metal/m-1.webp',
     description:
       '"...And Justice for All", lanzado en 1988, es el cuarto álbum de estudio de la banda y el primero con el bajista Jason Newsted, quien reemplazó a Cliff Burton. El álbum se caracteriza por sus canciones largas y complejas, con temas que exploran la crítica social y política. La portada muestra una estatua de la Dama de la Justicia agrietada, atada y con la balanza llena de dólares, reflejando la temática del álbum.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 502,
@@ -6382,12 +6382,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '07/06/1994',
     type: 'Vinil',
-    vinilPrice: '23000',
+    vinilPrice: 23000,
     itemNumber: '258569522X',
     image: '/images/grunge/g-31.webp',
     description:
       'Purple es el segundo álbum de estudio de la banda estadounidense Stone Temple Pilots, lanzado el 7 de junio de 1994. Este disco consolidó el estatus de la banda dentro de la escena del rock alternativo y el grunge, ampliando su sonido con elementos de psicodelia, hard rock, blues y hasta jazz. Liderados por el carismático vocalista Scott Weiland, STP logró una obra más madura y diversa que su debut (Core), con una producción impecable y letras introspectivas que reflejan lucha, deseo y redención.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 503,
@@ -6399,12 +6399,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '21/07/1987',
     type: 'Vinil',
-    vinilPrice: '22000',
+    vinilPrice: 22000,
     itemNumber: '258569524X',
     image: '/images/metal/m-10.webp',
     description:
       '. Lanzado en 1987, el disco capturó la crudeza, el caos y la actitud callejera de la banda, mezclando elementos de punk, blues, y heavy metal. Con la voz rasposa y feroz de Axl Rose, los solos explosivos de Slash, y una sección rítmica agresiva, el álbum ofreció una visión sucia y auténtica del rock de Los Ángeles, en contraposición al glam edulcorado de la época. Appetite es considerado uno de los discos debut más impactantes de la historia del rock.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 504,
@@ -6416,12 +6416,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '30/07/1996',
     type: 'Vinil',
-    vinilPrice: '25000',
+    vinilPrice: 25000,
     itemNumber: '258569525X',
     image: '/images/ska/s-42.webp',
     description:
       'Sublime es el tercer y último álbum de estudio de la banda californiana Sublime, lanzado de manera póstuma tras la muerte del vocalista Bradley Nowell. Este disco, lanzado el 30 de julio de 1996, consolidó a Sublime como uno de los referentes del punk rock alternativo de los 90, fusionando géneros como ska, punk, reggae, hip hop y dub. A pesar del fallecimiento de Nowell poco antes del lanzamiento, el álbum fue un éxito rotundo tanto comercial como crítico, y generó múltiples sencillos que siguen sonando hasta hoy.​',
-    price: '15000',
+    price: 15000,
   },
   {
     id: 505,
@@ -6433,12 +6433,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '22/03/1994',
     type: 'Vinil',
-    vinilPrice: '24000',
+    vinilPrice: 24000,
     itemNumber: '258569521X',
     image: '/images/alternativo/a-46.webp',
     description:
       'Lanzado originalmente de forma independiente en 1993 y relanzado comercialmente por Atlantic Records en 1994 tras el éxito inesperado del sencillo “Shine”. Aunque técnicamente es una maqueta, su sonido pulido y sus pegajosas canciones lo convirtieron rápidamente en un éxito del rock alternativo de los 90. El álbum mezcla rock melódico con toques grunge y post-grunge, y sentó las bases del estilo característico de la banda: riffs accesibles, estribillos potentes y letras introspectivas.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 506,
@@ -6450,12 +6450,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '23/10/1993',
     type: 'Vinil',
-    vinilPrice: '24000',
+    vinilPrice: 24000,
     itemNumber: '258569536X',
     image: '/images/hiphop/h-20.webp',
     description:
       'El álbum incluye algunos de los sencillos más emblemáticos de Snoop Dogg, como "Gin and Juice", "What’s My Name?" y "Nuthin’ But a ’G’ Thang" (que fue un éxito mundial junto a Dr. Dre). Doggy Style define el sonido G-Funk con su estilo relajado, pero líricamente agresivo, que habla de la vida en Los Ángeles, las fiestas, y las relaciones sociales.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 516,
@@ -6467,12 +6467,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '15/12/1992',
     type: 'Vinil',
-    vinilPrice: '22000',
+    vinilPrice: 22000,
     itemNumber: '25869835X',
     image: '/images/nuevos/cd-13.webp',
     description:
       '"The Chronic" es el álbum debut del rapero y productor Dr. Dre, lanzado en 1992. Fue su primer álbum en solitario después de salir de NWA, y es conocido por haber definido el sonido G-funk y por presentar a Snoop Dogg. El álbum fue un éxito comercial y crítico, y es considerado uno de los más importantes de la década de 1990.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 517,
@@ -6484,12 +6484,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '08/04/1994',
     type: 'Vinil',
-    vinilPrice: '25000',
+    vinilPrice: 25000,
     itemNumber: '25869973X',
     image: '/images/punk/p-11.webp',
     description:
       '"Smash" fue un hito en la historia del punk rock, convirtiéndose en el álbum más vendido de todos los tiempos lanzado por un sello independiente, con más de 11 millones de copias vendidas en todo el mundo . El álbum alcanzó el puesto número 4 en el Billboard 200 de EE. UU. y fue certificado seis veces platino por la RIAA​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 518,
@@ -6501,12 +6501,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '10/10/1969',
     type: 'Vinil',
-    vinilPrice: '28000',
+    vinilPrice: 28000,
     itemNumber: '25869973X',
     image: '/images/progresivo/p-2.webp',
     description:
       'Este álbum marcó el inicio oficial del rock progresivo como género definido, gracias a su fusión de rock psicodélico, jazz, música clásica y lírica poética. Su sonido experimental, combinado con la portada icónica pintada por Barry Godber, lo convierte en una obra fundamental.​',
-    price: '18000',
+    price: 18000,
   },
   {
     id: 519,
@@ -6518,12 +6518,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '1987',
     type: 'Vinil',
-    vinilPrice: '24000',
+    vinilPrice: 24000,
     itemNumber: '258569509X',
     image: '/images/grunge/g-17.webp',
     description:
       'Skin Yard es el álbum debut homónimo de la banda estadounidense de grunge Skin Yard, lanzado en enero de 1987 por el sello independiente C/Z Records. Este álbum es considerado uno de los primeros registros del movimiento grunge de Seattle, precediendo a los lanzamientos más conocidos de Nirvana y Soundgarden.​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 520,
@@ -6535,12 +6535,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '13/04/1983',
     type: 'Vinil',
-    vinilPrice: '21000',
+    vinilPrice: 21000,
     itemNumber: '258569510X',
     image: '/images/alternativo/a-31.webp',
     description:
       'Este primer álbum de Violent Femmes es una mezcla cruda y acústica de punk, folk y rock alternativo, con letras cargadas de ansiedad adolescente, deseo sexual, frustración y sarcasmo. La voz nasal y angustiada de Gordon Gano, junto con el uso de instrumentos acústicos poco convencionales para el punk (como contrabajo, xilófono y guitarras acústicas), le dieron al disco un sonido distintivo e influyente.​',
-    price: '25000',
+    price: 25000,
   },
   {
     id: 521,
@@ -6552,12 +6552,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '27/02/1973',
     type: 'Vinil',
-    vinilPrice: '25000',
+    vinilPrice: 25000,
     itemNumber: '25869996X',
     image: '/images/progresivo/p-25.webp',
     description:
       'Este álbum contiene uno de sus mayores éxitos: "God Gave Rock and Roll to You", escrita por Russ Ballard, que se convirtió en un himno del género. La canción fue posteriormente versionada por Kiss en los años 90. El disco también incluye temas más experimentales con estructuras largas y secciones instrumentales complejas, mostrando la faceta progresiva del grupo.​',
-    price: '24000',
+    price: 24000,
   },
   {
     id: 522,
@@ -6569,12 +6569,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '13/08/1990',
     type: 'Vinil',
-    vinilPrice: '27000',
+    vinilPrice: 27000,
     itemNumber: '25869929X',
     image: '/images/alternativo/a-21.webp',
     description:
       '"Bossanova" marcó una evolución en el sonido de Pixies, alejándose ligeramente del punk abrasivo de sus discos anteriores (Surfer Rosa, Doolittle) y adoptando una estética más espacial, surf rock y psicodélica. El álbum presenta letras surrealistas, paisajes sonoros más atmosféricos y una producción más pulida, a cargo de Gil Norton.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 523,
@@ -6586,12 +6586,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '05/06/1983',
     type: 'Vinil',
-    vinilPrice: '24000',
+    vinilPrice: 24000,
     itemNumber: '25869960X',
     image: '/images/metal/m-9.webp',
     description:
       'Es un pilar del hardcore punk de los años 80, aunque con elementos que más tarde definirían el crossover thrash, especialmente en sus discos posteriores. Este álbum incluye el legendario tema "Institutionalized", conocido por su letra sarcástica y existencial, además de su innovador videoclip que fue uno de los primeros de punk transmitidos en MTV.​',
-    price: '13000',
+    price: 13000,
   },
   {
     id: 524,
@@ -6603,12 +6603,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '1993',
     type: 'Vinil',
-    vinilPrice: '23000',
+    vinilPrice: 23000,
     itemNumber: '258569507X',
     image: '/images/grunge/g-16.webp',
     description:
       '​"Bent Pages" es un álbum recopilatorio de la banda estadounidense de garage punk The Mono Men, lanzado originalmente en 1993 por el sello Estrus Records. Esta colección reúne sencillos, lados B y rarezas grabadas entre 1988 y 1992, mostrando la evolución temprana de la banda y su fusión de sonidos garage de los años 60 con una energía punk cruda.',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 525,
@@ -6620,12 +6620,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '27/08/1991',
     type: 'Vinil',
-    vinilPrice: '24000',
+    vinilPrice: 24000,
     itemNumber: '25869936X',
     image: '/images/alternativo/a-28.webp',
     description:
       '"Fear" fue el álbum que catapultó a Toad the Wet Sprocket al éxito comercial. Mezclando elementos de folk rock, jangle pop y rock alternativo, el disco ofreció un sonido melódico, introspectivo y accesible, muy representativo del movimiento alternativo de principios de los años 90.​',
-    price: '12000',
+    price: 12000,
   },
   {
     id: 529,
@@ -6637,12 +6637,12 @@ export const products = [
     numDiscs: 1,
     releaseDate: '05/05/1997',
     type: 'Vinil',
-    vinilPrice: '26000',
+    vinilPrice: 26000,
     itemNumber: '25869873X',
     image: '/images/ska/s-6.webp',
     description:
       'El álbum es una explosión de ska punk, con influencias latinas y un sonido enérgico y directo. Las letras, aunque a veces difíciles de entender, transmiten un espíritu de fiesta y rebeldía. El álbum también incluye covers de canciones conocidas, como "Feliz Navidad". ​',
-    price: '14000',
+    price: 14000,
   },
   {
     id: 600,
@@ -6659,7 +6659,7 @@ export const products = [
     image: '/images/especiales/e-1.jpg',
     description:
       'Conmemorando el 30.º aniversario del icónico álbum de 1991 de Nirvana, el Nevermind Super Deluxe incluye 8 discos de vinilo de 180 gramos que presentan el álbum remasterizado a partir de las cintas analógicas originales, junto con 4 conciertos completos de la gira Nevermind en Ámsterdam, Melbourne, Tokio y Del Mar, California. También se incluye un vinilo de 7 pulgadas, por primera vez, con “Endless, Nameless” y las caras B “Even In His Youth” y “Aneurysm”, además de un libro de tapa dura de 40 páginas con fotos inéditas. ​',
-    price: '64000',
+    price: 64000,
   },
 
   {
@@ -6677,7 +6677,7 @@ export const products = [
     image: '/images/especiales/e-2.jpg',
     description:
       'Experimenta la potencia cruda y la legendaria presencia escénica de Led Zeppelin con el set Live ’69 & ’73 Ultimate Collection, una edición limitada de 4 vinilos prensados en impresionantes discos de colores. Esta colección esencial captura a la banda en su mejor momento, interpretando enérgicas versiones en vivo de sus mayores éxitos durante dos de sus años más icónicos. ​',
-    price: '14000',
+    price: 81000,
   },
   {
     id: 602,
@@ -6694,7 +6694,7 @@ export const products = [
     image: '/images/especiales/e-3.jpg',
     description:
       ' Además del álbum original, los box sets super deluxe incluirán una gran cantidad de material raro e inédito. Se incluye la legendaria presentación en Woodstock ’94, que anteriormente fue lanzada solo en una edición muy limitada en vinilo para el Record Store Day. Los 6 LPs también presentan 17 demos inéditos, 6 tomas de estudio (3 de ellas inéditas) y un show en un club de Barcelona en 1994 con 17 canciones nunca antes publicado.​',
-    price: '14000',
+    price: 70000,
   },
   {
     id: 603,
@@ -6711,7 +6711,7 @@ export const products = [
     image: '/images/especiales/e-4.jpg',
     description:
       'El Tool Complete Discography 6 CD Collection with Fear Inoculum Expanded Book Edition and Bonus Glossy Art Card es una colección exclusiva que abarca toda la discografía de estudio de la banda Tool. Este set está diseñado para fanáticos y coleccionistas que desean una experiencia física completa con contenido visual y artístico adicional.​',
-    price: '55000',
+    price: 55000,
   },
   {
     id: 604,
@@ -6728,7 +6728,7 @@ export const products = [
     image: '/images/especiales/e-5.jpg',
     description:
       '​Edición deluxe de cuatro CDs y dos DVDs. En 2018, The Cure ofreció dos conciertos históricos para celebrar una carrera de 40 años. Anniversary: 1978-2018 Live In Hyde Park London – un concierto aniversario de 29 canciones y 135 minutos de duración – y Curætion-25: From There To Here, From Here To There – grabado en la décima y última noche del 25.º Festival Meltdown (curado por el cantante Robert Smith) en el Royal Festival Hall de Londres.',
-    price: '55000',
+    price: 62000,
   },
   {
     id: 605,
@@ -6740,18 +6740,18 @@ export const products = [
     numDiscs: 14,
     releaseDate: '10/09/2021',
     type: 'Box-Set',
-    vinilPrice: '135000',
+    vinilPrice: '¢135.000',
     itemNumber: '25869873X',
     image: '/images/especiales/e-6.jpg',
     description:
       'El Metallica (The Black Album) Remastered – Deluxe Box Set es una edición limitada y numerada que conmemora el 30.º aniversario del icónico álbum homónimo de la banda, conocido popularmente como The Black Album. Este box set fue lanzado el 10 de septiembre de 2021 bajo el sello Blackened Recordings, propiedad de Metallica.',
-    price: '55000',
+    price: 53000,
   },
 
   {
     id: 700,
     name: 'Camiseta Circle Jerks',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/punk/p-1.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6764,7 +6764,7 @@ export const products = [
   {
     id: 701,
     name: 'Camiseta Misfits',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-2.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6777,7 +6777,7 @@ export const products = [
   {
     id: 702,
     name: 'Camiseta Dead Kennedys',
-    price: '16000',
+    price: 16000,
     image: '/images/ropa/punk/p-3.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6790,7 +6790,7 @@ export const products = [
   {
     id: 703,
     name: 'Camiseta Descendents',
-    price: '18000',
+    price: 18000,
     image: '/images/ropa/punk/p-4.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6803,7 +6803,7 @@ export const products = [
   {
     id: 704,
     name: 'Camiseta Bad Brains',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/punk/p-5.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6816,7 +6816,7 @@ export const products = [
   {
     id: 705,
     name: 'Camiseta The Clash',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-6.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6829,7 +6829,7 @@ export const products = [
   {
     id: 706,
     name: 'Camiseta Black Flag',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-7.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6842,7 +6842,7 @@ export const products = [
   {
     id: 707,
     name: 'Camiseta Sex Pistols',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/punk/p-8.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6855,7 +6855,7 @@ export const products = [
   {
     id: 708,
     name: 'Camiseta Operation Ivy',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-9.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6868,7 +6868,7 @@ export const products = [
   {
     id: 709,
     name: 'Camiseta Misfits',
-    price: '18000',
+    price: 18000,
     image: '/images/ropa/punk/p-10.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6881,7 +6881,7 @@ export const products = [
   {
     id: 710,
     name: 'Camiseta Descendents',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/punk/p-11.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6894,7 +6894,7 @@ export const products = [
   {
     id: 711,
     name: 'Camiseta The Offspring',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-12.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6907,7 +6907,7 @@ export const products = [
   {
     id: 712,
     name: 'Camiseta Social Distortion',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/punk/p-13.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6920,7 +6920,7 @@ export const products = [
   {
     id: 713,
     name: 'Camiseta Rancid',
-    price: '18000',
+    price: 18000,
     image: '/images/ropa/punk/p-14.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6933,7 +6933,7 @@ export const products = [
   {
     id: 714,
     name: 'Camiseta Bad Religion',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-15.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6946,7 +6946,7 @@ export const products = [
   {
     id: 715,
     name: 'Camiseta NOFX',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/punk/p-16.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6959,7 +6959,7 @@ export const products = [
   {
     id: 716,
     name: 'Camiseta Pennywise',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/punk/p-17.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6972,7 +6972,7 @@ export const products = [
   {
     id: 717,
     name: "Camiseta CBGB's",
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-18.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6985,7 +6985,7 @@ export const products = [
   {
     id: 718,
     name: 'Camiseta The Distillers',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-19.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -6998,7 +6998,7 @@ export const products = [
   {
     id: 719,
     name: 'Camiseta Rancid',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-20.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -7011,7 +7011,7 @@ export const products = [
   {
     id: 720,
     name: 'Camiseta Green Day',
-    price: '18000',
+    price: 18000,
     image: '/images/ropa/punk/p-21.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -7024,7 +7024,7 @@ export const products = [
   {
     id: 721,
     name: 'Camiseta Sick of it All',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-22.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -7037,7 +7037,7 @@ export const products = [
   {
     id: 722,
     name: 'Camiseta Bad Religion',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-23.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -7050,7 +7050,7 @@ export const products = [
   {
     id: 723,
     name: 'Camiseta The Offspring',
-    price: '16000',
+    price: 16000,
     image: '/images/ropa/punk/p-24.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -7063,7 +7063,7 @@ export const products = [
   {
     id: 724,
     name: 'Camiseta Agnostic Front',
-    price: '16000',
+    price: 16000,
     image: '/images/ropa/punk/p-25.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -7076,7 +7076,7 @@ export const products = [
   {
     id: 725,
     name: 'Camiseta Less Than Jake',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-26.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -7090,7 +7090,7 @@ export const products = [
   {
     id: 726,
     name: 'Camiseta Alice in Chains',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-1.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7103,7 +7103,7 @@ export const products = [
   {
     id: 727,
     name: 'Camiseta Nirvana',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/grunge/g-2.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7116,7 +7116,7 @@ export const products = [
   {
     id: 728,
     name: 'Camiseta Red Hot Chilli Peppers',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-3.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7129,7 +7129,7 @@ export const products = [
   {
     id: 729,
     name: 'Camiseta Silverchair',
-    price: '16000',
+    price: 16000,
     image: '/images/ropa/grunge/g-4.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7142,7 +7142,7 @@ export const products = [
   {
     id: 730,
     name: 'Camiseta Weezer',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/grunge/g-5.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7155,7 +7155,7 @@ export const products = [
   {
     id: 731,
     name: 'Camiseta The Cure',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-6.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7168,7 +7168,7 @@ export const products = [
   {
     id: 732,
     name: 'Camiseta Blur',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/grunge/g-7.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7181,7 +7181,7 @@ export const products = [
   {
     id: 733,
     name: 'Camiseta Soundgarden',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/grunge/g-8.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7194,7 +7194,7 @@ export const products = [
   {
     id: 734,
     name: 'Camiseta Pearl Jam',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/grunge/g-9.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7207,7 +7207,7 @@ export const products = [
   {
     id: 735,
     name: 'Camiseta Sonic Youth',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-10.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7220,7 +7220,7 @@ export const products = [
   {
     id: 736,
     name: 'Camiseta Radiohead',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/grunge/g-11.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7233,7 +7233,7 @@ export const products = [
   {
     id: 737,
     name: 'Camiseta Bush',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-12.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7246,7 +7246,7 @@ export const products = [
   {
     id: 738,
     name: 'Camiseta Nirvana',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/grunge/g-13.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7259,7 +7259,7 @@ export const products = [
   {
     id: 739,
     name: 'Camiseta Faith No More',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-14.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7272,7 +7272,7 @@ export const products = [
   {
     id: 740,
     name: 'Camiseta Red Hot Chilli Peppers',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/grunge/g-15.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7285,7 +7285,7 @@ export const products = [
   {
     id: 741,
     name: 'Camiseta Soundgarden',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-16.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7298,7 +7298,7 @@ export const products = [
   {
     id: 742,
     name: 'Camiseta 311',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-17.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7311,7 +7311,7 @@ export const products = [
   {
     id: 743,
     name: 'Camiseta Pixies',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-18.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7324,7 +7324,7 @@ export const products = [
   {
     id: 744,
     name: 'Camiseta Peal Jam',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-19.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7337,7 +7337,7 @@ export const products = [
   {
     id: 745,
     name: 'Camiseta Sonic Youth',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-20.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7350,7 +7350,7 @@ export const products = [
   {
     id: 746,
     name: 'Camiseta Smashing Pumpkins',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-21.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7363,7 +7363,7 @@ export const products = [
   {
     id: 747,
     name: 'Camiseta Mudhoney',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-22.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7376,7 +7376,7 @@ export const products = [
   {
     id: 748,
     name: 'Camiseta Dinosaur Jr',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-23.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7389,7 +7389,7 @@ export const products = [
   {
     id: 749,
     name: 'Camiseta Stone Temple Pilots',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/grunge/g-24.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7402,7 +7402,7 @@ export const products = [
   {
     id: 750,
     name: 'Camiseta Radiohead',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-25.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7415,7 +7415,7 @@ export const products = [
   {
     id: 751,
     name: 'Camiseta L7',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-26.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7428,7 +7428,7 @@ export const products = [
   {
     id: 752,
     name: 'Camiseta',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/grunge/g-27.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7440,7 +7440,7 @@ export const products = [
   {
     id: 753,
     name: 'Camiseta 311',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/grunge/g-28.webp',
     type: 'Clothing',
     category: 'Grunge',
@@ -7453,7 +7453,7 @@ export const products = [
   {
     id: 754,
     name: 'Camiseta Metallica',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-1.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7466,7 +7466,7 @@ export const products = [
   {
     id: 755,
     name: 'Camiseta Pantera',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-2.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7479,7 +7479,7 @@ export const products = [
   {
     id: 756,
     name: 'Camiseta Pink Floyd',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/metal/m-3.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7492,7 +7492,7 @@ export const products = [
   {
     id: 757,
     name: 'Camiseta Korn',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-4.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7505,7 +7505,7 @@ export const products = [
   {
     id: 758,
     name: 'Camiseta Iron Maiden',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/metal/m-5.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7518,7 +7518,7 @@ export const products = [
   {
     id: 759,
     name: 'Camiseta D.R.I.',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-6.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7531,7 +7531,7 @@ export const products = [
   {
     id: 760,
     name: 'Camiseta Tool',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-7.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7544,7 +7544,7 @@ export const products = [
   {
     id: 761,
     name: 'Camiseta Ghost',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-8.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7557,7 +7557,7 @@ export const products = [
   {
     id: 762,
     name: 'Camiseta Gojira',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-9.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7570,7 +7570,7 @@ export const products = [
   {
     id: 763,
     name: 'Camiseta Anthrax',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-10.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7583,7 +7583,7 @@ export const products = [
   {
     id: 764,
     name: 'Camiseta Slayer',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/metal/m-11.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7596,7 +7596,7 @@ export const products = [
   {
     id: 765,
     name: 'Camiseta Pantera',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-12.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7609,7 +7609,7 @@ export const products = [
   {
     id: 766,
     name: 'Camiseta Deftones',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/metal/m-13.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7622,7 +7622,7 @@ export const products = [
   {
     id: 767,
     name: 'Camiseta Def Leppard',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-14.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7635,7 +7635,7 @@ export const products = [
   {
     id: 768,
     name: "Camiseta Guns N' Roses",
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-15.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7648,7 +7648,7 @@ export const products = [
   {
     id: 769,
     name: 'Camiseta Slipknot',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/metal/m-16.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7661,7 +7661,7 @@ export const products = [
   {
     id: 770,
     name: 'Camiseta Tool',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-17.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7674,7 +7674,7 @@ export const products = [
   {
     id: 771,
     name: 'Camiseta Opeth',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/metal/m-18.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7687,7 +7687,7 @@ export const products = [
   {
     id: 772,
     name: 'Camiseta Black Sabbath',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-19.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7700,7 +7700,7 @@ export const products = [
   {
     id: 773,
     name: 'Camiseta Municipal Waste',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/metal/m-20.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7713,7 +7713,7 @@ export const products = [
   {
     id: 774,
     name: 'Camiseta Metallica',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-21.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7726,7 +7726,7 @@ export const products = [
   {
     id: 775,
     name: 'Camiseta Rush',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-22.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7739,7 +7739,7 @@ export const products = [
   {
     id: 776,
     name: 'Camiseta Anthrax',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-23.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7752,7 +7752,7 @@ export const products = [
   {
     id: 777,
     name: 'Camiseta Dio',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-24.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7765,7 +7765,7 @@ export const products = [
   {
     id: 778,
     name: 'Camiseta Kiss',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-25.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7778,7 +7778,7 @@ export const products = [
   {
     id: 779,
     name: 'Camiseta Cannibal Corpse',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-26.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7791,7 +7791,7 @@ export const products = [
   {
     id: 780,
     name: 'Camiseta Ghost',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/metal/m-27.webp',
     type: 'Clothing',
     category: 'Metal',
@@ -7804,7 +7804,7 @@ export const products = [
   {
     id: 781,
     name: 'Blusa Ramones',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-1.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7817,7 +7817,7 @@ export const products = [
   {
     id: 782,
     name: 'Crop Top AC/DC',
-    price: '11000',
+    price: 11000,
     image: '/images/ropa/mujer/m-2.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7830,7 +7830,7 @@ export const products = [
   {
     id: 783,
     name: "Blusa Guns N' Roses",
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-3.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7843,7 +7843,7 @@ export const products = [
   {
     id: 784,
     name: 'Blusa Korn',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-4.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7856,7 +7856,7 @@ export const products = [
   {
     id: 785,
     name: 'Chaqueta de Cuero',
-    price: '44000',
+    price: 44000,
     image: '/images/ropa/mujer/m-5.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7869,7 +7869,7 @@ export const products = [
   {
     id: 786,
     name: 'Falda de cuero',
-    price: '24000',
+    price: 24000,
     image: '/images/ropa/mujer/m-6.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7882,7 +7882,7 @@ export const products = [
   {
     id: 787,
     name: "Medias de Guns N' Roses",
-    price: '8000',
+    price: 8000,
     image: '/images/ropa/mujer/m-7.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7895,7 +7895,7 @@ export const products = [
   {
     id: 788,
     name: "Blusa Guns N' Roses",
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-8.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7908,7 +7908,7 @@ export const products = [
   {
     id: 789,
     name: 'Blusa Cat Flag',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-9.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7921,7 +7921,7 @@ export const products = [
   {
     id: 790,
     name: 'Blusa Punk Rock',
-    price: '12000',
+    price: 12000,
     image: '/images/ropa/mujer/m-10.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7934,7 +7934,7 @@ export const products = [
   {
     id: 791,
     name: 'Blusa Ramones',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-11.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7947,7 +7947,7 @@ export const products = [
   {
     id: 792,
     name: 'Falda Grunge',
-    price: '17000',
+    price: 17000,
     image: '/images/ropa/mujer/m-12.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7960,7 +7960,7 @@ export const products = [
   {
     id: 793,
     name: 'Blusa Nirvana',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-13.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7973,7 +7973,7 @@ export const products = [
   {
     id: 794,
     name: 'tenis',
-    price: '21000',
+    price: 21000,
     image: '/images/ropa/mujer/m-14.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7986,7 +7986,7 @@ export const products = [
   {
     id: 795,
     name: 'Blusa Kiss',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-15.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -7999,7 +7999,7 @@ export const products = [
   {
     id: 796,
     name: 'Short Mezclilla',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-16.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8012,7 +8012,7 @@ export const products = [
   {
     id: 797,
     name: 'Blusa Social Distortion',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-17.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8025,7 +8025,7 @@ export const products = [
   {
     id: 798,
     name: 'Blusa Calavera',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-18.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8038,7 +8038,7 @@ export const products = [
   {
     id: 799,
     name: 'Blusa Green Day',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-19.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8051,7 +8051,7 @@ export const products = [
   {
     id: 800,
     name: 'Chaqueta de Cuero',
-    price: '46000',
+    price: 46000,
     image: '/images/ropa/mujer/m-20.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8064,7 +8064,7 @@ export const products = [
   {
     id: 801,
     name: 'Short Mezclilla',
-    price: '24000',
+    price: 24000,
     image: '/images/ropa/mujer/m-21.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8077,7 +8077,7 @@ export const products = [
   {
     id: 802,
     name: 'Blusa Iron Maiden',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-22.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8090,7 +8090,7 @@ export const products = [
   {
     id: 803,
     name: 'Crop Top Nirvana',
-    price: '11000',
+    price: 11000,
     image: '/images/ropa/mujer/m-23.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8103,7 +8103,7 @@ export const products = [
   {
     id: 804,
     name: 'Blusa Pulp Fiction',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/mujer/m-24.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8116,7 +8116,7 @@ export const products = [
   {
     id: 805,
     name: 'Blusa Aerosmith',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/mujer/m-25.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8129,7 +8129,7 @@ export const products = [
   {
     id: 806,
     name: 'Tenis',
-    price: '21000',
+    price: 21000,
     image: '/images/ropa/mujer/m-26.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8142,7 +8142,7 @@ export const products = [
   {
     id: 807,
     name: 'Blusa Black Sabbath',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/mujer/m-27.webp',
     type: 'Clothing',
     category: 'Mujer',
@@ -8155,7 +8155,7 @@ export const products = [
   {
     id: 808,
     name: 'Camiseta Adolescents',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-27.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8168,7 +8168,7 @@ export const products = [
   {
     id: 809,
     name: 'Camiseta Reel Big Fish ',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-28.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8181,7 +8181,7 @@ export const products = [
   {
     id: 810,
     name: 'Camiseta Nofx',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-29.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8194,7 +8194,7 @@ export const products = [
   {
     id: 811,
     name: 'Camiseta Dropkick Murphys',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-30.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8207,7 +8207,7 @@ export const products = [
   {
     id: 812,
     name: 'Camiseta Void',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-31.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8220,7 +8220,7 @@ export const products = [
   {
     id: 813,
     name: 'Camiseta Lagwagon',
-    price: '13000',
+    price: 13000,
     image: '/images/ropa/punk/p-32.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8233,7 +8233,7 @@ export const products = [
   {
     id: 814,
     name: 'Camiseta The Offspring',
-    price: '12000',
+    price: 12000,
     image: '/images/ropa/punk/p-33.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8246,7 +8246,7 @@ export const products = [
   {
     id: 815,
     name: 'Camiseta SNFU',
-    price: '16000',
+    price: 16000,
     image: '/images/ropa/punk/p-34.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8259,7 +8259,7 @@ export const products = [
   {
     id: 816,
     name: 'Camiseta Bold',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-35.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8272,7 +8272,7 @@ export const products = [
   {
     id: 817,
     name: 'Camiseta H2O',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-36.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8285,7 +8285,7 @@ export const products = [
   {
     id: 818,
     name: 'Camiseta Bad Religion',
-    price: '12000',
+    price: 12000,
     image: '/images/ropa/punk/p-37.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8298,7 +8298,7 @@ export const products = [
   {
     id: 819,
     name: 'Camiseta Dead Kennedys',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-38.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8311,7 +8311,7 @@ export const products = [
   {
     id: 820,
     name: 'Camiseta Black Flag',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-39.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8324,7 +8324,7 @@ export const products = [
   {
     id: 821,
     name: 'Camiseta Minor Threat',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-40.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8337,7 +8337,7 @@ export const products = [
   {
     id: 822,
     name: 'Camiseta SSD',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-41.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8350,7 +8350,7 @@ export const products = [
   {
     id: 823,
     name: 'Camiseta Youth of Today',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-42.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8363,7 +8363,7 @@ export const products = [
   {
     id: 824,
     name: 'Camiseta Hüsker Dü',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-43.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8376,7 +8376,7 @@ export const products = [
   {
     id: 825,
     name: 'Camiseta Descendents',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-44.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8389,7 +8389,7 @@ export const products = [
   {
     id: 826,
     name: 'Camiseta Sick of It All',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-45.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8402,7 +8402,7 @@ export const products = [
   {
     id: 827,
     name: 'Camiseta Shelter',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-46.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8415,7 +8415,7 @@ export const products = [
   {
     id: 828,
     name: 'Camiseta SNFU',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-47.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8428,7 +8428,7 @@ export const products = [
   {
     id: 829,
     name: 'Camiseta RKL',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-48.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8441,7 +8441,7 @@ export const products = [
   {
     id: 830,
     name: 'Camiseta All',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-49.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8454,7 +8454,7 @@ export const products = [
   {
     id: 831,
     name: 'Camiseta Warzone',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-50.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8467,7 +8467,7 @@ export const products = [
   {
     id: 832,
     name: 'Camiseta Satanic Surfers',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-51.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8480,7 +8480,7 @@ export const products = [
   {
     id: 833,
     name: 'Camiseta Green Day',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-52.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8493,7 +8493,7 @@ export const products = [
   {
     id: 834,
     name: 'Camiseta Avail',
-    price: '15000',
+    price: 15000,
     image: '/images/ropa/punk/p-53.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8506,7 +8506,7 @@ export const products = [
   {
     id: 835,
     name: 'Camiseta Earth Crisis',
-    price: '14000',
+    price: 14000,
     image: '/images/ropa/punk/p-54.webp',
     type: 'Clothing',
     category: 'Punk',
@@ -8519,7 +8519,7 @@ export const products = [
   {
     id: 1000,
     name: 'Pulsera unisex de cuero sintético',
-    price: '10000',
+    price: 10000,
     image: '/images/accesorios/accesorios/a-1.webp',
     material: 'Cuero / Acero',
     longitud: '8 pulgadas',
@@ -8531,7 +8531,7 @@ export const products = [
   {
     id: 1001,
     name: 'Juego de 3 pulseras punk rock',
-    price: '11000',
+    price: 11000,
     image: '/images/accesorios/accesorios/a-1.webp',
     material: 'Cuero / Metal',
     longitud: '8"',
@@ -8543,7 +8543,7 @@ export const products = [
   {
     id: 1002,
     name: 'FaithHeart Brazalete vikingo para hombre',
-    price: '9000',
+    price: 9000,
     image: '/images/accesorios/accesorios/a-3.webp',
     material: 'Acero',
     longitud: '6.8 cm',
@@ -8555,7 +8555,7 @@ export const products = [
   {
     id: 1003,
     name: 'HZMAN Pulsera de serpiente vikinga para hombre, de acero inoxidable, mitología nórdica, Jormungandr',
-    price: '11000',
+    price: 11000,
     image: '/images/accesorios/accesorios/a-4.webp',
     material: 'Cuero / Metal',
     longitud: '8.5"',
@@ -8567,7 +8567,7 @@ export const products = [
   {
     id: 1004,
     name: 'Motorhead Lemmy Kilmister 6.3 in Fig',
-    price: '18000',
+    price: 18000,
     image: '/images/accesorios/coleccionables/c-1.webp',
     material: 'Plástico',
     longitud: '6.29"',
@@ -8579,7 +8579,7 @@ export const products = [
   {
     id: 1005,
     name: 'Monopoly Iron Maiden',
-    price: '20000',
+    price: 20000,
     image: '/images/accesorios/coleccionables/c-2.webp',
     material: 'Plástico',
     longitud: '2"l. x 15"',
@@ -8591,7 +8591,7 @@ export const products = [
   {
     id: 1006,
     name: 'Funko Pop! Moment Deluxe: Metallica Master of Puppets Tour (1986)',
-    price: '60000',
+    price: 60000,
     image: '/images/accesorios/coleccionables/c-3.webp',
     material: 'Plástico',
     longitud: '18"l. x 4,67"an. x 13"',
@@ -8603,7 +8603,7 @@ export const products = [
   {
     id: 1007,
     name: 'AQUARIUS Pink Floyd - Baraja de cartas',
-    price: '8000',
+    price: 8000,
     image: '/images/accesorios/coleccionables/c-4.webp',
     material: 'Plástico',
     longitud: '3,54"l. x 2,56"',
@@ -8615,7 +8615,7 @@ export const products = [
   {
     id: 1008,
     name: 'Vaso Térmico de Misfits',
-    price: '18000',
+    price: 18000,
     image: '/images/accesorios/coleccionables/c-5.webp',
     material: 'Acero inoxidable',
     longitud: '3,2" x 6,6"',
@@ -8627,7 +8627,7 @@ export const products = [
   {
     id: 1009,
     name: 'Funk Pop Axl Rose',
-    price: '10000',
+    price: 10000,
     image: '/images/accesorios/coleccionables/c-6.webp',
     material: 'Plástico',
     longitud: '2,5" x 2,5"',
@@ -8639,7 +8639,7 @@ export const products = [
   {
     id: 1010,
     name: 'Figura coleccionable de pato de Eddie The Trooper',
-    price: '12000',
+    price: 12000,
     image: '/images/accesorios/coleccionables/c-7.webp',
     material: 'Plástico',
     longitud: '5,9" x 4,3"an',
@@ -8651,7 +8651,7 @@ export const products = [
   {
     id: 1011,
     name: 'Nirvana Incesticide rompecabezas de 500 piezas',
-    price: '14000',
+    price: 14000,
     image: '/images/accesorios/coleccionables/c-8.webp',
     material: 'Cartón',
     longitud: '16 x 16"',
@@ -8663,7 +8663,7 @@ export const products = [
   {
     id: 1012,
     name: 'Taza de café negra - Metallica Kill Em All',
-    price: '15000',
+    price: 15000,
     image: '/images/accesorios/coleccionables/c-9.webp',
     material: 'Cerámica',
     longitud: '5" x 3"',
