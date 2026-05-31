@@ -3,42 +3,50 @@
     <div class="generoContenido">
       <h2 class="title">Buscar CD'S por Género</h2>
       <div class="grid">
-        <router-link to="/hard-core" class="card" data-aos="fade-in">
+        <router-link to="/catalogo/Hardcore" class="card" data-aos="fade-in">
           <img src="/icons/icon-1.png" alt="Metal Icon" class="genre-icon" />
           <h3>Hardcore</h3>
         </router-link>
 
-        <router-link to="/punk-rock" class="card" data-aos="fade-in">
+        <router-link to="/catalogo/Punk Rock" class="card" data-aos="fade-in">
           <img src="/icons/icon-2.png" alt="Metal Icon" class="genre-icon" />
           <h3>Punk Rock</h3>
         </router-link>
 
-        <router-link to="/ska-music" class="card" data-aos="fade-in">
+        <router-link to="/catalogo/Ska" class="card" data-aos="fade-in">
           <img src="/icons/icon-3.png" alt="Metal Icon" class="genre-icon" />
           <h3>Ska</h3>
         </router-link>
 
-        <router-link to="/rock-alternativo" class="card" data-aos="fade-int">
+        <router-link
+          to="/catalogo/Alternativo"
+          class="card"
+          data-aos="fade-int"
+        >
           <img src="/icons/icon-4.png" alt="Metal Icon" class="genre-icon" />
           <h3>Alternativo</h3>
         </router-link>
 
-        <router-link to="/grunge-music" class="card" data-aos="fade-in">
+        <router-link to="/catalogo/Grunge" class="card" data-aos="fade-in">
           <img src="/icons/icon-5.png" alt="Metal Icon" class="genre-icon" />
           <h3>Grunge</h3>
         </router-link>
 
-        <router-link to="/metal-music" class="card" data-aos="fade-in">
+        <router-link to="/catalogo/Metal" class="card" data-aos="fade-in">
           <img src="/icons/icon-6.png" alt="Metal Icon" class="genre-icon" />
           <h3>Metal</h3>
         </router-link>
 
-        <router-link to="/hip-hop" class="card" data-aos="fade-in">
+        <router-link to="/catalogo/Hip Hop" class="card" data-aos="fade-in">
           <img src="/icons/icon-7.png" alt="Metal Icon" class="genre-icon" />
           <h3>Hip Hop</h3>
         </router-link>
 
-        <router-link to="/rock-progresivo" class="card" data-aos="fade-in">
+        <router-link
+          to="/catalogo/Rock Progresivo"
+          class="card"
+          data-aos="fade-in"
+        >
           <img src="/icons/icon-8.png" alt="Metal Icon" class="genre-icon" />
           <h3>Progresivo</h3>
         </router-link>
@@ -91,7 +99,9 @@ export default {
   border: 2px solid #ff005580;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   cursor: pointer;
   text-decoration: none;
   color: inherit;

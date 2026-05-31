@@ -17,25 +17,81 @@
         <li class="has-submenu">
           <a href="#">Música</a>
           <ul class="submenu">
-            <li><router-link to="/punk-rock" @click="closeMenu">CDs Punk Rock</router-link></li>
-            <li><router-link to="/hard-core" @click="closeMenu">CDs Hardcore</router-link></li>
-            <li><router-link to="/metal-music" @click="closeMenu">CDs Metal</router-link></li>
-            <li><router-link to="/grunge-music" @click="closeMenu">CDs Grunge</router-link></li>
-            <li><router-link to="/rock-alternativo" @click="closeMenu">CDs Rock Alternativo</router-link></li>
-            <li><router-link to="/ska-music" @click="closeMenu">CDs Ska</router-link></li>
-            <li><router-link to="/hip-hop" @click="closeMenu">CDs Hip Hop</router-link></li>
-            <li><router-link to="/rock-progresivo" @click="closeMenu">CDs Rock Progresivo</router-link></li>
+            <li>
+              <router-link to="/catalogo/Punk Rock" @click="closeMenu"
+                >CDs Punk Rock</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/catalogo/Hardcore" @click="closeMenu"
+                >CDs Hardcore</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/catalogo/Metal" @click="closeMenu"
+                >CDs Metal</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/catalogo/Grunge" @click="closeMenu"
+                >CDs Grunge</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/catalogo/Alternativo" @click="closeMenu"
+                >CDs Rock Alternativo</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/catalogo/Ska" @click="closeMenu"
+                >CDs Ska</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/catalogo/Hip Hop" @click="closeMenu"
+                >CDs Hip Hop</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/catalogo/Rock Progresivo" @click="closeMenu"
+                >CDs Rock Progresivo</router-link
+              >
+            </li>
           </ul>
         </li>
         <li class="has-submenu">
           <a href="#">Mercadería</a>
           <ul class="submenu">
-            <li><router-link to="/ropa-punk" @click="closeMenu">Camisetas Punk / Ska</router-link></li>
-            <li><router-link to="/ropa-metal" @click="closeMenu">Camisetas Metal / Progresivo</router-link></li>
-            <li><router-link to="/ropa-grunge" @click="closeMenu">Camisetas Grunge / Alternativo</router-link></li>
-            <li><router-link to="/ropa-mujer" @click="closeMenu">Ropa Mujer</router-link></li>
-            <li><router-link to="/catalogo-accesorios" @click="closeMenu">Accesorios</router-link></li>
-            <li><router-link to="/articulos-coleccionables" @click="closeMenu">Artículos Coleccionables</router-link></li>
+            <li>
+              <router-link to="/ropa-punk" @click="closeMenu"
+                >Camisetas Punk / Ska</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/ropa-metal" @click="closeMenu"
+                >Camisetas Metal / Progresivo</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/ropa-grunge" @click="closeMenu"
+                >Camisetas Grunge / Alternativo</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/ropa-mujer" @click="closeMenu"
+                >Ropa Mujer</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/catalogo-accesorios" @click="closeMenu"
+                >Accesorios</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/articulos-coleccionables" @click="closeMenu"
+                >Artículos Coleccionables</router-link
+              >
+            </li>
           </ul>
         </li>
         <li><a href="/contacto">Contacto</a></li>
@@ -56,17 +112,17 @@ export default {
   data() {
     return {
       menuActive: false,
-    };
+    }
   },
   methods: {
     toggleMenu() {
-      this.menuActive = !this.menuActive;
+      this.menuActive = !this.menuActive
     },
     closeMenu() {
-      this.menuActive = false;
+      this.menuActive = false
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -210,8 +266,8 @@ export default {
   }
 
   .nav-menu a {
-  color: var(--color-text-light);
-}
+    color: var(--color-text-light);
+  }
 
   .nav-menu.active {
     display: flex;
@@ -272,5 +328,4 @@ export default {
     display: block;
   }
 }
-
 </style>

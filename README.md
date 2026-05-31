@@ -11,26 +11,46 @@ This project simulates an online music store where users can explore CDs by genr
 
 It focuses on:
 
-* Component reusability
-* UI/UX design
-* Dynamic filtering
-* Clean visual identity inspired by retro music aesthetics
+- Component reusability
+- UI/UX design
+- Dynamic filtering
+- Clean visual identity inspired by retro music aesthetics
 
 ## ⚙️ Tech Stack
 
-* Vue.js
-* JavaScript
-* HTML5
-* CSS3 (Custom Properties)
+- Vue.js
+- JavaScript
+- HTML5
+- CSS3 (Custom Properties)
 
 ## ✨ Features
 
-* 🎶 Filter CDs by music genre
-* 📀 Dynamic product rendering using reusable Vue components
-* 🔍 Product detail modal with price and information
-* 👕 Clothing section with selectable sizes
-* 🎨 Custom color palette inspired by 90s music culture
-* 📱 Responsive layout
+- 🎶 Filter CDs by music genre
+- 📀 Dynamic product rendering using reusable Vue components
+- 🔍 Product detail modal with price and information
+- 👕 Clothing section with selectable sizes
+- 🎨 Custom color palette inspired by 90s music culture
+- 📱 Responsive layout
+
+## 🛠️ Refactorización de Componentes: Optimización de Vistas por Género
+
+### 🔴 Antes del Refactor (Deuda Técnica)
+
+Originalmente, la aplicación contaba con **8 componentes individuales** para renderizar las distintas páginas de géneros musicales (ej. `PunkRock.vue`/`.js`, `Hardcore.vue`, `PopPunk.vue`, etc.).
+
+- **Problema:** Esto generaba una gran duplicidad de código (_Don't Repeat Yourself - DRY_ roto), dificultaba el mantenimiento y escalabilidad, ya que cualquier cambio en la interfaz requería modificar los 8 archivos por separado.
+
+### 🟢 Después del Refactor (Componente Reutilizable Único)
+
+Se eliminaron los 8 componentes redundantes y se unificó toda la lógica en **un solo componente dinámico y reutilizable**.
+
+- **¿Cómo funciona?** El nuevo componente centralizado detecta el género musical de forma dinámica (generalmente a través de parámetros de la URL de la ruta o mediante _props_).
+- **Filtrado Eficiente:** Con el género identificado, el componente realiza un único filtro sobre el estado global de productos (`products.filter(p => p.genre === generoActivo)`) y renderiza la grilla musical correspondiente de manera automática.
+
+### 🚀 Beneficios Obtenidos:
+
+- **Mantenibilidad:** El código visual y la lógica de filtrado ahora viven en un solo lugar. Si se añade un nuevo género a la tienda de música, no hay que crear código nuevo, la interfaz lo maneja en automático.
+- **Reducción de Peso:** Menos archivos en el proyecto, lo que optimiza el rendimiento y la limpieza del repositorio en GitHub.
 
 ## 🎨 Design System
 
@@ -74,19 +94,19 @@ https://garage94.vercel.app/
 
 ## 🔮 Future Improvements
 
-* 🛒 Shopping cart functionality
-* 📦 Inventory management system
-* 🔐 User authentication (login/register)
-* 💳 Checkout and payment flow
-* 📜 Order history tracking
-* 🔗 Backend integration (Node.js / Firebase)
+- 🛒 Shopping cart functionality
+- 📦 Inventory management system
+- 🔐 User authentication (login/register)
+- 💳 Checkout and payment flow
+- 📜 Order history tracking
+- 🔗 Backend integration (Node.js / Firebase)
 
 ## 📚 What I Learned
 
-* Building scalable UI with Vue components
-* Managing state across components
-* Creating reusable and maintainable structures
-* Designing cohesive UI systems
+- Building scalable UI with Vue components
+- Managing state across components
+- Creating reusable and maintainable structures
+- Designing cohesive UI systems
 
 ## 👤 Author
 
