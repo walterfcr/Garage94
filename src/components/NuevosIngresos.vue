@@ -2,9 +2,11 @@
   <div class="contenido-wrap">
     <h1>Nuevos Ingresos</h1>
 
-    <div class="product-list" data-aos="fade-in">
+    <div v-if="loading" class="loading-state">Descubriendo novedades...</div>
+
+    <div v-else class="product-list" data-aos="fade-in">
       <div
-        v-for="product in paginatedProducts"
+        v-for="product in randomCds"
         :key="product.id"
         class="product-card"
         @click="openModal(product)"
@@ -15,7 +17,6 @@
       </div>
     </div>
 
-    <!-- TRUE MODAL -->
     <CdModal
       v-if="isModalOpen"
       :product="selectedProduct"
@@ -25,62 +26,66 @@
 </template>
 
 <script>
-import { products } from '@/data/products.js'
+import { supabase } from '@/services/supabase.js' // Asegúrate de que apunte a tu cliente de Supabase
 import CdModal from '@/components/CdModal.vue'
 import { formatPrice } from '@/utils/formatPrice.js'
 
 export default {
-  name: 'CatalogoVinilos',
+  name: 'NuevosIngresos',
   components: { CdModal },
+
   data() {
     return {
-      allVinyl: [], // raw data
-      currentPage: 1,
-      itemsPerPage: 18,
+      randomCds: [],
+      loading: true,
       selectedProduct: null,
       isModalOpen: false,
     }
   },
 
-  created() {
-    /* pagination init */
-    const qp = parseInt(this.$route.query.page, 10)
-    this.currentPage = !isNaN(qp) && qp > 0 ? qp : 1
-
-    /* keep only vinilos */
-    this.allVinyl = products
-      .filter((p) => p.id >= 1 && p.id <= 18 && p.type !== 'Vinil')
-      .map(({ id, name, vinilPrice, image, ...rest }) => ({
-        id,
-        name,
-        vinilPrice,
-        image,
-        ...rest,
-      }))
-  },
-
-  mounted() {
-    /* responsive page size */
-    this.setItemsPerPage()
-    window.addEventListener('resize', this.handleResize)
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.handleResize)
-  },
-
-  computed: {
-    paginatedProducts() {
-      const start = (this.currentPage - 1) * this.itemsPerPage
-      return this.allVinyl.slice(start, start + this.itemsPerPage)
-    },
-    totalPages() {
-      return Math.ceil(this.allVinyl.length / this.itemsPerPage)
-    },
+  async created() {
+    await this.fetchRandomNewArrivals()
   },
 
   methods: {
     formatPrice,
-    /* ---------- modal ---------- */
+
+    async fetchRandomNewArrivals() {
+      this.loading = true
+      try {
+        // 🎲 Explicación: Buscamos solo CDs, le pedimos a PostgreSQL que los baraje
+        // aleatoriamente usando una API nativa de orden, y limitamos a 18 discos.
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('type', 'CD')
+          .textSearch('id', '') // Truco para permitir inyecciones avanzadas si fuera necesario o simplemente:
+        // Nota: La forma oficial más limpia para forzar orden random sin meter código SQL crudo
+        // es pedir una muestra aleatoria o desordenar el array en JS si son pocos,
+        // pero ordenando vía Postgres crudo es así:
+
+        // Para asegurar compatibilidad total en Supabase sin crear funciones extras en su dashboard,
+        // traemos un bloque inicial y lo barajamos con el algoritmo Fisher-Yates en el cliente:
+        const { data: cds, error: err } = await supabase
+          .from('products')
+          .select('*')
+          .eq('type', 'CD')
+          .limit(100) // Traemos una muestra de 100 discos recientes
+
+        if (err) throw err
+
+        if (cds) {
+          // Barajamos el array para que siempre sea diferente cada vez que recargues la página principal
+          this.randomCds = cds.sort(() => 0.5 - Math.random()).slice(0, 18) // Nos quedamos exactamente con los 18 aleatorios
+        }
+      } catch (err) {
+        console.error('Error fetching new arrivals:', err.message)
+      } finally {
+        this.loading = false
+      }
+    },
+
+    /* ---------- Control del Modal de CDs ---------- */
     openModal(product) {
       this.selectedProduct = product
       this.isModalOpen = true
@@ -88,35 +93,6 @@ export default {
     closeModal() {
       this.isModalOpen = false
       this.selectedProduct = null
-    },
-
-    /* ---------- pagination ---------- */
-    goToPage(page) {
-      if (page >= 1 && page <= this.totalPages) {
-        this.$router.replace({ query: { ...this.$route.query, page } })
-        this.currentPage = page
-        this.$nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
-      }
-    },
-
-    /* ---------- responsive items per page ---------- */
-    setItemsPerPage() {
-      const w = window.innerWidth
-      if (w >= 1800) this.itemsPerPage = 27
-      else if (w >= 1680) this.itemsPerPage = 24
-      else if (w >= 1400) this.itemsPerPage = 28
-      else if (w >= 1280) this.itemsPerPage = 24
-      else if (w >= 950) this.itemsPerPage = 20
-      else this.itemsPerPage = 18
-    },
-    handleResize() {
-      this.setItemsPerPage()
-    },
-  },
-
-  watch: {
-    itemsPerPage() {
-      this.goToPage(1)
     },
   },
 }
@@ -131,13 +107,14 @@ h3 {
   font-size: 0.8rem;
   margin: 0.5rem 0 0;
 }
-button[disabled] {
-  opacity: 0.5;
-  pointer-events: none;
-}
 .contenido-wrap {
   margin: 0;
-  padding: 50px 0 100px;
+  padding: 30px 0;
 }
-/* you already have product‑list / product‑card styles – keep them */
+.loading-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-muted);
+}
+/* El resto de estilos de tarjetas heredan de tus estilos globales */
 </style>

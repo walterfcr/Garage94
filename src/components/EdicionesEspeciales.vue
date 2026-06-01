@@ -2,9 +2,13 @@
   <div class="wrap-especiales">
     <h1>Ediciones Especiales</h1>
 
-    <div class="product-list">
+    <div v-if="loading" class="loading-state">
+      Cargando ediciones de colección...
+    </div>
+
+    <div v-else class="product-list">
       <div
-        v-for="(product, index) in paginatedProducts"
+        v-for="(product, index) in especiales"
         :key="product.id"
         class="product-card"
         data-aos="fade-in"
@@ -17,7 +21,6 @@
       </div>
     </div>
 
-    <!-- Modal -->
     <CdModal
       v-if="isModalOpen"
       :product="selectedProduct"
@@ -27,54 +30,49 @@
 </template>
 
 <script>
-import { products } from '@/data/products.js'
+import { supabase } from '@/services/supabase.js'
 import CdModal from '@/components/CdModal.vue'
 import { formatPrice } from '@/utils/formatPrice.js'
 
 export default {
   name: 'EdicionesEspeciales',
   components: { CdModal },
+
   data() {
     return {
-      cdProducts: [],
-      currentPage: 1,
-      itemsPerPage: 18,
+      especiales: [],
+      loading: true,
       isModalOpen: false,
       selectedProduct: null,
     }
   },
-  created() {
-    const page = parseInt(this.$route.query.page, 10)
-    this.currentPage = !isNaN(page) && page > 0 ? page : 1
 
-    this.cdProducts = products
-      .filter((item) => item.type === 'Box-Set')
-      .map(({ id, name, vinilPrice, image, ...rest }) => ({
-        id,
-        name,
-        vinilPrice,
-        image,
-        ...rest,
-      }))
+  async created() {
+    await this.fetchEspeciales()
   },
-  mounted() {
-    this.setItemsPerPage()
-    window.addEventListener('resize', this.handleResize)
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.handleResize)
-  },
-  computed: {
-    paginatedProducts() {
-      const start = (this.currentPage - 1) * this.itemsPerPage
-      return this.cdProducts.slice(start, start + this.itemsPerPage)
-    },
-    totalPages() {
-      return Math.ceil(this.cdProducts.length / this.itemsPerPage)
-    },
-  },
+
   methods: {
     formatPrice,
+
+    async fetchEspeciales() {
+      this.loading = true
+      try {
+        // Traemos de Supabase únicamente las filas correspondientes a Box-Set
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('type', 'Box-Set')
+          .order('id', { ascending: true })
+
+        if (error) throw error
+        this.especiales = data || []
+      } catch (err) {
+        console.error('Error fetching especiales:', err.message)
+      } finally {
+        this.loading = false
+      }
+    },
+
     openModal(product) {
       this.selectedProduct = product
       this.isModalOpen = true
@@ -82,30 +80,6 @@ export default {
     closeModal() {
       this.isModalOpen = false
       this.selectedProduct = null
-    },
-    goToPage(page) {
-      if (page >= 1 && page <= this.totalPages) {
-        this.$router.replace({ query: { ...this.$route.query, page } })
-        this.currentPage = page
-        this.$nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
-      }
-    },
-    setItemsPerPage() {
-      const w = window.innerWidth
-      if (w >= 1800) this.itemsPerPage = 27
-      else if (w >= 1680) this.itemsPerPage = 24
-      else if (w >= 1400) this.itemsPerPage = 28
-      else if (w >= 1280) this.itemsPerPage = 24
-      else if (w >= 950) this.itemsPerPage = 20
-      else this.itemsPerPage = 18
-    },
-    handleResize() {
-      this.setItemsPerPage()
-    },
-  },
-  watch: {
-    itemsPerPage() {
-      this.goToPage(1)
     },
   },
 }
@@ -129,5 +103,9 @@ h3 {
   margin: 0;
   padding: 50px 0 100px;
 }
-/* use your global .product-list and .product-card styles */
+.loading-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-muted);
+}
 </style>

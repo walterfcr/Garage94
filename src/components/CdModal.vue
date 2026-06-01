@@ -12,12 +12,12 @@
         <div class="column">
           <h2>Álbum: {{ product.name }}</h2>
           <p><strong>Artista:</strong> {{ product.band }}</p>
-          <p><strong>Género:</strong> {{ product.genreDescription }}</p>
+          <p><strong>Género:</strong> {{ product.genre_description }}</p>
           <p><strong>Disquera:</strong> {{ product.label }}</p>
-          <p><strong>N.º de discos:</strong> {{ product.numDiscs }}</p>
-          <p><strong>Lanzamiento:</strong> {{ product.releaseDate }}</p>
+          <p><strong>N.º de discos:</strong> {{ product.num_discs }}</p>
+          <p><strong>Lanzamiento:</strong> {{ product.release_date }}</p>
           <p><strong>Tipo:</strong> {{ product.type }}</p>
-          <p><strong>Item #:</strong> {{ product.itemNumber }}</p>
+          <p><strong>Item #:</strong> {{ product.item_number }}</p>
         </div>
 
         <!-- column 3 -->

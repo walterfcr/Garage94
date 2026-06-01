@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PaginaPrincipal from './views/PaginaPrincipal.vue'
 import CatalogoCds from '@/views/CatalogoCds.vue'
 import CatalogoRopa from '@/views/CatalogoRopa.vue'
-import VinilCollection from './components/VinilCollection.vue'
+import EdicionesEspeciales from './components/EdicionesEspeciales.vue'
 import CatalogoMercancia from '@/views/CatalogoMercancia.vue'
 import ContactForm from './components/ContactForm.vue'
 import AppNosotros from '@/components/AppNosotros.vue'
@@ -18,11 +18,6 @@ const routes = [
   },
 
   {
-    path: '/vinil-collection',
-    name: 'vinil-collection',
-    component: VinilCollection,
-  },
-  {
     path: '/ropa/:categoria',
     name: 'CatalogoRopa',
     component: CatalogoRopa,
@@ -36,14 +31,9 @@ const routes = [
   {
     path: '/ediciones-especiales',
     name: 'ediciones-especiales',
-    component: VinilCollection,
+    component: EdicionesEspeciales,
   },
   { path: '/contacto', name: 'Contacto', component: ContactForm },
-  {
-    path: '/cd/:id',
-    name: 'cd-details',
-    component: () => import('./views/CdDetails.vue'),
-  },
 ]
 
 const router = createRouter({

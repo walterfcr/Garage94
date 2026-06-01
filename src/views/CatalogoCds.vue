@@ -1,6 +1,6 @@
 <template>
   <div class="contenido-wrap">
-    <h1>Catálogo de CDs {{ currentGenreDisplay }}</h1>
+    <h1>Catálogo de {{ currentGenreDisplay }}</h1>
 
     <div v-if="loading" class="loading-state">Cargando productos...</div>
 
@@ -40,8 +40,8 @@
       @close="closeModal"
     />
 
-    <BuscarGenero />
-    <AppFooter />
+    <BuscarGenero v-if="!genreFromProp" />
+    <AppFooter v-if="!genreFromProp" />
   </div>
 </template>
 
@@ -55,6 +55,13 @@ import { formatPrice } from '@/utils/formatPrice.js'
 export default {
   name: 'CatalogoCds',
   components: { CdModal, BuscarGenero, AppFooter },
+
+  props: {
+    genreFromProp: {
+      type: String,
+      default: '',
+    },
+  },
 
   data() {
     return {
@@ -70,7 +77,11 @@ export default {
   computed: {
     // Detects genre from URL path parameter
     currentGenreDisplay() {
-      return this.$route.params.genre || 'Música'
+      const slug = this.genreFromProp || this.$route.params.genre || 'Música'
+      if (slug.toLowerCase() === 'vinyl' || slug.toLowerCase() === 'vinilos') {
+        return 'Vinilos'
+      }
+      return slug
     },
     paginatedProducts() {
       const start = (this.currentPage - 1) * this.itemsPerPage
@@ -104,52 +115,40 @@ export default {
     async fetchProductsByGenre() {
       this.loading = true
       try {
-        const { data, error } = await supabase
-          .from('products')
-          .select('*')
-          .eq('genre', this.currentGenreDisplay) // Restoring the genre check
-          .neq('type', 'Vinil')
+        // 🔍 Prioridad 1: La prop fija. Prioridad 2: La URL del navegador.
+        const categoriaUrl =
+          this.genreFromProp || this.$route.params.genre || ''
 
+        let query = supabase.from('products').select('*')
+
+        if (
+          categoriaUrl.toLowerCase() === 'vinyl' ||
+          categoriaUrl.toLowerCase() === 'vinilos'
+        ) {
+          query = query.eq('type', 'vinyl')
+        } else {
+          const generoFormateado = categoriaUrl
+            .split(' ')
+            .map(
+              (palabra) =>
+                palabra.charAt(0).toUpperCase() +
+                palabra.slice(1).toLowerCase(),
+            )
+            .join(' ')
+
+          query = query.eq('genre', generoFormateado).eq('type', 'CD')
+        }
+
+        const { data, error } = await query
         if (error) throw error
-        console.log('Client Target URL:', supabase.supabaseUrl)
-        // 1. Check if the database is giving your app ANY records at all
-        console.log('1. Total rows in database table:', data)
 
-        // 2. See what the URL parameter currently evaluates to
-        console.log(
-          '2. The current genre your URL is looking for:',
-          this.currentGenreDisplay,
-        )
-
-        // Filter down to match your route
-        const filtered = data.filter(
-          (p) => p.genre === this.currentGenreDisplay && p.type !== 'Vinil',
-        )
-        console.log('3. Rows matching after filtering:', filtered)
-
-        console.log('Supabase filtered data:', data)
-        this.cdProducts = data.map((p) => ({
-          id: p.id,
-          name: p.name,
-          band: p.band,
-          genre: p.genre,
-          genreDescription: p.genre_description, // mapped
-          label: p.label,
-          numDiscs: p.num_discs, // mapped
-          releaseDate: p.release_date, // mapped
-          type: p.type,
-          itemNumber: p.item_number, // mapped
-          image: p.image,
-          description: p.description,
-          price: p.price,
-        }))
+        this.cdProducts = data || []
       } catch (err) {
         console.error('Error fetching data from Supabase:', err.message)
       } finally {
         this.loading = false
       }
     },
-
     openModal(product) {
       this.selectedProduct = product
       this.isModalOpen = true
@@ -182,10 +181,11 @@ export default {
   },
 
   watch: {
-    // CRITICAL: If the user navigates from Punk to Hardcore,
-    // fetch new data without refreshing the page!
     '$route.params.genre': {
       async handler() {
+        // 🛑 Si el componente se instanció con una Prop fija, ignoramos los cambios de la URL
+        if (this.genreFromProp) return
+
         this.currentPage = 1
         await this.fetchProductsByGenre()
       },
