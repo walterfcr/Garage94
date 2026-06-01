@@ -63,32 +63,32 @@
           <a href="#">Mercadería</a>
           <ul class="submenu">
             <li>
-              <router-link to="/ropa-punk" @click="closeMenu"
+              <router-link to="/ropa/punk" @click="closeMenu"
                 >Camisetas Punk / Ska</router-link
               >
             </li>
             <li>
-              <router-link to="/ropa-metal" @click="closeMenu"
+              <router-link to="/ropa/metal" @click="closeMenu"
                 >Camisetas Metal / Progresivo</router-link
               >
             </li>
             <li>
-              <router-link to="/ropa-grunge" @click="closeMenu"
+              <router-link to="/ropa/grunge" @click="closeMenu"
                 >Camisetas Grunge / Alternativo</router-link
               >
             </li>
             <li>
-              <router-link to="/ropa-mujer" @click="closeMenu"
+              <router-link to="/ropa/mujer" @click="closeMenu"
                 >Ropa Mujer</router-link
               >
             </li>
             <li>
-              <router-link to="/catalogo-accesorios" @click="closeMenu"
+              <router-link to="/mercancia/accesorios" @click="closeMenu"
                 >Accesorios</router-link
               >
             </li>
             <li>
-              <router-link to="/articulos-coleccionables" @click="closeMenu"
+              <router-link to="/mercancia/coleccionables" @click="closeMenu"
                 >Artículos Coleccionables</router-link
               >
             </li>

@@ -8922,6 +8922,7 @@ export const products = [
       'Camiseta unisex de Ghost, confeccionada en 100% algodón suave y resistente, con diseño frontal que presenta el logo o imágenes icónicas de la banda, perfecta para fans del rock/metal teatral que buscan una prenda elegante, oscura y con mucho estilo.',
     itemNumber: 'CLTH-081',
   },
+
   {
     id: 781,
     name: 'Blusa Ramones',

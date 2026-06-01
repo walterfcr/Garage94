@@ -1,6 +1,6 @@
 <template>
   <div class="contenido-wrap">
-    <h1>Camisetas Grunge / Alternativo</h1>
+    <h1>Camisetas {{ formatTitle($route.params.categoria) }}</h1>
 
     <div class="product-list" data-aos="fade-in">
       <div
@@ -15,7 +15,6 @@
       </div>
     </div>
 
-    <!-- Pagination Controls -->
     <div class="pagination">
       <button @click="goToPage(currentPage - 1)" :disabled="currentPage === 1">
         Anterior
@@ -32,7 +31,6 @@
     <MercaSlider />
     <AppFooter />
 
-    <!-- Ropa Modal -->
     <RopaModal
       v-if="isModalOpen"
       :product="selectedProduct"
@@ -42,14 +40,14 @@
 </template>
 
 <script>
-import { products } from '@/data/products.js'
+import { supabase } from '@/services/supabase.js'
 import MercaSlider from '@/components/MercaSlider.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import RopaModal from '@/components/RopaModal.vue'
 import { formatPrice } from '@/utils/formatPrice.js'
 
 export default {
-  name: 'RopaGrunge',
+  name: 'CatalogoRopa',
   components: {
     MercaSlider,
     AppFooter,
@@ -57,23 +55,34 @@ export default {
   },
   data() {
     return {
-      cdProducts: [],
+      ropaProducts: [],
       currentPage: 1,
       itemsPerPage: 18,
       selectedProduct: null,
       isModalOpen: false,
     }
   },
-  created() {
-    const page = parseInt(this.$route.query.page, 10)
-    this.currentPage = !isNaN(page) && page > 0 ? page : 1
-
-    // Load all product data for modal use
-    this.cdProducts = products
-      .filter((item) => item.category === 'Grunge')
-      .map((item) => ({
-        ...item, // Keep all fields for modal (name, price, image, size, color, etc.)
-      }))
+  computed: {
+    paginatedProducts() {
+      const start = (this.currentPage - 1) * this.itemsPerPage
+      const end = start + this.itemsPerPage
+      return this.ropaProducts.slice(start, end)
+    },
+    totalPages() {
+      return Math.ceil(this.ropaProducts.length / this.itemsPerPage)
+    },
+  },
+  watch: {
+    '$route.params.categoria': {
+      immediate: true,
+      async handler(nuevaCategoria) {
+        await this.filtrarProductos(nuevaCategoria)
+        this.goToPage(1) // Reinicia a la página 1 después de que carguen los productos nuevos
+      },
+    },
+    itemsPerPage() {
+      this.goToPage(1)
+    },
   },
   mounted() {
     this.setItemsPerPage()
@@ -82,18 +91,33 @@ export default {
   beforeUnmount() {
     window.removeEventListener('resize', this.handleResize)
   },
-  computed: {
-    paginatedProducts() {
-      const start = (this.currentPage - 1) * this.itemsPerPage
-      const end = start + this.itemsPerPage
-      return this.cdProducts.slice(start, end)
-    },
-    totalPages() {
-      return Math.ceil(this.cdProducts.length / this.itemsPerPage)
-    },
-  },
   methods: {
     formatPrice,
+    async filtrarProductos(categoria) {
+      // Normaliza el parámetro de la URL (ej. "grunge" -> "Grunge")
+      const catFormateada =
+        categoria.charAt(0).toUpperCase() + categoria.slice(1).toLowerCase()
+
+      try {
+        // 📊 Hacemos la consulta en tiempo real a Supabase
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('type', 'Clothing')
+          .eq('category', catFormateada)
+
+        if (error) throw error
+
+        // Guardamos las camisetas que vinieron de la base de datos
+        this.ropaProducts = data || []
+      } catch (error) {
+        console.error('Error al traer la ropa de Supabase:', error.message)
+      }
+    },
+    formatTitle(text) {
+      if (!text) return ''
+      return text.charAt(0).toUpperCase() + text.slice(1)
+    },
     goToPage(page) {
       if (page >= 1 && page <= this.totalPages) {
         this.$router.replace({ query: { ...this.$route.query, page } })
@@ -102,20 +126,12 @@ export default {
     },
     setItemsPerPage() {
       const width = window.innerWidth
-
-      if (width >= 1800) {
-        this.itemsPerPage = 27
-      } else if (width >= 1680) {
-        this.itemsPerPage = 24
-      } else if (width >= 1400) {
-        this.itemsPerPage = 28
-      } else if (width >= 1280) {
-        this.itemsPerPage = 24
-      } else if (width >= 950) {
-        this.itemsPerPage = 20
-      } else {
-        this.itemsPerPage = 18
-      }
+      if (width >= 1800) this.itemsPerPage = 27
+      else if (width >= 1680) this.itemsPerPage = 24
+      else if (width >= 1400) this.itemsPerPage = 28
+      else if (width >= 1280) this.itemsPerPage = 24
+      else if (width >= 950) this.itemsPerPage = 20
+      else this.itemsPerPage = 18
     },
     handleResize() {
       this.setItemsPerPage()
@@ -129,35 +145,27 @@ export default {
       this.isModalOpen = false
     },
   },
-  watch: {
-    itemsPerPage() {
-      this.goToPage(1)
-    },
-  },
 }
 </script>
 
 <style scoped>
+/* Keeping your exact styles */
 h1 {
   text-align: center;
   color: var(----color-text-dark);
 }
-
 h3 {
   font-size: 0.8rem;
   margin: 0.5rem 0 0;
 }
-
 button[disabled] {
   opacity: 0.5;
   pointer-events: none;
 }
-
 .contenido-wrap {
   margin: 0;
   padding: 50px 0 0;
 }
-
 .product-card {
   cursor: pointer;
   transition: transform 0.2s ease;

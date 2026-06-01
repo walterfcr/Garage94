@@ -21,7 +21,7 @@
       No se encontraron discos para este género.
     </div>
 
-    <div v-if="totalPages > 1" class="pagination">
+    <div class="pagination">
       <button @click="goToPage(currentPage - 1)" :disabled="currentPage === 1">
         Anterior
       </button>

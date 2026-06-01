@@ -1,8 +1,7 @@
 <template>
   <div class="contenido-wrap">
-    <h1>Catálogo de Accesorios</h1>
+    <h1>Catálogo de {{ formatTitle($route.params.tipo) }}</h1>
 
-    <!-- lista de productos -->
     <div class="product-list" data-aos="fade-in">
       <div
         v-for="product in paginatedProducts"
@@ -16,7 +15,6 @@
       </div>
     </div>
 
-    <!-- paginación -->
     <div class="pagination">
       <button @click="goToPage(currentPage - 1)" :disabled="currentPage === 1">
         Anterior
@@ -30,7 +28,6 @@
       </button>
     </div>
 
-    <!-- MODAL ACCESORIOS -->
     <AccesoriosModal
       v-if="isModalOpen"
       :product="selectedProduct"
@@ -43,14 +40,14 @@
 </template>
 
 <script>
-import { products } from '@/data/products.js'
+import { supabase } from '@/services/supabase.js'
 import AccesoriosModal from '@/components/AccesoriosModal.vue'
 import MercaSlider from '@/components/MercaSlider.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import { formatPrice } from '@/utils/formatPrice.js'
 
 export default {
-  name: 'CatalogoAccesorios',
+  name: 'CatalogoMercancia',
   components: { AccesoriosModal, MercaSlider, AppFooter },
 
   data() {
@@ -63,20 +60,6 @@ export default {
     }
   },
 
-  created() {
-    const page = parseInt(this.$route.query.page, 10)
-    this.currentPage = !isNaN(page) && page > 0 ? page : 1
-    this.accessoryProducts = products.filter((p) => p.type === 'Accesorio')
-  },
-
-  mounted() {
-    this.setItemsPerPage()
-    window.addEventListener('resize', this.handleResize)
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.handleResize)
-  },
-
   computed: {
     paginatedProducts() {
       const start = (this.currentPage - 1) * this.itemsPerPage
@@ -87,8 +70,53 @@ export default {
     },
   },
 
+  watch: {
+    // Listens to URL shifts (e.g. switching tabs from Accessories to Collectibles)
+    '$route.params.tipo': {
+      immediate: true,
+      async handler(nuevoTipo) {
+        await this.cargarMercancia(nuevoTipo)
+        this.goToPage(1)
+      },
+    },
+    itemsPerPage() {
+      this.goToPage(1)
+    },
+  },
+
+  mounted() {
+    this.setItemsPerPage()
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+
   methods: {
     formatPrice,
+    async cargarMercancia(tipo) {
+      // Formats parameters to match DB entries ("accesorios" -> "Accesorio", "coleccionables" -> "Coleccionables")
+      let tipoBaseDatos = 'Accesorio'
+      if (tipo.toLowerCase().includes('colec')) {
+        tipoBaseDatos = 'Coleccionables'
+      }
+
+      try {
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('type', tipoBaseDatos)
+
+        if (error) throw error
+        this.accessoryProducts = data || []
+      } catch (error) {
+        console.error('Error fetching merchandise:', error.message)
+      }
+    },
+    formatTitle(tipo) {
+      if (!tipo) return ''
+      return tipo.charAt(0).toUpperCase() + tipo.slice(1).toLowerCase()
+    },
     openModal(product) {
       this.selectedProduct = product
       this.isModalOpen = true
@@ -117,17 +145,10 @@ export default {
       this.setItemsPerPage()
     },
   },
-
-  watch: {
-    itemsPerPage() {
-      this.goToPage(1)
-    },
-  },
 }
 </script>
 
 <style scoped>
-/* reuse the same styles you already have */
 h1 {
   text-align: center;
   color: var(--color-text-dark);

@@ -32,26 +32,6 @@ It focuses on:
 - 🎨 Custom color palette inspired by 90s music culture
 - 📱 Responsive layout
 
-## 🛠️ Refactorización de Componentes: Optimización de Vistas por Género
-
-### 🔴 Antes del Refactor (Deuda Técnica)
-
-Originalmente, la aplicación contaba con **8 componentes individuales** para renderizar las distintas páginas de géneros musicales (ej. `PunkRock.vue`/`.js`, `Hardcore.vue`, `PopPunk.vue`, etc.).
-
-- **Problema:** Esto generaba una gran duplicidad de código (_Don't Repeat Yourself - DRY_ roto), dificultaba el mantenimiento y escalabilidad, ya que cualquier cambio en la interfaz requería modificar los 8 archivos por separado.
-
-### 🟢 Después del Refactor (Componente Reutilizable Único)
-
-Se eliminaron los 8 componentes redundantes y se unificó toda la lógica en **un solo componente dinámico y reutilizable**.
-
-- **¿Cómo funciona?** El nuevo componente centralizado detecta el género musical de forma dinámica (generalmente a través de parámetros de la URL de la ruta o mediante _props_).
-- **Filtrado Eficiente:** Con el género identificado, el componente realiza un único filtro sobre el estado global de productos (`products.filter(p => p.genre === generoActivo)`) y renderiza la grilla musical correspondiente de manera automática.
-
-### 🚀 Beneficios Obtenidos:
-
-- **Mantenibilidad:** El código visual y la lógica de filtrado ahora viven en un solo lugar. Si se añade un nuevo género a la tienda de música, no hay que crear código nuevo, la interfaz lo maneja en automático.
-- **Reducción de Peso:** Menos archivos en el proyecto, lo que optimiza el rendimiento y la limpieza del repositorio en GitHub.
-
 ## 🎨 Design System
 
 The UI is built around a dark theme with vibrant accent colors:
@@ -76,6 +56,27 @@ The UI is built around a dark theme with vibrant accent colors:
 ## 📸 Screenshots
 
 (Add screenshots here)
+
+## 🚀 Recent Architecture Refactor: Dynamic Catalog System
+
+Recently, the entire storefront catalog system was re-architected to move away from hardcoded JSON arrays and static view duplication.
+
+### The Evolution:
+
+- **Before:** **14 separate Vue files** (e.g., `RopaGrunge.vue`, `RopaMujer.vue`, `CatalogoPunk.vue`, etc.), each maintaining duplicate pagination, window resize handlers, and modal logic.
+- **After:** **3 master components** powered dynamically by **Vue Router parameters** and **Supabase relational queries**.
+
+### The 3 Master Components:
+
+1. `CatalogoCds.vue` - Handles all 8+ music genres dynamically (`/cds/:genero`).
+2. `CatalogoRopa.vue` - Handles all clothing styles and departments (`/ropa/:categoria`).
+3. `CatalogoMercancia.vue` - Handles all collectibles and accessories (`/mercancia/:tipo`).
+
+### 💎 Key Benefits:
+
+- **High Scalability:** Adding a new music genre, clothing line, or merchandise category now requires **zero code changes**. We just insert the items into the Supabase `products` table, and the UI dynamically renders them.
+- **Code Maintainability:** Reduced code duplication by **over 75%**. Bug fixes or layout updates to pagination or modals only need to be written once instead of across 14 separate files.
+- **Database Single-Source of Truth:** All inventory is now centralized inside a single PostgreSQL table (`products`), seamlessly filtered on the fly via Supabase `.eq()` queries utilizing the unified `type` and `category` schema layout.
 
 ## 🛠️ Installation
 

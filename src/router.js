@@ -1,13 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PaginaPrincipal from './views/PaginaPrincipal.vue'
 import CatalogoCds from '@/views/CatalogoCds.vue'
+import CatalogoRopa from '@/views/CatalogoRopa.vue'
 import VinilCollection from './components/VinilCollection.vue'
-import RopaPunk from './components/RopaPunk.vue'
-import RopaMetal from './components/RopaMetal.vue'
-import RopaGrunge from './components/RopaGrunge.vue'
-import RopaMujer from './components/RopaMujer.vue'
-import CatalogoAccesorios from './components/CatalogoAccesorios.vue'
-import CatalogoColeccionables from './components/CatalogoColeccionables.vue'
+import CatalogoMercancia from '@/views/CatalogoMercancia.vue'
 import ContactForm from './components/ContactForm.vue'
 import AppNosotros from '@/components/AppNosotros.vue'
 
@@ -26,19 +22,16 @@ const routes = [
     name: 'vinil-collection',
     component: VinilCollection,
   },
-  { path: '/ropa-punk', name: 'ropa-punk', component: RopaPunk },
-  { path: '/ropa-metal', name: 'ropa-metal', component: RopaMetal },
-  { path: '/ropa-grunge', name: 'ropa-grunge', component: RopaGrunge },
-  { path: '/ropa-mujer', name: 'ropa-mujer', component: RopaMujer },
   {
-    path: '/catalogo-accesorios',
-    name: 'catalogo-accesorios',
-    component: CatalogoAccesorios,
+    path: '/ropa/:categoria',
+    name: 'CatalogoRopa',
+    component: CatalogoRopa,
   },
+
   {
-    path: '/articulos-coleccionables',
-    name: 'articulos-coleccionables',
-    component: CatalogoColeccionables,
+    path: '/mercancia/:tipo',
+    name: 'CatalogoMercancia',
+    component: CatalogoMercancia,
   },
   {
     path: '/ediciones-especiales',
