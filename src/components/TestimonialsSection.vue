@@ -13,7 +13,7 @@
           :alt="testimonial.name"
           class="testimonial-photo"
         />
-        <div class="testimonial-info" >
+        <div class="testimonial-info">
           <p class="testimonial-text">“{{ testimonial.text }}”</p>
           <p class="testimonial-name">{{ testimonial.name }}</p>
           <p class="testimonial-album">
@@ -51,22 +51,21 @@ const testimonials = [
     album: 'Ten - Pearl Jam',
     photo: '/images/clientes/fan4.webp',
   },
-];
+]
 </script>
 
 <style scoped>
-  h2 {
-    color: var(--color-accent);
-    font-size: 2.2rem;
-    font-family: 'Nova Square', sans-serif;
-    text-transform: uppercase;
-  }
-
+h2 {
+  color: var(--color-text-main) !important;
+  font-size: 2.2rem;
+  font-family: 'Nova Square', sans-serif;
+  text-transform: uppercase;
+}
 
 .testimonials {
-  background-color: var(--color-background-dark);
+  background-color: var(--color-background-darker);
   color: var(--color-text-light);
-  padding: 50px 20px 100px; 
+  padding: 50px 20px 100px;
   text-align: center;
 }
 
@@ -91,7 +90,7 @@ const testimonials = [
 }
 
 .testimonial-card {
-  background-color: var(--color-card-bg); 
+  background-color: var(--color-card-bg);
   border: 1px solid var(--color-border-light);
   border-radius: 12px;
   padding: 20px;
@@ -113,7 +112,7 @@ const testimonials = [
 .testimonial-info {
   flex: 1;
 }
- 
+
 .testimonial-text {
   font-style: italic;
   color: var(--color-text-muted);
@@ -130,4 +129,3 @@ const testimonials = [
   font-size: 0.9rem;
 }
 </style>
-

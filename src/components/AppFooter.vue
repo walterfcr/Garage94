@@ -15,7 +15,9 @@
             <li><router-link to="/hard-core">Hardcore</router-link></li>
             <li><router-link to="/metal-music">Metal</router-link></li>
             <li><router-link to="/grunge-music">Grunge</router-link></li>
-            <li><router-link to="/rock-alternativo">Rock Alternativo</router-link></li>
+            <li>
+              <router-link to="/rock-alternativo">Rock Alternativo</router-link>
+            </li>
           </ul>
         </div>
         <div class="link-column">
@@ -43,7 +45,10 @@
           <a href="#" aria-label="Facebook">📘</a>
           <a href="#" aria-label="Twitter">🐦</a>
         </div>
-        <p>&copy; {{ new Date().getFullYear() }} Garage 94. Todos los derechos reservados.</p>
+        <p>
+          &copy; {{ new Date().getFullYear() }} Garage 94. Todos los derechos
+          reservados.
+        </p>
       </div>
     </div>
   </footer>
@@ -52,12 +57,12 @@
 <script>
 export default {
   name: 'AppFooter',
-};
+}
 </script>
 
 <style scoped>
 .site-footer {
-  background-color: var(--color-surface);
+  background-color: var(--color-background-dark);
   color: var(--color-text-light);
   padding: 3rem 1.5rem;
 }
@@ -72,11 +77,11 @@ export default {
 
 .footer-logo img {
   max-width: 120px;
-  margin:0 auto;
+  margin: 0 auto;
   display: block;
 }
 
-@media (min-width:769px){
+@media (min-width: 769px) {
   .footer-logo {
     display: none;
   }
@@ -134,5 +139,4 @@ export default {
 .social-icons a:hover {
   color: var(--color-accent-hover);
 }
-
 </style>

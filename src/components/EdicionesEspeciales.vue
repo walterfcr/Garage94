@@ -93,13 +93,13 @@ h1 {
   font-family: 'Nova Square', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-text-main);
 }
 h3 {
   font-size: 0.8rem;
 }
 .wrap-especiales {
-  background: var(--color-surface);
+  background: var(--color-background-darker);
   margin: 0;
   padding: 50px 0 100px;
 }

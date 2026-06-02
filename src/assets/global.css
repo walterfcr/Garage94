@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: var(--main-background-color);
+  background-color: var(--color-surface);
 }
 
 html {
@@ -31,29 +31,22 @@ h1 {
 }
 
 :root {
-  /* fondos */
   --color-background-dark: #1f1f1f;
-  --color-background-light: #f5f5f5;
+  --color-background-darker: #121212;
   --color-surface: #2a2a2a;
-
-  /* Accent Colors */
   --color-accent: #ff0055;
   --color-accent-hover: #e6004c;
   --color-accent-alt: #ffba08;
-
-  /* Textos */
+  --color-text-main: #f5f5f5;
   --color-text-light: #f5f5f5;
   --color-text-muted: #cccccc;
+  --color-text-dimmed: #888888;
   --color-text-dark: #1f1f1f;
   --color-text-dark-hover: #9e9b9b;
-
-  /* bordes */
   --color-border: #333333;
   --color-border-light: #444;
-
-  /* UI */
-  --color-button-bg: #ff0055;
-  --color-button-hover: #e6004c;
+  --color-button-bg: var(--color-accent);
+  --color-button-hover: var(--color-accent-hover);
   --color-card-bg: #2e2e2e;
 }
 

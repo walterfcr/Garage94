@@ -1,7 +1,6 @@
-<!-- src/components/MerchSlider.vue -->
 <template>
   <section id="merch-slider">
-    <div class="merch-wrap">
+    <div :class="['merch-wrap', variantClass]">
       <h2 class="section-title">Mercadería Oficial</h2>
       <Swiper
         :modules="modules"
@@ -41,6 +40,13 @@ import 'swiper/swiper-bundle.css'
 
 export default {
   components: { Swiper, SwiperSlide },
+  props: {
+    // 🌟 Recibe la variante desde la página padre
+    variant: {
+      type: String,
+      default: 'surface', // Por defecto mantiene tu color-surface
+    },
+  },
   data() {
     return {
       merch: [
@@ -83,6 +89,12 @@ export default {
       ],
     }
   },
+  computed: {
+    // 🌟 Retorna la clase correcta según el prop
+    variantClass() {
+      return this.variant === 'dark' ? 'bg-dark' : 'bg-surface'
+    },
+  },
   setup() {
     return {
       modules: [Autoplay],
@@ -99,7 +111,10 @@ export default {
   font-family: 'Nova Square', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(----color-text-dark);
+}
+
+h2 {
+  color: var(--color-text-main);
 }
 
 .merch-card {
@@ -108,7 +123,7 @@ export default {
   justify-content: space-between;
   height: 100%;
   flex-grow: 1;
-  background: #1f1f1f;
+  background: var(--color-background-dark);
   border: 2px solid #ff005580;
   border-radius: 12px;
   overflow: hidden;
@@ -156,10 +171,19 @@ export default {
   margin-bottom: 1rem;
 }
 
+/* 🌟 TUS CONTENEDORES DE BACK-GROUND EXCLUSIVOS */
 .merch-wrap {
   margin: 0 auto;
-  padding: 50px 0 100px;
-  width: 90%;
+  padding: 50px 5% 100px;
+  width: 100%;
+}
+
+.bg-surface {
+  background: var(--color-surface);
+}
+
+.bg-dark {
+  background: var(--color-background-darker);
 }
 
 ::v-deep(.swiper-wrapper) {

@@ -162,8 +162,9 @@ export default {
 
 <style scoped>
 h1 {
+  padding-top: 50px;
   text-align: center;
-  color: var(--color-text-dark);
+  color: var(--color-text-main) !important;
 }
 .product-card img {
   object-fit: cover;

@@ -212,7 +212,7 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
-  color: var(--color-text-dark);
+  color: var(--color-text-main);
 }
 h3 {
   font-size: 0.8rem;
@@ -225,6 +225,7 @@ button[disabled] {
 .contenido-wrap {
   margin: 0;
   padding: 50px 0 0;
+  background: var(--color-surface);
 }
 .loading-state,
 .empty-state {

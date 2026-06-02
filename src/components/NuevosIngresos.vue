@@ -101,7 +101,7 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
-  color: var(--color-text-dark);
+  color: var(--color-text-main);
 }
 h3 {
   font-size: 0.8rem;
@@ -110,6 +110,7 @@ h3 {
 .contenido-wrap {
   margin: 0;
   padding: 60px 0 100px;
+  background: var(--color-surface);
 }
 .loading-state {
   text-align: center;

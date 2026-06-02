@@ -34,6 +34,10 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  color: var(--color-text-main) !important;
+}
+
 .collections-section {
   padding: 50px 0 100px;
   background-color: #121212;
@@ -67,7 +71,9 @@ export default {
   border: 2px solid #ff005580;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   cursor: pointer;
 }
 
@@ -82,7 +88,9 @@ export default {
   object-fit: cover;
   border-radius: 50%;
   filter: grayscale(30%);
-  transition: filter 0.3s, transform 0.3s;
+  transition:
+    filter 0.3s,
+    transform 0.3s;
   margin: 30px 0 0;
   border: 6px solid var(--color-border);
 }

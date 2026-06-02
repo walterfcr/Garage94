@@ -4,13 +4,21 @@
       <img src="/images/logo.png" alt="Logo" />
     </div>
 
-    <!-- Hamburger menu icon for mobile -->
     <button class="hamburger" @click="toggleMenu" aria-label="Toggle menu">
       ☰
     </button>
 
-    <!-- Navigation menu -->
     <nav class="nav-menu" :class="{ active: menuActive }">
+      <div class="search-box mobile-search-box">
+        <input
+          v-model="textoABuscar"
+          type="text"
+          placeholder="Buscar discos, ropa..."
+          @keyup.enter="ejecutarBusqueda"
+        />
+        <button @click="ejecutarBusqueda">🔍</button>
+      </div>
+
       <ul>
         <li><a href="/">Inicio</a></li>
         <li><a href="/nosotros">Nosotros</a></li>
@@ -101,7 +109,7 @@
     <div class="header-actions">
       <button>🛒</button>
       <button>Login</button>
-      <div class="search-box">
+      <div class="search-box desktop-search-box">
         <input
           v-model="textoABuscar"
           type="text"
@@ -153,7 +161,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 10px 100px;
-  background-color: var(--color-background-light);
+  background-color: var(--color-background-dark);
   border-bottom: 3px solid var(--color-border);
   color: var(--color-text-light);
   position: relative;
@@ -193,7 +201,7 @@ export default {
 
 .nav-menu a {
   text-decoration: none;
-  color: var(--color-text-dark);
+  color: var(--color-text-main);
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -370,6 +378,26 @@ export default {
 
   .has-submenu:hover .submenu {
     display: block;
+  }
+}
+.mobile-search-box {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-search-box {
+    display: none !important;
+  }
+
+  .mobile-search-box {
+    display: flex !important;
+    margin: 20px auto;
+    width: 85%;
+    color: var(--color-text-light) !important;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-accent);
+    border-radius: 20px;
+    padding: 6px 14px;
   }
 }
 

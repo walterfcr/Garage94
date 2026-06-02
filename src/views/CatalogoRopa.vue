@@ -28,7 +28,7 @@
       </button>
     </div>
 
-    <MercaSlider />
+    <MercaSlider variant="dark" />
     <AppFooter />
 
     <RopaModal
@@ -164,7 +164,7 @@ export default {
 /* Keeping your exact styles */
 h1 {
   text-align: center;
-  color: var(----color-text-dark);
+  color: var(--color-text-main) !important;
 }
 h3 {
   font-size: 0.8rem;

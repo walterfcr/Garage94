@@ -70,10 +70,14 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  color: var(--color-text-main) !important;
+}
+
 .collections-section {
   margin: 0 auto;
   padding: 50px 0 100px;
-  background-color: #121212;
+  background-color: var(--color-background-darker);
   color: #f5f5f5;
   text-align: center;
 }
