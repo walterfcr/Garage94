@@ -125,13 +125,25 @@ export default {
       }
     },
     setItemsPerPage() {
-      const width = window.innerWidth
-      if (width >= 1800) this.itemsPerPage = 27
-      else if (width >= 1680) this.itemsPerPage = 24
-      else if (width >= 1400) this.itemsPerPage = 28
-      else if (width >= 1280) this.itemsPerPage = 24
-      else if (width >= 950) this.itemsPerPage = 20
-      else this.itemsPerPage = 18
+      const w = window.innerWidth
+
+      if (w >= 1800) {
+        this.itemsPerPage = 24
+      } else if (w >= 1680) {
+        this.itemsPerPage = 28
+      } else if (w >= 1440) {
+        this.itemsPerPage = 24
+      } else if (w >= 1366) {
+        this.itemsPerPage = 24
+      } else if (w >= 1280) {
+        this.itemsPerPage = 20
+      } else if (w >= 900) {
+        this.itemsPerPage = 20
+      } else if (w >= 600) {
+        this.itemsPerPage = 24
+      } else {
+        this.itemsPerPage = 12
+      }
     },
     handleResize() {
       this.setItemsPerPage()

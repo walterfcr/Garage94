@@ -6,6 +6,7 @@ import EdicionesEspeciales from './components/EdicionesEspeciales.vue'
 import CatalogoMercancia from '@/views/CatalogoMercancia.vue'
 import ContactForm from './components/ContactForm.vue'
 import AppNosotros from '@/components/AppNosotros.vue'
+import ResultadosBusqueda from '@/views/ResultadosBusqueda.vue'
 
 const routes = [
   { path: '/', name: 'home', component: PaginaPrincipal },
@@ -34,6 +35,11 @@ const routes = [
     component: EdicionesEspeciales,
   },
   { path: '/contacto', name: 'Contacto', component: ContactForm },
+  {
+    path: '/buscar',
+    name: 'Buscar',
+    component: ResultadosBusqueda,
+  },
 ]
 
 const router = createRouter({

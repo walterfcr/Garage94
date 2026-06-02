@@ -101,7 +101,15 @@
     <div class="header-actions">
       <button>🛒</button>
       <button>Login</button>
-      <input type="text" placeholder="Buscar..." />
+      <div class="search-box">
+        <input
+          v-model="textoABuscar"
+          type="text"
+          placeholder="Buscar discos, ropa..."
+          @keyup.enter="ejecutarBusqueda"
+        />
+        <button @click="ejecutarBusqueda">🔍</button>
+      </div>
     </div>
   </header>
 </template>
@@ -112,6 +120,7 @@ export default {
   data() {
     return {
       menuActive: false,
+      textoABuscar: '', // 🔍 Guardará lo que el usuario escribe en el input
     }
   },
   methods: {
@@ -120,6 +129,19 @@ export default {
     },
     closeMenu() {
       this.menuActive = false
+    },
+
+    /* 🚀 Método para disparar la búsqueda en Supabase */
+    ejecutarBusqueda() {
+      const queryLimpio = this.textoABuscar.trim()
+
+      if (queryLimpio.length > 0) {
+        // Redirige a la nueva vista pasando la palabra clave en la URL (?q=...)
+        this.$router.push({ path: '/buscar', query: { q: queryLimpio } })
+
+        this.textoABuscar = '' // Limpia el input para la siguiente búsqueda
+        this.closeMenu() // Por si el usuario busca desde el menú móvil, aseguramos cerrarlo
+      }
     },
   },
 }
@@ -239,6 +261,58 @@ export default {
 
 .header-actions button:hover {
   background-color: var(--color-button-hover);
+}
+
+/* --- CONTENEDOR DEL BUSCADOR --- */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 0, 85, 0.3); /* Borde sutil rosa */
+  border-radius: 20px;
+  padding: 4px 14px;
+  transition: all 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+}
+
+.search-box:focus-within {
+  border-color: var(--color-accent); /* Brilla en rosa neón al hacer click */
+  box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* --- INPUT DE TEXTO --- */
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-text-dark);
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  width: 100%;
+  padding: 6px 0;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- BOTÓN LUPA --- */
+.search-box button {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding-left: 8px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.search-box button:hover {
+  color: var(--color-accent); /* La lupa se ilumina en rosa al pasar el mouse */
 }
 
 /* Responsive */

@@ -76,7 +76,7 @@ export default {
 
         if (cds) {
           // Barajamos el array para que siempre sea diferente cada vez que recargues la página principal
-          this.randomCds = cds.sort(() => 0.5 - Math.random()).slice(0, 18) // Nos quedamos exactamente con los 18 aleatorios
+          this.randomCds = cds.sort(() => 0.5 - Math.random()).slice(0, 16) // Nos quedamos exactamente con los 16 aleatorios
         }
       } catch (err) {
         console.error('Error fetching new arrivals:', err.message)
@@ -109,7 +109,7 @@ h3 {
 }
 .contenido-wrap {
   margin: 0;
-  padding: 30px 0;
+  padding: 60px 0 100px;
 }
 .loading-state {
   text-align: center;

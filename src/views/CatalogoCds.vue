@@ -168,12 +168,24 @@ export default {
 
     setItemsPerPage() {
       const w = window.innerWidth
-      if (w >= 1800) this.itemsPerPage = 27
-      else if (w >= 1680) this.itemsPerPage = 24
-      else if (w >= 1400) this.itemsPerPage = 28
-      else if (w >= 1280) this.itemsPerPage = 24
-      else if (w >= 950) this.itemsPerPage = 20
-      else this.itemsPerPage = 18
+
+      if (w >= 1800) {
+        this.itemsPerPage = 24
+      } else if (w >= 1680) {
+        this.itemsPerPage = 28
+      } else if (w >= 1440) {
+        this.itemsPerPage = 24
+      } else if (w >= 1366) {
+        this.itemsPerPage = 24
+      } else if (w >= 1280) {
+        this.itemsPerPage = 20
+      } else if (w >= 900) {
+        this.itemsPerPage = 20
+      } else if (w >= 600) {
+        this.itemsPerPage = 24
+      } else {
+        this.itemsPerPage = 12
+      }
     },
     handleResize() {
       this.setItemsPerPage()
