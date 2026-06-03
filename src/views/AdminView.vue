@@ -111,11 +111,15 @@
                     <option value="" disabled>
                       -- Selecciona un Género --
                     </option>
-                    <option value="Hardcore">Hardcore</option>
+
                     <option value="Punk Rock">Punk</option>
-                    <option value="Thrash Metal">Thrash Metal</option>
-                    <option value="Death Metal">Death Metal</option>
-                    <option value="Heavy Metal">Heavy Metal</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Hardcore">Hardcore</option>
+                    <option value="Grunge">Grunge</option>
+                    <option value="Rock Alternativo">Rock Alternativo</option>
+                    <option value="Ska">Ska</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Rock Progresivo">Rock Progresivo</option>
                   </select>
                 </div>
               </div>
@@ -294,47 +298,53 @@ export default {
     async handleSubmit() {
       this.loading = true
       try {
-        // Clonamos el estado reactivo para limpiarlo antes del INSERT
+        // 1. Creamos el payload base con lo que el administrador llenó
         const payload = { ...this.product }
 
-        // 1. Procesamiento especial para arreglos de tallas si es ropa
+        // 2. Si es ropa, procesamos las tallas
         if (payload.type === 'Clothing') {
           payload.sizes = this.rawSizes
             .split(',')
             .map((s) => s.trim())
             .filter(Boolean)
-        } else {
-          delete payload.sizes
-          delete payload.color
-          delete payload.category // Si no es ropa, limpiamos la categoría
         }
 
-        // 2. Limpieza estricta de campos musicales si es ropa o mercancía
-        if (!this.isMusic) {
-          delete payload.band
-          delete payload.genre
-          delete payload.genre_description
-          delete payload.label
-          delete payload.num_discs
-          delete payload.release_date
+        // 3. ✨ EL FILTRO FLUIDO:
+        // Creamos una lista con los campos que pertenecen a CADA tipo de producto
+        const camposMusica = [
+          'band',
+          'genre',
+          'genre_description',
+          'label',
+          'num_discs',
+          'release_date',
+        ]
+        const camposRopa = ['category', 'sizes', 'color']
+        const camposMercancia = ['material', 'length']
+
+        // Si NO es música, borramos los campos de música para que no viajen strings vacíos
+        if (payload.type !== 'CD' && payload.type !== 'Vinyl') {
+          camposMusica.forEach((campo) => delete payload[campo])
         }
 
-        // 3. Limpieza de mercancía si es música o ropa
+        // Si NO es ropa, borramos los campos de ropa
+        if (payload.type !== 'Clothing') {
+          camposRopa.forEach((campo) => delete payload[campo])
+        }
+
+        // Si NO es mercancía, borramos los campos de mercancía
         if (payload.type !== 'Accesorio' && payload.type !== 'Coleccionables') {
-          delete payload.material
-          delete payload.length
+          camposMercancia.forEach((campo) => delete payload[campo])
         }
 
-        // Enviar directo a Supabase
+        // 🚀 Enviamos a Supabase el objeto perfectamente limpio en una sola línea
         const { error } = await supabase.from('products').insert([payload])
 
         if (error) throw error
 
-        alert(
-          '¡Producto inyectado con éxito y perfectamente clasificado, Walter! ⚡',
-        )
+        alert('¡Producto guardado de forma limpia y fluida! ⚡')
 
-        // Reset completo del estado
+        // Reset del formulario
         this.product = this.getInitialProductState()
         this.rawSizes = 'S, M, L, XL'
       } catch (error) {
