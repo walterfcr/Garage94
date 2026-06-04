@@ -5,8 +5,18 @@
         <h2>G94 Admin</h2>
       </div>
       <nav class="sidebar-nav">
-        <a href="#" class="active">📦 Agregar Producto</a>
-        <a href="#">🧾 Órdenes</a>
+        <a
+          href="#"
+          :class="{ active: currentTab === 'products' }"
+          @click.prevent="currentTab = 'products'"
+          >📦 Agregar Producto</a
+        >
+        <a
+          href="#"
+          :class="{ active: currentTab === 'orders' }"
+          @click.prevent="currentTab = 'orders'"
+          >🧾 Órdenes</a
+        >
       </nav>
       <div class="sidebar-footer">
         <button @click="handleLogout" class="btn-logout">
@@ -17,11 +27,17 @@
 
     <main class="admin-content">
       <header class="content-header">
-        <h1>Panel de Gestión de Productos</h1>
+        <h1>
+          {{
+            currentTab === 'products'
+              ? 'Panel de Gestión de Productos'
+              : 'Historial de Pedidos'
+          }}
+        </h1>
         <div class="admin-badge">Admin Mode</div>
       </header>
 
-      <section class="form-section">
+      <section v-if="currentTab === 'products'" class="form-section">
         <div class="form-card">
           <h3>🚀 Subir Artículo al Inventario Real</h3>
 
@@ -280,17 +296,23 @@
           </form>
         </div>
       </section>
+      <OrdersList v-if="currentTab === 'orders'" />
     </main>
   </div>
 </template>
 
 <script>
+import OrdersList from '../components/OrdersList.vue'
 import { supabase } from '../services/supabase'
 
 export default {
   name: 'AdminView',
+  components: {
+    OrdersList,
+  }, // <--- Añade esta propiedad aquí
   data() {
     return {
+      currentTab: 'products', // <--- Asegúrate de tener esta línea también
       loading: false,
       product: this.getInitialProductState(),
     }
