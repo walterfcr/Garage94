@@ -2,7 +2,6 @@
   <div class="modal-overlay" @click.self="emitClose">
     <div class="modal-content" data-aos="fade-in">
       <div class="product-details">
-        <!-- Column 1: Image -->
         <div class="column">
           <img
             :src="product.image"
@@ -12,26 +11,24 @@
           />
         </div>
 
-        <!-- Column 2: Product Info -->
         <div class="column">
           <h2>{{ product.name }}</h2>
           <p><strong>Precio:</strong> {{ product.price }}</p>
           <p><strong>Material:</strong> {{ product.material }}</p>
-          <p><strong>Longitud:</strong> {{ product.longitud }}</p>
-          <p><strong>Item #:</strong> {{ product.itemNumber }}</p>
+          <p><strong>Longitud:</strong> {{ product.length }}</p>
+          <p><strong>Item #:</strong> {{ product.item_number }}</p>
         </div>
 
-        <!-- Column 3: Description -->
         <div class="column">
           <h3>Descripción:</h3>
           <p class="description">{{ product.description }}</p>
         </div>
       </div>
+      <button class="add-button" @click="addToCart">Agregar al carrito</button>
 
       <button class="close-button" @click="emitClose">Cerrar</button>
     </div>
 
-    <!-- Lightbox Overlay -->
     <div
       v-if="isLightboxOpen"
       class="lightbox-overlay"
@@ -49,18 +46,24 @@ export default {
   props: {
     product: { type: Object, required: true },
   },
+  emits: ['close', 'add-to-cart'],
   data() {
     return {
       isLightboxOpen: false,
     }
   },
   methods: {
-    addToCart() {
-      this.emitClose()
-    },
     emitClose() {
       this.$emit('close')
     },
+    addToCart() {
+      this.$emit('add-to-cart', {
+        product: this.product,
+        selectedSize: null,
+        type: this.product.type,
+      })
+      this.emitClose()
+    }, // <-- Aquí pusimos la coma que faltaba
     openLightbox() {
       if (window.innerWidth >= 769) {
         this.isLightboxOpen = true
@@ -84,6 +87,35 @@ export default {
 </script>
 
 <style scoped>
+.add-button {
+  margin-top: 1rem;
+  background-color: var(--color-button-bg);
+  color: var(--color-text-light);
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.add-button:hover {
+  background-color: var(--color-button-hover);
+}
+
+.close-button {
+  margin-top: 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: var(--color-background-dark);
+}
 .close-button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;

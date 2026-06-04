@@ -38,6 +38,7 @@
       v-if="isModalOpen"
       :product="selectedProduct"
       @close="closeModal"
+      @add-to-cart="manejarAgregarCarrito"
     />
 
     <BuscarGenero v-if="!genreFromProp" />
@@ -51,6 +52,7 @@ import CdModal from '@/components/CdModal.vue'
 import BuscarGenero from '@/components/BuscarGenero.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import { formatPrice } from '@/utils/formatPrice.js'
+import { cartService } from '@/services/cartService.js'
 
 export default {
   name: 'CatalogoCds',
@@ -156,6 +158,11 @@ export default {
     closeModal() {
       this.isModalOpen = false
       this.selectedProduct = null
+    },
+
+    manejarAgregarCarrito(item) {
+      cartService.addToCart(item.product, item.selectedSize)
+      console.log('¡Guardado en LocalStorage respetando las columnas de la DB!')
     },
 
     goToPage(page) {

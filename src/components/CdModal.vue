@@ -28,6 +28,7 @@
       </div>
 
       <button class="close-button" @click="emitClose">Cerrar</button>
+      <button class="add-button" @click="addToCart">Agregar al carrito</button>
     </div>
   </div>
 </template>
@@ -36,7 +37,7 @@
 export default {
   name: 'CdModal',
   props: { product: Object },
-  emits: ['close'],
+  emits: ['close', 'add-to-cart'],
   mounted() {
     /* lock background scroll */
     document.body.classList.add('no-scroll')
@@ -49,11 +50,48 @@ export default {
     emitClose() {
       this.$emit('close')
     },
+    addToCart() {
+      this.$emit('add-to-cart', {
+        product: this.product,
+        selectedSize: null,
+        type: this.product.type,
+      })
+      this.emitClose()
+    },
   },
 }
 </script>
 
 <style scoped>
+.add-button {
+  margin-top: 1rem;
+  background-color: var(--color-button-bg);
+  color: var(--color-text-light);
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.add-button:hover {
+  background-color: var(--color-button-hover);
+}
+
+.close-button {
+  margin-top: 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: var(--color-background-dark);
+}
 @media (max-width: 768px) {
   .product-details {
     flex-direction: column;

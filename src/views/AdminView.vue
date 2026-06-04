@@ -40,7 +40,7 @@
                 <label>Tipo de Producto (type) *</label>
                 <select v-model="product.type" required>
                   <option value="CD">Música: CD</option>
-                  <option value="Vinyl">Música: Vinyl</option>
+                  <option value="vinyl">Música: Vinyl</option>
                   <option value="Clothing">Ropa (Clothing)</option>
                   <option value="Accesorio">Mercancía: Accesorio</option>
                   <option value="Coleccionables">
@@ -60,15 +60,59 @@
                   required
                 />
               </div>
-              <div class="form-group">
+
+              <div
+                v-if="product.type === 'Clothing'"
+                class="form-group stock-tallas-box"
+              >
+                <label>Inventario por Tallas *</label>
+                <div class="tallas-grid">
+                  <div class="talla-input-item">
+                    <span>S</span>
+                    <input
+                      type="number"
+                      v-model.number="product.stock.S"
+                      min="0"
+                    />
+                  </div>
+                  <div class="talla-input-item">
+                    <span>M</span>
+                    <input
+                      type="number"
+                      v-model.number="product.stock.M"
+                      min="0"
+                    />
+                  </div>
+                  <div class="talla-input-item">
+                    <span>L</span>
+                    <input
+                      type="number"
+                      v-model.number="product.stock.L"
+                      min="0"
+                    />
+                  </div>
+                  <div class="talla-input-item">
+                    <span>XL</span>
+                    <input
+                      type="number"
+                      v-model.number="product.stock.XL"
+                      min="0"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div v-else class="form-group">
                 <label>Stock Disponible *</label>
                 <input
-                  v-model.number="product.stock"
+                  v-model.number="product.stock.unidad"
                   type="number"
                   placeholder="10"
+                  min="0"
                   required
                 />
               </div>
+
               <div class="form-group">
                 <label>Código de Artículo (item_number) *</label>
                 <input
@@ -91,7 +135,7 @@
             </div>
 
             <div
-              v-if="product.type === 'CD' || product.type === 'Vinyl'"
+              v-if="product.type === 'CD' || product.type === 'vinyl'"
               class="dynamic-section music-theme"
             >
               <h4>Detalles del Álbum Musical ({{ product.type }})</h4>
@@ -111,7 +155,6 @@
                     <option value="" disabled>
                       -- Selecciona un Género --
                     </option>
-
                     <option value="Punk Rock">Punk</option>
                     <option value="Metal">Metal</option>
                     <option value="Hardcore">Hardcore</option>
@@ -165,16 +208,6 @@
             >
               <h4>Atributos de Vestimenta</h4>
               <div class="form-row">
-                <div class="form-group flex-2">
-                  <label
-                    >Tallas Disponibles (sizes) - Separadas por comas</label
-                  >
-                  <input
-                    v-model="rawSizes"
-                    type="text"
-                    placeholder="Ej: S, M, L, XL"
-                  />
-                </div>
                 <div class="form-group flex-1">
                   <label>Color</label>
                   <input
@@ -259,38 +292,39 @@ export default {
   data() {
     return {
       loading: false,
-      rawSizes: 'S, M, L, XL', // Control local para las comas de las tallas de ropa
       product: this.getInitialProductState(),
     }
   },
   computed: {
-    // Helper rápido para saber si el tipo actual requiere campos de música
     isMusic() {
-      return this.product.type === 'CD' || this.product.type === 'Vinyl'
+      return this.product.type === 'CD' || this.product.type === 'vinyl'
     },
   },
   methods: {
     getInitialProductState() {
       return {
         name: '',
-        type: 'CD', // Valor por defecto inicial
+        type: 'CD',
         price: null,
-        stock: 0,
+        stock: {
+          unidad: 10,
+          S: 0,
+          M: 0,
+          L: 0,
+          XL: 0,
+        },
         item_number: '',
         image: '',
         description: '',
-        // Campos de música
         band: '',
         genre: '',
         genre_description: '',
         label: '',
         num_discs: null,
         release_date: '',
-        // Campos de ropa
         category: '',
         sizes: [],
         color: '',
-        // Campos de mercancía
         material: '',
         length: '',
       }
@@ -298,19 +332,33 @@ export default {
     async handleSubmit() {
       this.loading = true
       try {
-        // 1. Creamos el payload base con lo que el administrador llenó
         const payload = { ...this.product }
 
-        // 2. Si es ropa, procesamos las tallas
         if (payload.type === 'Clothing') {
-          payload.sizes = this.rawSizes
-            .split(',')
-            .map((s) => s.trim())
-            .filter(Boolean)
+          // 📦 1. ASIGNACIÓN INTELIGENTE AUTOMÁTICA DE TALLAS:
+          // Filtramos las llaves del objeto stock para detectar cuáles tienen un valor mayor a 0
+          const tallasActivas = []
+          if (this.product.stock.S > 0) tallasActivas.push('S')
+          if (this.product.stock.M > 0) tallasActivas.push('M')
+          if (this.product.stock.L > 0) tallasActivas.push('L')
+          if (this.product.stock.XL > 0) tallasActivas.push('XL')
+
+          // Se inyecta automáticamente el array de strings al payload (ej: ['S', 'M'])
+          payload.sizes = tallasActivas
+
+          // Guardamos el desglose limpio en el JSON de stock
+          payload.stock = {
+            S: this.product.stock.S || 0,
+            M: this.product.stock.M || 0,
+            L: this.product.stock.L || 0,
+            XL: this.product.stock.XL || 0,
+          }
+        } else {
+          payload.stock = {
+            unidad: this.product.stock.unidad || 0,
+          }
         }
 
-        // 3. ✨ EL FILTRO FLUIDO:
-        // Creamos una lista con los campos que pertenecen a CADA tipo de producto
         const camposMusica = [
           'band',
           'genre',
@@ -322,31 +370,22 @@ export default {
         const camposRopa = ['category', 'sizes', 'color']
         const camposMercancia = ['material', 'length']
 
-        // Si NO es música, borramos los campos de música para que no viajen strings vacíos
-        if (payload.type !== 'CD' && payload.type !== 'Vinyl') {
+        if (payload.type !== 'CD' && payload.type !== 'vinyl') {
           camposMusica.forEach((campo) => delete payload[campo])
         }
-
-        // Si NO es ropa, borramos los campos de ropa
         if (payload.type !== 'Clothing') {
           camposRopa.forEach((campo) => delete payload[campo])
         }
-
-        // Si NO es mercancía, borramos los campos de mercancía
         if (payload.type !== 'Accesorio' && payload.type !== 'Coleccionables') {
           camposMercancia.forEach((campo) => delete payload[campo])
         }
 
-        // 🚀 Enviamos a Supabase el objeto perfectamente limpio en una sola línea
         const { error } = await supabase.from('products').insert([payload])
 
         if (error) throw error
 
-        alert('¡Producto guardado de forma limpia y fluida! ⚡')
-
-        // Reset del formulario
+        alert('¡Producto guardado e inventario automatizado con éxito! ⚡')
         this.product = this.getInitialProductState()
-        this.rawSizes = 'S, M, L, XL'
       } catch (error) {
         alert('Error al guardar: ' + error.message)
       } finally {
@@ -367,7 +406,10 @@ export default {
 </script>
 
 <style scoped>
-/* Estructura General */
+h1 {
+  color: var(--color-text-main);
+}
+
 .admin-container {
   display: flex;
   min-height: 100vh;
@@ -444,7 +486,6 @@ export default {
   font-weight: bold;
 }
 
-/* Tarjeta del Formulario */
 .form-card {
   background: #141414;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -502,7 +543,42 @@ export default {
   border-color: #ff0055;
 }
 
-/* Diseños Temáticos de Secciones Dinámicas */
+/* 🎨 SECCIÓN DE LAS CAJITAS DE STOCK CORREGIDA */
+.stock-tallas-box {
+  flex: 1.2 !important; /* Le damos un poco más de aire en la fila */
+}
+.tallas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.1rem;
+}
+.talla-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 6px 4px;
+}
+.talla-input-item span {
+  font-size: 0.8rem;
+  color: #00bcff;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+/* Forzamos a que el input interno ignore el padding alto global y se vea el número */
+.talla-input-item input {
+  width: 85% !important;
+  padding: 5px 2px !important;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: #0d0d0d !important;
+  border-radius: 4px;
+  font-size: 0.9rem !important;
+}
+
 .dynamic-section {
   background: rgba(255, 255, 255, 0.015);
   padding: 1.5rem;

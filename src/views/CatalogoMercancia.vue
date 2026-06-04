@@ -32,6 +32,7 @@
       v-if="isModalOpen"
       :product="selectedProduct"
       @close="closeModal"
+      @add-to-cart="manejarAgregarCarrito"
     />
 
     <MercaSlider />
@@ -45,6 +46,7 @@ import AccesoriosModal from '@/components/AccesoriosModal.vue'
 import MercaSlider from '@/components/MercaSlider.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import { formatPrice } from '@/utils/formatPrice.js'
+import { cartService } from '@/services/cartService.js'
 
 export default {
   name: 'CatalogoMercancia',
@@ -131,6 +133,11 @@ export default {
         this.currentPage = page
         this.$nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
       }
+    },
+
+    manejarAgregarCarrito(item) {
+      cartService.addToCart(item.product, item.selectedSize)
+      console.log('¡Guardado en LocalStorage respetando las columnas de la DB!')
     },
     setItemsPerPage() {
       const w = window.innerWidth

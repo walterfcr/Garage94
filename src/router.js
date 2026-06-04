@@ -7,6 +7,7 @@ import EdicionesEspeciales from './components/EdicionesEspeciales.vue'
 import CatalogoMercancia from '@/views/CatalogoMercancia.vue'
 import LoginView from '@/views/LoginView.vue'
 import AdminView from '@/views/AdminView.vue'
+import CartView from '@/views/CartView.vue'
 import ContactForm from './components/ContactForm.vue'
 import AppNosotros from '@/components/AppNosotros.vue'
 import ResultadosBusqueda from '@/views/ResultadosBusqueda.vue'
@@ -50,6 +51,11 @@ const routes = [
     path: '/admin',
     component: AdminView,
     meta: { requiresAdmin: true },
+  },
+  {
+    path: '/carrito',
+    name: 'carrito',
+    component: CartView,
   },
 ]
 

@@ -22,7 +22,7 @@
 
           <p><strong>Color:</strong> {{ product.color }}</p>
           <p><strong>Precio:</strong> {{ product.price }}</p>
-          <p><strong>Item #:</strong> {{ product.itemNumber }}</p>
+          <p><strong>Item #:</strong> {{ product.item_number }}</p>
         </div>
 
         <!-- Column 3: Description -->
@@ -47,7 +47,7 @@ export default {
   props: {
     product: Object,
   },
-  emits: ['close'],
+  emits: ['close', 'add-to-cart'],
   data() {
     return {
       selectedSize: '',
@@ -64,8 +64,14 @@ export default {
       this.$emit('close')
     },
     addToCart() {
-      alert(`Añadido: ${this.product.name} - Talla: ${this.selectedSize}`)
-      // You can emit an event to parent instead of alert
+      // Disparamos el evento enviando el producto y la talla que seleccionó el cliente
+      this.$emit('add-to-cart', {
+        product: this.product,
+        selectedSize: this.selectedSize,
+        type: this.product.type,
+      })
+
+      // Cerramos el modal de una vez
       this.emitClose()
     },
   },
@@ -85,25 +91,39 @@ select {
   margin-bottom: 1rem;
 }
 
-.add-button,
+.add-button {
+  margin-top: 1rem;
+  background-color: var(--color-button-bg);
+  color: var(--color-text-light);
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.add-button:hover {
+  background-color: var(--color-button-hover);
+}
+
 .close-button {
   margin-top: 1rem;
-  background-color: #ff0055;
-  color: white;
-  border: none;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
   cursor: pointer;
 }
 
+.close-button:hover {
+  background-color: var(--color-background-dark);
+}
+
 .add-button[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-.close-button:hover,
-.add-button:hover {
-  background-color: #e6004d;
 }
 
 @media (max-width: 768px) {
