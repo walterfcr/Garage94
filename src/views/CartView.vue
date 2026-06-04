@@ -118,70 +118,82 @@ export default {
       if (this.cartItems.length === 0) return
 
       try {
+        console.log('--- INICIANDO PROCESAMIENTO DE COMPRA ---')
+
+        // ==========================================
+        // 🛍️ PASO NUEVO: GUARDAR LA ORDEN EN SUPABASE
+        // ==========================================
+
+        // Mapeamos los artículos locales para guardar solo lo necesario en la base de datos
+        const productosParaGuardar = this.cartItems.map((item) => ({
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity,
+          size: item.size || null,
+        }))
+
+        const { data: nuevaOrden, error: orderError } = await supabase
+          .from('orders')
+          .insert([
+            {
+              customer_name: this.customer.name,
+              customer_phone: this.customer.phone,
+              customer_address: this.customer.address,
+              total_price: this.totalCartPrice,
+              items: productosParaGuardar, // Pasamos el arreglo completo al JSONB
+            },
+          ])
+          .select()
+
+        if (orderError) {
+          console.error(
+            'Error al registrar la orden en DB:',
+            orderError.message,
+          )
+          throw orderError
+        }
+
+        console.log('¡Orden creada con éxito en Supabase!', nuevaOrden)
+
+        // ==========================================
+        // 🔄 PASO EXISTENTE: DESCONTAR EL STOCK REAL
+        // ==========================================
         for (const item of this.cartItems) {
           const idBuscado = Number(item.id)
 
-          // A. Traemos el stock actual (que es un objeto JSON)
           const { data: productoDB, error: fetchError } = await supabase
             .from('products')
             .select('stock, id')
             .eq('id', idBuscado)
             .single()
 
-          if (fetchError) {
-            console.error(
-              `Error al buscar el producto ID ${idBuscado} en DB:`,
-              fetchError.message,
-            )
-            throw fetchError
-          }
+          if (fetchError) throw fetchError
 
-          if (!productoDB || !productoDB.stock) {
-            throw new Error(
-              `El producto ${item.name} no tiene una estructura de stock válida.`,
-            )
-          }
-
-          // 🧠 EXTRAEMOS EL NÚMERO REAL: Accedemos a .unidad dentro del objeto stock
           const stockNumericoActual = Number(productoDB.stock.unidad)
-
-          // B. Calculamos el nuevo stock numérico
           const nuevoStockNumerico = stockNumericoActual - item.quantity
 
           if (nuevoStockNumerico < 0) {
-            alert(
-              `Lo sentimos, no hay suficiente stock de ${item.name}. Stock disponible: ${stockNumericoActual}`,
-            )
+            alert(`Lo sentimos, no hay suficiente stock de ${item.name}.`)
             return
           }
 
-          // 📦 ARMAMOS EL NUEVO OBJETO JSON para guardarlo tal como lo requiere tu tabla
-          const stockActualizadoJSON = { unidad: nuevoStockNumerico }
-
-          // C. Actualizamos el stock real enviando el objeto armado
-          const { data: updateData, error: updateError } = await supabase
+          const { error: updateError } = await supabase
             .from('products')
-            .update({ stock: stockActualizadoJSON }) // Guardamos el JSON completo actualizado
+            .update({ stock: { unidad: nuevoStockNumerico } })
             .eq('id', idBuscado)
-            .select()
 
-          if (updateError) {
-            console.error(
-              'Error al intentar hacer el UPDATE:',
-              updateError.message,
-            )
-            throw updateError
-          }
+          if (updateError) throw updateError
         }
 
-        // --- TODO SALIÓ BIEN ---
+        // --- TODO EL PROCESO FUE UN ÉXITO ---
         alert(
-          `¡Excelente ${this.customer.name}! Tu orden ha sido procesada con éxito.`,
+          `¡Excelente ${this.customer.name}! Tu pedido ha sido registrado y el inventario actualizado con éxito.`,
         )
         cartService.clearCart()
         this.$router.push('/')
       } catch (error) {
-        console.error('Error al procesar la compra en Supabase:', error.message)
+        console.error('Error general en el checkout:', error.message)
         alert(
           'Hubo un problema al procesar tu compra. Por favor, intenta de nuevo.',
         )
