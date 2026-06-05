@@ -29,21 +29,52 @@
     </div>
 
     <CdModal
-      v-if="isModalOpen"
+      v-if="
+        isModalOpen &&
+        (selectedProduct.type === 'CD' || selectedProduct.type === 'vinyl')
+      "
       :product="selectedProduct"
       @close="closeModal"
+      @add-to-cart="manejarAgregarCarrito"
+    />
+
+    <RopaModal
+      v-if="isModalOpen && selectedProduct.type === 'Clothing'"
+      :product="selectedProduct"
+      @close="closeModal"
+      @add-to-cart="manejarAgregarCarrito"
+    />
+
+    <AccesoriosModal
+      v-if="
+        isModalOpen &&
+        (selectedProduct.type === 'Accesorio' ||
+          selectedProduct.type === 'Coleccionables')
+      "
+      :product="selectedProduct"
+      @close="closeModal"
+      @add-to-cart="manejarAgregarCarrito"
     />
   </div>
 </template>
 
 <script>
 import { supabase } from '@/services/supabase.js'
-import CdModal from '@/components/CdModal.vue'
 import { formatPrice } from '@/utils/formatPrice.js'
+import { cartService } from '@/services/cartService.js'
+
+// 💡 Importación de la trilogía de modales especializados de Garage94
+import CdModal from '@/components/CdModal.vue'
+import RopaModal from '@/components/RopaModal.vue'
+import AccesoriosModal from '@/components/AccesoriosModal.vue'
 
 export default {
   name: 'ResultadosBusqueda',
-  components: { CdModal },
+  components: {
+    CdModal,
+    RopaModal,
+    AccesoriosModal,
+  },
 
   data() {
     return {
@@ -56,14 +87,11 @@ export default {
 
   computed: {
     searchQuery() {
-      // Captura el parámetro ?q= de la URL
       return this.$route.query.q || ''
     },
   },
 
   watch: {
-    // Si el usuario escribe algo nuevo estando ya en la página de resultados,
-    // el watch detecta el cambio en la URL y vuelve a buscar.
     searchQuery: {
       immediate: true,
       async handler(newQuery) {
@@ -80,12 +108,11 @@ export default {
     async performSearch(text) {
       this.loading = true
       try {
-        // 🔍 Buscamos coincidencias parciales en el nombre OR en la banda
         const { data, error } = await supabase
           .from('products')
           .select('*')
           .or(`name.ilike.%${text}%,band.ilike.%${text}%`)
-          .limit(40) // Limitamos a 40 para no saturar la pantalla
+          .limit(40)
 
         if (error) throw error
         this.results = data || []
@@ -104,6 +131,10 @@ export default {
       this.isModalOpen = false
       this.selectedProduct = null
     },
+    manejarAgregarCarrito(item) {
+      cartService.addToCart(item.product, item.selectedSize)
+      console.log('¡Guardado en LocalStorage respetando las columnas de la DB!')
+    },
   },
 }
 </script>
@@ -116,7 +147,7 @@ export default {
 h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--color-text-dark);
+  color: var(--color-text-main);
 }
 .loading-state,
 .no-results {

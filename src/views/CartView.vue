@@ -157,11 +157,12 @@ export default {
         console.log('¡Orden creada con éxito en Supabase!', nuevaOrden)
 
         // ==========================================
-        // 🔄 PASO EXISTENTE: DESCONTAR EL STOCK REAL
+        // 🔄 PASO EXISTENTE: DESCONTAR EL STOCK REAL (¡CORREGIDO!)
         // ==========================================
         for (const item of this.cartItems) {
           const idBuscado = Number(item.id)
 
+          // A. Traemos el objeto stock actual desde Supabase
           const { data: productoDB, error: fetchError } = await supabase
             .from('products')
             .select('stock, id')
@@ -170,17 +171,52 @@ export default {
 
           if (fetchError) throw fetchError
 
-          const stockNumericoActual = Number(productoDB.stock.unidad)
-          const nuevoStockNumerico = stockNumericoActual - item.quantity
+          // Clonamos el objeto de stock actual de la DB para no romper las otras propiedades
+          let stockActualizadoJSON = { ...productoDB.stock }
 
-          if (nuevoStockNumerico < 0) {
-            alert(`Lo sentimos, no hay suficiente stock de ${item.name}.`)
-            return
+          // B. REVISAMOS: ¿Es un producto con tallas (Clothing) o un artículo único?
+          if (item.size) {
+            // Caso Ropa: Descontamos solo la talla elegida (ej: 'L')
+            const tallaElegida = item.size
+            const stockActualTalla = Number(
+              stockActualizadoJSON[tallaElegida] || 0,
+            )
+            const nuevoStockTalla = stockActualTalla - item.quantity
+
+            if (nuevoStockTalla < 0) {
+              alert(
+                `Lo sentimos, no hay suficiente stock en talla ${tallaElegida} para ${item.name}.`,
+              )
+              return
+            }
+
+            // Modificamos SOLO la propiedad de esa talla en nuestro clon
+            stockActualizadoJSON[tallaElegida] = nuevoStockTalla
+          } else {
+            // Caso Música/Accesorios: Descontamos de la propiedad 'unidad'
+            const stockActualUnidad = Number(stockActualizadoJSON.unidad || 0)
+            const nuevoStockUnidad = stockActualUnidad - item.quantity
+
+            if (nuevoStockUnidad < 0) {
+              alert(
+                `Lo sentimos, no hay suficiente stock disponible de ${item.name}.`,
+              )
+              return
+            }
+
+            // Modificamos SOLO la unidad
+            stockActualizadoJSON.unidad = nuevoStockUnidad
           }
 
+          console.log(
+            `Estructura de stock final que va para Supabase (ID ${idBuscado}):`,
+            stockActualizadoJSON,
+          )
+
+          // C. Actualizamos en Supabase enviando el objeto completo modificado
           const { error: updateError } = await supabase
             .from('products')
-            .update({ stock: { unidad: nuevoStockNumerico } })
+            .update({ stock: stockActualizadoJSON })
             .eq('id', idBuscado)
 
           if (updateError) throw updateError
