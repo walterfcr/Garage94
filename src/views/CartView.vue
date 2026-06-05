@@ -25,10 +25,18 @@
             <p class="item-price">{{ formatPrice(item.price) }}</p>
           </div>
 
-          <div class="item-quantity-controls">
-            <p>
+          <div class="item-right-controls">
+            <div class="item-quantity-box">
               Cant: <strong>{{ item.quantity }}</strong>
-            </p>
+            </div>
+
+            <button
+              @click="eliminarItem(index)"
+              class="btn-delete-item"
+              title="Eliminar producto"
+            >
+              🗑️
+            </button>
           </div>
         </div>
       </div>
@@ -114,17 +122,35 @@ export default {
     loadCart() {
       this.cartItems = cartService.getCart()
     },
+
+    // 🔥 NUEVO MÉTODO: Eliminar ítem por su índice en el LocalStorage
+    eliminarItem(index) {
+      // 1. Sacamos los ítems actuales
+      let copiaCarrito = cartService.getCart()
+
+      // 2. Borramos el elemento del array
+      copiaCarrito.splice(index, 1)
+
+      // 3. Limpiamos por completo el carrito viejo para resetear la memoria del servicio
+      cartService.clearCart()
+
+      // 4. Le reinyectamos los productos que quedaron uno por uno a través de tu servicio oficial
+      copiaCarrito.forEach((item) => {
+        // Le pasamos el objeto del producto y su talla (si es que tiene)
+        cartService.addToCart(item, item.size || null)
+      })
+
+      // 5. Refrescamos la interfaz local y la Navbar
+      this.loadCart()
+      window.dispatchEvent(new Event('cart-updated'))
+    },
+
     async checkout() {
       if (this.cartItems.length === 0) return
 
       try {
         console.log('--- INICIANDO PROCESAMIENTO DE COMPRA ---')
 
-        // ==========================================
-        // 🛍️ PASO NUEVO: GUARDAR LA ORDEN EN SUPABASE
-        // ==========================================
-
-        // Mapeamos los artículos locales para guardar solo lo necesario en la base de datos
         const productosParaGuardar = this.cartItems.map((item) => ({
           id: item.id,
           name: item.name,
@@ -141,28 +167,16 @@ export default {
               customer_phone: this.customer.phone,
               customer_address: this.customer.address,
               total_price: this.totalCartPrice,
-              items: productosParaGuardar, // Pasamos el arreglo completo al JSONB
+              items: productosParaGuardar,
             },
           ])
           .select()
 
-        if (orderError) {
-          console.error(
-            'Error al registrar la orden en DB:',
-            orderError.message,
-          )
-          throw orderError
-        }
+        if (orderError) throw orderError
 
-        console.log('¡Orden creada con éxito en Supabase!', nuevaOrden)
-
-        // ==========================================
-        // 🔄 PASO EXISTENTE: DESCONTAR EL STOCK REAL (¡CORREGIDO!)
-        // ==========================================
         for (const item of this.cartItems) {
           const idBuscado = Number(item.id)
 
-          // A. Traemos el objeto stock actual desde Supabase
           const { data: productoDB, error: fetchError } = await supabase
             .from('products')
             .select('stock, id')
@@ -171,12 +185,9 @@ export default {
 
           if (fetchError) throw fetchError
 
-          // Clonamos el objeto de stock actual de la DB para no romper las otras propiedades
           let stockActualizadoJSON = { ...productoDB.stock }
 
-          // B. REVISAMOS: ¿Es un producto con tallas (Clothing) o un artículo único?
           if (item.size) {
-            // Caso Ropa: Descontamos solo la talla elegida (ej: 'L')
             const tallaElegida = item.size
             const stockActualTalla = Number(
               stockActualizadoJSON[tallaElegida] || 0,
@@ -189,11 +200,8 @@ export default {
               )
               return
             }
-
-            // Modificamos SOLO la propiedad de esa talla en nuestro clon
             stockActualizadoJSON[tallaElegida] = nuevoStockTalla
           } else {
-            // Caso Música/Accesorios: Descontamos de la propiedad 'unidad'
             const stockActualUnidad = Number(stockActualizadoJSON.unidad || 0)
             const nuevoStockUnidad = stockActualUnidad - item.quantity
 
@@ -203,17 +211,9 @@ export default {
               )
               return
             }
-
-            // Modificamos SOLO la unidad
             stockActualizadoJSON.unidad = nuevoStockUnidad
           }
 
-          console.log(
-            `Estructura de stock final que va para Supabase (ID ${idBuscado}):`,
-            stockActualizadoJSON,
-          )
-
-          // C. Actualizamos en Supabase enviando el objeto completo modificado
           const { error: updateError } = await supabase
             .from('products')
             .update({ stock: stockActualizadoJSON })
@@ -222,7 +222,6 @@ export default {
           if (updateError) throw updateError
         }
 
-        // --- TODO EL PROCESO FUE UN ÉXITO ---
         alert(
           `¡Excelente ${this.customer.name}! Tu pedido ha sido registrado y el inventario actualizado con éxito.`,
         )
@@ -238,7 +237,6 @@ export default {
   },
   created() {
     this.loadCart()
-    // Escucha si el carrito se actualiza de fondo
     window.addEventListener('cart-updated', this.loadCart)
   },
   beforeUnmount() {
@@ -279,6 +277,8 @@ h1 {
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
 }
+
+/* 🔄 DISEÑO CORREGIDO DE LA TARJETA DEL ÍTEM */
 .cart-item-card {
   display: flex;
   gap: 1.5rem;
@@ -288,12 +288,20 @@ h1 {
   margin-bottom: 1rem;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  justify-content: space-between; /* Empuja el bloque derecho al extremo */
 }
 .item-img {
   width: 90px;
   height: 90px;
   object-fit: cover;
   border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* El bloque de detalles se estira de forma fluida ocupando el centro izquierdo */
+.item-details {
+  flex-grow: 1;
+  text-align: left;
 }
 .item-details h3 {
   margin: 0 0 0.5rem;
@@ -309,14 +317,55 @@ h1 {
   margin: 0.25rem 0;
 }
 .item-size span {
-  color: var(--color-accent-alt);
+  color: var(--color-accent-alt, #00ffaa);
   font-weight: bold;
 }
 .item-price {
-  color: var(--color-accent-alt);
+  color: var(--color-accent-alt, #00ffaa);
   font-weight: bold;
   margin: 0.5rem 0 0;
 }
+
+/* 🎯 NUEVA COLUMNA ALINEADA DE CONTROLES EXTREMO DERECHO */
+.item-right-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea los textos a la derecha */
+  justify-content: space-between;
+  gap: 1rem;
+  height: 90px; /* Misma altura que la imagen para cuadrar la visual */
+  flex-shrink: 0;
+}
+.item-quantity-box {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.item-quantity-box strong {
+  color: #fff;
+  background: #252525;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+/* BOTÓN DE BASURERO ULTRA LIMPIO */
+.btn-delete-item {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+.btn-delete-item:hover {
+  background: rgba(255, 0, 85, 0.15);
+  transform: scale(1.1);
+}
+
+/* RESTO DE LA INTERFAZ */
 .cart-summary {
   background: #141414;
   padding: 1.5rem;
@@ -363,8 +412,8 @@ hr {
 .btn-checkout {
   width: 100%;
   padding: 0.8rem;
-  background: var(--color-accent);
-  color: var(--color-text-main);
+  background: var(--color-accent, #ff0055);
+  color: var(--color-text-main, #fff);
   border: none;
   border-radius: 6px;
   font-weight: bold;
@@ -378,6 +427,9 @@ hr {
 @media (max-width: 768px) {
   .cart-content {
     grid-template-columns: 1fr;
+  }
+  .cart-item-card {
+    position: relative;
   }
 }
 </style>

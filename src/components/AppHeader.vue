@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <div class="logo">
-      <img src="/images/logo.png" alt="Logo" />
+      <router-link to="/">
+        <img src="/images/logo.png" alt="Logo Garage94" />
+      </router-link>
     </div>
 
     <button class="hamburger" @click="toggleMenu" aria-label="Toggle menu">
@@ -20,8 +22,11 @@
       </div>
 
       <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/nosotros">Nosotros</a></li>
+        <li><router-link to="/" @click="closeMenu">Inicio</router-link></li>
+        <li>
+          <router-link to="/nosotros" @click="closeMenu">Nosotros</router-link>
+        </li>
+
         <li class="has-submenu">
           <a href="#">Música</a>
           <ul class="submenu">
@@ -67,6 +72,7 @@
             </li>
           </ul>
         </li>
+
         <li class="has-submenu">
           <a href="#">Mercadería</a>
           <ul class="submenu">
@@ -102,13 +108,48 @@
             </li>
           </ul>
         </li>
-        <li><a href="/contacto">Contacto</a></li>
+
+        <li>
+          <router-link to="/contacto" @click="closeMenu">Contacto</router-link>
+        </li>
+
+        <li class="mobile-actions-li">
+          <router-link
+            to="/carrito"
+            class="btn-nav-action-mobile"
+            @click="closeMenu"
+          >
+            🛒 Carrito ({{ cartCount }})
+          </router-link>
+          <router-link
+            to="/login"
+            class="btn-nav-action-mobile login-mobile"
+            @click="closeMenu"
+          >
+            👤 Login
+          </router-link>
+        </li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <button>🛒</button>
-      <button>Login</button>
+      <router-link
+        to="/carrito"
+        class="btn-action cart-btn-wrap"
+        title="Ver mi carrito"
+      >
+        <span class="icon">🛒</span>
+        <span v-if="cartCount > 0" class="cart-badge">{{ cartCount }}</span>
+      </router-link>
+
+      <router-link
+        to="/login"
+        class="btn-action login-btn"
+        title="Iniciar sesión"
+      >
+        Login
+      </router-link>
+
       <div class="search-box desktop-search-box">
         <input
           v-model="textoABuscar"
@@ -123,12 +164,15 @@
 </template>
 
 <script>
+import { cartService } from '@/services/cartService.js' // 🔥 Importación vital del servicio
+
 export default {
   name: 'AppHeader',
   data() {
     return {
       menuActive: false,
-      textoABuscar: '', // 🔍 Guardará lo que el usuario escribe en el input
+      textoABuscar: '',
+      cartCount: 0, // 🛒 Aquí se guardará el total de piezas agregadas
     }
   },
   methods: {
@@ -138,29 +182,41 @@ export default {
     closeMenu() {
       this.menuActive = false
     },
-
-    /* 🚀 Método para disparar la búsqueda en Supabase */
     ejecutarBusqueda() {
       const queryLimpio = this.textoABuscar.trim()
-
       if (queryLimpio.length > 0) {
-        // Redirige a la nueva vista pasando la palabra clave en la URL (?q=...)
         this.$router.push({ path: '/buscar', query: { q: queryLimpio } })
-
-        this.textoABuscar = '' // Limpia el input para la siguiente búsqueda
-        this.closeMenu() // Por si el usuario busca desde el menú móvil, aseguramos cerrarlo
+        this.textoABuscar = ''
+        this.closeMenu()
       }
     },
+    // 🔥 Cuenta el total sumando las cantidades individuales de cada producto
+    actualizarContador() {
+      const items = cartService.getCart()
+      this.cartCount = items.reduce((acc, item) => acc + item.quantity, 0)
+    },
+  },
+  mounted() {
+    // Inicializar el conteo apenas se cargue la web
+    this.actualizarContador()
+    // Escuchar el evento que configuramos en los borrados y agregados
+    window.addEventListener('cart-updated', this.actualizarContador)
+  },
+  beforeUnmount() {
+    window.removeEventListener('cart-updated', this.actualizarContador)
   },
 }
 </script>
 
 <style scoped>
+/* ==========================================================================
+   💥 CONFIGURACIÓN GLOBAL DEL HEADER
+   ========================================================================== */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 100px;
+  padding: 10px 40px;
   background-color: var(--color-background-dark);
   border-bottom: 3px solid var(--color-border);
   color: var(--color-text-light);
@@ -168,26 +224,33 @@ export default {
 }
 
 .logo img {
-  height: 75px;
+  height: 65px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
 }
 
-/* Hamburger */
 .hamburger {
   display: none;
-  font-size: 30px;
+  font-size: 28px;
   background: none;
   border: none;
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
   cursor: pointer;
 }
 
-/* Nav Menu */
+/* ==========================================================================
+   🧭 MENÚ DE NAVEGACIÓN Y SUBMENÚS (DESKTOP)
+   ========================================================================== */
 .nav-menu {
   display: flex;
+  align-items: center;
 }
 
 .nav-menu ul {
   display: flex;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -195,160 +258,197 @@ export default {
 
 .nav-menu li {
   position: relative;
-  margin: 0 15px;
-  text-align: center;
+  margin: 0 12px;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: var(--color-text-main);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.2s ease;
 }
 
-.nav-menu a:hover {
-  color: var(--color-text-dark-hover);
+.nav-menu a:hover,
+.router-link-active {
+  color: var(--color-accent) !important;
 }
 
-/* Submenu */
 .has-submenu .submenu {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  padding: 10px;
-  min-width: 250px;
-  z-index: 10;
+  border: 2px solid var(--color-border);
+  padding: 8px 0;
+  min-width: 240px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  z-index: 100;
 }
 
 .has-submenu:hover .submenu {
   display: block;
 }
 
-.has-submenu .submenu a {
-  color: var(--color-text-light);
+.submenu li a {
+  display: block;
+  color: var(--color-text-light) !important;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: normal;
 }
 
-.submenu li {
-  margin: 5px 0;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
-}
-
-.submenu li:hover {
+.submenu li a:hover {
   background-color: var(--color-background-dark);
+  color: var(--color-accent) !important;
 }
 
-/* Header Actions */
+/* ==========================================================================
+   🛍️ ACCIONES DEL HEADER (BOTONES Y BURBUJA NEÓN)
+   ========================================================================== */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
-.header-actions input {
-  padding: 5px 10px;
+.btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
   border: 1px solid var(--color-border-light);
-  border-radius: 3px;
-  background-color: var(--color-surface);
   color: var(--color-text-light);
-}
-
-.header-actions button {
-  background-color: var(--color-button-bg);
-  color: #fff;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  text-decoration: none;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.2s ease;
 }
 
-.header-actions button:hover {
-  background-color: var(--color-button-hover);
+.btn-action:hover {
+  background: #363636;
+  border-color: var(--color-text-muted);
 }
 
-/* --- CONTENEDOR DEL BUSCADOR --- */
+.login-btn {
+  background: var(--color-button-bg);
+  border: none;
+}
+.login-btn:hover {
+  background: var(--color-button-hover);
+}
+
+.cart-btn-wrap {
+  position: relative;
+  width: 42px;
+  padding: 0;
+  border-radius: 50%;
+}
+.cart-btn-wrap .icon {
+  font-size: 1.1rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--color-accent-alt);
+  color: #121212;
+  font-size: 0.7rem;
+  font-weight: 900;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  box-shadow: 0 0 8px var(--color-accent-alt);
+}
+
+.mobile-actions-li {
+  display: none;
+}
+
+/* ==========================================================================
+   🔍 CONTROL ESPECÍFICO DE LOS BUSCADORES (EL FILTRO DEFINITIVO)
+   ========================================================================== */
+/* Estilos Base compartidos */
 .search-box {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 0, 85, 0.3); /* Borde sutil rosa */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 0, 85, 0.2);
   border-radius: 20px;
   padding: 4px 14px;
   transition: all 0.3s ease;
-  max-width: 300px;
-  width: 100%;
 }
-
-.search-box:focus-within {
-  border-color: var(--color-accent); /* Brilla en rosa neón al hacer click */
-  box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-/* --- INPUT DE TEXTO --- */
 .search-box input {
   background: transparent;
   border: none;
   outline: none;
-  color: var(--color-text-dark);
-  font-family: 'Roboto', sans-serif;
+  color: var(--color-text-light);
   font-size: 0.85rem;
   width: 100%;
-  padding: 6px 0;
 }
-
-.search-box input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-/* --- BOTÓN LUPA --- */
 .search-box button {
   background: transparent;
   border: none;
-  color: var(--color-text-muted);
   cursor: pointer;
-  font-size: 0.9rem;
-  padding-left: 8px;
-  transition: color 0.2s ease;
-  display: flex;
-  align-items: center;
+  padding-left: 6px;
 }
 
-.search-box button:hover {
-  color: var(--color-accent); /* La lupa se ilumina en rosa al pasar el mouse */
+/* 🖥️ Reglas para Escritorio (Pantallas Grandes) */
+@media screen and (min-width: 769px) {
+  .mobile-search-box {
+    display: none !important; /* Totalmente fulminado en PC */
+  }
+  .desktop-search-box {
+    display: flex;
+    width: 220px;
+  }
+  .desktop-search-box:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 8px rgba(255, 0, 85, 0.3);
+    width: 260px;
+  }
 }
 
-/* Responsive */
+/* 📱 Reglas para Dispositivos Móviles (Pantallas Pequeñas) */
 @media screen and (max-width: 768px) {
-  .header {
-    flex-wrap: wrap;
-    padding: 10px 30px;
+  .desktop-search-box {
+    display: none !important; /* Oculta el buscador del bloque derecho */
+  }
+
+  .mobile-search-box {
+    display: flex !important; /* Se activa limpio dentro del menú hamburguesa */
+    margin: 15px auto;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-accent);
   }
 
   .hamburger {
     display: block;
-    z-index: 1100;
-    position: relative;
   }
 
   .nav-menu {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-background-darker);
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
-  }
-
-  .nav-menu a {
-    color: var(--color-text-light);
+    border-bottom: 2px solid var(--color-border);
   }
 
   .nav-menu.active {
@@ -357,77 +457,65 @@ export default {
 
   .nav-menu ul {
     flex-direction: column;
-    padding: 10px;
+    width: 100%;
+    padding: 15px 0;
   }
 
   .nav-menu li {
-    padding: 10px 0;
+    width: 100%;
+    margin: 0;
+    padding: 0; /* Reseteamos el padding del contenedor */
+    text-align: left; /* Alineación limpia a la izquierda */
   }
 
-  .header-actions {
-    display: none;
-  }
-
-  .has-submenu .submenu {
-    display: none;
-    position: relative;
-    background-color: var(--color-surface);
-    border: none;
-    padding: 0;
-  }
-
-  .has-submenu:hover .submenu {
+  .nav-menu ul > li > a {
     display: block;
-  }
-}
-.mobile-search-box {
-  display: none !important;
-}
-
-@media (max-width: 768px) {
-  .desktop-search-box {
-    display: none !important;
-  }
-
-  .mobile-search-box {
-    display: flex !important;
-    margin: 20px auto;
-    width: 85%;
+    padding: 12px 24px; /* 12px arriba/abajo y 24px de separación del borde izquierdo */
     color: var(--color-text-light) !important;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--color-accent);
-    border-radius: 20px;
-    padding: 6px 14px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .hamburger {
-    display: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03); /* Separador sutil entre opciones */
+    transition: background-color 0.2s ease;
   }
 
-  .nav-menu {
-    display: flex !important;
-  }
-
-  .nav-menu ul {
-    flex-direction: row;
-  }
-
-  .nav-menu li {
-    margin: 0 15px;
-  }
-
-  .header-actions {
-    display: flex;
+  /* Efecto visual al tocar una opción principal en móvil */
+  .nav-menu ul > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
   .has-submenu .submenu {
+    position: relative;
+    transform: none;
+    left: 0;
+    width: 90%;
+    margin: 5px auto;
+    box-shadow: none;
+    background: var(--color-background-dark);
+  }
+
+  .header-actions {
     display: none;
   }
 
-  .has-submenu:hover .submenu {
+  .mobile-actions-li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px 5px;
+    width: 90% !important;
+    margin: 0 auto;
+  }
+  .btn-nav-action-mobile {
     display: block;
+    width: 100%;
+    background: var(--color-surface);
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--color-text-light) !important;
+    border: 1px solid var(--color-border-light);
+  }
+  .btn-nav-action-mobile.login-mobile {
+    background: var(--color-accent);
+    border: none;
   }
 }
 </style>
