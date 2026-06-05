@@ -1,28 +1,25 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import './assets/global.css';
-import router from './router';
+import { createApp } from 'vue'
+import App from './App.vue'
+import './assets/global.css'
+import router from './router'
 
-// AOS imports
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(router);
+app.use(router)
 
-// Mount first
-app.mount('#app');
+app.mount('#app')
 
-// Initialize AOS after the app is mounted
 AOS.init({
   once: true,
-  duration: 400, // faster animation
-  easing: 'ease-out', // optional: snappy easing
-});
+  duration: 400,
+  easing: 'ease-out',
+})
 
 router.afterEach(() => {
   setTimeout(() => {
-    AOS.refreshHard();
-  }, 50); // minimal delay
-});
+    AOS.refreshHard()
+  }, 50)
+})

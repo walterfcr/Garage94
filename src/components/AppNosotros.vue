@@ -1,14 +1,17 @@
 <template>
   <div>
-    <!-- Hero Section with Rotating Text and Background -->
-    <section class="nosotros-hero" :style="{ backgroundImage: `url('/images/nosotros.jpg')` }">
+    <section
+      class="nosotros-hero"
+      :style="{ backgroundImage: `url('/images/nosotros.jpg')` }"
+    >
       <div class="hero-text">
         <h1>{{ currentPhrase }}</h1>
-        <p>Es un refugio para quienes crecieron entre gritos, guitarras y rebeldía.</p>
+        <p>
+          Es un refugio para quienes crecieron entre gritos, guitarras y
+          rebeldía.
+        </p>
       </div>
     </section>
-
-    
 
     <TestimonialsSection />
     <AppFooter />
@@ -16,8 +19,8 @@
 </template>
 
 <script>
-import TestimonialsSection from '@/components/TestimonialsSection.vue';
-import AppFooter from '@/components/AppFooter.vue';
+import TestimonialsSection from '@/components/TestimonialsSection.vue'
+import AppFooter from '@/components/AppFooter.vue'
 
 export default {
   name: 'AppNosotros',
@@ -35,26 +38,25 @@ export default {
       ],
       currentIndex: 0,
       intervalId: null,
-    };
+    }
   },
   computed: {
     currentPhrase() {
-      return this.phrases[this.currentIndex];
+      return this.phrases[this.currentIndex]
     },
   },
   mounted() {
     this.intervalId = setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.phrases.length;
-    }, 4000);
+      this.currentIndex = (this.currentIndex + 1) % this.phrases.length
+    }, 4000)
   },
   beforeUnmount() {
-    clearInterval(this.intervalId);
+    clearInterval(this.intervalId)
   },
-};
+}
 </script>
 
 <style scoped>
-/* Hero Section */
 .nosotros-hero {
   height: 70vh;
   background-size: cover;
@@ -100,7 +102,6 @@ export default {
   }
 }
 
-/* Content Section */
 .nosotros-wrap {
   margin: 100px 0 0;
 }

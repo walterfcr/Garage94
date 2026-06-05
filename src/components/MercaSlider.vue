@@ -41,10 +41,9 @@ import 'swiper/swiper-bundle.css'
 export default {
   components: { Swiper, SwiperSlide },
   props: {
-    // 🌟 Recibe la variante desde la página padre
     variant: {
       type: String,
-      default: 'surface', // Por defecto mantiene tu color-surface
+      default: 'surface',
     },
   },
   data() {
@@ -90,7 +89,6 @@ export default {
     }
   },
   computed: {
-    // 🌟 Retorna la clase correcta según el prop
     variantClass() {
       return this.variant === 'dark' ? 'bg-dark' : 'bg-surface'
     },
@@ -171,7 +169,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* 🌟 TUS CONTENEDORES DE BACK-GROUND EXCLUSIVOS */
 .merch-wrap {
   margin: 0 auto;
   padding: 50px 5% 100px;

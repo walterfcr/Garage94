@@ -97,7 +97,7 @@ h2 {
 
 .card:hover img {
   filter: grayscale(0%);
-  transform: scale(1.05); /* Aumenta el tamaño de la imagen en un 5% */
+  transform: scale(1.05);
   border: 6px solid var(--color-border-light);
 }
 

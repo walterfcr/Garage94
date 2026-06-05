@@ -63,7 +63,7 @@ export default {
         type: this.product.type,
       })
       this.emitClose()
-    }, // <-- Aquí pusimos la coma que faltaba
+    },
     openLightbox() {
       if (window.innerWidth >= 769) {
         this.isLightboxOpen = true
@@ -146,7 +146,6 @@ export default {
   transform: scale(1.02);
 }
 
-/* Lightbox styles */
 .lightbox-overlay {
   position: fixed;
   inset: 0;

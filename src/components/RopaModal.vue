@@ -2,16 +2,13 @@
   <div class="modal-overlay" @click.self="emitClose">
     <div class="modal-content" data-aos="fade-in">
       <div class="product-details">
-        <!-- Column 1: Image -->
         <div class="column">
           <img :src="product.image" :alt="product.name" />
         </div>
 
-        <!-- Column 2: Clothing Info -->
         <div class="column">
           <h2>{{ product.name }}</h2>
 
-          <!-- Size Dropdown -->
           <label for="size-select"><strong>Talla:</strong></label>
           <select id="size-select" v-model="selectedSize">
             <option disabled value="">Selecciona una talla</option>
@@ -25,7 +22,6 @@
           <p><strong>Item #:</strong> {{ product.item_number }}</p>
         </div>
 
-        <!-- Column 3: Description -->
         <div class="column">
           <h3>Descripción</h3>
           <p>{{ product.description }}</p>
@@ -64,14 +60,12 @@ export default {
       this.$emit('close')
     },
     addToCart() {
-      // Disparamos el evento enviando el producto y la talla que seleccionó el cliente
       this.$emit('add-to-cart', {
         product: this.product,
         selectedSize: this.selectedSize,
         type: this.product.type,
       })
 
-      // Cerramos el modal de una vez
       this.emitClose()
     },
   },

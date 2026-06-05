@@ -24,7 +24,7 @@ p {
 }
 
 h1 {
-  color: var(--color-accent);
+  color: var(--color-text-main);
   font-size: 2.2rem;
   font-family: 'Nova Square', sans-serif;
   text-transform: uppercase;
@@ -50,12 +50,11 @@ h1 {
   --color-card-bg: #2e2e2e;
 }
 
-/* Paginación */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 6rem 0; /* moved margin-bottom here */
+  margin: 6rem 0;
   gap: 10px;
 }
 
@@ -82,7 +81,7 @@ h1 {
 
 .product-list {
   display: grid;
-  /* 🌟 CAMBIO CLAVE: Usamos auto-fill para evitar que las tarjetas se estiren cuando hay pocos resultados */
+
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1.5rem;
   width: 90%;
@@ -91,9 +90,8 @@ h1 {
   max-width: 1800px;
 }
 
-/* --- PRODUCT CARD MEJORADO --- */
 .product-card {
-  position: relative; /* 🌟 Esencial para posicionar la etiqueta (badge) adentro */
+  position: relative;
   background: var(--color-background-dark);
   border: 2px solid #ff005580;
   border-radius: 12px;
@@ -106,8 +104,8 @@ h1 {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Mantiene el precio siempre abajo alineado */
-  min-height: 280px; /* Asegura una altura uniforme en todo el catálogo */
+  justify-content: space-between;
+  min-height: 280px;
   overflow: hidden;
 }
 
@@ -119,7 +117,7 @@ h1 {
 .product-card img {
   width: 100%;
   height: 150px;
-  object-fit: contain; /* 🌟 Cambiado a contain para que las portadas de CDs/Vinilos se vean perfectas sin recortarse */
+  object-fit: contain;
   margin: 0 auto 1rem;
   filter: grayscale(20%);
   transition: filter 0.3s ease;
@@ -137,8 +135,8 @@ h1 {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  overflow-y: auto; /* IMPORTANT: allow vertical scroll */
-  padding: 20px; /* add padding so modal isn't flush on small screens */
+  overflow-y: auto;
+  padding: 20px;
 }
 
 .modal-content {
@@ -152,8 +150,8 @@ h1 {
   box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
   position: relative;
 
-  max-height: 90vh; /* limit modal height to viewport height */
-  overflow-y: auto; /* allow scrolling inside modal */
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .close-button {
@@ -204,7 +202,6 @@ h1 {
   }
 }
 
-/* Title & Price */
 .product-card h3 {
   color: var(--color-text-light) !important;
   margin: 0.5rem 0 0.2rem;
@@ -218,7 +215,6 @@ h1 {
   margin: 0;
 }
 
-/* Link Style Reset */
 .product-card a {
   text-decoration: none;
   color: inherit;

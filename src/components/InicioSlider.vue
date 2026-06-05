@@ -3,7 +3,7 @@
     class="inicio"
     :style="{ backgroundImage: `url('/images/${currentSlide}')` }"
   >
-  <div class="texto-slider">
+    <div class="texto-slider">
       <h1>TU TIENDA. TU PLAYLIST. TU IDENTIDAD</h1>
       <p>CDs, vinilos y ropa de culto para quienes crecieron al margen.</p>
     </div>
@@ -17,31 +17,32 @@ export default {
     return {
       slides: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'],
       currentSlideIndex: 0,
-    };
+    }
   },
   computed: {
     currentSlide() {
-      return this.slides[this.currentSlideIndex];
-    }
+      return this.slides[this.currentSlideIndex]
+    },
   },
   mounted() {
-    this.startSlideShow();
+    this.startSlideShow()
   },
   methods: {
     startSlideShow() {
       setInterval(() => {
-        this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
-      }, 5000); // Change every 5 seconds
-    }
-  }
-};
+        this.currentSlideIndex =
+          (this.currentSlideIndex + 1) % this.slides.length
+      }, 5000)
+    },
+  },
+}
 </script>
 
 <style>
 .inicio {
   height: 700px;
   width: 100%;
-  /*box-shadow: inset 0 0 0 1000px rgba(11, 18, 46, 0.6);*/
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -95,5 +96,4 @@ export default {
     font-size: 1rem;
   }
 }
-
 </style>

@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { supabase } from '@/services/supabase.js' // Asegúrate de que apunte a tu cliente de Supabase
+import { supabase } from '@/services/supabase.js'
 import CdModal from '@/components/CdModal.vue'
 import { formatPrice } from '@/utils/formatPrice.js'
 
@@ -53,30 +53,21 @@ export default {
     async fetchRandomNewArrivals() {
       this.loading = true
       try {
-        // 🎲 Explicación: Buscamos solo CDs, le pedimos a PostgreSQL que los baraje
-        // aleatoriamente usando una API nativa de orden, y limitamos a 18 discos.
         const { data, error } = await supabase
           .from('products')
           .select('*')
           .eq('type', 'CD')
-          .textSearch('id', '') // Truco para permitir inyecciones avanzadas si fuera necesario o simplemente:
-        // Nota: La forma oficial más limpia para forzar orden random sin meter código SQL crudo
-        // es pedir una muestra aleatoria o desordenar el array en JS si son pocos,
-        // pero ordenando vía Postgres crudo es así:
+          .textSearch('id', '')
 
-        // Para asegurar compatibilidad total en Supabase sin crear funciones extras en su dashboard,
-        // traemos un bloque inicial y lo barajamos con el algoritmo Fisher-Yates en el cliente:
         const { data: cds, error: err } = await supabase
           .from('products')
           .select('*')
           .eq('type', 'CD')
-          .limit(100) // Traemos una muestra de 100 discos recientes
+          .limit(100)
 
         if (err) throw err
-
         if (cds) {
-          // Barajamos el array para que siempre sea diferente cada vez que recargues la página principal
-          this.randomCds = cds.sort(() => 0.5 - Math.random()).slice(0, 16) // Nos quedamos exactamente con los 16 aleatorios
+          this.randomCds = cds.sort(() => 0.5 - Math.random()).slice(0, 16)
         }
       } catch (err) {
         console.error('Error fetching new arrivals:', err.message)
@@ -85,7 +76,6 @@ export default {
       }
     },
 
-    /* ---------- Control del Modal de CDs ---------- */
     openModal(product) {
       this.selectedProduct = product
       this.isModalOpen = true
@@ -117,5 +107,4 @@ h3 {
   padding: 40px;
   color: var(--color-text-muted);
 }
-/* El resto de estilos de tarjetas heredan de tus estilos globales */
 </style>

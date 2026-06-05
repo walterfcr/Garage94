@@ -51,7 +51,6 @@ export default {
   },
   methods: {
     handleSubmit() {
-      // Simulate form submission
       this.successMessage = '¡Gracias por tu mensaje!'
       this.form.name = ''
       this.form.email = ''

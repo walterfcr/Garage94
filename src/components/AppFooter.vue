@@ -1,12 +1,10 @@
 <template>
   <footer class="site-footer">
     <div class="footer-content">
-      <!-- Logo or brand name -->
       <div class="footer-logo">
         <img src="/images/logo.png" alt="Logo" />
       </div>
 
-      <!-- Navigation links -->
       <div class="footer-links">
         <div class="link-column">
           <h4>Música</h4>
@@ -38,7 +36,6 @@
         </div>
       </div>
 
-      <!-- Social and copyright -->
       <div class="footer-bottom">
         <div class="social-icons">
           <a href="#" aria-label="Instagram">📷</a>

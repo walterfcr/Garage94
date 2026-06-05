@@ -1,14 +1,11 @@
 <template>
-  <!-- Only rendered when product is not null -->
   <div class="modal-overlay" @click.self="emitClose">
     <div class="modal-content" data-aos="fade-in">
       <div class="product-details">
-        <!-- column 1 -->
         <div class="column">
           <img :src="product.image" :alt="product.name" />
         </div>
 
-        <!-- column 2 -->
         <div class="column">
           <h2>Álbum: {{ product.name }}</h2>
           <p><strong>Artista:</strong> {{ product.band }}</p>
@@ -20,7 +17,6 @@
           <p><strong>Item #:</strong> {{ product.item_number }}</p>
         </div>
 
-        <!-- column 3 -->
         <div class="column">
           <h3>Descripción del álbum</h3>
           <p>{{ product.description }}</p>
@@ -39,11 +35,9 @@ export default {
   props: { product: Object },
   emits: ['close', 'add-to-cart'],
   mounted() {
-    /* lock background scroll */
     document.body.classList.add('no-scroll')
   },
   unmounted() {
-    /* unlock background scroll */
     document.body.classList.remove('no-scroll')
   },
   methods: {
@@ -96,7 +90,7 @@ export default {
   .product-details {
     flex-direction: column;
   }
-  /* Remove vertical centering but keep horizontal centering */
+
   .modal-overlay {
     align-items: flex-start;
   }

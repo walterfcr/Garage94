@@ -62,8 +62,6 @@
 import { supabase } from '@/services/supabase.js'
 import { formatPrice } from '@/utils/formatPrice.js'
 import { cartService } from '@/services/cartService.js'
-
-// 💡 Importación de la trilogía de modales especializados de Garage94
 import CdModal from '@/components/CdModal.vue'
 import RopaModal from '@/components/RopaModal.vue'
 import AccesoriosModal from '@/components/AccesoriosModal.vue'

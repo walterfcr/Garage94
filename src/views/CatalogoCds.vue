@@ -77,7 +77,6 @@ export default {
   },
 
   computed: {
-    // Detects genre from URL path parameter
     currentGenreDisplay() {
       const slug = this.genreFromProp || this.$route.params.genre || 'Música'
       if (slug.toLowerCase() === 'vinyl' || slug.toLowerCase() === 'vinilos') {
@@ -95,11 +94,9 @@ export default {
   },
 
   async created() {
-    // Read page parameter from query URL
     const page = parseInt(this.$route.query.page, 10)
     this.currentPage = !isNaN(page) && page > 0 ? page : 1
 
-    // Fetch data from Supabase
     await this.fetchProductsByGenre()
   },
 
@@ -117,7 +114,6 @@ export default {
     async fetchProductsByGenre() {
       this.loading = true
       try {
-        // 🔍 Prioridad 1: La prop fija. Prioridad 2: La URL del navegador.
         const categoriaUrl =
           this.genreFromProp || this.$route.params.genre || ''
 
@@ -202,7 +198,6 @@ export default {
   watch: {
     '$route.params.genre': {
       async handler() {
-        // 🛑 Si el componente se instanció con una Prop fija, ignoramos los cambios de la URL
         if (this.genreFromProp) return
 
         this.currentPage = 1

@@ -73,7 +73,6 @@ export default {
   },
 
   watch: {
-    // Listens to URL shifts (e.g. switching tabs from Accessories to Collectibles)
     '$route.params.tipo': {
       immediate: true,
       async handler(nuevoTipo) {
@@ -97,7 +96,6 @@ export default {
   methods: {
     formatPrice,
     async cargarMercancia(tipo) {
-      // Formats parameters to match DB entries ("accesorios" -> "Accesorio", "coleccionables" -> "Coleccionables")
       let tipoBaseDatos = 'Accesorio'
       if (tipo.toLowerCase().includes('colec')) {
         tipoBaseDatos = 'Coleccionables'

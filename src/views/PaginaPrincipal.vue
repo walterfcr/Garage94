@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import AOS from 'aos' // Import the AOS library
+import AOS from 'aos'
 import InicioSlider from '@/components/InicioSlider.vue'
 import CatalogoCds from '@/views/CatalogoCds.vue'
 import FeaturedCollections from '@/components/FeaturedCollections.vue'
@@ -48,17 +48,13 @@ export default {
   },
 
   mounted() {
-    // Initialize AOS when the page is loaded
     AOS.init()
 
-    // Refresh AOS animations after component is mounted
     setTimeout(() => {
-      AOS.refresh() // Ensure animations are refreshed
+      AOS.refresh()
     }, 300)
   },
 }
 </script>
 
-<style scoped>
-/* Add any global or page-specific styles here */
-</style>
+<style scoped></style>

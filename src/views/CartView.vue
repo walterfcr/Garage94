@@ -123,24 +123,17 @@ export default {
       this.cartItems = cartService.getCart()
     },
 
-    // 🔥 NUEVO MÉTODO: Eliminar ítem por su índice en el LocalStorage
     eliminarItem(index) {
-      // 1. Sacamos los ítems actuales
       let copiaCarrito = cartService.getCart()
 
-      // 2. Borramos el elemento del array
       copiaCarrito.splice(index, 1)
 
-      // 3. Limpiamos por completo el carrito viejo para resetear la memoria del servicio
       cartService.clearCart()
 
-      // 4. Le reinyectamos los productos que quedaron uno por uno a través de tu servicio oficial
       copiaCarrito.forEach((item) => {
-        // Le pasamos el objeto del producto y su talla (si es que tiene)
         cartService.addToCart(item, item.size || null)
       })
 
-      // 5. Refrescamos la interfaz local y la Navbar
       this.loadCart()
       window.dispatchEvent(new Event('cart-updated'))
     },
@@ -278,7 +271,6 @@ h1 {
   gap: 2rem;
 }
 
-/* 🔄 DISEÑO CORREGIDO DE LA TARJETA DEL ÍTEM */
 .cart-item-card {
   display: flex;
   gap: 1.5rem;
@@ -288,7 +280,7 @@ h1 {
   margin-bottom: 1rem;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  justify-content: space-between; /* Empuja el bloque derecho al extremo */
+  justify-content: space-between;
 }
 .item-img {
   width: 90px;
@@ -298,7 +290,6 @@ h1 {
   flex-shrink: 0;
 }
 
-/* El bloque de detalles se estira de forma fluida ocupando el centro izquierdo */
 .item-details {
   flex-grow: 1;
   text-align: left;
@@ -326,15 +317,13 @@ h1 {
   margin: 0.5rem 0 0;
 }
 
-/* 🎯 NUEVA COLUMNA ALINEADA DE CONTROLES EXTREMO DERECHO */
 .item-right-controls {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Alinea los textos a la derecha */
+  align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
-  height: 90px; /* Misma altura que la imagen para cuadrar la visual */
-  flex-shrink: 0;
+  height: 90px;
 }
 .item-quantity-box {
   font-size: 0.95rem;
@@ -348,7 +337,6 @@ h1 {
   margin-left: 4px;
 }
 
-/* BOTÓN DE BASURERO ULTRA LIMPIO */
 .btn-delete-item {
   background: transparent;
   border: none;
@@ -365,7 +353,6 @@ h1 {
   transform: scale(1.1);
 }
 
-/* RESTO DE LA INTERFAZ */
 .cart-summary {
   background: #141414;
   padding: 1.5rem;

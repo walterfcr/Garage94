@@ -57,7 +57,6 @@ export default {
     async fetchEspeciales() {
       this.loading = true
       try {
-        // Traemos de Supabase únicamente las filas correspondientes a Box-Set
         const { data, error } = await supabase
           .from('products')
           .select('*')

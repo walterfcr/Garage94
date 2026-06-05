@@ -57,13 +57,13 @@
 
 <script>
 import { onMounted } from 'vue'
-import AOS from 'aos' // Import AOS
+import AOS from 'aos'
 
 export default {
   name: 'BuscarGenero',
   mounted() {
     onMounted(() => {
-      AOS.init() // Initialize AOS on component mount
+      AOS.init()
     })
   },
 }

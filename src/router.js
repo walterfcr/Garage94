@@ -87,7 +87,6 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
   if (to.meta.requiresAdmin) {
-    // 1. Verificamos la sesión activa
     const {
       data: { user },
     } = await supabase.auth.getUser()
@@ -96,24 +95,21 @@ router.beforeEach(async (to, from, next) => {
       return next('/login')
     }
 
-    // 2. Consultamos el perfil
     const { data: profile, error } = await supabase
       .from('profiles')
       .select('role')
       .eq('id', user.id)
-      .maybeSingle() // 🌟 Cambiamos .single() por .maybeSingle() para evitar que un error rompa el flujo
+      .maybeSingle()
 
-    // 🔍 ESTOS LOGS TE VAN A DECIR EXACTAMENTE QUÉ PASA en la consola del navegador (F12)
     console.log('Guard - Usuario ID:', user.id)
     console.log('Guard - Perfil encontrado:', profile)
     if (error) console.error('Guard - Error de Supabase:', error)
 
-    // 3. Validamos el rol seguro
     if (profile && profile.role === 'admin') {
-      next() // Es admin, pasa
+      next()
     } else {
       alert('Acceso denegado. Se requieren permisos de administrador.')
-      next('/') // No es admin o no se encontró, al Home
+      next('/')
     }
   } else {
     next()

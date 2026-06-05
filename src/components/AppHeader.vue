@@ -164,7 +164,7 @@
 </template>
 
 <script>
-import { cartService } from '@/services/cartService.js' // 🔥 Importación vital del servicio
+import { cartService } from '@/services/cartService.js'
 
 export default {
   name: 'AppHeader',
@@ -172,7 +172,7 @@ export default {
     return {
       menuActive: false,
       textoABuscar: '',
-      cartCount: 0, // 🛒 Aquí se guardará el total de piezas agregadas
+      cartCount: 0,
     }
   },
   methods: {
@@ -190,16 +190,15 @@ export default {
         this.closeMenu()
       }
     },
-    // 🔥 Cuenta el total sumando las cantidades individuales de cada producto
+
     actualizarContador() {
       const items = cartService.getCart()
       this.cartCount = items.reduce((acc, item) => acc + item.quantity, 0)
     },
   },
   mounted() {
-    // Inicializar el conteo apenas se cargue la web
     this.actualizarContador()
-    // Escuchar el evento que configuramos en los borrados y agregados
+
     window.addEventListener('cart-updated', this.actualizarContador)
   },
   beforeUnmount() {
@@ -209,9 +208,6 @@ export default {
 </script>
 
 <style scoped>
-/* ==========================================================================
-   💥 CONFIGURACIÓN GLOBAL DEL HEADER
-   ========================================================================== */
 .header {
   display: flex;
   align-items: center;
@@ -240,9 +236,6 @@ export default {
   cursor: pointer;
 }
 
-/* ==========================================================================
-   🧭 MENÚ DE NAVEGACIÓN Y SUBMENÚS (DESKTOP)
-   ========================================================================== */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -306,9 +299,6 @@ export default {
   color: var(--color-accent) !important;
 }
 
-/* ==========================================================================
-   🛍️ ACCIONES DEL HEADER (BOTONES Y BURBUJA NEÓN)
-   ========================================================================== */
 .header-actions {
   display: flex;
   align-items: center;
@@ -377,10 +367,6 @@ export default {
   display: none;
 }
 
-/* ==========================================================================
-   🔍 CONTROL ESPECÍFICO DE LOS BUSCADORES (EL FILTRO DEFINITIVO)
-   ========================================================================== */
-/* Estilos Base compartidos */
 .search-box {
   display: flex;
   align-items: center;
@@ -405,10 +391,9 @@ export default {
   padding-left: 6px;
 }
 
-/* 🖥️ Reglas para Escritorio (Pantallas Grandes) */
 @media screen and (min-width: 769px) {
   .mobile-search-box {
-    display: none !important; /* Totalmente fulminado en PC */
+    display: none !important;
   }
   .desktop-search-box {
     display: flex;
@@ -421,14 +406,13 @@ export default {
   }
 }
 
-/* 📱 Reglas para Dispositivos Móviles (Pantallas Pequeñas) */
 @media screen and (max-width: 768px) {
   .desktop-search-box {
-    display: none !important; /* Oculta el buscador del bloque derecho */
+    display: none !important;
   }
 
   .mobile-search-box {
-    display: flex !important; /* Se activa limpio dentro del menú hamburguesa */
+    display: flex !important;
     margin: 15px auto;
     width: 90%;
     background: rgba(255, 255, 255, 0.05);
@@ -464,19 +448,18 @@ export default {
   .nav-menu li {
     width: 100%;
     margin: 0;
-    padding: 0; /* Reseteamos el padding del contenedor */
-    text-align: left; /* Alineación limpia a la izquierda */
+    padding: 0;
+    text-align: left;
   }
 
   .nav-menu ul > li > a {
     display: block;
-    padding: 12px 24px; /* 12px arriba/abajo y 24px de separación del borde izquierdo */
+    padding: 12px 24px;
     color: var(--color-text-light) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03); /* Separador sutil entre opciones */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     transition: background-color 0.2s ease;
   }
 
-  /* Efecto visual al tocar una opción principal en móvil */
   .nav-menu ul > li > a:hover {
     background-color: rgba(255, 255, 255, 0.05);
   }

@@ -79,7 +79,7 @@ export default {
       immediate: true,
       async handler(nuevaCategoria) {
         await this.filtrarProductos(nuevaCategoria)
-        this.goToPage(1) // Reinicia a la página 1 después de que carguen los productos nuevos
+        this.goToPage(1)
       },
     },
     itemsPerPage() {
@@ -96,12 +96,10 @@ export default {
   methods: {
     formatPrice,
     async filtrarProductos(categoria) {
-      // Normaliza el parámetro de la URL (ej. "grunge" -> "Grunge")
       const catFormateada =
         categoria.charAt(0).toUpperCase() + categoria.slice(1).toLowerCase()
 
       try {
-        // 📊 Hacemos la consulta en tiempo real a Supabase
         const { data, error } = await supabase
           .from('products')
           .select('*')
@@ -110,7 +108,6 @@ export default {
 
         if (error) throw error
 
-        // Guardamos las camisetas que vinieron de la base de datos
         this.ropaProducts = data || []
       } catch (error) {
         console.error('Error al traer la ropa de Supabase:', error.message)
@@ -167,7 +164,6 @@ export default {
 </script>
 
 <style scoped>
-/* Keeping your exact styles */
 h1 {
   text-align: center;
   color: var(--color-text-main) !important;

@@ -33,6 +33,17 @@
           {{ loading ? 'Cargando...' : 'Entrar' }}
         </button>
       </form>
+
+      <div class="demo-section">
+        <h3>Acceso para Reclutadores</h3>
+        <p>
+          Haz clic abajo para ingresar con las credenciales del Administrador de
+          la base de datos sin tener que escribir.
+        </p>
+        <button @click="cargarAdminDemo" class="btn-demo">
+          ⚡ Ingresar como Admin Demo
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -51,24 +62,56 @@ export default {
     }
   },
   methods: {
+    // ⚡ Autocompleta los datos del administrador único que tienes en 'profiles'
+    cargarAdminDemo() {
+      // Reemplaza estos strings por el correo y clave reales que creaste en tu Supabase Auth
+      this.email = 'admin@garage94.com'
+      this.password = 'admin1234'
+      this.handleLogin()
+    },
+
     async handleLogin() {
       this.loading = true
       this.errorMessage = null
 
       try {
-        // 🔐 Intentamos iniciar sesión en Supabase Auth
-        const { data, error } = await supabase.auth.signInWithPassword({
-          email: this.email,
-          password: this.password,
-        })
+        // 1. 🔐 Intentamos iniciar sesión en Supabase Auth
+        const { data: authData, error: authError } =
+          await supabase.auth.signInWithPassword({
+            email: this.email,
+            password: this.password,
+          })
 
-        if (error) throw error
+        if (authError) throw authError
 
-        // 🎉 Si el login es exitoso, redirigimos al Home o vista principal
-        alert('¡Bienvenido de vuelta a Garage94!')
-        this.$router.push('/')
+        const user = authData.user
+
+        // 2. 🛡️ REVISIÓN DE ROL: Consultamos la tabla 'profiles' para validar si es Admin
+        const { data: profile, error: profileError } = await supabase
+          .from('profiles')
+          .select('role') // Si tu columna de rol se llama distinto, cámbiala aquí
+          .eq('id', user.id)
+          .single()
+
+        if (profileError) {
+          console.error(
+            'Error al consultar tabla profiles:',
+            profileError.message,
+          )
+        }
+
+        // 3. 🔀 Redirección inteligente basada en permisos reales
+        if (profile && profile.role === 'admin') {
+          alert('¡Bienvenido de vuelta, Administrador de Garage94!')
+          this.$router.push('/admin') // Lo mandamos al panel de control de órdenes
+        } else {
+          alert('¡Bienvenido de vuelta a Garage94!')
+          this.$router.push('/') // Un cliente común o usuario sin rol va al Home
+        }
+
+        // Emitimos evento global por si necesitas que la cabecera actualice botones en tiempo real
+        window.dispatchEvent(new Event('auth-state-changed'))
       } catch (error) {
-        // Manejo de errores amigables en español
         if (error.message === 'Invalid login credentials') {
           this.errorMessage =
             'Credenciales inválidas. Verifica tu correo o contraseña.'
@@ -89,13 +132,13 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  background: var(--color-background);
+  background: var(--color-background-darker, #121212);
   padding: 20px;
 }
 
 .login-card {
   background: var(--color-surface);
-  border: 2px solid var(--color-border-glow);
+  border: 2px solid var(--color-border);
   border-radius: 12px;
   padding: 2.5rem;
   width: 100%;
@@ -138,7 +181,7 @@ export default {
 }
 
 .input-group input {
-  background: var(--color-background);
+  background: var(--color-background-dark, #1f1f1f);
   border: 1px solid var(--color-border);
   border-radius: 6px;
   padding: 12px;
@@ -183,5 +226,47 @@ export default {
 .btn-login:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* --- 🌟 AGREGADO DE ESTILO: SECCIÓN DEMO RECLUTADOR --- */
+.demo-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--color-border);
+  text-align: left;
+}
+
+.demo-section h3 {
+  font-family: 'Nova Square', sans-serif;
+  font-size: 1rem;
+  color: var(--color-accent-alt, #ffba08); /* Amarillo neón de realce */
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.demo-section p {
+  font-size: 0.8rem;
+  color: var(--color-text-dimmed, #888);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.btn-demo {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid var(--color-accent-alt, #ffba08);
+  color: var(--color-accent-alt, #ffba08);
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-demo:hover {
+  background: var(--color-accent-alt, #ffba08);
+  color: #121212;
+  box-shadow: 0 0 10px rgba(255, 186, 8, 0.3);
 }
 </style>

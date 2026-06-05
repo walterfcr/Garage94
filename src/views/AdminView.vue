@@ -309,10 +309,10 @@ export default {
   name: 'AdminView',
   components: {
     OrdersList,
-  }, // <--- Añade esta propiedad aquí
+  },
   data() {
     return {
-      currentTab: 'products', // <--- Asegúrate de tener esta línea también
+      currentTab: 'products',
       loading: false,
       product: this.getInitialProductState(),
     }
@@ -357,18 +357,14 @@ export default {
         const payload = { ...this.product }
 
         if (payload.type === 'Clothing') {
-          // 📦 1. ASIGNACIÓN INTELIGENTE AUTOMÁTICA DE TALLAS:
-          // Filtramos las llaves del objeto stock para detectar cuáles tienen un valor mayor a 0
           const tallasActivas = []
           if (this.product.stock.S > 0) tallasActivas.push('S')
           if (this.product.stock.M > 0) tallasActivas.push('M')
           if (this.product.stock.L > 0) tallasActivas.push('L')
           if (this.product.stock.XL > 0) tallasActivas.push('XL')
 
-          // Se inyecta automáticamente el array de strings al payload (ej: ['S', 'M'])
           payload.sizes = tallasActivas
 
-          // Guardamos el desglose limpio en el JSON de stock
           payload.stock = {
             S: this.product.stock.S || 0,
             M: this.product.stock.M || 0,
@@ -565,9 +561,8 @@ h1 {
   border-color: #ff0055;
 }
 
-/* 🎨 SECCIÓN DE LAS CAJITAS DE STOCK CORREGIDA */
 .stock-tallas-box {
-  flex: 1.2 !important; /* Le damos un poco más de aire en la fila */
+  flex: 1.2 !important;
 }
 .tallas-grid {
   display: grid;
@@ -590,7 +585,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 4px;
 }
-/* Forzamos a que el input interno ignore el padding alto global y se vea el número */
+
 .talla-input-item input {
   width: 85% !important;
   padding: 5px 2px !important;
