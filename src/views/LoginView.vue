@@ -35,11 +35,6 @@
       </form>
 
       <div class="demo-section">
-        <h3>Acceso para Reclutadores</h3>
-        <p>
-          Haz clic abajo para ingresar con las credenciales del Administrador de
-          la base de datos sin tener que escribir.
-        </p>
         <button @click="cargarAdminDemo" class="btn-demo">
           ⚡ Ingresar como Admin Demo
         </button>
@@ -62,9 +57,7 @@ export default {
     }
   },
   methods: {
-    // ⚡ Autocompleta los datos del administrador único que tienes en 'profiles'
     cargarAdminDemo() {
-      // Reemplaza estos strings por el correo y clave reales que creaste en tu Supabase Auth
       this.email = 'admin@garage94.com'
       this.password = 'admin1234'
       this.handleLogin()

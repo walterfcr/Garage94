@@ -142,12 +142,7 @@
 
             <div class="form-group">
               <label>Ruta de la Imagen (image) *</label>
-              <input
-                v-model="product.image"
-                type="text"
-                placeholder="Ej: /images/ropa/punk/p-1.webp"
-                required
-              />
+              <input type="file" @change="handleImageSelect" />
             </div>
 
             <div
@@ -314,6 +309,7 @@ export default {
     return {
       currentTab: 'products',
       loading: false,
+      selectedFile: null,
       product: this.getInitialProductState(),
     }
   },
@@ -350,6 +346,9 @@ export default {
         material: '',
         length: '',
       }
+    },
+    handleImageSelect(event) {
+      this.selectedFile = event.target.files[0]
     },
     async handleSubmit() {
       this.loading = true
@@ -398,6 +397,17 @@ export default {
           camposMercancia.forEach((campo) => delete payload[campo])
         }
 
+        const file = this.selectedFile
+        const fileName = `${payload.item_number}-${Date.now()}-${file.name}`
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(fileName, file)
+        const { data } = supabase.storage
+          .from('products')
+          .getPublicUrl(fileName)
+        payload.image = data.publicUrl
+
+        if (uploadError) throw uploadError
         const { error } = await supabase.from('products').insert([payload])
 
         if (error) throw error
@@ -585,7 +595,6 @@ h1 {
   font-weight: bold;
   margin-bottom: 4px;
 }
-
 .talla-input-item input {
   width: 85% !important;
   padding: 5px 2px !important;
