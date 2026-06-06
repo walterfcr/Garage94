@@ -13,6 +13,13 @@
         >
         <a
           href="#"
+          :class="{ active: currentTab === 'manage' }"
+          @click.prevent="currentTab = 'manage'"
+        >
+          ✏️ Gestionar Productos
+        </a>
+        <a
+          href="#"
           :class="{ active: currentTab === 'orders' }"
           @click.prevent="currentTab = 'orders'"
           >🧾 Órdenes</a
@@ -291,6 +298,7 @@
           </form>
         </div>
       </section>
+      <ProductManager v-if="currentTab === 'manage'" />
       <OrdersList v-if="currentTab === 'orders'" />
     </main>
   </div>
@@ -298,12 +306,14 @@
 
 <script>
 import OrdersList from '../components/OrdersList.vue'
+import ProductManager from '../components/ProductManager.vue'
 import { supabase } from '../services/supabase'
 
 export default {
   name: 'AdminView',
   components: {
     OrdersList,
+    ProductManager,
   },
   data() {
     return {
