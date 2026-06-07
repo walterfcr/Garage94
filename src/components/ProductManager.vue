@@ -30,6 +30,7 @@
             <th>Banda</th>
             <th>Tipo</th>
             <th>Precio</th>
+            <th>Stock</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -40,6 +41,13 @@
             <td>{{ product.band }}</td>
             <td>{{ product.type }}</td>
             <td>{{ product.price }}</td>
+            <td>
+              {{
+                product.type === 'Clothing'
+                  ? `${product.stock?.S || 0}/${product.stock?.M || 0}/${product.stock?.L || 0}/${product.stock?.XL || 0}`
+                  : product.stock?.unidad
+              }}
+            </td>
             <td>
               <button @click="editProduct(product)">✏️ Editar</button>
               <button @click="deleteProduct(product)">🗑️ Eliminar</button>
@@ -74,6 +82,56 @@
           <input v-model="selectedProduct.band" type="text" />
 
           <input v-model.number="selectedProduct.price" type="number" />
+          <div v-if="selectedProduct.type !== 'Clothing'">
+            <h4>Stock disponible</h4>
+
+            <input
+              v-model.number="selectedProduct.stock.unidad"
+              type="number"
+              min="0"
+            />
+          </div>
+          <div v-if="selectedProduct.type === 'Clothing'">
+            <h4>Inventario por talla</h4>
+
+            <div class="stock-grid">
+              <div>
+                <label>S</label>
+                <input
+                  v-model.number="selectedProduct.stock.S"
+                  type="number"
+                  min="0"
+                />
+              </div>
+
+              <div>
+                <label>M</label>
+                <input
+                  v-model.number="selectedProduct.stock.M"
+                  type="number"
+                  min="0"
+                />
+              </div>
+
+              <div>
+                <label>L</label>
+                <input
+                  v-model.number="selectedProduct.stock.L"
+                  type="number"
+                  min="0"
+                />
+              </div>
+
+              <div>
+                <label>XL</label>
+                <input
+                  v-model.number="selectedProduct.stock.XL"
+                  type="number"
+                  min="0"
+                />
+              </div>
+            </div>
+          </div>
 
           <div class="edit-layout">
             <div class="description-column">
@@ -218,6 +276,7 @@ export default {
             price: this.selectedProduct.price,
             description: this.selectedProduct.description,
             image: imageUrl,
+            stock: this.selectedProduct.stock,
           })
           .eq('id', this.selectedProduct.id)
 
@@ -239,6 +298,20 @@ export default {
       if (!confirmDelete) return
 
       try {
+        if (
+          product.image &&
+          product.image.includes('/storage/v1/object/public/products/')
+        ) {
+          const fileName = product.image.split('/products/')[1]
+
+          const { error: storageError } = await supabase.storage
+            .from('products')
+            .remove([fileName])
+
+          if (storageError) {
+            console.error(storageError)
+          }
+        }
         const { error } = await supabase
           .from('products')
           .delete()
@@ -462,5 +535,21 @@ tr:hover {
   padding: 12px;
   border-radius: 8px;
   min-width: 220px;
+}
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stock-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stock-grid label {
+  font-weight: bold;
+  color: var(--color-accent-alt);
 }
 </style>
