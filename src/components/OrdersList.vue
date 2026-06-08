@@ -11,36 +11,85 @@
     <div v-else class="orders-grid">
       <div v-for="order in orders" :key="order.id" class="order-card">
         <div class="order-header">
-          <span class="order-id">Orden #{{ order.id }}</span>
-          <span class="order-date">{{ formatDate(order.created_at) }}</span>
+          <span class="order-id">
+            {{ formatOrderNumber(order.id) }}
+          </span>
+          <span class="order-date">
+            {{ formatDate(order.created_at) }}
+          </span>
         </div>
 
-        <div class="order-body">
-          <div class="client-info">
-            <p>👤 <strong>Cliente:</strong> {{ order.customer_name }}</p>
-            <p>📞 <strong>Teléfono:</strong> {{ order.customer_phone }}</p>
-            <p>📍 <strong>Dirección:</strong> {{ order.customer_address }}</p>
-          </div>
+        <div class="order-summary">
+          <p>{{ order.customer_name }}</p>
 
-          <div class="order-items">
-            <h4>Artículos Comprados:</h4>
-            <ul>
-              <li v-for="(item, idx) in order.items" :key="idx">
-                ⚫ {{ item.name }}
-                <span v-if="item.size"
-                  >(Talla: <strong>{{ item.size }}</strong
-                  >)</span
-                >
-                x{{ item.quantity }} -
-                <span class="item-cost">₡{{ item.price * item.quantity }}</span>
-              </li>
-            </ul>
-          </div>
+          <span
+            class="status-badge"
+            :class="{
+              pending: order.status === 'Pendiente',
+              shipped: order.status === 'Enviado',
+              delivered: order.status === 'Entregado',
+            }"
+          >
+            {{ order.status }}
+          </span>
+
+          <div class="order-total">₡{{ order.total_price }}</div>
+
+          <button @click="openOrder(order)">Ver Detalles</button>
         </div>
+      </div>
+    </div>
+    <div
+      v-if="selectedOrder"
+      class="modal-overlay"
+      @click.self="selectedOrder = null"
+    >
+      <div class="modal-content">
+        <div class="status-section">
+          <label>Estado de la orden</label>
 
-        <div class="order-footer">
-          <span>Monto Total:</span>
-          <span class="order-total">₡{{ order.total_price }}</span>
+          <select v-model="selectedOrder.status">
+            <option value="Pendiente">Pendiente</option>
+            <option value="Enviado">Enviado</option>
+            <option value="Entregado">Entregado</option>
+          </select>
+        </div>
+        <h3>Orden #{{ selectedOrder.id }}</h3>
+
+        <p>
+          <strong>Cliente:</strong>
+          {{ selectedOrder.customer_name }}
+        </p>
+
+        <p>
+          <strong>Teléfono:</strong>
+          {{ selectedOrder.customer_phone }}
+        </p>
+
+        <p>
+          <strong>Dirección:</strong>
+          {{ selectedOrder.customer_address }}
+        </p>
+
+        <hr />
+
+        <h4>Productos</h4>
+
+        <ul>
+          <li v-for="(item, index) in selectedOrder.items" :key="index">
+            {{ item.name }}
+            <span v-if="item.size"> ({{ item.size }}) </span>
+
+            x{{ item.quantity }}
+          </li>
+        </ul>
+
+        <h3>₡{{ selectedOrder.total_price }}</h3>
+
+        <div class="modal-actions">
+          <button @click="saveOrderStatus">💾 Guardar Estado</button>
+
+          <button @click="selectedOrder = null">❌ Cerrar</button>
         </div>
       </div>
     </div>
@@ -49,6 +98,7 @@
 
 <script>
 import { supabase } from '../services/supabase'
+import { formatOrderNumber } from '@/utils/formatOrderNumber'
 
 export default {
   name: 'OrdersList',
@@ -56,12 +106,14 @@ export default {
     return {
       orders: [],
       loading: false,
+      selectedOrder: null,
     }
   },
   mounted() {
     this.fetchOrders()
   },
   methods: {
+    formatOrderNumber,
     async fetchOrders() {
       this.loading = true
       try {
@@ -89,17 +141,39 @@ export default {
         minute: '2-digit',
       })
     },
+    openOrder(order) {
+      this.selectedOrder = order
+    },
+    async saveOrderStatus() {
+      try {
+        const { error } = await supabase
+          .from('orders')
+          .update({
+            status: this.selectedOrder.status,
+          })
+          .eq('id', this.selectedOrder.id)
+
+        if (error) throw error
+
+        alert('Estado actualizado')
+
+        await this.fetchOrders()
+
+        this.selectedOrder = null
+      } catch (error) {
+        console.error(error)
+        alert(error.message)
+      }
+    },
   },
 }
 </script>
 
 <style scoped>
 .orders-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 750px;
-  margin: 0 auto;
 }
 .order-card {
   background: #141414;
@@ -173,5 +247,110 @@ export default {
   border-radius: 8px;
   color: #888;
   border: 1px dashed rgba(255, 255, 255, 0.05);
+}
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.status-badge {
+  background: rgba(255, 186, 8, 0.15);
+  color: var(--color-accent-alt);
+  border: 1px solid rgba(255, 186, 8, 0.3);
+
+  padding: 6px 10px;
+  border-radius: 20px;
+
+  width: fit-content;
+
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.status-badge.pending {
+  background: rgba(255, 186, 8, 0.15);
+  color: #ffba08;
+  border: 1px solid rgba(255, 186, 8, 0.4);
+}
+
+.status-badge.shipped {
+  background: rgba(0, 188, 255, 0.15);
+  color: #00bcff;
+  border: 1px solid rgba(0, 188, 255, 0.4);
+}
+
+.status-badge.delivered {
+  background: rgba(0, 230, 115, 0.15);
+  color: #00e673;
+  border: 1px solid rgba(0, 230, 115, 0.4);
+}
+
+.order-summary button {
+  background: var(--color-accent);
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 10px;
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.order-summary button:hover {
+  background: var(--color-accent-hover);
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 700px;
+  max-width: 90vw;
+
+  background: var(--color-background-darker);
+  border: 1px solid var(--color-border);
+
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.modal-content h3 {
+  color: var(--color-accent-alt);
+}
+.status-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  margin: 1rem 0;
+}
+
+.status-section select {
+  background: var(--color-surface);
+  color: var(--color-text-main);
+
+  border: 1px solid var(--color-border);
+
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  margin-top: 1rem;
 }
 </style>

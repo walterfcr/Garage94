@@ -96,6 +96,7 @@
 import { supabase } from '@/services/supabase.js'
 import { cartService } from '@/services/cartService.js'
 import { formatPrice } from '@/utils/formatPrice.js'
+import { formatOrderNumber } from '@/utils/formatOrderNumber'
 
 export default {
   name: 'CartView',
@@ -118,6 +119,7 @@ export default {
     },
   },
   methods: {
+    formatOrderNumber,
     formatPrice,
     loadCart() {
       this.cartItems = cartService.getCart()
@@ -147,6 +149,10 @@ export default {
         const productosParaGuardar = this.cartItems.map((item) => ({
           id: item.id,
           name: item.name,
+          band: item.band || null,
+          type: item.type || null,
+          image: item.image || null,
+          item_number: item.item_number || null,
           price: item.price,
           quantity: item.quantity,
           size: item.size || null,
@@ -216,7 +222,7 @@ export default {
         }
 
         alert(
-          `¡Excelente ${this.customer.name}! Tu pedido ha sido registrado y el inventario actualizado con éxito.`,
+          `Pedido #${formatOrderNumber(nuevaOrden[0].id)} registrado correctamente. Guarda este número para consultar el estado de tu orden.`,
         )
         cartService.clearCart()
         this.$router.push('/')

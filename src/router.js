@@ -11,6 +11,7 @@ import CartView from '@/views/CartView.vue'
 import ContactForm from './components/ContactForm.vue'
 import AppNosotros from '@/components/AppNosotros.vue'
 import ResultadosBusqueda from '@/views/ResultadosBusqueda.vue'
+import TrackOrderView from '@/views/TrackOrderView.vue'
 
 const routes = [
   { path: '/', name: 'home', component: PaginaPrincipal },
@@ -56,6 +57,11 @@ const routes = [
     path: '/carrito',
     name: 'carrito',
     component: CartView,
+  },
+  {
+    path: '/orden',
+    name: 'Orden',
+    component: TrackOrderView,
   },
 ]
 
