@@ -108,7 +108,11 @@
             </li>
           </ul>
         </li>
-
+        <li>
+          <router-link to="/orden" @click="closeMenu"
+            >Rastrea Pedido</router-link
+          >
+        </li>
         <li>
           <router-link to="/contacto" @click="closeMenu">Contacto</router-link>
         </li>

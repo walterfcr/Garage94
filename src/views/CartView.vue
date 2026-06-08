@@ -1,98 +1,104 @@
 <template>
-  <div class="cart-container">
-    <h1>Tu Carrito de Compras</h1>
+  <div class="page">
+    <main class="content">
+      <div class="cart-container">
+        <h1>Tu Carrito de Compras</h1>
 
-    <div v-if="cartItems.length === 0" class="empty-cart">
-      <p>No tienes productos en el carrito todavía.</p>
-      <router-link to="/" class="btn-back">Ir a la tienda</router-link>
-    </div>
+        <div v-if="cartItems.length === 0" class="empty-cart">
+          <p>No tienes productos en el carrito todavía.</p>
+          <router-link to="/" class="btn-back">Ir a la tienda</router-link>
+        </div>
 
-    <div v-else class="cart-content">
-      <div class="cart-items-list">
-        <div
-          v-for="(item, index) in cartItems"
-          :key="index"
-          class="cart-item-card"
-        >
-          <img :src="item.image" :alt="item.name" class="item-img" />
+        <div v-else class="cart-content">
+          <div class="cart-items-list">
+            <div
+              v-for="(item, index) in cartItems"
+              :key="index"
+              class="cart-item-card"
+            >
+              <img :src="item.image" :alt="item.name" class="item-img" />
 
-          <div class="item-details">
-            <h3>{{ item.name }}</h3>
-            <p class="item-meta">Item #: {{ item.item_number }}</p>
-            <p v-if="item.size" class="item-size">
-              Talla: <span>{{ item.size }}</span>
-            </p>
-            <p class="item-price">{{ formatPrice(item.price) }}</p>
+              <div class="item-details">
+                <h3>{{ item.name }}</h3>
+                <p class="item-meta">Item #: {{ item.item_number }}</p>
+                <p v-if="item.size" class="item-size">
+                  Talla: <span>{{ item.size }}</span>
+                </p>
+                <p class="item-price">{{ formatPrice(item.price) }}</p>
+              </div>
+
+              <div class="item-right-controls">
+                <div class="item-quantity-box">
+                  Cant: <strong>{{ item.quantity }}</strong>
+                </div>
+
+                <button
+                  @click="eliminarItem(index)"
+                  class="btn-delete-item"
+                  title="Eliminar producto"
+                >
+                  🗑️
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="item-right-controls">
-            <div class="item-quantity-box">
-              Cant: <strong>{{ item.quantity }}</strong>
+          <div class="cart-summary">
+            <h2>Resumen de Orden</h2>
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <span>{{ formatPrice(totalCartPrice) }}</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total:</span>
+              <span>{{ formatPrice(totalCartPrice) }}</span>
             </div>
 
-            <button
-              @click="eliminarItem(index)"
-              class="btn-delete-item"
-              title="Eliminar producto"
-            >
-              🗑️
-            </button>
+            <hr />
+
+            <h3>Datos de Envío</h3>
+            <form @submit.prevent="checkout">
+              <div class="form-group">
+                <label>Nombre Completo:</label>
+                <input
+                  type="text"
+                  v-model="customer.name"
+                  required
+                  placeholder="Ej: Walter..."
+                />
+              </div>
+              <div class="form-group">
+                <label>Teléfono:</label>
+                <input
+                  type="text"
+                  v-model="customer.phone"
+                  required
+                  placeholder="Ej: 8888-8888"
+                />
+              </div>
+              <div class="form-group">
+                <label>Dirección de Entrega:</label>
+                <textarea
+                  v-model="customer.address"
+                  required
+                  placeholder="Provincia, Cantón, Distrito y detalles..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-checkout">
+                🚀 Confirmar y Finalizar Compra
+              </button>
+            </form>
           </div>
         </div>
       </div>
-
-      <div class="cart-summary">
-        <h2>Resumen de Orden</h2>
-        <div class="summary-row">
-          <span>Subtotal:</span>
-          <span>{{ formatPrice(totalCartPrice) }}</span>
-        </div>
-        <div class="summary-row total">
-          <span>Total:</span>
-          <span>{{ formatPrice(totalCartPrice) }}</span>
-        </div>
-
-        <hr />
-
-        <h3>Datos de Envío</h3>
-        <form @submit.prevent="checkout">
-          <div class="form-group">
-            <label>Nombre Completo:</label>
-            <input
-              type="text"
-              v-model="customer.name"
-              required
-              placeholder="Ej: Walter..."
-            />
-          </div>
-          <div class="form-group">
-            <label>Teléfono:</label>
-            <input
-              type="text"
-              v-model="customer.phone"
-              required
-              placeholder="Ej: 8888-8888"
-            />
-          </div>
-          <div class="form-group">
-            <label>Dirección de Entrega:</label>
-            <textarea
-              v-model="customer.address"
-              required
-              placeholder="Provincia, Cantón, Distrito y detalles..."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn-checkout">
-            🚀 Confirmar y Finalizar Compra
-          </button>
-        </form>
-      </div>
-    </div>
+    </main>
+    <AppFooter />
   </div>
 </template>
 
 <script>
+import AppFooter from '@/components/AppFooter.vue'
 import { supabase } from '@/services/supabase.js'
 import { cartService } from '@/services/cartService.js'
 import { formatPrice } from '@/utils/formatPrice.js'
@@ -100,6 +106,7 @@ import { formatOrderNumber } from '@/utils/formatOrderNumber'
 
 export default {
   name: 'CartView',
+  components: { AppFooter },
   data() {
     return {
       cartItems: [],
@@ -245,6 +252,15 @@ export default {
 </script>
 
 <style scoped>
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
 .cart-container {
   max-width: 1200px;
   margin: 0 auto;

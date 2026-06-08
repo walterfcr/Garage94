@@ -1,93 +1,100 @@
 <template>
-  <div class="track-order">
-    <h1>Seguimiento de Pedido</h1>
+  <div class="page">
+    <main class="content">
+      <div class="track-order">
+        <h1>Seguimiento de Pedido</h1>
 
-    <div class="search-box">
-      <input v-model="orderId" type="text" placeholder="Ej: RC-00015" />
+        <div class="search-box">
+          <input v-model="orderId" type="text" placeholder="Ej: RC-00015" />
 
-      <button @click="searchOrder">Buscar</button>
-    </div>
-
-    <div v-if="order" class="order-card">
-      <h2>{{ formatOrderNumber(order.id) }}</h2>
-      <hr class="order-divider" />
-
-      <div class="order-layout">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="order-info">
-          <p>
-            <strong>Cliente:</strong>
-            {{ order.customer_name }}
-          </p>
-
-          <div class="status-row">
-            <strong>Estado:</strong>
-
-            <span
-              class="status-badge"
-              :class="{
-                pending: order.status === 'Pendiente',
-                shipped: order.status === 'Enviado',
-                delivered: order.status === 'Entregado',
-              }"
-            >
-              {{ order.status }}
-            </span>
-          </div>
-
-          <p>
-            <strong>Total:</strong>
-            ₡{{ order.total_price }}
-          </p>
+          <button @click="searchOrder">Buscar</button>
         </div>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="products-column">
-          <h3>Productos</h3>
+        <div v-if="order" class="order-card">
+          <h2>{{ formatOrderNumber(order.id) }}</h2>
+          <hr class="order-divider" />
 
-          <div
-            v-for="(item, index) in order.items"
-            :key="index"
-            class="tracking-item"
-          >
-            <img
-              :src="item.image"
-              :alt="item.name"
-              class="tracking-item-image"
-            />
-
-            <div class="tracking-item-info">
-              <h4>{{ item.name }}</h4>
-
-              <p v-if="item.band">
-                {{ item.band }}
+          <div class="order-layout">
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="order-info">
+              <p>
+                <strong>Cliente:</strong>
+                {{ order.customer_name }}
               </p>
+
+              <div class="status-row">
+                <strong>Estado:</strong>
+
+                <span
+                  class="status-badge"
+                  :class="{
+                    pending: order.status === 'Pendiente',
+                    shipped: order.status === 'Enviado',
+                    delivered: order.status === 'Entregado',
+                  }"
+                >
+                  {{ order.status }}
+                </span>
+              </div>
 
               <p>
-                {{ item.type }}
+                <strong>Total:</strong>
+                ₡{{ order.total_price }}
               </p>
+            </div>
 
-              <p>Cantidad: {{ item.quantity }}</p>
+            <!-- COLUMNA DERECHA -->
+            <div class="products-column">
+              <h3>Productos</h3>
 
-              <p v-if="item.size">Talla: {{ item.size }}</p>
+              <div
+                v-for="(item, index) in order.items"
+                :key="index"
+                class="tracking-item"
+              >
+                <img
+                  :src="item.image"
+                  :alt="item.name"
+                  class="tracking-item-image"
+                />
+
+                <div class="tracking-item-info">
+                  <h4>{{ item.name }}</h4>
+
+                  <p v-if="item.band">
+                    {{ item.band }}
+                  </p>
+
+                  <p>
+                    {{ item.type }}
+                  </p>
+
+                  <p>Cantidad: {{ item.quantity }}</p>
+
+                  <p v-if="item.size">Talla: {{ item.size }}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <p v-if="errorMessage" class="error-message">
-      {{ errorMessage }}
-    </p>
+        <p v-if="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </p>
+      </div>
+    </main>
+    <AppFooter />
   </div>
 </template>
 
 <script>
+import AppFooter from '@/components/AppFooter.vue'
 import { supabase } from '@/services/supabase'
 import { formatOrderNumber } from '@/utils/formatOrderNumber'
 
 export default {
   name: 'TrackOrderView',
+  components: { AppFooter },
 
   data() {
     return {
@@ -126,6 +133,15 @@ export default {
 </script>
 
 <style scoped>
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
 .track-order {
   max-width: 900px;
   margin: 3rem auto;
